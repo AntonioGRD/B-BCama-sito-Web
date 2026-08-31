@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>B&B CaMa | Via Raffaele Viviani 36, Gragnano - Punteggio 9.5 Eccezionale</title>
+  <meta name="description" content="B&B CaMa a Gragnano (NA): terrazza panoramica sui Monti Lattari, camere con bagno privato, WiFi gratuito e colazione tipica. Punteggio 9.5 su Booking.com.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Outfit', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif'],
+          },
+          colors: {
+            amber: {
+              50: '#fffbeb',
+              100: '#fef3c7',
+              500: '#f59e0b',
+              600: '#d97706',
+              700: '#b45309',
+              800: '#92400e',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    .font-ext500 {
+      font-weight: 600;
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .hero-gradient {
+      background: radial-gradient(circle at top right, rgba(217, 119, 6, 0.08), transparent 50%),
+                  radial-gradient(circle at bottom left, rgba(245, 158, 11, 0.05), transparent 40%);
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-amber-500 selection:text-white">
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-slate-900 text-slate-200 text-xs py-2 px-4">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+      <div class="flex items-center gap-4">
+        <span class="flex items-center gap-1.5 text-amber-400">
+          <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+          <strong class="font-bold">9.5 / 10</strong> Eccezionale su Booking.com
+        </span>
+        <span class="hidden sm:inline text-slate-500">|</span>
+        <span class="hidden sm:flex items-center gap-1.5 text-slate-300">
+          <i data-lucide="map-pin" class="w-3.5 h-3.5 text-amber-400"></i>
+          Via Raffaele Viviani, 36 (Piano 5), Gragnano (NA)
+        </span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="tel:+393447186581" class="hover:text-amber-400 transition flex items-center gap-1">
+          <i data-lucide="phone" class="w-3.5 h-3.5 text-amber-400"></i>
+          <span>+39 344 718 6581</span>
+        </a>
+        <a href="https://wa.me/393447186581?text=Salve%20B%26B%20CaMa%2C%20vorrei%20informazioni%20sulle%20disponibilit%C3%A0" target="_blank" class="hover:text-emerald-400 transition flex items-center gap-1 text-emerald-400 font-medium">
+          <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+          <span>WhatsApp Diretto</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navbar -->
+  <header class="sticky top-0 z-50 glass-card border-b border-slate-200/80 transition-all duration-300 shadow-sm" id="navbar">
+    <div class="max-w-7xl mx-auto px-6 py-3.5 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500 to-amber-700 flex items-center justify-center text-white shadow-md group-hover:scale-105 transition duration-300 font-serif font-bold text-xl">
+          C
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-xl font-bold font-serif tracking-tight text-slate-900 block leading-tight">B&B CaMa</span>
+            <span class="bg-amber-100 text-amber-800 text-[10px] font-bold px-2 py-0.5 rounded-full">9.5 ★</span>
+          </div>
+          <span class="text-[11px] font-medium uppercase tracking-widest text-amber-700">Gragnano • Costiera & Pompei</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-600">
+        <a href="#chi-siamo" class="hover:text-amber-600 transition">Chi Siamo</a>
+        <a href="#camere" class="hover:text-amber-600 transition">Camere</a>
+        <a href="#servizi" class="hover:text-amber-600 transition">Servizi</a>
+        <a href="#recensioni" class="hover:text-amber-600 transition">Recensioni</a>
+        <a href="#dintorni" class="hover:text-amber-600 transition">Posizione</a>
+        <a href="#info-utili" class="hover:text-amber-600 transition">Info & Regole</a>
+      </nav>
+
+      <!-- CTA & Mobile Menu Button -->
+      <div class="flex items-center gap-3">
+        <a href="#prenota" class="hidden sm:inline-flex items-center gap-2 bg-amber-600 hover:bg-amber-700 text-white text-sm font-semibold px-5 py-2.5 rounded-lg shadow-sm hover:shadow transition duration-200">
+          <i data-lucide="calendar-check" class="w-4 h-4"></i>
+          <span>Prenota Subito</span>
+        </a>
+        <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg text-slate-700 hover:bg-slate-100 transition" aria-label="Menu">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileMenu" class="hidden md:hidden border-t border-slate-200 bg-white px-6 py-4 space-y-3">
+      <a href="#chi-siamo" class="block py-2 text-slate-700 font-medium hover:text-amber-600 transition">Chi Siamo</a>
+      <a href="#camere" class="block py-2 text-slate-700 font-medium hover:text-amber-600 transition">Camere</a>
+      <a href="#servizi" class="block py-2 text-slate-700 font-medium hover:text-amber-600 transition">Servizi</a>
+      <a href="#recensioni" class="block py-2 text-slate-700 font-medium hover:text-amber-600 transition">Recensioni (9.5/10)</a>
+      <a href="#dintorni" class="block py-2 text-slate-700 font-medium hover:text-amber-600 transition">Posizione & Distanze</a>
+      <a href="#info-utili" class="block py-2 text-slate-700 font-medium hover:text-amber-600 transition">Info & Regole</a>
+      <a href="#prenota" class="block text-center bg-amber-600 hover:bg-amber-700 text-white font-medium py-3 rounded-lg mt-2">
+        Verifica Disponibilità
+      </a>
+    </div>
+  </header>
+
+  <main class="bg-slate-50 text-slate-800 font-sans hero-gradient">
+
+    <!-- SEZIONE CHI SIAMO / HERO (Richiesta Utente con dati Booking.com) -->
+    <section id="chi-siamo" class="py-16 md:py-24 px-6 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div class="space-y-6">
+        <div class="inline-flex items-center gap-2 bg-amber-100/80 border border-amber-300/80 text-amber-900 px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wide uppercase shadow-sm">
+          <i data-lucide="award" class="w-3.5 h-3.5 text-amber-600"></i>
+          <span>Punteggio Booking.com 9.5 • Eccezionale</span>
+        </div>
+        
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-ext500 tracking-tight text-slate-900 font-serif leading-[1.15]">
+          Il tuo rifugio di charme nel cuore di Gragnano
+        </h1>
+        
+        <p class="text-lg text-slate-600 leading-relaxed">
+          Immersi nella capitale mondiale della pasta e in posizione strategica tra Napoli, Pompei, Sorrento e la Costiera Amalfitana. Al 5° piano con vista panoramica sulle montagne e la città, offriamo un’atmosfera calda e familiare, terrazza solarium, camere dotate di ogni comfort e la quiete perfetta per rigenerarti dopo una giornata alla scoperta delle meraviglie campane.
+        </p>
+
+        <!-- Punti di forza reali da Booking.com -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3.5 pt-2 text-slate-700">
+          <div class="flex items-center gap-2 text-sm font-medium bg-white p-2.5 rounded-xl border border-slate-200/80 shadow-sm">
+            <i data-lucide="mountain" class="w-4 h-4 text-amber-600 shrink-0"></i>
+            <span>Vista Montagna & Terrazza</span>
+          </div>
+          <div class="flex items-center gap-2 text-sm font-medium bg-white p-2.5 rounded-xl border border-slate-200/80 shadow-sm">
+            <i data-lucide="coffee" class="w-4 h-4 text-amber-600 shrink-0"></i>
+            <span>Colazione Inclusa</span>
+          </div>
+          <div class="flex items-center gap-2 text-sm font-medium bg-white p-2.5 rounded-xl border border-slate-200/80 shadow-sm">
+            <i data-lucide="sparkles" class="w-4 h-4 text-amber-600 shrink-0"></i>
+            <span>Pulizia Impeccabile (10/10)</span>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap gap-4 pt-4">
+          <a href="#prenota" class="bg-amber-600 hover:bg-amber-700 text-white font-medium px-7 py-3.5 rounded-xl shadow-md hover:shadow-lg transition duration-200 flex items-center gap-2">
+            <span>Verifica Disponibilità</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+          <a href="https://wa.me/393447186581?text=Ciao%20B%26B%20CaMa%2C%20vorrei%20informazioni%20sulle%20camere" target="_blank" class="bg-white hover:bg-slate-100 text-slate-800 font-medium px-6 py-3.5 rounded-xl border border-slate-200 shadow-sm transition duration-200 flex items-center gap-2">
+            <i data-lucide="message-circle" class="w-4 h-4 text-emerald-600"></i>
+            <span>Contatta su WhatsApp</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Griglia Immagini Hero -->
+      <div class="grid grid-cols-2 gap-4 relative">
+        <div class="absolute -inset-4 bg-amber-500/10 rounded-3xl -z-10 blur-xl"></div>
+        
+        <div class="group relative overflow-hidden rounded-2xl shadow-lg aspect-[3/4] bg-slate-200">
+          <img src="images/camera-standard.jpg" alt="Camera matrimoniale B&B CaMa Gragnano" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent flex items-end p-4">
+            <div>
+              <span class="text-xs font-semibold uppercase tracking-wider text-amber-300">Camera Comfort</span>
+              <p class="text-white text-sm font-medium">Bagno Privato & Climatizzazione</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="group relative overflow-hidden rounded-2xl shadow-lg aspect-[3/4] bg-slate-200 mt-8">
+          <img src="images/dettaglio-colazione.jpg" alt="Colazione e vista terrazza" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent flex items-end p-4">
+            <div>
+              <span class="text-xs font-semibold uppercase tracking-wider text-amber-300">Sapori Autentici</span>
+              <p class="text-white text-sm font-medium">Colazione all'Italiana & Caffè</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BADGE RICONOSCIMENTO BOOKING.COM -->
+    <section class="py-6 px-6 max-w-7xl mx-auto">
+      <div class="bg-gradient-to-r from-slate-900 to-slate-800 text-white rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl border border-slate-700">
+        <div class="flex items-center gap-5">
+          <div class="w-16 h-16 rounded-2xl bg-amber-500 flex flex-col items-center justify-center font-bold text-slate-950 shadow-inner shrink-0">
+            <span class="text-2xl leading-none">9.5</span>
+            <span class="text-[10px] uppercase font-semibold">su 10</span>
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="font-serif font-bold text-xl text-white">Giudizio Ospiti: Eccezionale</span>
+              <span class="text-amber-400 text-sm">★★★★★</span>
+            </div>
+            <p class="text-slate-300 text-sm mt-0.5">Basato su recensioni verificate di ospiti su Booking.com</p>
+          </div>
+        </div>
+        <div class="flex flex-wrap gap-4 text-center md:text-left text-xs font-medium text-slate-300">
+          <div class="bg-slate-800/80 px-4 py-2 rounded-xl border border-slate-700">
+            <span class="text-amber-400 font-bold block text-sm">10 / 10</span> Accoglienza & Staff
+          </div>
+          <div class="bg-slate-800/80 px-4 py-2 rounded-xl border border-slate-700">
+            <span class="text-amber-400 font-bold block text-sm">10 / 10</span> Pulizia Struttura
+          </div>
+          <div class="bg-slate-800/80 px-4 py-2 rounded-xl border border-slate-700">
+            <span class="text-amber-400 font-bold block text-sm">9.5 / 10</span> Comfort & Servizi
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEZIONE SERVIZI COMPLETI STRUTTURA -->
+    <section id="servizi" class="py-16 px-6 max-w-7xl mx-auto">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-amber-600 font-semibold tracking-wider uppercase text-sm">Servizi & Dotazioni</span>
+        <h2 class="text-3xl md:text-4xl font-bold font-serif text-slate-900 mt-1">Tutto il comfort che desideri</h2>
+        <p class="text-slate-600 mt-3">Ogni dettaglio è curato per assicurarti il massimo relax e un soggiorno piacevole.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- 1. Terrazza e Vista -->
+        <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition duration-300 group">
+          <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center mb-4 group-hover:bg-amber-600 group-hover:text-white transition duration-300">
+            <i data-lucide="sun-medium" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-bold text-lg text-slate-900 mb-2">Terrazza & Vista Montagna</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Situato al 5° piano (con ascensore), il B&B offre una splendida vista panoramica sulla catena montuosa dei Monti Lattari e sulla città di Gragnano.</p>
+        </div>
+
+        <!-- 2. Colazione -->
+        <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition duration-300 group">
+          <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center mb-4 group-hover:bg-amber-600 group-hover:text-white transition duration-300">
+            <i data-lucide="coffee" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-bold text-lg text-slate-900 mb-2">Colazione all'Italiana</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Macchina per caffè espresso, bollitore per tè, cornetti freschi, succhi e confetture locali per una colazione autentica.</p>
+        </div>
+
+        <!-- 3. Bagno Privato & Cortesia -->
+        <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition duration-300 group">
+          <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center mb-4 group-hover:bg-amber-600 group-hover:text-white transition duration-300">
+            <i data-lucide="bath" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-bold text-lg text-slate-900 mb-2">Bagno Privato Completo</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Ogni camera dispone di bagno privato con bidet, doccia, asciugacapelli, asciugamani morbidi e set di prodotti di cortesia in omaggio.</p>
+        </div>
+
+        <!-- 4. Wi-Fi e Connettività -->
+        <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition duration-300 group">
+          <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center mb-4 group-hover:bg-amber-600 group-hover:text-white transition duration-300">
+            <i data-lucide="wifi" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-bold text-lg text-slate-900 mb-2">WiFi Gratuito in Tutta la Struttura</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Connessione wireless ad alta velocità disponibile sia nelle camere che negli spazi comuni, ideale per smart working o streaming.</p>
+        </div>
+
+        <!-- 5. Climatizzazione Autonoma -->
+        <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition duration-300 group">
+          <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center mb-4 group-hover:bg-amber-600 group-hover:text-white transition duration-300">
+            <i data-lucide="thermometer-snowflake" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-bold text-lg text-slate-900 mb-2">Aria Condizionata & Riscaldamento</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Regola la temperatura ideale in autonomia sia d'estate che d'inverno grazie agli impianti di climatizzazione moderna.</p>
+        </div>
+
+        <!-- 6. Smart TV & Intrattenimento -->
+        <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition duration-300 group">
+          <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center mb-4 group-hover:bg-amber-600 group-hover:text-white transition duration-300">
+            <i data-lucide="tv" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-bold text-lg text-slate-900 mb-2">Smart TV a Schermo Piatto</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">TV LED con canali digitali e prese elettriche vicino al letto per caricare comodamente tutti i tuoi dispositivi.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEZIONE LE NOSTRE CAMERE -->
+    <section id="camere" class="py-16 px-6 max-w-7xl mx-auto border-t border-slate-200/70">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div>
+          <span class="text-amber-600 font-semibold tracking-wider uppercase text-sm">Le Nostre Sistemazioni</span>
+          <h2 class="text-3xl md:text-4xl font-bold font-serif text-slate-900 mt-1">Camere confortevoli e curate</h2>
+        </div>
+        <p class="text-slate-600 max-w-md mt-4 md:mt-0 text-sm">
+          Tutte le nostre camere includono bagno privato, biancheria di qualità, climatizzazione e accesso alla terrazza panoramica.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Camera 1: Standard Matrimoniale -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition duration-300 flex flex-col">
+          <div class="relative h-64 overflow-hidden">
+            <img src="images/camera-standard.jpg" alt="Camera Matrimoniale B&B CaMa" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+            <div class="absolute top-4 left-4 bg-slate-900/80 backdrop-blur-md text-white text-xs font-semibold px-3 py-1.5 rounded-full">
+              Matrimoniale • 2 Ospiti
+            </div>
+            <div class="absolute bottom-4 right-4 bg-amber-600 text-white font-bold text-sm px-3.5 py-1 rounded-lg shadow">
+              da €70 / notte
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <h3 class="text-xl font-bold text-slate-900 mb-2">Camera Matrimoniale Standard</h3>
+              <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                Comoda camera da letto con letto matrimoniale, bagno privato, finiture curate e affaccio luminoso.
+              </p>
+              <div class="flex flex-wrap gap-2 text-xs text-slate-600">
+                <span class="bg-slate-100 px-2.5 py-1 rounded-md">Letto Matrimoniale</span>
+                <span class="bg-slate-100 px-2.5 py-1 rounded-md">Bagno Privato</span>
+                <span class="bg-slate-100 px-2.5 py-1 rounded-md">Aria Condizionata</span>
+                <span class="bg-slate-100 px-2.5 py-1 rounded-md">TV Schermo Piatto</span>
+                <span class="bg-slate-100 px-2.5 py-1 rounded-md">WiFi Fibra</span>
+              </div>
+            </div>
+            <button onclick="selezionaCamera('standard')" class="w-full text-center border border-amber-600 text-amber-700 hover:bg-amber-600 hover:text-white font-semibold py-2.5 rounded-lg transition duration-200">
+              Seleziona per Prenotare
+            </button>
+          </div>
+        </div>
+
+        <!-- Camera 2: Camera con Balcone e Vista Montagna -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-amber-300 shadow-md hover:shadow-xl transition duration-300 flex flex-col relative ring-2 ring-amber-500/20">
+          <div class="absolute top-3 right-3 z-10 bg-amber-500 text-slate-950 text-xs font-bold px-3 py-1 rounded-full shadow">
+            Vista Panoramica
+          </div>
+          <div class="relative h-64 overflow-hidden">
+            <img src="images/camera-superior.jpg" alt="Camera Superior con Vista Montagna B&B CaMa" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+            <div class="absolute top-4 left-4 bg-slate-900/80 backdrop-blur-md text-white text-xs font-semibold px-3 py-1.5 rounded-full">
+              Vista Montagna • 2 Ospiti
+            </div>
+            <div class="absolute bottom-4 right-4 bg-amber-600 text-white font-bold text-sm px-3.5 py-1 rounded-lg shadow">
+              da €90 / notte
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <h3 class="text-xl font-bold text-slate-900 mb-2">Camera con Balcone e Vista Montagna</h3>
+              <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                La sistemazione più suggestiva: accesso al balcone con affaccio diretto sulla catena dei Monti Lattari.
+              </p>
+              <div class="flex flex-wrap gap-2 text-xs text-slate-600">
+                <span class="bg-amber-50 text-amber-800 px-2.5 py-1 rounded-md font-medium">Balcone con Vista</span>
+                <span class="bg-slate-100 px-2.5 py-1 rounded-md">Letto King Size</span>
+                <span class="bg-slate-100 px-2.5 py-1 rounded-md">Bollitore / Tè</span>
+                <span class="bg-slate-100 px-2.5 py-1 rounded-md">Set Cortesia</span>
+              </div>
+            </div>
+            <button onclick="selezionaCamera('superior')" class="w-full text-center bg-amber-600 hover:bg-amber-700 text-white font-semibold py-2.5 rounded-lg transition duration-200">
+              Seleziona per Prenotare
+            </button>
+          </div>
+        </div>
+
+        <!-- Camera 3: Camera Tripla / Familiare -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition duration-300 flex flex-col">
+          <div class="relative h-64 overflow-hidden">
+            <img src="images/camera-standard.jpg" alt="Camera Tripla / Familiare B&B CaMa" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+            <div class="absolute top-4 left-4 bg-slate-900/80 backdrop-blur-md text-white text-xs font-semibold px-3 py-1.5 rounded-full">
+              Fino a 3-4 Ospiti
+            </div>
+            <div class="absolute bottom-4 right-4 bg-amber-600 text-white font-bold text-sm px-3.5 py-1 rounded-lg shadow">
+              da €110 / notte
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <h3 class="text-xl font-bold text-slate-900 mb-2">Camera Familiare / Tripla</h3>
+              <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                Ideale per famiglie o piccoli gruppi di amici alla scoperta di Pompei e della Costiera.
+              </p>
+              <div class="flex flex-wrap gap-2 text-xs text-slate-600">
+                <span class="bg-slate-100 px-2.5 py-1 rounded-md">Matrimoniale + Singolo</span>
+                <span class="bg-slate-100 px-2.5 py-1 rounded-md">Spaziosa</span>
+                <span class="bg-slate-100 px-2.5 py-1 rounded-md">Climatizzatore</span>
+                <span class="bg-slate-100 px-2.5 py-1 rounded-md">Bagno Privato</span>
+              </div>
+            </div>
+            <button onclick="selezionaCamera('suite')" class="w-full text-center border border-amber-600 text-amber-700 hover:bg-amber-600 hover:text-white font-semibold py-2.5 rounded-lg transition duration-200">
+              Seleziona per Prenotare
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEZIONE RECENSIONI DEGLI OSPITI REALI -->
+    <section id="recensioni" class="py-16 px-6 max-w-7xl mx-auto bg-slate-100/60 rounded-3xl my-8 border border-slate-200/80">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-amber-600 font-semibold tracking-wider uppercase text-sm">Esperienze Verificate</span>
+        <h2 class="text-3xl md:text-4xl font-bold font-serif text-slate-900 mt-1">Cosa dicono i nostri ospiti</h2>
+        <p class="text-slate-600 mt-2">Dicono di noi su Booking.com con punteggio medio 9.5 / 10</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex text-amber-400 gap-1">
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            </div>
+            <p class="text-slate-700 text-sm italic leading-relaxed">
+              "L'accoglienza è stata fantastica! La camera era impeccabile, pulitissima e dotata di ogni comfort. Bellissima la vista panoramica dal quinto piano."
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+            <span class="font-bold text-slate-800">Ospite Booking.com</span>
+            <span class="bg-amber-100 text-amber-800 font-bold px-2 py-0.5 rounded">Voto 10/10</span>
+          </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex text-amber-400 gap-1">
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            </div>
+            <p class="text-slate-700 text-sm italic leading-relaxed">
+              "Posizione strategica per visitare Pompei, Sorrento e la Costiera senza lo stress del caos cittadino. Proprietario gentilissimo e sempre disponibile."
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+            <span class="font-bold text-slate-800">Coppia in Viaggio</span>
+            <span class="bg-amber-100 text-amber-800 font-bold px-2 py-0.5 rounded">Voto 10/10</span>
+          </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex text-amber-400 gap-1">
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            </div>
+            <p class="text-slate-700 text-sm italic leading-relaxed">
+              "Struttura nuova, curata nei dettagli, silenziosa e con un ottimo letto. Ottima anche la colazione e la comodità dell'ascensore."
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+            <span class="font-bold text-slate-800">Ospite Italiano</span>
+            <span class="bg-amber-100 text-amber-800 font-bold px-2 py-0.5 rounded">Voto 9.5/10</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEZIONE PRENOTA (Richiesta Utente) -->
+    <section id="prenota" class="bg-white py-20 px-6 border-t border-slate-200">
+      <div class="max-w-3xl mx-auto bg-slate-900 text-white rounded-3xl shadow-2xl p-8 md:p-12 relative overflow-hidden">
+        
+        <div class="absolute top-0 right-0 w-80 h-80 bg-amber-500/10 rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-80 h-80 bg-amber-600/10 rounded-full blur-3xl -ml-20 -mb-20 pointer-events-none"></div>
+
+        <div class="text-center space-y-3 mb-8 relative z-10">
+          <span class="text-amber-400 text-xs uppercase font-bold tracking-widest bg-amber-400/10 border border-amber-400/20 px-3 py-1 rounded-full">Prenotazione Diretta al Miglior Prezzo</span>
+          <h2 class="text-3xl md:text-4xl font-bold font-serif">Pianifica il tuo soggiorno</h2>
+          <p class="text-slate-400">Seleziona le date per verificare la disponibilità e richiedi la prenotazione</p>
+        </div>
+
+        <form id="bookingForm" onsubmit="handleBookingSubmit(event)" class="space-y-6 relative z-10">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label for="checkin" class="block text-sm font-medium text-slate-300 mb-2 flex items-center gap-2">
+                <i data-lucide="calendar" class="w-4 h-4 text-amber-400"></i>
+                <span>Data di Check-in (dalle 17:00)</span>
+              </label>
+              <input type="date" id="checkin" name="checkin" required
+                     class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 transition">
+            </div>
+            <div>
+              <label for="checkout" class="block text-sm font-medium text-slate-300 mb-2 flex items-center gap-2">
+                <i data-lucide="calendar" class="w-4 h-4 text-amber-400"></i>
+                <span>Data di Check-out (entro 10:30)</span>
+              </label>
+              <input type="date" id="checkout" name="checkout" required
+                     class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 transition">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label for="ospiti" class="block text-sm font-medium text-slate-300 mb-2 flex items-center gap-2">
+                <i data-lucide="users" class="w-4 h-4 text-amber-400"></i>
+                <span>Ospiti</span>
+              </label>
+              <select id="ospiti" name="ospiti" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 transition">
+                <option value="1">1 Ospite</option>
+                <option value="2" selected>2 Ospiti</option>
+                <option value="3">3 Ospiti</option>
+                <option value="4">4 Ospiti</option>
+              </select>
+            </div>
+            <div>
+              <label for="camere" class="block text-sm font-medium text-slate-300 mb-2 flex items-center gap-2">
+                <i data-lucide="bed-double" class="w-4 h-4 text-amber-400"></i>
+                <span>Camera</span>
+              </label>
+              <select id="camere" name="camere" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 transition">
+                <option value="standard" selected>Camera Matrimoniale Standard (€70/notte)</option>
+                <option value="superior">Camera con Balcone e Vista Montagna (€90/notte)</option>
+                <option value="suite">Camera Familiare / Tripla (€110/notte)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Anteprima Notti & Prezzo Dinamico -->
+          <div id="priceSummary" class="hidden bg-slate-800/80 border border-slate-700 p-4 rounded-xl flex items-center justify-between">
+            <div class="text-sm">
+              <span class="text-slate-400">Durata soggiorno: </span>
+              <span id="summaryNights" class="font-semibold text-white">0 notti</span>
+            </div>
+            <div class="text-right">
+              <span class="text-xs text-slate-400 block">Totale stimato</span>
+              <span id="summaryTotal" class="text-lg font-bold text-amber-400">€0</span>
+            </div>
+          </div>
+
+          <button type="submit" class="w-full bg-amber-600 hover:bg-amber-700 text-white font-semibold py-4 rounded-xl shadow-lg hover:shadow-amber-600/30 transition duration-200 flex items-center justify-center gap-2 group text-base">
+            <i data-lucide="sparkles" class="w-5 h-5 group-hover:rotate-12 transition transform"></i>
+            <span>Verifica e Richiedi Prenotazione</span>
+          </button>
+
+          <p class="text-center text-xs text-slate-400">
+            Nessun addebito immediato. Riceverai risposta immediata per confermare il soggiorno.
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <!-- SEZIONE POSIZIONE STRATEGICA & DINTORNI (Dati precisi) -->
+    <section id="dintorni" class="py-16 px-6 max-w-7xl mx-auto">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-amber-600 font-semibold tracking-wider uppercase text-sm">Posizione & Distanze</span>
+        <h2 class="text-3xl md:text-4xl font-bold font-serif text-slate-900 mt-1">Nel cuore della Campania</h2>
+        <p class="text-slate-600 mt-3">Via Raffaele Viviani 36, Gragnano (NA). Ottima base logistica tra archeologia, mare e sentieri escursionistici.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm text-center">
+          <div class="text-3xl font-black text-amber-600 font-serif mb-1">10 km</div>
+          <h4 class="font-bold text-slate-900 mb-1">Pompei & Scavi Archeologici</h4>
+          <p class="text-xs text-slate-500">Raggiungibile in soli 15 minuti di auto o treno locale.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm text-center">
+          <div class="text-3xl font-black text-amber-600 font-serif mb-1">18 km</div>
+          <h4 class="font-bold text-slate-900 mb-1">Sorrento & Traghetti Capri</h4>
+          <p class="text-xs text-slate-500">25 minuti per il centro di Sorrento e gli imbarchi per Capri.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm text-center">
+          <div class="text-3xl font-black text-amber-600 font-serif mb-1">24 km</div>
+          <h4 class="font-bold text-slate-900 mb-1">Marina di Puolo & Costiera</h4>
+          <p class="text-xs text-slate-500">Incantevoli baie, spiagge e la celebre Costiera Amalfitana.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm text-center">
+          <div class="text-3xl font-black text-amber-600 font-serif mb-1">28 km</div>
+          <h4 class="font-bold text-slate-900 mb-1">Parco Nazionale del Vesuvio</h4>
+          <p class="text-xs text-slate-500">Escursioni sul Gran Cono del Vesuvio e sentieri naturalistici.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEZIONE INFO UTILI E REGOLE STRUTTURA -->
+    <section id="info-utili" class="py-16 px-6 max-w-7xl mx-auto border-t border-slate-200">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-amber-600 font-semibold tracking-wider uppercase text-sm">Informazioni Pratiche</span>
+        <h2 class="text-3xl md:text-4xl font-bold font-serif text-slate-900 mt-1">Regole della struttura</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white p-6 rounded-2xl border border-slate-200">
+          <div class="flex items-center gap-3 mb-2 text-slate-900 font-bold">
+            <i data-lucide="clock" class="w-5 h-5 text-amber-600"></i>
+            <span>Check-in</span>
+          </div>
+          <p class="text-sm text-slate-600">Dalle <strong>17:00</strong> alle <strong>21:00</strong> (possibilità di concordare orari diversi su richiesta).</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-slate-200">
+          <div class="flex items-center gap-3 mb-2 text-slate-900 font-bold">
+            <i data-lucide="log-out" class="w-5 h-5 text-amber-600"></i>
+            <span>Check-out</span>
+          </div>
+          <p class="text-sm text-slate-600">Dalle <strong>08:00</strong> fino alle <strong>10:30</strong>.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-slate-200">
+          <div class="flex items-center gap-3 mb-2 text-slate-900 font-bold">
+            <i data-lucide="cigarette-off" class="w-5 h-5 text-amber-600"></i>
+            <span>Non Fumatori</span>
+          </div>
+          <p class="text-sm text-slate-600">Struttura interamente non fumatori (consentito solo in terrazza/balcone).</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-slate-200">
+          <div class="flex items-center gap-3 mb-2 text-slate-900 font-bold">
+            <i data-lucide="building-2" class="w-5 h-5 text-amber-600"></i>
+            <span>Accessibilità</span>
+          </div>
+          <p class="text-sm text-slate-600">Struttura situata al <strong>5° piano con ascensore</strong> per il massimo comfort.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- MODALE CONFERMA PRENOTAZIONE -->
+  <div id="bookingModal" class="fixed inset-0 bg-slate-950/70 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-lg w-full p-8 shadow-2xl relative animate-in fade-in zoom-in duration-200">
+      <button onclick="closeModal()" class="absolute top-5 right-5 text-slate-400 hover:text-slate-600 p-2">
+        <i data-lucide="x" class="w-6 h-6"></i>
+      </button>
+
+      <div class="text-center mb-6">
+        <div class="w-14 h-14 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center mx-auto mb-3">
+          <i data-lucide="check-circle-2" class="w-8 h-8"></i>
+        </div>
+        <h3 class="text-2xl font-bold font-serif text-slate-900">Riepilogo Richiesta</h3>
+        <p class="text-sm text-slate-500">Invia la richiesta direttamente all'host di B&B CaMa</p>
+      </div>
+
+      <!-- Dati Soggiorno -->
+      <div class="bg-slate-50 rounded-2xl p-4 mb-6 border border-slate-100 text-sm space-y-2">
+        <div class="flex justify-between">
+          <span class="text-slate-500">Date:</span>
+          <span id="modalDates" class="font-semibold text-slate-800">-</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-slate-500">Ospiti:</span>
+          <span id="modalGuests" class="font-semibold text-slate-800">-</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-slate-500">Tipologia Camera:</span>
+          <span id="modalRoom" class="font-semibold text-slate-800">-</span>
+        </div>
+        <div class="flex justify-between pt-2 border-t border-slate-200 font-bold text-slate-900">
+          <span>Totale Stimato:</span>
+          <span id="modalTotal" class="text-amber-600">-</span>
+        </div>
+      </div>
+
+      <form onsubmit="sendFinalBooking(event)" class="space-y-4">
+        <div>
+          <label class="block text-xs font-medium text-slate-700 mb-1">Nome e Cognome</label>
+          <input type="text" id="guestName" required placeholder="Es. Mario Rossi" class="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-amber-500">
+        </div>
+        <div>
+          <label class="block text-xs font-medium text-slate-700 mb-1">Telefono</label>
+          <input type="tel" id="guestPhone" required placeholder="Es. +39 333 1234567" class="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-amber-500">
+        </div>
+        <div>
+          <label class="block text-xs font-medium text-slate-700 mb-1">Email</label>
+          <input type="email" id="guestEmail" required placeholder="mario.rossi@email.com" class="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-amber-500">
+        </div>
+
+        <div class="grid grid-cols-2 gap-3 pt-2">
+          <button type="button" onclick="sendViaWhatsApp()" class="bg-emerald-600 hover:bg-emerald-700 text-white font-medium py-3 rounded-xl flex items-center justify-center gap-2 text-sm transition shadow-sm hover:shadow">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>WhatsApp (+39 344 718 6581)</span>
+          </button>
+          <button type="submit" class="bg-amber-600 hover:bg-amber-700 text-white font-medium py-3 rounded-xl flex items-center justify-center gap-2 text-sm transition shadow-sm hover:shadow">
+            <i data-lucide="mail" class="w-4 h-4"></i>
+            <span>Invia Email</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- FOOTER & CONTATTI -->
+  <footer id="contatti" class="bg-slate-950 text-slate-400 py-16 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10">
+      
+      <!-- Brand & Descrizione -->
+      <div class="space-y-4 md:col-span-2">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-amber-600 flex items-center justify-center text-white font-bold font-serif text-xl">
+            C
+          </div>
+          <span class="text-2xl font-bold font-serif text-white">B&B CaMa</span>
+        </div>
+        <p class="text-sm text-slate-400 max-w-md leading-relaxed">
+          Il tuo rifugio accogliente al 5° piano con vista sui Monti Lattari. Ospitalità calorosa, pulizia eccezionale e collegamenti rapidi per Pompei, Sorrento, Capri e tutta la Costiera Amalfitana.
+        </p>
+        <div class="flex items-center gap-2 text-xs text-amber-400 font-semibold">
+          <span>★ Punteggio 9.5 su Booking.com</span>
+        </div>
+      </div>
+
+      <!-- Link Rapidi -->
+      <div class="space-y-3">
+        <h4 class="text-white font-semibold text-sm uppercase tracking-wider">Navigazione</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#chi-siamo" class="hover:text-amber-400 transition">Chi Siamo</a></li>
+          <li><a href="#camere" class="hover:text-amber-400 transition">Le Camere</a></li>
+          <li><a href="#servizi" class="hover:text-amber-400 transition">Servizi Inclusi</a></li>
+          <li><a href="#recensioni" class="hover:text-amber-400 transition">Recensioni Ospiti</a></li>
+          <li><a href="#prenota" class="hover:text-amber-400 transition">Verifica Disponibilità</a></li>
+        </ul>
+      </div>
+
+      <!-- Contatti e Indirizzo Reali -->
+      <div class="space-y-3">
+        <h4 class="text-white font-semibold text-sm uppercase tracking-wider">Contatti & Posizione</h4>
+        <ul class="space-y-2 text-sm">
+          <li class="flex items-start gap-2">
+            <i data-lucide="map-pin" class="w-4 h-4 text-amber-500 shrink-0 mt-1"></i>
+            <span>Via Raffaele Viviani, 36 (Piano 5)<br>80054 Gragnano (NA), Italia</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <i data-lucide="phone" class="w-4 h-4 text-amber-500 shrink-0"></i>
+            <a href="tel:+393447186581" class="hover:text-amber-400 transition">+39 344 718 6581</a>
+          </li>
+          <li class="flex items-center gap-2">
+            <i data-lucide="message-circle" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+            <a href="https://wa.me/393447186581" target="_blank" class="text-emerald-400 hover:underline">WhatsApp Diretto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+      <p>© 2026 B&B CaMa - Via Raffaele Viviani 36, Gragnano (NA). Tutti i diritti riservati.</p>
+      <div class="flex gap-4">
+        <span>Check-in: 17:00 - 21:00</span>
+        <span>Check-out: 08:00 - 10:30</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
