@@ -592,6 +592,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Scroll to top button visibility handler
+  const scrollTopBtn = document.getElementById('scrollToTopBtn');
+  if (scrollTopBtn) {
+    const checkScroll = () => {
+      if (window.scrollY > 250) {
+        scrollTopBtn.classList.add('visible');
+      } else {
+        scrollTopBtn.classList.remove('visible');
+      }
+    };
+    window.addEventListener('scroll', checkScroll, { passive: true });
+    checkScroll();
+  }
+
   // Apply initial language
   setLanguage(currentLang);
 });
