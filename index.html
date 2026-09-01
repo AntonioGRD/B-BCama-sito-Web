@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>B&B CaMa | Via Raffaele Viviani 36, Gragnano - Punteggio 9.5 Eccezionale</title>
-  <meta name="description" content="B&B CaMa a Gragnano (NA): terrazza panoramica sui Monti Lattari, camere con bagno privato, WiFi gratuito e colazione tipica. Punteggio 9.5 su Booking.com.">
+  <title>Lusso CaMa | B&B Esclusivo a Gragnano - Costiera & Pompei</title>
+  <meta name="description" content="Lusso CaMa B&B a Gragnano (NA). Camere di charme al 5° piano con vista panoramica sui Monti Lattari, bagno privato e servizi premium. Punteggio 9.5 Eccezionale.">
   
-  <!-- Google Fonts -->
+  <!-- Google Fonts: Cinzel, Cormorant Garamond, Montserrat -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -18,17 +18,19 @@
       theme: {
         extend: {
           fontFamily: {
-            sans: ['Outfit', 'sans-serif'],
-            serif: ['"Playfair Display"', 'serif'],
+            cinzel: ['Cinzel', 'serif'],
+            editorial: ['"Cormorant Garamond"', 'serif'],
+            sans: ['Montserrat', 'sans-serif'],
           },
           colors: {
-            amber: {
-              50: '#fffbeb',
-              100: '#fef3c7',
-              500: '#f59e0b',
-              600: '#d97706',
-              700: '#b45309',
-              800: '#92400e',
+            gold: {
+              100: '#fbf7ee',
+              200: '#f4e8cc',
+              300: '#e5cd97',
+              400: '#d4b26f',
+              500: '#c5a880',
+              600: '#b08d4b',
+              700: '#8c6a2d',
             }
           }
         }
@@ -39,733 +41,903 @@
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
-  <style>
-    .font-ext500 {
-      font-weight: 600;
-    }
-    .glass-card {
-      background: rgba(255, 255, 255, 0.94);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-    }
-    .hero-gradient {
-      background: radial-gradient(circle at top right, rgba(217, 119, 6, 0.08), transparent 50%),
-                  radial-gradient(circle at bottom left, rgba(245, 158, 11, 0.05), transparent 40%);
-    }
-  </style>
+  <!-- Custom Luxury Stylesheet -->
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-amber-500 selection:text-white">
+<body class="bg-[#0a0a0c] text-[#d1d1d6] font-sans antialiased selection:bg-[#c5a880] selection:text-black">
 
-  <!-- Top Announcement Bar -->
-  <div class="bg-slate-900 text-slate-200 text-xs py-2 px-4">
-    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+  <!-- TOP STATUS STRIP & LANGUAGE SWITCHER -->
+  <div class="bg-[#0e0e12] border-b border-[#c5a880]/20 text-xs py-2 px-6">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-3">
       <div class="flex items-center gap-4">
-        <span class="flex items-center gap-1.5 text-amber-400">
-          <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
-          <strong class="font-bold">9.5 / 10</strong> Eccezionale su Booking.com
+        <span class="flex items-center gap-1.5 text-gold-300 font-medium">
+          <i data-lucide="award" class="w-3.5 h-3.5 text-gold-400"></i>
+          <span data-i18n="topRating">Punteggio Booking.com <strong class="text-white font-bold">9.5 / 10</strong> • Eccezionale</span>
         </span>
-        <span class="hidden sm:inline text-slate-500">|</span>
-        <span class="hidden sm:flex items-center gap-1.5 text-slate-300">
-          <i data-lucide="map-pin" class="w-3.5 h-3.5 text-amber-400"></i>
-          Via Raffaele Viviani, 36 (Piano 5), Gragnano (NA)
+        <span class="hidden md:inline text-zinc-600">|</span>
+        <span class="hidden md:flex items-center gap-1.5 text-zinc-400">
+          <i data-lucide="map-pin" class="w-3.5 h-3.5 text-gold-400"></i>
+          <span data-i18n="topAddress">Via Raffaele Viviani, 36 (Piano 5), Gragnano (NA)</span>
         </span>
       </div>
-      <div class="flex items-center gap-4">
-        <a href="tel:+393447186581" class="hover:text-amber-400 transition flex items-center gap-1">
-          <i data-lucide="phone" class="w-3.5 h-3.5 text-amber-400"></i>
+      
+      <div class="flex items-center gap-5">
+        <a href="tel:+393447186581" class="text-zinc-300 hover:text-gold-300 transition flex items-center gap-1.5">
+          <i data-lucide="phone" class="w-3.5 h-3.5 text-gold-400"></i>
           <span>+39 344 718 6581</span>
         </a>
-        <a href="https://wa.me/393447186581?text=Salve%20B%26B%20CaMa%2C%20vorrei%20informazioni%20sulle%20disponibilit%C3%A0" target="_blank" class="hover:text-emerald-400 transition flex items-center gap-1 text-emerald-400 font-medium">
+        <a href="https://wa.me/393447186581?text=Salve%20B%26B%20CaMa%2C%20vorrei%20informazioni%20sulle%20disponibilit%C3%A0" target="_blank" class="text-emerald-400 hover:text-emerald-300 transition flex items-center gap-1.5 font-medium">
           <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
-          <span>WhatsApp Diretto</span>
+          <span data-i18n="topWhatsApp">WhatsApp Diretto</span>
         </a>
+
+        <!-- Language Selector -->
+        <div class="flex items-center border border-gold-400/40 rounded-sm overflow-hidden text-[11px] font-cinzel">
+          <button onclick="setLanguage('it')" class="lang-btn px-2 py-0.5 transition" data-lang="it">IT</button>
+          <span class="text-zinc-700 bg-black/40 px-0.5">|</span>
+          <button onclick="setLanguage('en')" class="lang-btn px-2 py-0.5 transition" data-lang="en">EN</button>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- Main Navbar -->
-  <header class="sticky top-0 z-50 glass-card border-b border-slate-200/80 transition-all duration-300 shadow-sm" id="navbar">
-    <div class="max-w-7xl mx-auto px-6 py-3.5 flex items-center justify-between">
-      <a href="#" class="flex items-center gap-3 group">
-        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500 to-amber-700 flex items-center justify-center text-white shadow-md group-hover:scale-105 transition duration-300 font-serif font-bold text-xl">
-          C
-        </div>
+  <!-- MAIN LUXURY HEADER -->
+  <header class="luxury-header">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      
+      <!-- Logo Branding (Transparent) -->
+      <a href="#" class="flex items-center gap-3.5 group text-decoration-none">
+        <img src="immagini/logo.png" alt="Logo B&B CaMa" class="h-11 md:h-12 w-auto object-contain transition duration-300 group-hover:scale-105 drop-shadow-[0_2px_10px_rgba(197,168,128,0.3)]">
         <div>
-          <div class="flex items-center gap-2">
-            <span class="text-xl font-bold font-serif tracking-tight text-slate-900 block leading-tight">B&B CaMa</span>
-            <span class="bg-amber-100 text-amber-800 text-[10px] font-bold px-2 py-0.5 rounded-full">9.5 ★</span>
-          </div>
-          <span class="text-[11px] font-medium uppercase tracking-widest text-amber-700">Gragnano • Costiera & Pompei</span>
+          <span class="font-cinzel text-lg md:text-xl font-bold tracking-widest text-white block leading-none">
+            B&B CAMA
+          </span>
+          <span class="text-[9px] tracking-[0.25em] uppercase text-gold-400 font-semibold mt-1 block">
+            Lusso & Charme • Gragnano
+          </span>
         </div>
       </a>
 
-      <!-- Desktop Nav Links -->
-      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-600">
-        <a href="#chi-siamo" class="hover:text-amber-600 transition">Chi Siamo</a>
-        <a href="#camere" class="hover:text-amber-600 transition">Camere</a>
-        <a href="#servizi" class="hover:text-amber-600 transition">Servizi</a>
-        <a href="#recensioni" class="hover:text-amber-600 transition">Recensioni</a>
-        <a href="#dintorni" class="hover:text-amber-600 transition">Posizione</a>
-        <a href="#info-utili" class="hover:text-amber-600 transition">Info & Regole</a>
+      <!-- Desktop Navigation Menu -->
+      <nav class="hidden lg:flex items-center gap-8">
+        <a href="#home" class="luxury-nav-link active" data-i18n="navHome">Home</a>
+        <a href="#camere" class="luxury-nav-link" data-i18n="navRooms">Camere</a>
+        <a href="#servizi" class="luxury-nav-link" data-i18n="navServices">Servizi</a>
+        <a href="#recensioni" class="luxury-nav-link" data-i18n="navReviews">Recensioni</a>
+        <a href="#contatti" class="luxury-nav-link" data-i18n="navContacts">Contatti</a>
       </nav>
 
-      <!-- CTA & Mobile Menu Button -->
-      <div class="flex items-center gap-3">
-        <a href="#prenota" class="hidden sm:inline-flex items-center gap-2 bg-amber-600 hover:bg-amber-700 text-white text-sm font-semibold px-5 py-2.5 rounded-lg shadow-sm hover:shadow transition duration-200">
-          <i data-lucide="calendar-check" class="w-4 h-4"></i>
-          <span>Prenota Subito</span>
+      <!-- CTA & Mobile Toggle -->
+      <div class="flex items-center gap-4">
+        <a href="#prenota" class="hidden sm:inline-flex btn-gold text-xs uppercase py-2.5 px-5" data-i18n="navBook">
+          Prenota
         </a>
-        <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg text-slate-700 hover:bg-slate-100 transition" aria-label="Menu">
+        <button id="mobileMenuBtn" class="lg:hidden text-zinc-300 hover:text-gold-300 p-2 focus:outline-none" aria-label="Menu Mobile">
           <i data-lucide="menu" class="w-6 h-6"></i>
         </button>
       </div>
     </div>
 
-    <!-- Mobile Navigation Drawer -->
-    <div id="mobileMenu" class="hidden md:hidden border-t border-slate-200 bg-white px-6 py-4 space-y-3">
-      <a href="#chi-siamo" class="block py-2 text-slate-700 font-medium hover:text-amber-600 transition">Chi Siamo</a>
-      <a href="#camere" class="block py-2 text-slate-700 font-medium hover:text-amber-600 transition">Camere</a>
-      <a href="#servizi" class="block py-2 text-slate-700 font-medium hover:text-amber-600 transition">Servizi</a>
-      <a href="#recensioni" class="block py-2 text-slate-700 font-medium hover:text-amber-600 transition">Recensioni (9.5/10)</a>
-      <a href="#dintorni" class="block py-2 text-slate-700 font-medium hover:text-amber-600 transition">Posizione & Distanze</a>
-      <a href="#info-utili" class="block py-2 text-slate-700 font-medium hover:text-amber-600 transition">Info & Regole</a>
-      <a href="#prenota" class="block text-center bg-amber-600 hover:bg-amber-700 text-white font-medium py-3 rounded-lg mt-2">
-        Verifica Disponibilità
+    <!-- Mobile Drawer -->
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-zinc-800 bg-[#0c0c10] px-6 py-5 space-y-3">
+      <a href="#home" class="block py-2 text-zinc-300 hover:text-gold-300 font-cinzel tracking-wider text-sm" data-i18n="navHome">Home</a>
+      <a href="#camere" class="block py-2 text-zinc-300 hover:text-gold-300 font-cinzel tracking-wider text-sm" data-i18n="navRooms">Camere</a>
+      <a href="#servizi" class="block py-2 text-zinc-300 hover:text-gold-300 font-cinzel tracking-wider text-sm" data-i18n="navServices">Servizi Premium</a>
+      <a href="#recensioni" class="block py-2 text-zinc-300 hover:text-gold-300 font-cinzel tracking-wider text-sm" data-i18n="navReviews">Recensioni (9.5/10)</a>
+      <a href="#contatti" class="block py-2 text-zinc-300 hover:text-gold-300 font-cinzel tracking-wider text-sm" data-i18n="navContacts">Reception & Contatti</a>
+      <a href="#prenota" class="block text-center btn-gold text-xs uppercase py-3 mt-3" data-i18n="heroBtnBook">
+        Prenota Il Tuo Soggiorno
       </a>
     </div>
   </header>
 
-  <main class="bg-slate-50 text-slate-800 font-sans hero-gradient">
+  <!-- HERO SECTION: DARK LUXURY AESTHETIC -->
+  <section id="home" class="hero-luxury">
+    <div class="hero-luxury-bg" style="background-image: url('immagini/Stabia Sunset1.jpeg');"></div>
+    <div class="hero-luxury-overlay"></div>
 
-    <!-- SEZIONE CHI SIAMO / HERO (Richiesta Utente con dati Booking.com) -->
-    <section id="chi-siamo" class="py-16 md:py-24 px-6 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-      <div class="space-y-6">
-        <div class="inline-flex items-center gap-2 bg-amber-100/80 border border-amber-300/80 text-amber-900 px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wide uppercase shadow-sm">
-          <i data-lucide="award" class="w-3.5 h-3.5 text-amber-600"></i>
-          <span>Punteggio Booking.com 9.5 • Eccezionale</span>
+    <div class="relative z-10 max-w-5xl mx-auto px-6 py-20 text-center flex flex-col items-center">
+      
+      <!-- Luxury Badge & Official Transparent Logo -->
+      <div class="flex flex-col items-center mb-6">
+        <img src="immagini/logo.png" alt="Logo Ufficiale B&B CaMa" class="h-24 md:h-28 w-auto object-contain mb-4 drop-shadow-[0_4px_25px_rgba(197,168,128,0.4)]">
+        <div class="badge-gold animate-pulse">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5 text-gold-300"></i>
+          <span data-i18n="heroBadge">Esperienza di Charme & Panorama</span>
         </div>
-        
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-ext500 tracking-tight text-slate-900 font-serif leading-[1.15]">
-          Il tuo rifugio di charme nel cuore di Gragnano
+      </div>
+
+      <!-- Main Headline in Serif -->
+      <div class="hero-frame-border px-8 py-10 md:px-16 md:py-14 max-w-3xl mb-8">
+        <span class="text-xs uppercase tracking-[0.3em] text-gold-400 font-semibold block mb-3 font-cinzel" data-i18n="heroLocation">
+          Gragnano • Costiera Amalfitana • Pompei
+        </span>
+        <h1 class="font-cinzel text-3xl md:text-5xl lg:text-6xl font-normal text-white tracking-wide leading-tight mb-4" data-i18n="heroTitle">
+          Le Nostre Camere
         </h1>
-        
-        <p class="text-lg text-slate-600 leading-relaxed">
-          Immersi nella capitale mondiale della pasta e in posizione strategica tra Napoli, Pompei, Sorrento e la Costiera Amalfitana. Al 5° piano con vista panoramica sulle montagne e la città, offriamo un’atmosfera calda e familiare, terrazza solarium, camere dotate di ogni comfort e la quiete perfetta per rigenerarti dopo una giornata alla scoperta delle meraviglie campane.
+        <p class="font-editorial italic text-xl md:text-2xl text-gold-200 max-w-xl mx-auto" data-i18n="heroSubtitle">
+          L'eleganza dell'ospitalità italiana con vista mozzafiato sui Monti Lattari
         </p>
-
-        <!-- Punti di forza reali da Booking.com -->
-        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3.5 pt-2 text-slate-700">
-          <div class="flex items-center gap-2 text-sm font-medium bg-white p-2.5 rounded-xl border border-slate-200/80 shadow-sm">
-            <i data-lucide="mountain" class="w-4 h-4 text-amber-600 shrink-0"></i>
-            <span>Vista Montagna & Terrazza</span>
-          </div>
-          <div class="flex items-center gap-2 text-sm font-medium bg-white p-2.5 rounded-xl border border-slate-200/80 shadow-sm">
-            <i data-lucide="coffee" class="w-4 h-4 text-amber-600 shrink-0"></i>
-            <span>Colazione Inclusa</span>
-          </div>
-          <div class="flex items-center gap-2 text-sm font-medium bg-white p-2.5 rounded-xl border border-slate-200/80 shadow-sm">
-            <i data-lucide="sparkles" class="w-4 h-4 text-amber-600 shrink-0"></i>
-            <span>Pulizia Impeccabile (10/10)</span>
-          </div>
-        </div>
-
-        <div class="flex flex-wrap gap-4 pt-4">
-          <a href="#prenota" class="bg-amber-600 hover:bg-amber-700 text-white font-medium px-7 py-3.5 rounded-xl shadow-md hover:shadow-lg transition duration-200 flex items-center gap-2">
-            <span>Verifica Disponibilità</span>
-            <i data-lucide="arrow-right" class="w-4 h-4"></i>
-          </a>
-          <a href="https://wa.me/393447186581?text=Ciao%20B%26B%20CaMa%2C%20vorrei%20informazioni%20sulle%20camere" target="_blank" class="bg-white hover:bg-slate-100 text-slate-800 font-medium px-6 py-3.5 rounded-xl border border-slate-200 shadow-sm transition duration-200 flex items-center gap-2">
-            <i data-lucide="message-circle" class="w-4 h-4 text-emerald-600"></i>
-            <span>Contatta su WhatsApp</span>
-          </a>
-        </div>
       </div>
 
-      <!-- Griglia Immagini Hero -->
-      <div class="grid grid-cols-2 gap-4 relative">
-        <div class="absolute -inset-4 bg-amber-500/10 rounded-3xl -z-10 blur-xl"></div>
+      <!-- Quick Action Buttons -->
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <a href="#prenota" class="btn-gold">
+          <i data-lucide="calendar" class="w-4 h-4"></i>
+          <span data-i18n="heroBtnBook">Prenota Soggiorno</span>
+        </a>
+        <a href="#camere" class="btn-gold-outline">
+          <span data-i18n="heroBtnExplore">Esplora le Camere</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRESENTATION & CAMERE SHOWCASE SECTION -->
+  <section id="camere" class="section-light py-20 md:py-28 px-6">
+    <div class="max-w-6xl mx-auto">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-xs uppercase tracking-[0.25em] text-gold-700 font-cinzel font-semibold block mb-2" data-i18n="sectionWelcome">
+          Benvenuti a CaMa
+        </span>
+        <h2 class="font-cinzel text-3xl md:text-4xl lg:text-5xl font-normal text-zinc-900 tracking-wide mb-6" data-i18n="sectionRoomsTitle">
+          Le Nostre Camere
+        </h2>
+        <div class="w-20 h-[1.5px] bg-gradient-to-r from-transparent via-[#c5a880] to-transparent mx-auto mb-8"></div>
         
-        <div class="group relative overflow-hidden rounded-2xl shadow-lg aspect-[3/4] bg-slate-200">
-          <img src="images/camera-standard.jpg" alt="Camera matrimoniale B&B CaMa Gragnano" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
-          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent flex items-end p-4">
-            <div>
-              <span class="text-xs font-semibold uppercase tracking-wider text-amber-300">Camera Comfort</span>
-              <p class="text-white text-sm font-medium">Bagno Privato & Climatizzazione</p>
+        <p class="font-editorial text-xl md:text-2xl text-zinc-700 leading-relaxed italic mb-4" data-i18n="sectionRoomsQuote">
+          «Un'oasi di tranquillità ed eleganza al 5° piano con terrazza panoramica, dove ogni dettaglio è pensato per regalarti un soggiorno memorabile tra Pompei, Sorrento e la Costiera.»
+        </p>
+        <p class="text-sm md:text-base text-zinc-600 leading-relaxed" data-i18n="sectionRoomsDesc">
+          Situato nel cuore di Gragnano, il B&B CaMa unisce la raffinatezza delle nostre camere dotate di bagno privato, aria condizionata autonoma e Smart TV, alla posizione strategica ideale per scoprire le meraviglie archeologiche e paesaggistiche della Campania.
+        </p>
+      </div>
+
+      <!-- 3-COLUMNS PHOTO SHOWCASE (WITH MULTI-PHOTO GALLERIES) -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-16">
+        
+        <!-- Room 1: Pompei Room (5 Photos) -->
+        <div class="bg-white border border-[#e2d8c3] rounded-sm shadow-sm overflow-hidden flex flex-col justify-between group hover:shadow-xl transition duration-300">
+          <div>
+            <div class="luxury-image-card aspect-[4/3] relative cursor-pointer" onclick="openGallery('pompei', 0)">
+              <div class="absolute top-3 left-3 z-10 bg-black/70 backdrop-blur-sm border border-gold-400/40 text-gold-300 text-[10px] font-cinzel font-semibold px-2.5 py-1 uppercase tracking-wider rounded-sm flex items-center gap-1.5 shadow">
+                <i data-lucide="camera" class="w-3 h-3 text-gold-400"></i>
+                <span>5 Foto</span>
+              </div>
+              <img id="pompeiMainImg" src="immagini/Pompei Room1.jpeg" alt="Pompei Room B&B CaMa Gragnano" class="w-full h-full object-cover">
+              <div class="card-caption flex items-center justify-between">
+                <div>
+                  <span class="text-[10px] font-cinzel tracking-widest text-gold-300 uppercase block" data-i18n="pompeiType">Camera Matrimoniale</span>
+                  <h3 class="font-cinzel text-base font-semibold text-white">Pompei Room</h3>
+                </div>
+                <span class="text-xs text-gold-300 underline font-medium" data-i18n="viewGallery">Apri Galleria +</span>
+              </div>
             </div>
+
+            <!-- Thumbnail Strip -->
+            <div class="p-4 pb-2 bg-[#fbf9f5] border-b border-[#ebd5a0]/40">
+              <span class="text-[10px] font-cinzel uppercase tracking-wider text-zinc-500 block mb-2 font-semibold" data-i18n="allRoomPhotos">Tutte le foto della camera:</span>
+              <div class="grid grid-cols-5 gap-1.5">
+                <div class="aspect-square rounded-sm overflow-hidden border border-gold-400/50 cursor-pointer hover:opacity-100 opacity-90 transition" onclick="changeCardImage('pompeiMainImg', 'immagini/Pompei Room1.jpeg', 'pompei', 0); openGallery('pompei', 0);">
+                  <img src="immagini/Pompei Room1.jpeg" alt="Pompei 1" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-square rounded-sm overflow-hidden border border-zinc-300 cursor-pointer hover:opacity-100 opacity-80 transition hover:border-gold-400" onclick="changeCardImage('pompeiMainImg', 'immagini/Pompei Room2.jpeg', 'pompei', 1); openGallery('pompei', 1);">
+                  <img src="immagini/Pompei Room2.jpeg" alt="Pompei Bagno" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-square rounded-sm overflow-hidden border border-zinc-300 cursor-pointer hover:opacity-100 opacity-80 transition hover:border-gold-400" onclick="changeCardImage('pompeiMainImg', 'immagini/Pompei Room3.jpeg', 'pompei', 2); openGallery('pompei', 2);">
+                  <img src="immagini/Pompei Room3.jpeg" alt="Pompei Dettaglio" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-square rounded-sm overflow-hidden border border-zinc-300 cursor-pointer hover:opacity-100 opacity-80 transition hover:border-gold-400" onclick="changeCardImage('pompeiMainImg', 'immagini/Pompei Room4.jpeg', 'pompei', 3); openGallery('pompei', 3);">
+                  <img src="immagini/Pompei Room4.jpeg" alt="Pompei Camera" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-square rounded-sm overflow-hidden border border-zinc-300 cursor-pointer hover:opacity-100 opacity-80 transition hover:border-gold-400" onclick="changeCardImage('pompeiMainImg', 'immagini/Pompei Room5.jpeg', 'pompei', 4); openGallery('pompei', 4);">
+                  <img src="immagini/Pompei Room5.jpeg" alt="Pompei Vista" class="w-full h-full object-cover">
+                </div>
+              </div>
+            </div>
+
+            <!-- Details -->
+            <div class="p-5 space-y-3">
+              <p class="text-xs text-zinc-600 leading-relaxed" data-i18n="pompeiDesc">
+                Ampia camera con letto matrimoniale confortevole, bagno privato completo con doccia, climatizzazione autonoma, Smart TV e Wi-Fi veloce.
+              </p>
+              <div class="flex flex-wrap gap-1.5 text-[11px] text-zinc-700">
+                <span class="bg-[#f2ece1] px-2 py-0.5 rounded-sm" data-i18n="pompeiTag1">Bagno Privato</span>
+                <span class="bg-[#f2ece1] px-2 py-0.5 rounded-sm" data-i18n="pompeiTag2">Letto Matrimoniale</span>
+                <span class="bg-[#f2ece1] px-2 py-0.5 rounded-sm" data-i18n="pompeiTag3">Clima & TV</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-5 pt-0 flex items-center justify-between border-t border-zinc-100">
+            <div>
+              <span class="text-[10px] text-zinc-500 uppercase tracking-wider block font-cinzel" data-i18n="roomRateFrom">Tariffa da</span>
+              <span class="text-base font-cinzel font-bold text-zinc-900">€70 <span class="text-xs font-normal text-zinc-500" data-i18n="perNight">/ notte</span></span>
+            </div>
+            <button onclick="selezionaCamera('standard')" class="btn-gold text-[11px] uppercase py-2 px-4" data-i18n="btnSelect">
+              Seleziona
+            </button>
           </div>
         </div>
 
-        <div class="group relative overflow-hidden rounded-2xl shadow-lg aspect-[3/4] bg-slate-200 mt-8">
-          <img src="images/dettaglio-colazione.jpg" alt="Colazione e vista terrazza" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
-          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent flex items-end p-4">
+        <!-- Room 2: Stabia Sunset (4 Photos) -->
+        <div class="bg-white border-2 border-gold-400/60 rounded-sm shadow-md overflow-hidden flex flex-col justify-between group hover:shadow-xl transition duration-300 relative">
+          <div>
+            <div class="luxury-image-card aspect-[4/3] relative cursor-pointer" onclick="openGallery('stabia', 0)">
+              <div class="absolute top-3 left-3 z-10 bg-gold-500 text-black text-[10px] font-cinzel font-bold px-2.5 py-1 uppercase tracking-wider rounded-sm shadow-md" data-i18n="panoramicViewBadge">
+                Vista Panoramica
+              </div>
+              <div class="absolute top-3 right-3 z-10 bg-black/70 backdrop-blur-sm border border-gold-400/40 text-gold-300 text-[10px] font-cinzel font-semibold px-2 py-1 uppercase tracking-wider rounded-sm flex items-center gap-1 shadow">
+                <i data-lucide="camera" class="w-3 h-3 text-gold-400"></i>
+                <span>4 Foto</span>
+              </div>
+              <img id="stabiaMainImg" src="immagini/Stabia Sunset1.jpeg" alt="Stabia Sunset B&B CaMa" class="w-full h-full object-cover">
+              <div class="card-caption flex items-center justify-between">
+                <div>
+                  <span class="text-[10px] font-cinzel tracking-widest text-gold-300 uppercase block" data-i18n="stabiaType">Superior con Balcone</span>
+                  <h3 class="font-cinzel text-base font-semibold text-white">Stabia Sunset</h3>
+                </div>
+                <span class="text-xs text-gold-300 underline font-medium" data-i18n="viewGallery">Apri Galleria +</span>
+              </div>
+            </div>
+
+            <!-- Thumbnail Strip -->
+            <div class="p-4 pb-2 bg-[#fbf9f5] border-b border-[#ebd5a0]/40">
+              <span class="text-[10px] font-cinzel uppercase tracking-wider text-zinc-500 block mb-2 font-semibold" data-i18n="allRoomPhotos">Tutte le foto della camera:</span>
+              <div class="grid grid-cols-4 gap-1.5">
+                <div class="aspect-square rounded-sm overflow-hidden border border-gold-400/50 cursor-pointer hover:opacity-100 opacity-90 transition" onclick="changeCardImage('stabiaMainImg', 'immagini/Stabia Sunset1.jpeg', 'stabia', 0); openGallery('stabia', 0);">
+                  <img src="immagini/Stabia Sunset1.jpeg" alt="Stabia 1" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-square rounded-sm overflow-hidden border border-zinc-300 cursor-pointer hover:opacity-100 opacity-80 transition hover:border-gold-400" onclick="changeCardImage('stabiaMainImg', 'immagini/Stabia Sunset2.jpeg', 'stabia', 1); openGallery('stabia', 1);">
+                  <img src="immagini/Stabia Sunset2.jpeg" alt="Stabia Bagno" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-square rounded-sm overflow-hidden border border-zinc-300 cursor-pointer hover:opacity-100 opacity-80 transition hover:border-gold-400" onclick="changeCardImage('stabiaMainImg', 'immagini/Stabia Sunset3.jpeg', 'stabia', 2); openGallery('stabia', 2);">
+                  <img src="immagini/Stabia Sunset3.jpeg" alt="Stabia Panorama" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-square rounded-sm overflow-hidden border border-zinc-300 cursor-pointer hover:opacity-100 opacity-80 transition hover:border-gold-400" onclick="changeCardImage('stabiaMainImg', 'immagini/Stabia Sunset4.jpeg', 'stabia', 3); openGallery('stabia', 3);">
+                  <img src="immagini/Stabia Sunset4.jpeg" alt="Stabia Dettaglio" class="w-full h-full object-cover">
+                </div>
+              </div>
+            </div>
+
+            <!-- Details -->
+            <div class="p-5 space-y-3">
+              <p class="text-xs text-zinc-600 leading-relaxed" data-i18n="stabiaDesc">
+                La sistemazione più suggestiva: accesso al balcone privato con vista panoramica sulla catena montuosa dei Monti Lattari, bagno privato e kit di benvenuto.
+              </p>
+              <div class="flex flex-wrap gap-1.5 text-[11px] text-zinc-700">
+                <span class="bg-gold-100 text-gold-800 font-semibold px-2 py-0.5 rounded-sm border border-gold-300/60" data-i18n="stabiaTag1">Balcone Panoramico</span>
+                <span class="bg-[#f2ece1] px-2 py-0.5 rounded-sm" data-i18n="stabiaTag2">Bagno Privato</span>
+                <span class="bg-[#f2ece1] px-2 py-0.5 rounded-sm" data-i18n="stabiaTag3">Vista Montagna</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-5 pt-0 flex items-center justify-between border-t border-zinc-100">
             <div>
-              <span class="text-xs font-semibold uppercase tracking-wider text-amber-300">Sapori Autentici</span>
-              <p class="text-white text-sm font-medium">Colazione all'Italiana & Caffè</p>
+              <span class="text-[10px] text-zinc-500 uppercase tracking-wider block font-cinzel" data-i18n="roomRateFrom">Tariffa da</span>
+              <span class="text-base font-cinzel font-bold text-zinc-900">€90 <span class="text-xs font-normal text-zinc-500" data-i18n="perNight">/ notte</span></span>
+            </div>
+            <button onclick="selezionaCamera('superior')" class="btn-gold text-[11px] uppercase py-2 px-4" data-i18n="btnSelect">
+              Seleziona
+            </button>
+          </div>
+        </div>
+
+        <!-- Room 3: VesuView (3 Photos) -->
+        <div class="bg-white border-2 border-gold-400/60 rounded-sm shadow-md overflow-hidden flex flex-col justify-between group hover:shadow-xl transition duration-300 relative">
+          <div>
+            <div class="luxury-image-card aspect-[4/3] relative cursor-pointer" onclick="openGallery('vesuview', 0)">
+              <div class="absolute top-3 left-3 z-10 bg-gold-500 text-black text-[10px] font-cinzel font-bold px-2.5 py-1 uppercase tracking-wider rounded-sm shadow-md" data-i18n="panoramicBalconyBadge">
+                Balcone Panoramico
+              </div>
+              <div class="absolute top-3 right-3 z-10 bg-black/70 backdrop-blur-sm border border-gold-400/40 text-gold-300 text-[10px] font-cinzel font-semibold px-2 py-1 uppercase tracking-wider rounded-sm flex items-center gap-1 shadow">
+                <i data-lucide="camera" class="w-3 h-3 text-gold-400"></i>
+                <span>3 Foto</span>
+              </div>
+              <img id="vesuviewMainImg" src="immagini/VesuView1.jpeg" alt="VesuView B&B CaMa" class="w-full h-full object-cover">
+              <div class="card-caption flex items-center justify-between">
+                <div>
+                  <span class="text-[10px] font-cinzel tracking-widest text-gold-300 uppercase block" data-i18n="vesuviewType">Matrimoniale con Balcone</span>
+                  <h3 class="font-cinzel text-base font-semibold text-white">VesuView</h3>
+                </div>
+                <span class="text-xs text-gold-300 underline font-medium" data-i18n="viewGallery">Apri Galleria +</span>
+              </div>
+            </div>
+
+            <!-- Thumbnail Strip -->
+            <div class="p-4 pb-2 bg-[#fbf9f5] border-b border-[#ebd5a0]/40">
+              <span class="text-[10px] font-cinzel uppercase tracking-wider text-zinc-500 block mb-2 font-semibold" data-i18n="allRoomPhotos">Tutte le foto della camera:</span>
+              <div class="grid grid-cols-3 gap-1.5">
+                <div class="aspect-square rounded-sm overflow-hidden border border-gold-400/50 cursor-pointer hover:opacity-100 opacity-90 transition" onclick="changeCardImage('vesuviewMainImg', 'immagini/VesuView1.jpeg', 'vesuview', 0); openGallery('vesuview', 0);">
+                  <img src="immagini/VesuView1.jpeg" alt="VesuView 1" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-square rounded-sm overflow-hidden border border-zinc-300 cursor-pointer hover:opacity-100 opacity-80 transition hover:border-gold-400" onclick="changeCardImage('vesuviewMainImg', 'immagini/VesuView2.jpeg', 'vesuview', 1); openGallery('vesuview', 1);">
+                  <img src="immagini/VesuView2.jpeg" alt="VesuView 2" class="w-full h-full object-cover">
+                </div>
+                <div class="aspect-square rounded-sm overflow-hidden border border-zinc-300 cursor-pointer hover:opacity-100 opacity-80 transition hover:border-gold-400" onclick="changeCardImage('vesuviewMainImg', 'immagini/VesuView3.jpeg', 'vesuview', 2); openGallery('vesuview', 2);">
+                  <img src="immagini/VesuView3.jpeg" alt="VesuView Bagno" class="w-full h-full object-cover">
+                </div>
+              </div>
+            </div>
+
+            <!-- Details -->
+            <div class="p-5 space-y-3">
+              <p class="text-xs text-zinc-600 leading-relaxed" data-i18n="vesuviewDesc">
+                Splendida camera matrimoniale dotata di <strong>balcone panoramico</strong> con vista suggestiva. Riservata per <strong>2 persone</strong> (3° ospite consentito solo per <strong>neonato con culla</strong> su richiesta). Bagno privato e climatizzazione autonoma.
+              </p>
+              <div class="flex flex-wrap gap-1.5 text-[11px] text-zinc-700">
+                <span class="bg-gold-100 text-gold-800 font-semibold px-2 py-0.5 rounded-sm border border-gold-300/60" data-i18n="vesuviewTag1">Balcone Panoramico</span>
+                <span class="bg-[#f2ece1] px-2 py-0.5 rounded-sm" data-i18n="vesuviewTag2">2 Ospiti (+ Culla Neonato)</span>
+                <span class="bg-[#f2ece1] px-2 py-0.5 rounded-sm" data-i18n="vesuviewTag3">Bagno Privato</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-5 pt-0 flex items-center justify-between border-t border-zinc-100">
+            <div>
+              <span class="text-[10px] text-zinc-500 uppercase tracking-wider block font-cinzel" data-i18n="roomRateFrom">Tariffa da</span>
+              <span class="text-base font-cinzel font-bold text-zinc-900">€90 <span class="text-xs font-normal text-zinc-500" data-i18n="perNight">/ notte</span></span>
+            </div>
+            <button onclick="selezionaCamera('suite')" class="btn-gold text-[11px] uppercase py-2 px-4" data-i18n="btnSelect">
+              Seleziona
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Terrazza & Spazi Comuni (5 Photos) -->
+      <div class="border-t border-[#e2d8c3] pt-12">
+        <div class="text-center max-w-2xl mx-auto mb-8">
+          <span class="text-[11px] font-cinzel uppercase tracking-[0.25em] text-gold-700 font-semibold block mb-1" data-i18n="commonAreasBadge">Terrazza & Servizi Comuni (5 Foto)</span>
+          <h3 class="font-cinzel text-2xl text-zinc-900 font-normal" data-i18n="commonAreasTitle">Spazi Comuni & Panorama</h3>
+          <p class="text-xs text-zinc-600 mt-2" data-i18n="commonAreasDesc">La terrazza panoramica al 5° piano con solarium e la cucina comune a disposizione degli ospiti.</p>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+          <div class="luxury-image-card aspect-[4/3] group" onclick="openGallery('esterni', 0)">
+            <img src="immagini/Esterno1.jpeg" alt="Terrazza Panoramica Solarium al 5° Piano" class="w-full h-full object-cover">
+            <div class="card-caption !p-2 !bg-black/70 text-center">
+              <span class="text-[10px] text-gold-300 font-cinzel block" data-i18n="terrazzaSolarium">Terrazza Solarium</span>
+            </div>
+          </div>
+          <div class="luxury-image-card aspect-[4/3] group" onclick="openGallery('esterni', 1)">
+            <img src="immagini/Esterno2.jpeg" alt="Panorama su Gragnano e Monti Lattari" class="w-full h-full object-cover">
+            <div class="card-caption !p-2 !bg-black/70 text-center">
+              <span class="text-[10px] text-gold-300 font-cinzel block" data-i18n="vistaDallAlto">Vista dall'Alto</span>
+            </div>
+          </div>
+          <div class="luxury-image-card aspect-[4/3] group" onclick="openGallery('esterni', 2)">
+            <img src="immagini/Esterno3.jpeg" alt="Catena dei Monti Lattari" class="w-full h-full object-cover">
+            <div class="card-caption !p-2 !bg-black/70 text-center">
+              <span class="text-[10px] text-gold-300 font-cinzel block" data-i18n="montiLattari">Monti Lattari</span>
+            </div>
+          </div>
+          <div class="luxury-image-card aspect-[4/3] group" onclick="openGallery('esterni', 3)">
+            <img src="immagini/Esterno4.jpeg" alt="Area Relax Esterna" class="w-full h-full object-cover">
+            <div class="card-caption !p-2 !bg-black/70 text-center">
+              <span class="text-[10px] text-gold-300 font-cinzel block" data-i18n="areaRelax">Area Relax Terrazza</span>
+            </div>
+          </div>
+          <div class="luxury-image-card aspect-[4/3] group" onclick="openGallery('esterni', 4)">
+            <img src="immagini/cucina in comune con frigo.jpeg" alt="Area Colazione e Cucina Comune" class="w-full h-full object-cover">
+            <div class="card-caption !p-2 !bg-black/70 text-center">
+              <span class="text-[10px] text-gold-300 font-cinzel block" data-i18n="cucinaFrigo">Cucina & Frigorifero</span>
             </div>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- BADGE RICONOSCIMENTO BOOKING.COM -->
-    <section class="py-6 px-6 max-w-7xl mx-auto">
-      <div class="bg-gradient-to-r from-slate-900 to-slate-800 text-white rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl border border-slate-700">
-        <div class="flex items-center gap-5">
-          <div class="w-16 h-16 rounded-2xl bg-amber-500 flex flex-col items-center justify-center font-bold text-slate-950 shadow-inner shrink-0">
-            <span class="text-2xl leading-none">9.5</span>
-            <span class="text-[10px] uppercase font-semibold">su 10</span>
+    </div>
+  </section>
+
+  <!-- SERVIZI PREMIUM -->
+  <section id="servizi" class="section-cream py-20 px-6 border-t border-[#e8e2d5]">
+    <div class="max-w-6xl mx-auto">
+      
+      <!-- Section Title -->
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs uppercase tracking-[0.25em] text-gold-700 font-cinzel font-semibold block mb-2" data-i18n="servicesBadge">
+          Eccellenza & Accoglienza
+        </span>
+        <h2 class="font-cinzel text-3xl md:text-4xl font-normal text-zinc-900 tracking-wide" data-i18n="servicesTitle">
+          Servizi Premium
+        </h2>
+        <div class="w-16 h-[1.5px] bg-gradient-to-r from-transparent via-[#c5a880] to-transparent mx-auto mt-4 mb-3"></div>
+      </div>
+
+      <!-- 4 Gold Icon Badges -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        
+        <!-- Service 1 -->
+        <div class="service-luxury-item bg-white/70 backdrop-blur-sm border border-[#e2d8c3] rounded-sm p-6 shadow-sm">
+          <div class="service-icon-luxury">
+            <i data-lucide="key-round" class="w-7 h-7"></i>
+          </div>
+          <h3 class="font-cinzel text-sm font-semibold text-zinc-900 uppercase tracking-wider mb-2" data-i18n="srv1Title">
+            Check-in Esclusivo
+          </h3>
+          <p class="text-xs text-zinc-600 leading-relaxed" data-i18n="srv1Desc">
+            Accoglienza personalizzata al 5° piano con ascensore, orari flessibili su richiesta e massima riservatezza.
+          </p>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-luxury-item bg-white/70 backdrop-blur-sm border border-[#e2d8c3] rounded-sm p-6 shadow-sm">
+          <div class="service-icon-luxury">
+            <i data-lucide="compass" class="w-7 h-7"></i>
+          </div>
+          <h3 class="font-cinzel text-sm font-semibold text-zinc-900 uppercase tracking-wider mb-2" data-i18n="srv2Title">
+            Assistenza Dedicata
+          </h3>
+          <p class="text-xs text-zinc-600 leading-relaxed" data-i18n="srv2Desc">
+            Consigli d'autore per ristoranti, pastifici storici di Gragnano, transfer per Pompei, Sorrento e la Costiera.
+          </p>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-luxury-item bg-white/70 backdrop-blur-sm border border-[#e2d8c3] rounded-sm p-6 shadow-sm">
+          <div class="service-icon-luxury">
+            <i data-lucide="shield-check" class="w-7 h-7"></i>
+          </div>
+          <h3 class="font-cinzel text-sm font-semibold text-zinc-900 uppercase tracking-wider mb-2" data-i18n="srv3Title">
+            Miglior Tariffa Diretta
+          </h3>
+          <p class="text-xs text-zinc-600 leading-relaxed" data-i18n="srv3Desc">
+            Prenota direttamente senza intermediari per ottenere il miglior prezzo garantito e assistenza immediata.
+          </p>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="service-luxury-item bg-white/70 backdrop-blur-sm border border-[#e2d8c3] rounded-sm p-6 shadow-sm">
+          <div class="service-icon-luxury">
+            <i data-lucide="coffee" class="w-7 h-7"></i>
+          </div>
+          <h3 class="font-cinzel text-sm font-semibold text-zinc-900 uppercase tracking-wider mb-2" data-i18n="srv4Title">
+            Comfort a 5 Stelle
+          </h3>
+          <p class="text-xs text-zinc-600 leading-relaxed" data-i18n="srv4Desc">
+            Colazione all'italiana, caffè espresso, climatizzazione autonoma, Wi-Fi fibra e pulizia impeccabile (voto 10/10).
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Additional Amenities Bullet Points -->
+      <div class="mt-14 pt-8 border-t border-[#e2d8c3] grid grid-cols-2 md:grid-cols-4 gap-4 text-center text-xs font-medium text-zinc-700">
+        <div class="flex items-center justify-center gap-2">
+          <i data-lucide="wifi" class="w-4 h-4 text-gold-600"></i>
+          <span data-i18n="amenityWifi">Wi-Fi Fibra Gratuito</span>
+        </div>
+        <div class="flex items-center justify-center gap-2">
+          <i data-lucide="thermometer-snowflake" class="w-4 h-4 text-gold-600"></i>
+          <span data-i18n="amenityAC">Climatizzazione Autonoma</span>
+        </div>
+        <div class="flex items-center justify-center gap-2">
+          <i data-lucide="tv" class="w-4 h-4 text-gold-600"></i>
+          <span data-i18n="amenityTV">Smart TV a Schermo Piatto</span>
+        </div>
+        <div class="flex items-center justify-center gap-2">
+          <i data-lucide="sparkles" class="w-4 h-4 text-gold-600"></i>
+          <span data-i18n="amenityKit">Set Cortesia & Asciugamani</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- RECENSIONI E RICONOSCIMENTI (BOOKING 9.5) -->
+  <section id="recensioni" class="py-20 px-6 bg-[#0e0e12] border-t border-b border-[#c5a880]/20">
+    <div class="max-w-6xl mx-auto">
+      
+      <!-- Booking 9.5 Banner -->
+      <div class="bg-gradient-to-r from-[#171720] to-[#121217] border border-gold-400/30 rounded-sm p-8 md:p-10 mb-12 flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl relative overflow-hidden">
+        <div class="absolute -top-12 -right-12 w-48 h-48 bg-gold-400/10 rounded-full blur-3xl pointer-events-none"></div>
+        
+        <div class="flex items-center gap-6">
+          <div class="w-20 h-20 rounded-sm bg-gradient-to-br from-gold-300 via-gold-500 to-gold-700 flex flex-col items-center justify-center font-cinzel font-bold text-black shadow-lg shrink-0">
+            <span class="text-3xl leading-none">9.5</span>
+            <span class="text-[9px] uppercase tracking-widest mt-0.5">su 10</span>
           </div>
           <div>
-            <div class="flex items-center gap-2">
-              <span class="font-serif font-bold text-xl text-white">Giudizio Ospiti: Eccezionale</span>
-              <span class="text-amber-400 text-sm">★★★★★</span>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="font-cinzel text-2xl font-bold text-white tracking-wide" data-i18n="scoreTitle">Punteggio Eccezionale</span>
+              <span class="text-gold-400 text-sm">★★★★★</span>
             </div>
-            <p class="text-slate-300 text-sm mt-0.5">Basato su recensioni verificate di ospiti su Booking.com</p>
+            <p class="text-zinc-400 text-sm" data-i18n="scoreSubtitle">Riconoscimento ufficiale basato su recensioni verificate di ospiti internazionali.</p>
           </div>
         </div>
-        <div class="flex flex-wrap gap-4 text-center md:text-left text-xs font-medium text-slate-300">
-          <div class="bg-slate-800/80 px-4 py-2 rounded-xl border border-slate-700">
-            <span class="text-amber-400 font-bold block text-sm">10 / 10</span> Accoglienza & Staff
+
+        <div class="flex flex-wrap gap-4 text-xs font-cinzel text-zinc-300">
+          <div class="bg-black/50 px-4 py-2.5 rounded-sm border border-gold-400/20 text-center">
+            <span class="text-gold-300 font-bold block text-base">10 / 10</span> <span data-i18n="scoreStaff">Accoglienza</span>
           </div>
-          <div class="bg-slate-800/80 px-4 py-2 rounded-xl border border-slate-700">
-            <span class="text-amber-400 font-bold block text-sm">10 / 10</span> Pulizia Struttura
+          <div class="bg-black/50 px-4 py-2.5 rounded-sm border border-gold-400/20 text-center">
+            <span class="text-gold-300 font-bold block text-base">10 / 10</span> <span data-i18n="scoreClean">Pulizia</span>
           </div>
-          <div class="bg-slate-800/80 px-4 py-2 rounded-xl border border-slate-700">
-            <span class="text-amber-400 font-bold block text-sm">9.5 / 10</span> Comfort & Servizi
+          <div class="bg-black/50 px-4 py-2.5 rounded-sm border border-gold-400/20 text-center">
+            <span class="text-gold-300 font-bold block text-base">9.6 / 10</span> <span data-i18n="scoreLoc">Posizione</span>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- SEZIONE SERVIZI COMPLETI STRUTTURA -->
-    <section id="servizi" class="py-16 px-6 max-w-7xl mx-auto">
-      <div class="text-center max-w-2xl mx-auto mb-12">
-        <span class="text-amber-600 font-semibold tracking-wider uppercase text-sm">Servizi & Dotazioni</span>
-        <h2 class="text-3xl md:text-4xl font-bold font-serif text-slate-900 mt-1">Tutto il comfort che desideri</h2>
-        <p class="text-slate-600 mt-3">Ogni dettaglio è curato per assicurarti il massimo relax e un soggiorno piacevole.</p>
+      <!-- Testimonial Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="bg-[#14141a] border border-[#262632] p-6 rounded-sm flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex text-gold-400 gap-1 text-xs">
+              <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
+            </div>
+            <p class="font-editorial italic text-zinc-300 text-lg leading-relaxed" data-i18n="review1Text">
+              «L'accoglienza è stata fantastica! La camera era impeccabile, pulitissima e dotata di ogni comfort. Bellissima la vista panoramica dal quinto piano.»
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-zinc-800 flex items-center justify-between text-xs text-zinc-500">
+            <span class="text-zinc-300 font-medium" data-i18n="review1Author">Ospite Booking.com</span>
+            <span class="text-gold-400 font-bold">10/10</span>
+          </div>
+        </div>
+
+        <div class="bg-[#14141a] border border-[#262632] p-6 rounded-sm flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex text-gold-400 gap-1 text-xs">
+              <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
+            </div>
+            <p class="font-editorial italic text-zinc-300 text-lg leading-relaxed" data-i18n="review2Text">
+              «Posizione strategica per visitare Pompei, Sorrento e la Costiera senza lo stress del caos cittadino. Proprietario gentilissimo e sempre disponibile.»
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-zinc-800 flex items-center justify-between text-xs text-zinc-500">
+            <span class="text-zinc-300 font-medium" data-i18n="review2Author">Coppia in Viaggio</span>
+            <span class="text-gold-400 font-bold">10/10</span>
+          </div>
+        </div>
+
+        <div class="bg-[#14141a] border border-[#262632] p-6 rounded-sm flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex text-gold-400 gap-1 text-xs">
+              <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
+            </div>
+            <p class="font-editorial italic text-zinc-300 text-lg leading-relaxed" data-i18n="review3Text">
+              «Struttura nuova, curata nei minimi dettagli, silenziosa e con un letto comodissimo. Ottima anche la colazione e la presenza dell'ascensore.»
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-zinc-800 flex items-center justify-between text-xs text-zinc-500">
+            <span class="text-zinc-300 font-medium" data-i18n="review3Author">Ospite Italiano</span>
+            <span class="text-gold-400 font-bold">9.5/10</span>
+          </div>
+        </div>
+
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- 1. Terrazza e Vista -->
-        <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition duration-300 group">
-          <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center mb-4 group-hover:bg-amber-600 group-hover:text-white transition duration-300">
-            <i data-lucide="sun-medium" class="w-6 h-6"></i>
-          </div>
-          <h3 class="font-bold text-lg text-slate-900 mb-2">Terrazza & Vista Montagna</h3>
-          <p class="text-slate-600 text-sm leading-relaxed">Situato al 5° piano (con ascensore), il B&B offre una splendida vista panoramica sulla catena montuosa dei Monti Lattari e sulla città di Gragnano.</p>
-        </div>
+    </div>
+  </section>
 
-        <!-- 2. Colazione -->
-        <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition duration-300 group">
-          <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center mb-4 group-hover:bg-amber-600 group-hover:text-white transition duration-300">
-            <i data-lucide="coffee" class="w-6 h-6"></i>
-          </div>
-          <h3 class="font-bold text-lg text-slate-900 mb-2">Colazione all'Italiana</h3>
-          <p class="text-slate-600 text-sm leading-relaxed">Macchina per caffè espresso, bollitore per tè, cornetti freschi, succhi e confetture locali per una colazione autentica.</p>
-        </div>
-
-        <!-- 3. Bagno Privato & Cortesia -->
-        <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition duration-300 group">
-          <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center mb-4 group-hover:bg-amber-600 group-hover:text-white transition duration-300">
-            <i data-lucide="bath" class="w-6 h-6"></i>
-          </div>
-          <h3 class="font-bold text-lg text-slate-900 mb-2">Bagno Privato Completo</h3>
-          <p class="text-slate-600 text-sm leading-relaxed">Ogni camera dispone di bagno privato con bidet, doccia, asciugacapelli, asciugamani morbidi e set di prodotti di cortesia in omaggio.</p>
-        </div>
-
-        <!-- 4. Wi-Fi e Connettività -->
-        <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition duration-300 group">
-          <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center mb-4 group-hover:bg-amber-600 group-hover:text-white transition duration-300">
-            <i data-lucide="wifi" class="w-6 h-6"></i>
-          </div>
-          <h3 class="font-bold text-lg text-slate-900 mb-2">WiFi Gratuito in Tutta la Struttura</h3>
-          <p class="text-slate-600 text-sm leading-relaxed">Connessione wireless ad alta velocità disponibile sia nelle camere che negli spazi comuni, ideale per smart working o streaming.</p>
-        </div>
-
-        <!-- 5. Climatizzazione Autonoma -->
-        <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition duration-300 group">
-          <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center mb-4 group-hover:bg-amber-600 group-hover:text-white transition duration-300">
-            <i data-lucide="thermometer-snowflake" class="w-6 h-6"></i>
-          </div>
-          <h3 class="font-bold text-lg text-slate-900 mb-2">Aria Condizionata & Riscaldamento</h3>
-          <p class="text-slate-600 text-sm leading-relaxed">Regola la temperatura ideale in autonomia sia d'estate che d'inverno grazie agli impianti di climatizzazione moderna.</p>
-        </div>
-
-        <!-- 6. Smart TV & Intrattenimento -->
-        <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition duration-300 group">
-          <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center mb-4 group-hover:bg-amber-600 group-hover:text-white transition duration-300">
-            <i data-lucide="tv" class="w-6 h-6"></i>
-          </div>
-          <h3 class="font-bold text-lg text-slate-900 mb-2">Smart TV a Schermo Piatto</h3>
-          <p class="text-slate-600 text-sm leading-relaxed">TV LED con canali digitali e prese elettriche vicino al letto per caricare comodamente tutti i tuoi dispositivi.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- SEZIONE LE NOSTRE CAMERE -->
-    <section id="camere" class="py-16 px-6 max-w-7xl mx-auto border-t border-slate-200/70">
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
-        <div>
-          <span class="text-amber-600 font-semibold tracking-wider uppercase text-sm">Le Nostre Sistemazioni</span>
-          <h2 class="text-3xl md:text-4xl font-bold font-serif text-slate-900 mt-1">Camere confortevoli e curate</h2>
-        </div>
-        <p class="text-slate-600 max-w-md mt-4 md:mt-0 text-sm">
-          Tutte le nostre camere includono bagno privato, biancheria di qualità, climatizzazione e accesso alla terrazza panoramica.
+  <!-- PRENOTAZIONE RAPIDA & CALCOLATORE DATE -->
+  <section id="prenota" class="py-20 px-6 bg-[#0a0a0c]">
+    <div class="max-w-4xl mx-auto bg-[#131318] border border-gold-400/40 rounded-sm p-8 md:p-12 shadow-2xl relative">
+      <div class="text-center max-w-xl mx-auto mb-10">
+        <span class="badge-gold mb-3" data-i18n="bookBadge">Prenotazione Diretta al Miglior Prezzo</span>
+        <h2 class="font-cinzel text-3xl md:text-4xl text-white font-normal tracking-wide" data-i18n="bookTitle">
+          Verifica Disponibilità
+        </h2>
+        <p class="font-editorial italic text-gold-200 text-lg mt-2" data-i18n="bookSubtitle">
+          Seleziona le date per calcolare la tariffa e inviare la richiesta
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <form id="bookingForm" onsubmit="handleBookingSubmit(event)" class="space-y-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label for="checkin" class="block text-xs font-cinzel uppercase tracking-wider text-gold-300 mb-2 flex items-center gap-2">
+              <i data-lucide="calendar" class="w-4 h-4 text-gold-400"></i>
+              <span data-i18n="labelCheckin">Data Check-in (dalle 17:00)</span>
+            </label>
+            <input type="date" id="checkin" required class="concierge-input">
+          </div>
+          <div>
+            <label for="checkout" class="block text-xs font-cinzel uppercase tracking-wider text-gold-300 mb-2 flex items-center gap-2">
+              <i data-lucide="calendar" class="w-4 h-4 text-gold-400"></i>
+              <span data-i18n="labelCheckout">Data Check-out (entro 10:30)</span>
+            </label>
+            <input type="date" id="checkout" required class="concierge-input">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label for="ospiti" class="block text-xs font-cinzel uppercase tracking-wider text-gold-300 mb-2 flex items-center gap-2">
+              <i data-lucide="users" class="w-4 h-4 text-gold-400"></i>
+              <span data-i18n="labelGuests">Numero Ospiti</span>
+            </label>
+            <select id="ospiti" class="concierge-input">
+              <option value="1" data-i18n="guestCount1">1 Ospite</option>
+              <option value="2" selected data-i18n="guestCount2">2 Ospiti</option>
+              <option value="3" data-i18n="guestCount3">3 Ospiti</option>
+              <option value="4" data-i18n="guestCount4">4 Ospiti</option>
+            </select>
+          </div>
+          <div>
+            <label for="camere" class="block text-xs font-cinzel uppercase tracking-wider text-gold-300 mb-2 flex items-center gap-2">
+              <i data-lucide="bed-double" class="w-4 h-4 text-gold-400"></i>
+              <span data-i18n="labelRoom">Tipologia Camera</span>
+            </label>
+            <select id="camere" class="concierge-input">
+              <option value="standard" data-i18n="optPompei">Pompei Room (Standard) - €70/notte</option>
+              <option value="superior" selected data-i18n="optStabia">Stabia Sunset (Vista Montagna) - €90/notte</option>
+              <option value="suite" data-i18n="optVesu">VesuView (Balcone Panoramico • 2 Ospiti + Culla) - €90/notte</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Dynamic Price Summary Box -->
+        <div id="priceSummary" class="bg-[#1a1a24] border border-gold-400/30 p-4 rounded-sm flex items-center justify-between">
+          <div>
+            <span class="text-xs text-zinc-400 uppercase tracking-wider block font-cinzel" data-i18n="stayDuration">Durata soggiorno</span>
+            <span id="summaryNights" class="text-white font-medium text-sm">2 notti</span>
+          </div>
+          <div class="text-right">
+            <span class="text-xs text-zinc-400 uppercase tracking-wider block font-cinzel" data-i18n="estimatedTotal">Totale stimato</span>
+            <span id="summaryTotal" class="text-2xl font-cinzel font-bold text-gold-300">€180</span>
+          </div>
+        </div>
+
+        <button type="submit" class="w-full btn-gold text-sm uppercase py-4">
+          <i data-lucide="sparkles" class="w-4 h-4"></i>
+          <span data-i18n="btnBookSubmit">Richiedi Prenotazione & Verifica</span>
+        </button>
+
+        <p class="text-center text-xs text-zinc-500" data-i18n="bookDisclaimer">
+          Risposta immediata. Nessun pagamento anticipato richiesto in questa fase.
+        </p>
+      </form>
+    </div>
+  </section>
+
+  <!-- RECEPTION & CONTATTI FOOTER -->
+  <footer id="contatti" class="concierge-section pt-20 pb-12 px-6">
+    <div class="max-w-6xl mx-auto">
+      
+      <!-- Section Title -->
+      <div class="text-center mb-14">
+        <h2 class="font-cinzel text-3xl md:text-5xl font-normal text-white tracking-widest mb-3" data-i18n="contactsSectionTitle">
+          Reception & Contatti
+        </h2>
+        <div class="w-16 h-[1.5px] bg-gradient-to-r from-transparent via-[#c5a880] to-transparent mx-auto"></div>
+      </div>
+
+      <!-- 2 Columns Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-16">
         
-        <!-- Camera 1: Standard Matrimoniale -->
-        <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition duration-300 flex flex-col">
-          <div class="relative h-64 overflow-hidden">
-            <img src="images/camera-standard.jpg" alt="Camera Matrimoniale B&B CaMa" class="w-full h-full object-cover hover:scale-105 transition duration-500">
-            <div class="absolute top-4 left-4 bg-slate-900/80 backdrop-blur-md text-white text-xs font-semibold px-3 py-1.5 rounded-full">
-              Matrimoniale • 2 Ospiti
-            </div>
-            <div class="absolute bottom-4 right-4 bg-amber-600 text-white font-bold text-sm px-3.5 py-1 rounded-lg shadow">
-              da €70 / notte
+        <!-- Left Column: Direct Contacts & Assistance -->
+        <div class="lg:col-span-5 space-y-6">
+          <div class="flex items-center gap-4 bg-[#141419] p-4 border border-gold-400/30 rounded-sm">
+            <img src="immagini/logo.png" alt="Logo B&B CaMa" class="h-14 w-auto object-contain shrink-0 drop-shadow-[0_2px_10px_rgba(197,168,128,0.3)]">
+            <div>
+              <h3 class="font-cinzel text-base text-gold-300 uppercase tracking-wider font-bold">
+                B&B CaMa
+              </h3>
+              <p class="text-xs text-zinc-400" data-i18n="contactsHelpDesc">Bed & Breakfast di Pregio a Gragnano</p>
             </div>
           </div>
-          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
-            <div>
-              <h3 class="text-xl font-bold text-slate-900 mb-2">Camera Matrimoniale Standard</h3>
-              <p class="text-slate-600 text-sm leading-relaxed mb-4">
-                Comoda camera da letto con letto matrimoniale, bagno privato, finiture curate e affaccio luminoso.
-              </p>
-              <div class="flex flex-wrap gap-2 text-xs text-slate-600">
-                <span class="bg-slate-100 px-2.5 py-1 rounded-md">Letto Matrimoniale</span>
-                <span class="bg-slate-100 px-2.5 py-1 rounded-md">Bagno Privato</span>
-                <span class="bg-slate-100 px-2.5 py-1 rounded-md">Aria Condizionata</span>
-                <span class="bg-slate-100 px-2.5 py-1 rounded-md">TV Schermo Piatto</span>
-                <span class="bg-slate-100 px-2.5 py-1 rounded-md">WiFi Fibra</span>
+
+          <!-- Contact items -->
+          <div class="space-y-3 pt-1">
+            
+            <a href="tel:+393447186581" class="flex items-center gap-3.5 p-3 rounded-sm bg-[#141419] border border-[#2a2a34] hover:border-gold-400 transition group text-decoration-none">
+              <div class="w-9 h-9 rounded-full bg-gold-400/10 border border-gold-400/30 flex items-center justify-center text-gold-400 group-hover:bg-gold-400 group-hover:text-black transition shrink-0">
+                <i data-lucide="phone" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <span class="text-[10px] font-cinzel uppercase tracking-wider text-zinc-400 block" data-i18n="contactPhoneLabel">Mobile & Info</span>
+                <span class="text-sm text-white font-medium">+39 344 718 6581</span>
+              </div>
+            </a>
+
+            <a href="tel:08118974870" class="flex items-center gap-3.5 p-3 rounded-sm bg-[#141419] border border-[#2a2a34] hover:border-gold-400 transition group text-decoration-none">
+              <div class="w-9 h-9 rounded-full bg-gold-400/10 border border-gold-400/30 flex items-center justify-center text-gold-400 group-hover:bg-gold-400 group-hover:text-black transition shrink-0">
+                <i data-lucide="phone-call" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <span class="text-[10px] font-cinzel uppercase tracking-wider text-zinc-400 block" data-i18n="contactLandlineLabel">Telefono Fisso</span>
+                <span class="text-sm text-white font-medium">081 18974870</span>
+              </div>
+            </a>
+
+            <a href="https://wa.me/393447186581?text=Salve%20Reception%20B%26B%20CaMa%2C%20vorrei%20prenotare%20un%20soggiorno" target="_blank" class="flex items-center gap-3.5 p-3 rounded-sm bg-[#141419] border border-[#2a2a34] hover:border-emerald-500 transition group text-decoration-none">
+              <div class="w-9 h-9 rounded-full bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 group-hover:bg-emerald-500 group-hover:text-black transition shrink-0">
+                <i data-lucide="message-circle" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <span class="text-[10px] font-cinzel uppercase tracking-wider text-zinc-400 block" data-i18n="contactWhatsAppLabel">WhatsApp Diretto 24/7</span>
+                <span class="text-sm text-emerald-400 font-medium" data-i18n="contactWhatsAppSub">Scrivici in tempo reale</span>
+              </div>
+            </a>
+
+            <a href="mailto:bebcama1963@gmail.com" class="flex items-center gap-3.5 p-3 rounded-sm bg-[#141419] border border-[#2a2a34] hover:border-gold-400 transition group text-decoration-none">
+              <div class="w-9 h-9 rounded-full bg-gold-400/10 border border-gold-400/30 flex items-center justify-center text-gold-400 group-hover:bg-gold-400 group-hover:text-black transition shrink-0">
+                <i data-lucide="mail" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <span class="text-[10px] font-cinzel uppercase tracking-wider text-zinc-400 block" data-i18n="contactEmailLabel">Email Ufficiale</span>
+                <span class="text-sm text-zinc-200 font-medium">bebcama1963@gmail.com</span>
+              </div>
+            </a>
+
+            <div class="flex items-start gap-3.5 p-3 rounded-sm bg-[#141419] border border-[#2a2a34]">
+              <div class="w-9 h-9 rounded-full bg-gold-400/10 border border-gold-400/30 flex items-center justify-center text-gold-400 shrink-0 mt-0.5">
+                <i data-lucide="map-pin" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <span class="text-[10px] font-cinzel uppercase tracking-wider text-zinc-400 block" data-i18n="contactAddressLabel">Posizione & Indirizzo</span>
+                <span class="text-xs text-zinc-300" data-i18n="contactAddressValue">Via Raffaele Viviani, 36 (Piano 5 con ascensore)<br>80054 Gragnano (NA), Italia</span>
               </div>
             </div>
-            <button onclick="selezionaCamera('standard')" class="w-full text-center border border-amber-600 text-amber-700 hover:bg-amber-600 hover:text-white font-semibold py-2.5 rounded-lg transition duration-200">
-              Seleziona per Prenotare
-            </button>
+
           </div>
         </div>
 
-        <!-- Camera 2: Camera con Balcone e Vista Montagna -->
-        <div class="bg-white rounded-2xl overflow-hidden border border-amber-300 shadow-md hover:shadow-xl transition duration-300 flex flex-col relative ring-2 ring-amber-500/20">
-          <div class="absolute top-3 right-3 z-10 bg-amber-500 text-slate-950 text-xs font-bold px-3 py-1 rounded-full shadow">
-            Vista Panoramica
-          </div>
-          <div class="relative h-64 overflow-hidden">
-            <img src="images/camera-superior.jpg" alt="Camera Superior con Vista Montagna B&B CaMa" class="w-full h-full object-cover hover:scale-105 transition duration-500">
-            <div class="absolute top-4 left-4 bg-slate-900/80 backdrop-blur-md text-white text-xs font-semibold px-3 py-1.5 rounded-full">
-              Vista Montagna • 2 Ospiti
-            </div>
-            <div class="absolute bottom-4 right-4 bg-amber-600 text-white font-bold text-sm px-3.5 py-1 rounded-lg shadow">
-              da €90 / notte
-            </div>
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+        <!-- Right Column: Direct Inquiry Form -->
+        <div class="lg:col-span-7 bg-[#121217] border border-gold-400/30 rounded-sm p-6 sm:p-8 shadow-xl">
+          <h3 class="font-cinzel text-base text-gold-300 uppercase tracking-wider mb-4" data-i18n="formTitle">
+            Richiesta Diretta di Soggiorno
+          </h3>
+
+          <form onsubmit="handleContactSubmit(event)" class="space-y-4">
             <div>
-              <h3 class="text-xl font-bold text-slate-900 mb-2">Camera con Balcone e Vista Montagna</h3>
-              <p class="text-slate-600 text-sm leading-relaxed mb-4">
-                La sistemazione più suggestiva: accesso al balcone con affaccio diretto sulla catena dei Monti Lattari.
-              </p>
-              <div class="flex flex-wrap gap-2 text-xs text-slate-600">
-                <span class="bg-amber-50 text-amber-800 px-2.5 py-1 rounded-md font-medium">Balcone con Vista</span>
-                <span class="bg-slate-100 px-2.5 py-1 rounded-md">Letto King Size</span>
-                <span class="bg-slate-100 px-2.5 py-1 rounded-md">Bollitore / Tè</span>
-                <span class="bg-slate-100 px-2.5 py-1 rounded-md">Set Cortesia</span>
+              <input type="text" id="contactName" required placeholder="Nome e Cognome *" data-i18n-ph="inputNamePh" class="concierge-input">
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <input type="email" id="contactEmail" required placeholder="Email *" data-i18n-ph="inputEmailPh" class="concierge-input">
+              </div>
+              <div>
+                <input type="tel" id="contactPhone" placeholder="Telefono / WhatsApp" data-i18n-ph="inputPhonePh" class="concierge-input">
               </div>
             </div>
-            <button onclick="selezionaCamera('superior')" class="w-full text-center bg-amber-600 hover:bg-amber-700 text-white font-semibold py-2.5 rounded-lg transition duration-200">
-              Seleziona per Prenotare
-            </button>
-          </div>
-        </div>
 
-        <!-- Camera 3: Camera Tripla / Familiare -->
-        <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition duration-300 flex flex-col">
-          <div class="relative h-64 overflow-hidden">
-            <img src="images/camera-standard.jpg" alt="Camera Tripla / Familiare B&B CaMa" class="w-full h-full object-cover hover:scale-105 transition duration-500">
-            <div class="absolute top-4 left-4 bg-slate-900/80 backdrop-blur-md text-white text-xs font-semibold px-3 py-1.5 rounded-full">
-              Fino a 3-4 Ospiti
-            </div>
-            <div class="absolute bottom-4 right-4 bg-amber-600 text-white font-bold text-sm px-3.5 py-1 rounded-lg shadow">
-              da €110 / notte
-            </div>
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
-            <div>
-              <h3 class="text-xl font-bold text-slate-900 mb-2">Camera Familiare / Tripla</h3>
-              <p class="text-slate-600 text-sm leading-relaxed mb-4">
-                Ideale per famiglie o piccoli gruppi di amici alla scoperta di Pompei e della Costiera.
-              </p>
-              <div class="flex flex-wrap gap-2 text-xs text-slate-600">
-                <span class="bg-slate-100 px-2.5 py-1 rounded-md">Matrimoniale + Singolo</span>
-                <span class="bg-slate-100 px-2.5 py-1 rounded-md">Spaziosa</span>
-                <span class="bg-slate-100 px-2.5 py-1 rounded-md">Climatizzatore</span>
-                <span class="bg-slate-100 px-2.5 py-1 rounded-md">Bagno Privato</span>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <select id="contactRoom" class="concierge-input">
+                  <option value="Tutte le Camere / Informazione Generale" data-i18n="optAllRooms">Camera d'interesse (qualsiasi)</option>
+                  <option value="Pompei Room (Standard)">Pompei Room</option>
+                  <option value="Stabia Sunset (Vista Montagna)">Stabia Sunset</option>
+                  <option value="VesuView (Balcone Panoramico • 2 Ospiti + Culla)">VesuView (Balcone Panoramico)</option>
+                </select>
+              </div>
+              <div>
+                <input type="text" id="contactNotes" placeholder="Date indicative o note speciali" data-i18n-ph="inputNotesPh" class="concierge-input">
               </div>
             </div>
-            <button onclick="selezionaCamera('suite')" class="w-full text-center border border-amber-600 text-amber-700 hover:bg-amber-600 hover:text-white font-semibold py-2.5 rounded-lg transition duration-200">
-              Seleziona per Prenotare
+
+            <!-- Big Golden Button -->
+            <button type="submit" class="w-full btn-gold py-4 text-sm uppercase tracking-widest mt-2">
+              <i data-lucide="send" class="w-4 h-4"></i>
+              <span data-i18n="btnFormSubmit">Invia Richiesta di Soggiorno</span>
             </button>
-          </div>
+          </form>
         </div>
-      </div>
-    </section>
 
-    <!-- SEZIONE RECENSIONI DEGLI OSPITI REALI -->
-    <section id="recensioni" class="py-16 px-6 max-w-7xl mx-auto bg-slate-100/60 rounded-3xl my-8 border border-slate-200/80">
-      <div class="text-center max-w-2xl mx-auto mb-12">
-        <span class="text-amber-600 font-semibold tracking-wider uppercase text-sm">Esperienze Verificate</span>
-        <h2 class="text-3xl md:text-4xl font-bold font-serif text-slate-900 mt-1">Cosa dicono i nostri ospiti</h2>
-        <p class="text-slate-600 mt-2">Dicono di noi su Booking.com con punteggio medio 9.5 / 10</p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
-          <div class="space-y-3">
-            <div class="flex text-amber-400 gap-1">
-              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-            </div>
-            <p class="text-slate-700 text-sm italic leading-relaxed">
-              "L'accoglienza è stata fantastica! La camera era impeccabile, pulitissima e dotata di ogni comfort. Bellissima la vista panoramica dal quinto piano."
-            </p>
-          </div>
-          <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
-            <span class="font-bold text-slate-800">Ospite Booking.com</span>
-            <span class="bg-amber-100 text-amber-800 font-bold px-2 py-0.5 rounded">Voto 10/10</span>
-          </div>
+      <!-- Bottom Bar & Copyright -->
+      <div class="pt-8 border-t border-zinc-800/80 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 gap-4">
+        <div class="flex items-center gap-2">
+          <span class="font-cinzel font-bold text-zinc-400">LUSSO CAMA</span>
+          <span data-i18n="footerCopyright">© 2026 • Tutti i diritti riservati</span>
         </div>
-
-        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
-          <div class="space-y-3">
-            <div class="flex text-amber-400 gap-1">
-              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-            </div>
-            <p class="text-slate-700 text-sm italic leading-relaxed">
-              "Posizione strategica per visitare Pompei, Sorrento e la Costiera senza lo stress del caos cittadino. Proprietario gentilissimo e sempre disponibile."
-            </p>
-          </div>
-          <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
-            <span class="font-bold text-slate-800">Coppia in Viaggio</span>
-            <span class="bg-amber-100 text-amber-800 font-bold px-2 py-0.5 rounded">Voto 10/10</span>
-          </div>
-        </div>
-
-        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
-          <div class="space-y-3">
-            <div class="flex text-amber-400 gap-1">
-              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-            </div>
-            <p class="text-slate-700 text-sm italic leading-relaxed">
-              "Struttura nuova, curata nei dettagli, silenziosa e con un ottimo letto. Ottima anche la colazione e la comodità dell'ascensore."
-            </p>
-          </div>
-          <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
-            <span class="font-bold text-slate-800">Ospite Italiano</span>
-            <span class="bg-amber-100 text-amber-800 font-bold px-2 py-0.5 rounded">Voto 9.5/10</span>
-          </div>
+        <div class="flex gap-6 font-cinzel tracking-wider text-[11px]">
+          <span data-i18n="footerCheckinHours">Check-in: 17:00 - 21:00</span>
+          <span data-i18n="footerCheckoutHours">Check-out: 08:00 - 10:30</span>
         </div>
       </div>
-    </section>
 
-    <!-- SEZIONE PRENOTA (Richiesta Utente) -->
-    <section id="prenota" class="bg-white py-20 px-6 border-t border-slate-200">
-      <div class="max-w-3xl mx-auto bg-slate-900 text-white rounded-3xl shadow-2xl p-8 md:p-12 relative overflow-hidden">
-        
-        <div class="absolute top-0 right-0 w-80 h-80 bg-amber-500/10 rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none"></div>
-        <div class="absolute bottom-0 left-0 w-80 h-80 bg-amber-600/10 rounded-full blur-3xl -ml-20 -mb-20 pointer-events-none"></div>
+    </div>
+  </footer>
 
-        <div class="text-center space-y-3 mb-8 relative z-10">
-          <span class="text-amber-400 text-xs uppercase font-bold tracking-widest bg-amber-400/10 border border-amber-400/20 px-3 py-1 rounded-full">Prenotazione Diretta al Miglior Prezzo</span>
-          <h2 class="text-3xl md:text-4xl font-bold font-serif">Pianifica il tuo soggiorno</h2>
-          <p class="text-slate-400">Seleziona le date per verificare la disponibilità e richiedi la prenotazione</p>
-        </div>
-
-        <form id="bookingForm" onsubmit="handleBookingSubmit(event)" class="space-y-6 relative z-10">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <label for="checkin" class="block text-sm font-medium text-slate-300 mb-2 flex items-center gap-2">
-                <i data-lucide="calendar" class="w-4 h-4 text-amber-400"></i>
-                <span>Data di Check-in (dalle 17:00)</span>
-              </label>
-              <input type="date" id="checkin" name="checkin" required
-                     class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 transition">
-            </div>
-            <div>
-              <label for="checkout" class="block text-sm font-medium text-slate-300 mb-2 flex items-center gap-2">
-                <i data-lucide="calendar" class="w-4 h-4 text-amber-400"></i>
-                <span>Data di Check-out (entro 10:30)</span>
-              </label>
-              <input type="date" id="checkout" name="checkout" required
-                     class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 transition">
-            </div>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <label for="ospiti" class="block text-sm font-medium text-slate-300 mb-2 flex items-center gap-2">
-                <i data-lucide="users" class="w-4 h-4 text-amber-400"></i>
-                <span>Ospiti</span>
-              </label>
-              <select id="ospiti" name="ospiti" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 transition">
-                <option value="1">1 Ospite</option>
-                <option value="2" selected>2 Ospiti</option>
-                <option value="3">3 Ospiti</option>
-                <option value="4">4 Ospiti</option>
-              </select>
-            </div>
-            <div>
-              <label for="camere" class="block text-sm font-medium text-slate-300 mb-2 flex items-center gap-2">
-                <i data-lucide="bed-double" class="w-4 h-4 text-amber-400"></i>
-                <span>Camera</span>
-              </label>
-              <select id="camere" name="camere" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 transition">
-                <option value="standard" selected>Camera Matrimoniale Standard (€70/notte)</option>
-                <option value="superior">Camera con Balcone e Vista Montagna (€90/notte)</option>
-                <option value="suite">Camera Familiare / Tripla (€110/notte)</option>
-              </select>
-            </div>
-          </div>
-
-          <!-- Anteprima Notti & Prezzo Dinamico -->
-          <div id="priceSummary" class="hidden bg-slate-800/80 border border-slate-700 p-4 rounded-xl flex items-center justify-between">
-            <div class="text-sm">
-              <span class="text-slate-400">Durata soggiorno: </span>
-              <span id="summaryNights" class="font-semibold text-white">0 notti</span>
-            </div>
-            <div class="text-right">
-              <span class="text-xs text-slate-400 block">Totale stimato</span>
-              <span id="summaryTotal" class="text-lg font-bold text-amber-400">€0</span>
-            </div>
-          </div>
-
-          <button type="submit" class="w-full bg-amber-600 hover:bg-amber-700 text-white font-semibold py-4 rounded-xl shadow-lg hover:shadow-amber-600/30 transition duration-200 flex items-center justify-center gap-2 group text-base">
-            <i data-lucide="sparkles" class="w-5 h-5 group-hover:rotate-12 transition transform"></i>
-            <span>Verifica e Richiedi Prenotazione</span>
-          </button>
-
-          <p class="text-center text-xs text-slate-400">
-            Nessun addebito immediato. Riceverai risposta immediata per confermare il soggiorno.
-          </p>
-        </form>
-      </div>
-    </section>
-
-    <!-- SEZIONE POSIZIONE STRATEGICA & DINTORNI (Dati precisi) -->
-    <section id="dintorni" class="py-16 px-6 max-w-7xl mx-auto">
-      <div class="text-center max-w-2xl mx-auto mb-12">
-        <span class="text-amber-600 font-semibold tracking-wider uppercase text-sm">Posizione & Distanze</span>
-        <h2 class="text-3xl md:text-4xl font-bold font-serif text-slate-900 mt-1">Nel cuore della Campania</h2>
-        <p class="text-slate-600 mt-3">Via Raffaele Viviani 36, Gragnano (NA). Ottima base logistica tra archeologia, mare e sentieri escursionistici.</p>
-      </div>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm text-center">
-          <div class="text-3xl font-black text-amber-600 font-serif mb-1">10 km</div>
-          <h4 class="font-bold text-slate-900 mb-1">Pompei & Scavi Archeologici</h4>
-          <p class="text-xs text-slate-500">Raggiungibile in soli 15 minuti di auto o treno locale.</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm text-center">
-          <div class="text-3xl font-black text-amber-600 font-serif mb-1">18 km</div>
-          <h4 class="font-bold text-slate-900 mb-1">Sorrento & Traghetti Capri</h4>
-          <p class="text-xs text-slate-500">25 minuti per il centro di Sorrento e gli imbarchi per Capri.</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm text-center">
-          <div class="text-3xl font-black text-amber-600 font-serif mb-1">24 km</div>
-          <h4 class="font-bold text-slate-900 mb-1">Marina di Puolo & Costiera</h4>
-          <p class="text-xs text-slate-500">Incantevoli baie, spiagge e la celebre Costiera Amalfitana.</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm text-center">
-          <div class="text-3xl font-black text-amber-600 font-serif mb-1">28 km</div>
-          <h4 class="font-bold text-slate-900 mb-1">Parco Nazionale del Vesuvio</h4>
-          <p class="text-xs text-slate-500">Escursioni sul Gran Cono del Vesuvio e sentieri naturalistici.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- SEZIONE INFO UTILI E REGOLE STRUTTURA -->
-    <section id="info-utili" class="py-16 px-6 max-w-7xl mx-auto border-t border-slate-200">
-      <div class="text-center max-w-2xl mx-auto mb-12">
-        <span class="text-amber-600 font-semibold tracking-wider uppercase text-sm">Informazioni Pratiche</span>
-        <h2 class="text-3xl md:text-4xl font-bold font-serif text-slate-900 mt-1">Regole della struttura</h2>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="bg-white p-6 rounded-2xl border border-slate-200">
-          <div class="flex items-center gap-3 mb-2 text-slate-900 font-bold">
-            <i data-lucide="clock" class="w-5 h-5 text-amber-600"></i>
-            <span>Check-in</span>
-          </div>
-          <p class="text-sm text-slate-600">Dalle <strong>17:00</strong> alle <strong>21:00</strong> (possibilità di concordare orari diversi su richiesta).</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-2xl border border-slate-200">
-          <div class="flex items-center gap-3 mb-2 text-slate-900 font-bold">
-            <i data-lucide="log-out" class="w-5 h-5 text-amber-600"></i>
-            <span>Check-out</span>
-          </div>
-          <p class="text-sm text-slate-600">Dalle <strong>08:00</strong> fino alle <strong>10:30</strong>.</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-2xl border border-slate-200">
-          <div class="flex items-center gap-3 mb-2 text-slate-900 font-bold">
-            <i data-lucide="cigarette-off" class="w-5 h-5 text-amber-600"></i>
-            <span>Non Fumatori</span>
-          </div>
-          <p class="text-sm text-slate-600">Struttura interamente non fumatori (consentito solo in terrazza/balcone).</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-2xl border border-slate-200">
-          <div class="flex items-center gap-3 mb-2 text-slate-900 font-bold">
-            <i data-lucide="building-2" class="w-5 h-5 text-amber-600"></i>
-            <span>Accessibilità</span>
-          </div>
-          <p class="text-sm text-slate-600">Struttura situata al <strong>5° piano con ascensore</strong> per il massimo comfort.</p>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- MODALE CONFERMA PRENOTAZIONE -->
-  <div id="bookingModal" class="fixed inset-0 bg-slate-950/70 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
-    <div class="bg-white rounded-3xl max-w-lg w-full p-8 shadow-2xl relative animate-in fade-in zoom-in duration-200">
-      <button onclick="closeModal()" class="absolute top-5 right-5 text-slate-400 hover:text-slate-600 p-2">
+  <!-- BOOKING MODAL -->
+  <div id="bookingModal" class="fixed inset-0 bg-black/85 backdrop-blur-md z-50 hidden items-center justify-center p-4">
+    <div class="bg-[#14141a] border border-gold-400/50 rounded-sm max-w-lg w-full p-8 shadow-2xl relative animate-in fade-in zoom-in duration-200 text-white">
+      <button onclick="closeModal()" class="absolute top-5 right-5 text-zinc-400 hover:text-white p-2">
         <i data-lucide="x" class="w-6 h-6"></i>
       </button>
 
       <div class="text-center mb-6">
-        <div class="w-14 h-14 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center mx-auto mb-3">
-          <i data-lucide="check-circle-2" class="w-8 h-8"></i>
+        <div class="w-14 h-14 bg-gold-400/10 border border-gold-400/40 text-gold-300 rounded-full flex items-center justify-center mx-auto mb-3">
+          <i data-lucide="check-circle-2" class="w-7 h-7"></i>
         </div>
-        <h3 class="text-2xl font-bold font-serif text-slate-900">Riepilogo Richiesta</h3>
-        <p class="text-sm text-slate-500">Invia la richiesta direttamente all'host di B&B CaMa</p>
+        <h3 class="text-2xl font-cinzel font-normal text-white" data-i18n="bookTitle">Riepilogo Soggiorno</h3>
+        <p class="text-xs text-zinc-400 font-sans mt-1">Invia la richiesta direttamente all'host di Lusso CaMa</p>
       </div>
 
-      <!-- Dati Soggiorno -->
-      <div class="bg-slate-50 rounded-2xl p-4 mb-6 border border-slate-100 text-sm space-y-2">
+      <!-- Soggiorno Info Box -->
+      <div class="bg-[#1a1a24] border border-zinc-800 rounded-sm p-4 mb-6 text-sm space-y-2 font-sans">
         <div class="flex justify-between">
-          <span class="text-slate-500">Date:</span>
-          <span id="modalDates" class="font-semibold text-slate-800">-</span>
+          <span class="text-zinc-400">Date:</span>
+          <span id="modalDates" class="font-medium text-white">-</span>
         </div>
         <div class="flex justify-between">
-          <span class="text-slate-500">Ospiti:</span>
-          <span id="modalGuests" class="font-semibold text-slate-800">-</span>
+          <span class="text-zinc-400" data-i18n="labelGuests">Ospiti:</span>
+          <span id="modalGuests" class="font-medium text-white">-</span>
         </div>
         <div class="flex justify-between">
-          <span class="text-slate-500">Tipologia Camera:</span>
-          <span id="modalRoom" class="font-semibold text-slate-800">-</span>
+          <span class="text-zinc-400" data-i18n="labelRoom">Tipologia:</span>
+          <span id="modalRoom" class="font-medium text-gold-300">-</span>
         </div>
-        <div class="flex justify-between pt-2 border-t border-slate-200 font-bold text-slate-900">
-          <span>Totale Stimato:</span>
-          <span id="modalTotal" class="text-amber-600">-</span>
+        <div class="flex justify-between pt-2 border-t border-zinc-700 font-cinzel font-bold text-base text-white">
+          <span data-i18n="estimatedTotal">Totale Stimato:</span>
+          <span id="modalTotal" class="text-gold-300">-</span>
         </div>
       </div>
 
       <form onsubmit="sendFinalBooking(event)" class="space-y-4">
         <div>
-          <label class="block text-xs font-medium text-slate-700 mb-1">Nome e Cognome</label>
-          <input type="text" id="guestName" required placeholder="Es. Mario Rossi" class="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-amber-500">
+          <label class="block text-xs font-cinzel uppercase tracking-wider text-zinc-400 mb-1" data-i18n="inputNamePh">Nome e Cognome *</label>
+          <input type="text" id="guestName" required placeholder="Es. Mario Rossi" class="concierge-input text-sm py-2">
         </div>
         <div>
-          <label class="block text-xs font-medium text-slate-700 mb-1">Telefono</label>
-          <input type="tel" id="guestPhone" required placeholder="Es. +39 333 1234567" class="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-amber-500">
+          <label class="block text-xs font-cinzel uppercase tracking-wider text-zinc-400 mb-1" data-i18n="inputPhonePh">Telefono *</label>
+          <input type="tel" id="guestPhone" required placeholder="Es. +39 333 1234567" class="concierge-input text-sm py-2">
         </div>
         <div>
-          <label class="block text-xs font-medium text-slate-700 mb-1">Email</label>
-          <input type="email" id="guestEmail" required placeholder="mario.rossi@email.com" class="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-amber-500">
+          <label class="block text-xs font-cinzel uppercase tracking-wider text-zinc-400 mb-1" data-i18n="inputEmailPh">Email *</label>
+          <input type="email" id="guestEmail" required placeholder="mario.rossi@email.com" class="concierge-input text-sm py-2">
         </div>
 
         <div class="grid grid-cols-2 gap-3 pt-2">
-          <button type="button" onclick="sendViaWhatsApp()" class="bg-emerald-600 hover:bg-emerald-700 text-white font-medium py-3 rounded-xl flex items-center justify-center gap-2 text-sm transition shadow-sm hover:shadow">
+          <button type="button" onclick="sendViaWhatsApp()" class="bg-emerald-600 hover:bg-emerald-500 text-white font-medium py-3 rounded-sm flex items-center justify-center gap-2 text-xs uppercase tracking-wider transition">
             <i data-lucide="message-circle" class="w-4 h-4"></i>
-            <span>WhatsApp (+39 344 718 6581)</span>
+            <span>WhatsApp</span>
           </button>
-          <button type="submit" class="bg-amber-600 hover:bg-amber-700 text-white font-medium py-3 rounded-xl flex items-center justify-center gap-2 text-sm transition shadow-sm hover:shadow">
+          <button type="submit" class="btn-gold py-3 text-xs uppercase tracking-wider">
             <i data-lucide="mail" class="w-4 h-4"></i>
-            <span>Invia Email</span>
+            <span>Email</span>
           </button>
         </div>
       </form>
     </div>
   </div>
 
-  <!-- FOOTER & CONTATTI -->
-  <footer id="contatti" class="bg-slate-950 text-slate-400 py-16 border-t border-slate-800">
-    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10">
-      
-      <!-- Brand & Descrizione -->
-      <div class="space-y-4 md:col-span-2">
-        <div class="flex items-center gap-3">
-          <div class="w-10 h-10 rounded-xl bg-amber-600 flex items-center justify-center text-white font-bold font-serif text-xl">
-            C
-          </div>
-          <span class="text-2xl font-bold font-serif text-white">B&B CaMa</span>
-        </div>
-        <p class="text-sm text-slate-400 max-w-md leading-relaxed">
-          Il tuo rifugio accogliente al 5° piano con vista sui Monti Lattari. Ospitalità calorosa, pulizia eccezionale e collegamenti rapidi per Pompei, Sorrento, Capri e tutta la Costiera Amalfitana.
-        </p>
-        <div class="flex items-center gap-2 text-xs text-amber-400 font-semibold">
-          <span>★ Punteggio 9.5 su Booking.com</span>
-        </div>
-      </div>
+  <!-- LIGHTBOX MODAL WITH ARROWS AND COUNTER -->
+  <div id="lightboxModal" class="lightbox-modal" onclick="closeLightbox()">
+    <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white hover:text-gold-300 p-3 z-50 text-2xl font-cinzel transition">✕</button>
+    
+    <button onclick="prevGalleryPhoto(event)" class="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-50 w-12 h-12 rounded-full bg-black/60 border border-gold-400/40 text-gold-300 hover:bg-gold-400 hover:text-black flex items-center justify-center text-2xl font-cinzel transition shadow-xl" aria-label="Foto precedente">
+      ‹
+    </button>
 
-      <!-- Link Rapidi -->
-      <div class="space-y-3">
-        <h4 class="text-white font-semibold text-sm uppercase tracking-wider">Navigazione</h4>
-        <ul class="space-y-2 text-sm">
-          <li><a href="#chi-siamo" class="hover:text-amber-400 transition">Chi Siamo</a></li>
-          <li><a href="#camere" class="hover:text-amber-400 transition">Le Camere</a></li>
-          <li><a href="#servizi" class="hover:text-amber-400 transition">Servizi Inclusi</a></li>
-          <li><a href="#recensioni" class="hover:text-amber-400 transition">Recensioni Ospiti</a></li>
-          <li><a href="#prenota" class="hover:text-amber-400 transition">Verifica Disponibilità</a></li>
-        </ul>
-      </div>
+    <button onclick="nextGalleryPhoto(event)" class="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-50 w-12 h-12 rounded-full bg-black/60 border border-gold-400/40 text-gold-300 hover:bg-gold-400 hover:text-black flex items-center justify-center text-2xl font-cinzel transition shadow-xl" aria-label="Foto successiva">
+      ›
+    </button>
 
-      <!-- Contatti e Indirizzo Reali -->
-      <div class="space-y-3">
-        <h4 class="text-white font-semibold text-sm uppercase tracking-wider">Contatti & Posizione</h4>
-        <ul class="space-y-2 text-sm">
-          <li class="flex items-start gap-2">
-            <i data-lucide="map-pin" class="w-4 h-4 text-amber-500 shrink-0 mt-1"></i>
-            <span>Via Raffaele Viviani, 36 (Piano 5)<br>80054 Gragnano (NA), Italia</span>
-          </li>
-          <li class="flex items-center gap-2">
-            <i data-lucide="phone" class="w-4 h-4 text-amber-500 shrink-0"></i>
-            <a href="tel:+393447186581" class="hover:text-amber-400 transition">+39 344 718 6581</a>
-          </li>
-          <li class="flex items-center gap-2">
-            <i data-lucide="message-circle" class="w-4 h-4 text-emerald-400 shrink-0"></i>
-            <a href="https://wa.me/393447186581" target="_blank" class="text-emerald-400 hover:underline">WhatsApp Diretto</a>
-          </li>
-        </ul>
+    <div class="lightbox-img-wrapper" onclick="event.stopPropagation()">
+      <div class="relative">
+        <img id="lightboxImg" src="" alt="Anteprima Foto B&B CaMa" class="rounded-sm">
+        <div id="lightboxCounter" class="absolute top-3 right-3 bg-black/80 border border-gold-400/40 text-gold-300 text-xs font-cinzel font-semibold px-2.5 py-1 rounded-sm shadow">1 / 5</div>
       </div>
+      <div id="lightboxCaption" class="text-center font-cinzel text-sm text-gold-200 mt-3 tracking-wider"></div>
     </div>
+  </div>
 
-    <div class="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
-      <p>© 2026 B&B CaMa - Via Raffaele Viviani 36, Gragnano (NA). Tutti i diritti riservati.</p>
-      <div class="flex gap-4">
-        <span>Check-in: 17:00 - 21:00</span>
-        <span>Check-out: 08:00 - 10:30</span>
-      </div>
-    </div>
-  </footer>
-
+  <!-- Application Logic JS -->
   <script src="app.js"></script>
 </body>
 </html>
