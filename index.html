@@ -806,6 +806,34 @@
           </div>
         </div>
 
+        <!-- 2 Nuove Opzioni: Day Use & Allestimento Personalizzato -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-1">
+          <!-- Day Use Checkbox -->
+          <div class="flex items-center gap-3 p-3.5 bg-[#181822] border border-gold-400/25 rounded-sm hover:border-gold-400/50 transition">
+            <input type="checkbox" id="dayUseCheckbox" class="w-4 h-4 accent-[#c5a880] cursor-pointer">
+            <label for="dayUseCheckbox" class="text-xs text-zinc-300 font-medium cursor-pointer flex items-center gap-2 select-none">
+              <i data-lucide="clock" class="w-4 h-4 text-gold-400"></i>
+              <span data-i18n="labelDayUse">Formula Day Use (3 ore di relax)</span>
+            </label>
+          </div>
+
+          <!-- Allestimento Stanza Select -->
+          <div>
+            <label for="allestimentoSelect"
+              class="block text-xs font-cinzel uppercase tracking-wider text-gold-300 mb-2 flex items-center gap-2">
+              <i data-lucide="sparkles" class="w-4 h-4 text-gold-400"></i>
+              <span data-i18n="labelAllestimento">Allestimento Personalizzato Stanza</span>
+            </label>
+            <select id="allestimentoSelect" class="concierge-input">
+              <option value="standard" data-i18n="optAllestimentoStandard">Standard (Nessun allestimento extra)</option>
+              <option value="Petali & Candele Romantiche" data-i18n="optAllestimentoRomantico">Petali & Candele Romantiche</option>
+              <option value="Compleanno o Ricorrenza Speciale" data-i18n="optAllestimentoCompleanno">Compleanno o Ricorrenza Speciale</option>
+              <option value="Prosecco & Dolcezze di Benvenuto" data-i18n="optAllestimentoProsecco">Prosecco & Dolcezze di Benvenuto</option>
+              <option value="Allestimento Luxury Completo" data-i18n="optAllestimentoLuxury">Allestimento Luxury Completo</option>
+            </select>
+          </div>
+        </div>
+
         <!-- Dynamic Price Summary Box -->
         <div id="priceSummary"
           class="bg-[#1a1a24] border border-gold-400/30 p-4 rounded-sm flex items-center justify-between">

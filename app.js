@@ -104,6 +104,13 @@ const TRANSLATIONS = {
     optPompei: 'Pompei Room (Standard) - Contatta per il prezzo',
     optStabia: 'Stabia Sunset (Vista Montagna) - Contatta per il prezzo',
     optVesu: 'VesuView (Balcone Panoramico • 2 Ospiti + Culla) - Contatta per il prezzo',
+    labelDayUse: 'Formula Day Use (3 ore di relax)',
+    labelAllestimento: 'Allestimento Personalizzato Stanza',
+    optAllestimentoStandard: 'Standard (Nessun allestimento extra)',
+    optAllestimentoRomantico: 'Petali & Candele Romantiche',
+    optAllestimentoCompleanno: 'Compleanno o Ricorrenza Speciale',
+    optAllestimentoProsecco: 'Prosecco & Dolcezze di Benvenuto',
+    optAllestimentoLuxury: 'Allestimento Luxury Completo',
     stayDuration: 'Durata soggiorno',
     estimatedTotal: 'Preventivo soggiorno',
     btnBookSubmit: 'Richiedi Disponibilità & Preventivo',
@@ -231,6 +238,13 @@ const TRANSLATIONS = {
     optPompei: 'Pompei Room (Standard) - Contact for price',
     optStabia: 'Stabia Sunset (Mountain View) - Contact for price',
     optVesu: 'VesuView (Panoramic Balcony • 2 Guests + Crib) - Contact for price',
+    labelDayUse: 'Day Use Formula (3-hour stay)',
+    labelAllestimento: 'Custom Room Setup & Occasion',
+    optAllestimentoStandard: 'Standard (No extra setup)',
+    optAllestimentoRomantico: 'Romantic Petals & Candles',
+    optAllestimentoCompleanno: 'Birthday or Special Anniversary',
+    optAllestimentoProsecco: 'Prosecco & Welcome Sweets',
+    optAllestimentoLuxury: 'Full Luxury Experience Setup',
     stayDuration: 'Stay duration',
     estimatedTotal: 'Custom Quote',
     btnBookSubmit: 'Request Availability & Quote',
@@ -435,7 +449,11 @@ function sendViaWhatsApp() {
   const guests = bookingData.ospiti ? `${bookingData.ospiti} ospiti` : '2 ospiti';
   const dates = `dal ${bookingData.checkin} al ${bookingData.checkout} (${bookingData.nights || 1} notti)`;
 
-  const message = `Salve B&B CaMa, vorrei prenotare la camera ${room} per ${guests} nelle date ${dates}. Il mio nome è ${name}, telefono: ${phone}, email: ${email}.`;
+  const dayUseSelected = document.getElementById('dayUseCheckbox')?.checked ? "in formula Day Use (3 ore)" : "";
+  const allestimentoSelected = document.getElementById('allestimentoSelect')?.value || "standard";
+
+  const message = `Salve B&B CaMa, vorrei prenotare la camera ${room} ${dayUseSelected} per ${guests} nelle date ${dates}. Richiesta allestimento: ${allestimentoSelected}. Il mio nome è ${name}, telefono: ${phone}, email: ${email}.`;
+
   const whatsappUrl = `https://wa.me/393447186581?text=${encodeURIComponent(message)}`;
   window.open(whatsappUrl, '_blank');
 }
