@@ -148,7 +148,8 @@ const TRANSLATIONS = {
     btnFormSubmit: 'Invia Richiesta su WhatsApp',
     footerCheckinHours: 'Check-in: 17:00 - 21:00',
     footerCheckoutHours: 'Check-out: 08:00 - 10:30',
-    footerCopyright: '© 2026 • Tutti i diritti riservati'
+    footerCopyright: '© 2026 • Tutti i diritti riservati',
+    footerDevBy: 'Sito realizzato da'
   },
   en: {
     topRating: 'Booking.com Rating <strong class="text-white font-bold">9.5 / 10</strong> • Exceptional',
@@ -295,7 +296,8 @@ const TRANSLATIONS = {
     btnFormSubmit: 'Send Request on WhatsApp',
     footerCheckinHours: 'Check-in: 17:00 - 21:00',
     footerCheckoutHours: 'Check-out: 08:00 - 10:30',
-    footerCopyright: '© 2026 • All rights reserved'
+    footerCopyright: '© 2026 • All rights reserved',
+    footerDevBy: 'Website developed by'
   }
 };
 
