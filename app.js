@@ -12,12 +12,12 @@ const TRANSLATIONS = {
     navServices: 'Servizi',
     navReviews: 'Recensioni',
     navContacts: 'Contatti',
-    navBook: 'Prenota',
+    navBook: 'Chiedi Disponibilità',
     heroBadge: 'Esperienza di Charme & Panorama',
     heroLocation: 'Gragnano • Costiera Amalfitana • Pompei',
     heroTitle: 'Le Nostre Camere',
     heroSubtitle: "L'eleganza dell'ospitalità italiana con vista mozzafiato sui Monti Lattari",
-    heroBtnBook: 'Prenota Soggiorno',
+    heroBtnBook: 'Chiedi Disponibilità',
     heroBtnExplore: 'Esplora le Camere',
     sectionWelcome: 'Benvenuti a CaMa',
     sectionRoomsTitle: 'Le Nostre Camere',
@@ -41,10 +41,12 @@ const TRANSLATIONS = {
     vesuviewTag1: 'Balcone Panoramico',
     vesuviewTag2: '2 Ospiti (+ Culla Neonato)',
     vesuviewTag3: 'Bagno Privato',
-    
-    roomRateFrom: 'Tariffa da',
-    perNight: '/ notte',
-    btnSelect: 'Seleziona',
+
+    roomRateFrom: 'Tariffa',
+    contactForPrice: 'Contattare per il prezzo',
+    rateTypeLabel: 'Offerta & Preventivo',
+    bestRateOnRequest: 'Miglior Tariffa su Richiesta',
+    btnSelect: 'Richiedi Info',
     viewGallery: 'Apri Galleria +',
     allRoomPhotos: 'Tutte le foto della camera:',
     panoramicBalconyBadge: 'Balcone Panoramico',
@@ -86,9 +88,9 @@ const TRANSLATIONS = {
     review3Text: "«Struttura nuova, curata nei minimi dettagli, silenziosa e con un letto comodissimo. Ottima anche la colazione e la presenza dell'ascensore.»",
     review3Author: 'Ospite Italiano',
     // Booking
-    bookBadge: 'Prenotazione Diretta al Miglior Prezzo',
+    bookBadge: 'Preventivo Diretto al Miglior Prezzo',
     bookTitle: 'Verifica Disponibilità',
-    bookSubtitle: 'Seleziona le date per calcolare la tariffa e inviare la richiesta',
+    bookSubtitle: 'Seleziona le date per richiedere la disponibilità e la migliore tariffa',
     labelCheckin: 'Data Check-in (dalle 17:00)',
     labelCheckout: 'Data Check-out (entro 10:30)',
     labelGuests: 'Numero Ospiti',
@@ -97,13 +99,15 @@ const TRANSLATIONS = {
     guestCount2: '2 Ospiti',
     guestCount3: '3 Ospiti',
     guestCount4: '4 Ospiti',
-    optPompei: 'Pompei Room (Standard) - €70/notte',
-    optStabia: 'Stabia Sunset (Vista Montagna) - €90/notte',
-    optVesu: 'VesuView (Balcone Panoramico • 2 Ospiti + Culla) - €90/notte',
+    guestCount5: '5 Ospiti',
+    guestCount6: '6 Ospiti (Intera struttura)',
+    optPompei: 'Pompei Room (Standard) - Contatta per il prezzo',
+    optStabia: 'Stabia Sunset (Vista Montagna) - Contatta per il prezzo',
+    optVesu: 'VesuView (Balcone Panoramico • 2 Ospiti + Culla) - Contatta per il prezzo',
     stayDuration: 'Durata soggiorno',
-    estimatedTotal: 'Totale stimato',
-    btnBookSubmit: 'Richiedi Prenotazione & Verifica',
-    bookDisclaimer: 'Risposta immediata. Nessun pagamento anticipato richiesto in questa fase.',
+    estimatedTotal: 'Preventivo soggiorno',
+    btnBookSubmit: 'Richiedi Disponibilità & Preventivo',
+    bookDisclaimer: 'Risposta immediata su WhatsApp ed Email. Nessun pagamento anticipato.',
     // Reception & Contacts
     contactsSectionTitle: 'Reception & Contatti',
     contactsHelpTitle: 'Assistenza Personalizzata',
@@ -121,7 +125,7 @@ const TRANSLATIONS = {
     inputPhonePh: 'Telefono / WhatsApp',
     optAllRooms: "Camera d'interesse (qualsiasi)",
     inputNotesPh: 'Date indicative o note speciali',
-    btnFormSubmit: 'Invia Richiesta di Soggiorno',
+    btnFormSubmit: 'Invia Richiesta su WhatsApp',
     footerCheckinHours: 'Check-in: 17:00 - 21:00',
     footerCheckoutHours: 'Check-out: 08:00 - 10:30',
     footerCopyright: '© 2026 • Tutti i diritti riservati'
@@ -135,12 +139,12 @@ const TRANSLATIONS = {
     navServices: 'Services',
     navReviews: 'Reviews',
     navContacts: 'Contacts',
-    navBook: 'Book Now',
+    navBook: 'Check Availability',
     heroBadge: 'Charming & Scenic Experience',
     heroLocation: 'Gragnano • Amalfi Coast • Pompeii',
     heroTitle: 'Our Rooms',
     heroSubtitle: 'The elegance of Italian hospitality with breathtaking views of the Lattari Mountains',
-    heroBtnBook: 'Book Your Stay',
+    heroBtnBook: 'Check Availability',
     heroBtnExplore: 'Explore Rooms',
     sectionWelcome: 'Welcome to CaMa',
     sectionRoomsTitle: 'Our Rooms',
@@ -164,10 +168,12 @@ const TRANSLATIONS = {
     vesuviewTag1: 'Panoramic Balcony',
     vesuviewTag2: '2 Guests (+ Infant Crib)',
     vesuviewTag3: 'Private Bathroom',
-    
-    roomRateFrom: 'From',
-    perNight: '/ night',
-    btnSelect: 'Select',
+
+    roomRateFrom: 'Rate',
+    contactForPrice: 'Contact for best price',
+    rateTypeLabel: 'Offer & Quote',
+    bestRateOnRequest: 'Best Rate on Request',
+    btnSelect: 'Inquire',
     viewGallery: 'Open Gallery +',
     allRoomPhotos: 'All room photos:',
     panoramicBalconyBadge: 'Panoramic Balcony',
@@ -209,9 +215,9 @@ const TRANSLATIONS = {
     review3Text: '«Brand new property, cared for in every detail, very quiet with a super comfortable bed. Delicious breakfast and convenient elevator access.»',
     review3Author: 'Italian Guest',
     // Booking
-    bookBadge: 'Direct Booking at Best Guaranteed Rate',
+    bookBadge: 'Direct Custom Quote at Best Rate',
     bookTitle: 'Check Availability',
-    bookSubtitle: 'Select your dates to calculate estimated price and send your request',
+    bookSubtitle: 'Select your dates to check availability and get your personalized offer',
     labelCheckin: 'Check-in Date (from 17:00)',
     labelCheckout: 'Check-out Date (by 10:30)',
     labelGuests: 'Number of Guests',
@@ -220,13 +226,15 @@ const TRANSLATIONS = {
     guestCount2: '2 Guests',
     guestCount3: '3 Guests',
     guestCount4: '4 Guests',
-    optPompei: 'Pompei Room (Standard) - €70/night',
-    optStabia: 'Stabia Sunset (Mountain View) - €90/night',
-    optVesu: 'VesuView (Panoramic Balcony • 2 Guests + Crib) - €90/night',
+    guestCount5: '5 Guests',
+    guestCount6: '6 Guests (Full Property)',
+    optPompei: 'Pompei Room (Standard) - Contact for price',
+    optStabia: 'Stabia Sunset (Mountain View) - Contact for price',
+    optVesu: 'VesuView (Panoramic Balcony • 2 Guests + Crib) - Contact for price',
     stayDuration: 'Stay duration',
-    estimatedTotal: 'Estimated total',
-    btnBookSubmit: 'Request Booking & Check Availability',
-    bookDisclaimer: 'Immediate response. No upfront payment required at this stage.',
+    estimatedTotal: 'Custom Quote',
+    btnBookSubmit: 'Request Availability & Quote',
+    bookDisclaimer: 'Immediate response on WhatsApp & Email. No upfront payment.',
     // Reception & Contacts
     contactsSectionTitle: 'Reception & Contacts',
     contactsHelpTitle: 'Personalized Support',
@@ -244,7 +252,7 @@ const TRANSLATIONS = {
     inputPhonePh: 'Phone / WhatsApp',
     optAllRooms: 'Room of Interest (Any)',
     inputNotesPh: 'Tentative dates or special requests',
-    btnFormSubmit: 'Send Stay Request',
+    btnFormSubmit: 'Send Request on WhatsApp',
     footerCheckinHours: 'Check-in: 17:00 - 21:00',
     footerCheckoutHours: 'Check-out: 08:00 - 10:30',
     footerCopyright: '© 2026 • All rights reserved'
@@ -339,18 +347,17 @@ document.addEventListener('DOMContentLoaded', () => {
   setLanguage(currentLang);
 });
 
-// Room Prices configuration
-const ROOM_DATA = {
-  standard: { name: 'Pompei Room (Standard)', price: 70 },
-  superior: { name: 'Stabia Sunset (Vista Montagna)', price: 90 },
-  suite: { name: 'VesuView (Balcone Panoramico - 2 Ospiti + Culla)', price: 90 }
+// Room names mapping
+const ROOM_NAMES = {
+  standard: 'Pompei Room (Standard)',
+  superior: 'Stabia Sunset (Vista Montagna)',
+  suite: 'VesuView (Balcone Panoramico)'
 };
 
-// Calculate booking price dynamically
+// Calculate booking nights dynamically
 function updatePriceCalculator() {
   const checkin = document.getElementById('checkin')?.value;
   const checkout = document.getElementById('checkout')?.value;
-  const roomType = document.getElementById('camere')?.value || 'superior';
   const priceSummary = document.getElementById('priceSummary');
   const summaryNights = document.getElementById('summaryNights');
   const summaryTotal = document.getElementById('summaryTotal');
@@ -366,9 +373,7 @@ function updatePriceCalculator() {
     priceSummary.classList.remove('hidden');
     const nightLabel = currentLang === 'en' ? (nights === 1 ? 'night' : 'nights') : (nights === 1 ? 'notte' : 'notti');
     summaryNights.textContent = `${nights} ${nightLabel}`;
-    const rate = ROOM_DATA[roomType]?.price || 85;
-    const total = nights * rate;
-    summaryTotal.textContent = `€${total}`;
+    summaryTotal.textContent = currentLang === 'en' ? 'Best Rate on Request' : 'Contattare per il prezzo';
   } else if (priceSummary) {
     priceSummary.classList.add('hidden');
   }
@@ -399,18 +404,17 @@ function handleBookingSubmit(e) {
   const date2 = new Date(checkout);
   const diffTime = date2.getTime() - date1.getTime();
   const nights = Math.max(1, Math.ceil(diffTime / (1000 * 60 * 60 * 24)));
-  const roomName = ROOM_DATA[roomKey]?.name || 'Camera B&B CaMa';
-  const total = nights * (ROOM_DATA[roomKey]?.price || 85);
+  const roomName = ROOM_NAMES[roomKey] || 'Camera B&B CaMa';
 
-  bookingData = { checkin, checkout, ospiti, roomKey, roomName, nights, total };
+  bookingData = { checkin, checkout, ospiti, roomKey, roomName, nights };
 
-  const nightsWord = currentLang === 'en' ? (nights === 1 ? 'night' : 'nights') : (nights === 1 ? 'notti' : 'notti');
-  const guestsWord = currentLang === 'en' ? 'Guests' : 'Ospiti';
+  const nightsWord = currentLang === 'en' ? (nights === 1 ? 'night' : 'nights') : (nights === 1 ? 'notte' : 'notti');
+  const guestsWord = currentLang === 'en' ? (ospiti === '1' ? 'Guest' : 'Guests') : (ospiti === '1' ? 'Ospite' : 'Ospiti');
 
   document.getElementById('modalDates').textContent = `${checkin} → ${checkout} (${nights} ${nightsWord})`;
   document.getElementById('modalGuests').textContent = `${ospiti} ${guestsWord}`;
   document.getElementById('modalRoom').textContent = roomName;
-  document.getElementById('modalTotal').textContent = `€${total}`;
+  document.getElementById('modalTotal').textContent = currentLang === 'en' ? 'Best Rate on Request' : 'Contattaci per il miglior prezzo';
 
   document.getElementById('bookingModal').classList.remove('hidden');
   document.getElementById('bookingModal').classList.add('flex');
@@ -422,32 +426,18 @@ function closeModal() {
   modal.classList.remove('flex');
 }
 
-// Send via WhatsApp directly
+// Send via WhatsApp directly with complete pre-set message
 function sendViaWhatsApp() {
   const name = document.getElementById('guestName')?.value || 'Ospite';
   const phone = document.getElementById('guestPhone')?.value || '';
   const email = document.getElementById('guestEmail')?.value || '';
+  const room = bookingData.roomName || 'Camera B&B CaMa';
+  const guests = bookingData.ospiti ? `${bookingData.ospiti} ospiti` : '2 ospiti';
+  const dates = `dal ${bookingData.checkin} al ${bookingData.checkout} (${bookingData.nights || 1} notti)`;
 
-  const isEn = currentLang === 'en';
-  const intro = isEn ? 'Hello B&B CaMa, I would like to request a booking:' : 'Salve B&B CaMa, desidero richiedere una prenotazione:';
-  const nameLbl = isEn ? 'Name' : 'Nome';
-  const phoneLbl = isEn ? 'Phone' : 'Telefono';
-  const roomLbl = isEn ? 'Room' : 'Camera';
-  const nightsLbl = isEn ? 'nights' : 'notti';
-  const guestsLbl = isEn ? 'Guests' : 'Ospiti';
-  const totalLbl = isEn ? 'Estimated Total' : 'Totale Stimato';
-
-  const msg = `${intro}%0A` +
-    `👤 *${nameLbl}:* ${encodeURIComponent(name)}%0A` +
-    `📞 *${phoneLbl}:* ${encodeURIComponent(phone)}%0A` +
-    `✉️ *Email:* ${encodeURIComponent(email)}%0A` +
-    `🛏️ *${roomLbl}:* ${encodeURIComponent(bookingData.roomName || 'Camera')}%0A` +
-    `📅 *Check-in:* ${bookingData.checkin}%0A` +
-    `📅 *Check-out:* ${bookingData.checkout} (${bookingData.nights} ${nightsLbl})%0A` +
-    `👥 *${guestsLbl}:* ${bookingData.ospiti}%0A` +
-    `💰 *${totalLbl}:* €${bookingData.total}`;
-
-  window.open(`https://wa.me/393447186581?text=${msg}`, '_blank');
+  const message = `Salve B&B CaMa, vorrei prenotare la camera ${room} per ${guests} nelle date ${dates}. Il mio nome è ${name}, telefono: ${phone}, email: ${email}.`;
+  const whatsappUrl = `https://wa.me/393447186581?text=${encodeURIComponent(message)}`;
+  window.open(whatsappUrl, '_blank');
 }
 
 function sendFinalBooking(e) {
@@ -457,45 +447,33 @@ function sendFinalBooking(e) {
   const email = document.getElementById('guestEmail').value;
 
   const isEn = currentLang === 'en';
-  const subject = encodeURIComponent(isEn ? `Booking Request B&B CaMa - ${name}` : `Richiesta Prenotazione B&B CaMa - ${name}`);
+  const subject = encodeURIComponent(isEn ? `Booking Inquiry B&B CaMa - ${name}` : `Richiesta Preventivo B&B CaMa - ${name}`);
   const body = encodeURIComponent(
-    `Richiesta di soggiorno / Booking Request B&B CaMa:\n\n` +
+    `Richiesta di soggiorno / Booking Inquiry B&B CaMa:\n\n` +
     `Nome / Name: ${name}\n` +
     `Telefono / Phone: ${phone}\n` +
     `Email: ${email}\n` +
     `Camera / Room: ${bookingData.roomName}\n` +
-    `Date / Period: Dal ${bookingData.checkin} al ${bookingData.checkout} (${bookingData.nights} notti / nights)\n` +
-    `Ospiti / Guests: ${bookingData.ospiti}\n` +
-    `Totale indicativo / Total: €${bookingData.total}\n`
+    `Periodo / Dates: Dal ${bookingData.checkin} al ${bookingData.checkout} (${bookingData.nights} notti / nights)\n` +
+    `Ospiti / Guests: ${bookingData.ospiti}\n\n` +
+    `Desidero ricevere la migliore tariffa e la conferma della disponibilità.\n`
   );
 
   window.location.href = `mailto:bebcama1963@gmail.com?subject=${subject}&body=${body}`;
 }
 
-// Reception direct inquiry submission
+// Reception direct inquiry submission via pre-set WhatsApp message
 function handleContactSubmit(e) {
   e.preventDefault();
-  const name = document.getElementById('contactName').value;
-  const email = document.getElementById('contactEmail').value;
-  const phone = document.getElementById('contactPhone').value;
-  const room = document.getElementById('contactRoom').value;
-  const notes = document.getElementById('contactNotes').value;
+  const name = document.getElementById('contactName')?.value || 'Ospite';
+  const email = document.getElementById('contactEmail')?.value || '';
+  const phone = document.getElementById('contactPhone')?.value || '';
+  const room = document.getElementById('contactRoom')?.value || 'Camera';
+  const notes = document.getElementById('contactNotes')?.value || 'Informazioni generali';
 
-  const isEn = currentLang === 'en';
-  const intro = isEn ? 'Hello Reception B&B CaMa, I would like to request info:' : 'Salve Reception B&B CaMa, vorrei richiedere informazioni per un soggiorno:';
-  const nameLbl = isEn ? 'Name' : 'Nome';
-  const phoneLbl = isEn ? 'Phone' : 'Telefono';
-  const roomLbl = isEn ? 'Room of interest' : "Camera d'interesse";
-  const notesLbl = isEn ? 'Request/Notes' : 'Richiesta/Note';
-
-  const msg = `${intro}%0A` +
-    `👤 *${nameLbl}:* ${encodeURIComponent(name)}%0A` +
-    `✉️ *Email:* ${encodeURIComponent(email)}%0A` +
-    `📞 *${phoneLbl}:* ${encodeURIComponent(phone)}%0A` +
-    `🛏️ *${roomLbl}:* ${encodeURIComponent(room)}%0A` +
-    `💬 *${notesLbl}:* ${encodeURIComponent(notes)}`;
-
-  window.open(`https://wa.me/393447186581?text=${msg}`, '_blank');
+  const message = `Salve B&B CaMa, vorrei richiedere informazioni per ${room}. Dettagli: ${notes}. Nome: ${name}, telefono: ${phone}, email: ${email}.`;
+  const whatsappUrl = `https://wa.me/393447186581?text=${encodeURIComponent(message)}`;
+  window.open(whatsappUrl, '_blank');
 }
 
 // Room Galleries Data
@@ -587,7 +565,7 @@ function openLightbox(imgSrc, captionText) {
       return;
     }
   }
-  
+
   const modal = document.getElementById('lightboxModal');
   const img = document.getElementById('lightboxImg');
   const caption = document.getElementById('lightboxCaption');
