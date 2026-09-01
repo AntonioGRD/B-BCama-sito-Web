@@ -17,7 +17,7 @@ const TRANSLATIONS = {
     heroBadge: 'Esperienza di Charme & Panorama',
     heroLocation: 'Gragnano • Costiera Amalfitana • Pompei',
     heroTitle: 'Le Nostre Camere',
-    heroSubtitle: "L'eleganza dell'ospitalità italiana con vista mozzafiato sui Monti Lattari",
+    heroSubtitle: "L'eleganza dell'ospitalità italiana con vista mozzafiato sul Vesuvio",
     heroBtnBook: 'Chiedi Disponibilità',
     heroBtnExplore: 'Esplora le Camere',
     // Chi Siamo
@@ -185,7 +185,7 @@ const TRANSLATIONS = {
     heroBadge: 'Charming & Scenic Experience',
     heroLocation: 'Gragnano • Amalfi Coast • Pompeii',
     heroTitle: 'Our Rooms',
-    heroSubtitle: 'The elegance of Italian hospitality with breathtaking views of the Lattari Mountains',
+    heroSubtitle: 'The elegance of Italian hospitality with breathtaking views of Mount Vesuvius',
     heroBtnBook: 'Check Availability',
     heroBtnExplore: 'Explore Rooms',
     // About Us
@@ -353,7 +353,7 @@ const TRANSLATIONS = {
     heroBadge: 'Experiencia con Encanto y Vistas',
     heroLocation: 'Gragnano • Costa Amalfitana • Pompeya',
     heroTitle: 'Nuestras Habitaciones',
-    heroSubtitle: 'La elegancia de la hospitalidad italiana con vistas panorámicas a los Montes Lattari',
+    heroSubtitle: 'La elegancia de la hospitalidad italiana con vistas panorámicas al Vesubio',
     heroBtnBook: 'Consultar Disponibilidad',
     heroBtnExplore: 'Explorar Habitaciones',
     // Quiénes Somos
