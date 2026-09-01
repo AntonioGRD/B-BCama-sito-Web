@@ -51,6 +51,19 @@ const TRANSLATIONS = {
     allRoomPhotos: 'Tutte le foto della camera:',
     panoramicBalconyBadge: 'Balcone Panoramico',
     panoramicViewBadge: 'Vista Panoramica',
+    // Highlights 3 Cards
+    stayBadge: 'Soggiorno & Pernottamento',
+    stayTitle: 'Camere di Charme',
+    stayDesc: 'Pernottamento classico in eleganti camere matrimoniali al 5° piano con ascensore, bagno privato, Smart TV, Wi-Fi fibra e terrazza panoramica sui Monti Lattari.',
+    stayCta: 'Scopri le Camere',
+    dayUseBadge: 'Relax & Privacy Diurna',
+    dayUseTitle: 'Formula Day Use (3 Ore)',
+    dayUseDesc: 'Opzione flessibile diurna per qualche ora di totale riservatezza e relax in camera privata con bagno en-suite, balcone panoramico e climatizzazione autonoma.',
+    dayUseCta: 'Richiedi Day Use',
+    setupBadge: 'Momenti Romantici & Ricorrenze',
+    setupTitle: 'Allestimenti Personalizzati',
+    setupDesc: 'Rendi unico il tuo momento: richiedi allestimenti con petali di rosa, candele, Prosecco, dolcezze e composizioni speciali per compleanni e anniversari.',
+    setupCta: 'Personalizza Soggiorno',
     // External
     commonAreasBadge: 'Terrazza & Servizi Comuni (5 Foto)',
     commonAreasTitle: 'Spazi Comuni & Panorama',
@@ -185,6 +198,19 @@ const TRANSLATIONS = {
     allRoomPhotos: 'All room photos:',
     panoramicBalconyBadge: 'Panoramic Balcony',
     panoramicViewBadge: 'Panoramic View',
+    // Highlights 3 Cards
+    stayBadge: 'Overnight Stay & Boutique Rooms',
+    stayTitle: 'Charming Guest Rooms',
+    stayDesc: 'Classic overnight stays in elegant double bedrooms on the 5th floor with elevator, private bathroom, Smart TV, fiber Wi-Fi, and panoramic terrace overlooking the Lattari Mountains.',
+    stayCta: 'Discover Rooms',
+    dayUseBadge: 'Daytime Relax & Privacy',
+    dayUseTitle: 'Day Use Formula (3 Hours)',
+    dayUseDesc: 'Flexible daytime break for maximum privacy and comfort in a private room with en-suite bathroom, panoramic balcony, and air conditioning.',
+    dayUseCta: 'Request Day Use',
+    setupBadge: 'Romantic Moments & Celebrations',
+    setupTitle: 'Custom Room Setups',
+    setupDesc: 'Make your stay unforgettable: request themed setups with rose petals, scented candles, Prosecco, sweets, and birthday or anniversary arrangements.',
+    setupCta: 'Customize Stay',
     // External
     commonAreasBadge: 'Terrace & Shared Areas (5 Photos)',
     commonAreasTitle: 'Shared Spaces & Scenic Views',
@@ -446,13 +472,15 @@ function sendViaWhatsApp() {
   const phone = document.getElementById('guestPhone')?.value || '';
   const email = document.getElementById('guestEmail')?.value || '';
   const room = bookingData.roomName || 'Camera B&B CaMa';
-  const guests = bookingData.ospiti ? `${bookingData.ospiti} ospiti` : '2 ospiti';
+  const guests = bookingData.ospiti ? bookingData.ospiti : '2';
   const dates = `dal ${bookingData.checkin} al ${bookingData.checkout} (${bookingData.nights || 1} notti)`;
 
-  const dayUseSelected = document.getElementById('dayUseCheckbox')?.checked ? "in formula Day Use (3 ore)" : "";
-  const allestimentoSelected = document.getElementById('allestimentoSelect')?.value || "standard";
+  const isDayUse = (document.getElementById('dayUseCheckbox')?.checked || document.getElementById('dayUseToggle')?.checked) 
+    ? "in formula Day Use (3 ore)" 
+    : "per pernottamento";
+  const allestimento = document.getElementById('allestimentoSelect')?.value || document.getElementById('allestimentoInput')?.value || "Standard";
 
-  const message = `Salve B&B CaMa, vorrei prenotare la camera ${room} ${dayUseSelected} per ${guests} nelle date ${dates}. Richiesta allestimento: ${allestimentoSelected}. Il mio nome è ${name}, telefono: ${phone}, email: ${email}.`;
+  const message = `Salve B&B CaMa, vorrei prenotare la camera ${room} ${isDayUse} per ${guests} ospiti nelle date ${dates}. Allestimento richiesto: ${allestimento}. Nome: ${name}, telefono: ${phone}, email: ${email}.`;
 
   const whatsappUrl = `https://wa.me/393447186581?text=${encodeURIComponent(message)}`;
   window.open(whatsappUrl, '_blank');

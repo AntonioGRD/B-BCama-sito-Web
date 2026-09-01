@@ -252,6 +252,35 @@ body {
   transform: translateY(-2px);
 }
 
+.btn-gold-card {
+  background: var(--gold-gradient);
+  color: #0a0a0d !important;
+  font-family: var(--font-serif-luxury);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 0.75rem 1.25rem;
+  border-radius: 3px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 14px rgba(197, 168, 128, 0.28);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.btn-gold-card:hover {
+  background: var(--gold-gradient-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(212, 178, 111, 0.5);
+  color: #000 !important;
+}
+
 /* Sections Light & Cream */
 .section-light {
   background-color: var(--bg-light);
