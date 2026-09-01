@@ -84,6 +84,8 @@
           <button onclick="setLanguage('it')" class="lang-btn px-2 py-0.5 transition" data-lang="it">IT</button>
           <span class="text-zinc-700 bg-black/40 px-0.5">|</span>
           <button onclick="setLanguage('en')" class="lang-btn px-2 py-0.5 transition" data-lang="en">EN</button>
+          <span class="text-zinc-700 bg-black/40 px-0.5">|</span>
+          <button onclick="setLanguage('es')" class="lang-btn px-2 py-0.5 transition" data-lang="es">ES</button>
         </div>
       </div>
     </div>
@@ -140,6 +142,19 @@
         data-i18n="navReviews">Recensioni (9.5/10)</a>
       <a href="#contatti" class="block py-2 text-zinc-300 hover:text-gold-300 font-cinzel tracking-wider text-sm"
         data-i18n="navContacts">Reception & Contatti</a>
+      
+      <!-- Mobile Lang Switcher -->
+      <div class="flex items-center justify-between pt-2 border-t border-zinc-800">
+        <span class="text-xs text-zinc-400 font-cinzel">Lingua / Language:</span>
+        <div class="flex items-center border border-gold-400/40 rounded-sm overflow-hidden text-[11px] font-cinzel">
+          <button onclick="setLanguage('it')" class="lang-btn px-2.5 py-1 transition" data-lang="it">IT</button>
+          <span class="text-zinc-700 bg-black/40 px-0.5">|</span>
+          <button onclick="setLanguage('en')" class="lang-btn px-2.5 py-1 transition" data-lang="en">EN</button>
+          <span class="text-zinc-700 bg-black/40 px-0.5">|</span>
+          <button onclick="setLanguage('es')" class="lang-btn px-2.5 py-1 transition" data-lang="es">ES</button>
+        </div>
+      </div>
+
       <a href="#prenota" class="block text-center btn-gold text-xs uppercase py-3 mt-3" data-i18n="navBook">
         Chiedi Disponibilità
       </a>

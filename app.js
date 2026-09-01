@@ -298,6 +298,153 @@ const TRANSLATIONS = {
     footerCheckoutHours: 'Check-out: 08:00 - 10:30',
     footerCopyright: '© 2026 • All rights reserved',
     footerDevBy: 'Website developed by'
+  },
+  es: {
+    topRating: 'Puntuación Booking.com <strong class="text-white font-bold">9.5 / 10</strong> • Excepcional',
+    topAddress: 'Via Raffaele Viviani, 36 (5ª Planta), Gragnano (NA), Italia',
+    topWhatsApp: 'WhatsApp Directo',
+    navHome: 'Inicio',
+    navRooms: 'Habitaciones',
+    navServices: 'Servicios',
+    navReviews: 'Opiniones',
+    navContacts: 'Contacto',
+    navBook: 'Consultar Disponibilidad',
+    heroBadge: 'Experiencia con Encanto y Vistas',
+    heroLocation: 'Gragnano • Costa Amalfitana • Pompeya',
+    heroTitle: 'Nuestras Habitaciones',
+    heroSubtitle: 'La elegancia de la hospitalidad italiana con vistas panorámicas a los Montes Lattari',
+    heroBtnBook: 'Consultar Disponibilidad',
+    heroBtnExplore: 'Explorar Habitaciones',
+    sectionWelcome: 'Bienvenidos a CaMa',
+    sectionRoomsTitle: 'Nuestras Habitaciones',
+    sectionRoomsQuote: '«Un oasis de tranquilidad y elegancia en la 5ª planta con terraza panorámica, donde cada detalle está pensado para regalarte una estancia inolvidable entre Pompeya, Sorrento y la Costa Amalfitana.»',
+    sectionRoomsDesc: 'Situado en el corazón de Gragnano, el B&B CaMa combina el refinamiento de sus habitaciones con baño privado, aire acondicionado autónomo y Smart TV, con una ubicación estratégica ideal para descubrir las maravillas arqueológicas y paisajísticas de Campania.',
+    // Pompei Room
+    pompeiType: 'Habitación Doble',
+    pompeiDesc: 'Amplia habitación con cómoda cama de matrimonio, baño privado completo con ducha, climatización autónoma, Smart TV y Wi-Fi de alta velocidad.',
+    pompeiTag1: 'Baño Privado',
+    pompeiTag2: 'Cama de Matrimonio',
+    pompeiTag3: 'Clima & TV',
+    // Stabia Sunset
+    stabiaType: 'Superior con Balcón',
+    stabiaDesc: 'El alojamiento más sugerente: acceso al balcón privado con vistas panorámicas a la cordillera de los Montes Lattari, baño privado y set de bienvenida.',
+    stabiaTag1: 'Balcón Panorámico',
+    stabiaTag2: 'Baño Privado',
+    stabiaTag3: 'Vistas a la Montaña',
+    // VesuView
+    vesuviewType: 'Doble con Balcón',
+    vesuviewDesc: 'Espléndida habitación doble con <strong>balcón panorámico</strong> y vistas impresionantes. Reservada para <strong>2 personas</strong> (3er huésped permitido solo para <strong>bebé con cuna</strong> bajo petición). Baño privado y aire acondicionado.',
+    vesuviewTag1: 'Balcón Panorámico',
+    vesuviewTag2: '2 Huéspedes (+ Cuna Bebé)',
+    vesuviewTag3: 'Baño Privado',
+    roomRateFrom: 'Tarifa',
+    contactForPrice: 'Contactar para el precio',
+    rateTypeLabel: 'Oferta y Presupuesto',
+    bestRateOnRequest: 'Mejor Tarifa a Petición',
+    btnSelect: 'Solicitar Info',
+    viewGallery: 'Abrir Galería +',
+    allRoomPhotos: 'Todas las fotos de la habitación:',
+    panoramicBalconyBadge: 'Balcón Panorámico',
+    panoramicViewBadge: 'Vistas Panorámicas',
+    // Highlights 3 Cards
+    stayBadge: 'Estancia y Alojamiento',
+    stayTitle: 'Habitaciones con Encanto',
+    stayDesc: 'Estancia clásica en elegantes habitaciones dobles en la 5ª planta con ascensor, baño privado, Smart TV, Wi-Fi fibra y terraza panorámica sobre los Montes Lattari.',
+    stayCta: 'Descubrir Habitaciones',
+    dayUseBadge: 'Relax y Privacidad Diurna',
+    dayUseTitle: 'Fórmula Day Use (3 Horas)',
+    dayUseDesc: 'Opción flexible diurna para unas horas de total privacidad y relax en habitación privada con baño en-suite, balcón panorámico y climatización.',
+    dayUseCta: 'Solicitar Day Use',
+    setupBadge: 'Momentos Románticos y Celebraciones',
+    setupTitle: 'Preparación Personalizada',
+    setupDesc: 'Haz único tu momento: solicita detalles con pétalos de rosa, velas, Prosecco, bombones y decoración especial para cumpleaños y aniversarios.',
+    setupCta: 'Personalizar Estancia',
+    // External
+    commonAreasBadge: 'Terraza y Zonas Comunes (5 Fotos)',
+    commonAreasTitle: 'Espacios Comunes y Vistas',
+    commonAreasDesc: 'La terraza solárium panorámica en la 5ª planta y la cocina común a disposición de los huéspedes.',
+    terrazzaSolarium: 'Terraza Solárium',
+    vistaDallAlto: 'Vistas desde Arriba',
+    montiLattari: 'Montes Lattari',
+    areaRelax: 'Área de Relax en Terraza',
+    cucinaFrigo: 'Cocina y Frigorífico',
+    // Services
+    servicesBadge: 'Excelencia y Hospitalidad',
+    servicesTitle: 'Servicios Premium',
+    srv1Title: 'Check-in Exclusivo',
+    srv1Desc: 'Atención personalizada en la 5ª planta con ascensor, horarios flexibles bajo petición y máxima discreción.',
+    srv2Title: 'Asistencia Dedicada',
+    srv2Desc: 'Recomendaciones exclusivas de restaurantes, fábricas históricas de pasta de Gragnano y traslados a Pompeya, Sorrento y la Costa.',
+    srv3Title: 'Mejor Tarifa Directa',
+    srv3Desc: 'Reserva directamente sin comisiones intermediarias para obtener el mejor precio garantizado y atención inmediata.',
+    srv4Title: 'Confort de 5 Estrellas',
+    srv4Desc: 'Desayuno italiano, café espresso, climatización autónoma, Wi-Fi fibra y limpieza impecable (puntuación 10/10).',
+    amenityWifi: 'Wi-Fi Fibra Gratuito',
+    amenityAC: 'Climatización Autónoma',
+    amenityTV: 'Smart TV de Pantalla Plana',
+    amenityKit: 'Set de Cortesía y Toallas',
+    // Reviews
+    scoreTitle: 'Puntuación Excepcional',
+    scoreSubtitle: 'Reconocimiento oficial basado en opiniones verificadas de huéspedes internacionales.',
+    scoreStaff: 'Atención',
+    scoreClean: 'Limpieza',
+    scoreLoc: 'Ubicación',
+    review1Text: '«¡La atención fue fantástica! La habitación estaba impecable, muy limpia y con todas las comodidades. Preciosas vistas panorámicas desde la quinta planta.»',
+    review1Author: 'Huésped Booking.com',
+    review2Text: '«Ubicación estratégica para visitar Pompeya, Sorrento y la Costa sin el estrés del caos de la ciudad. El anfitrión es amabilísimo y siempre disponible.»',
+    review2Author: 'Pareja de Viaje',
+    review3Text: '«Alojamiento nuevo, cuidado hasta el último detalle, muy tranquilo y con una cama comodísima. Excelente desayuno y comodidad del ascensor.»',
+    review3Author: 'Huésped Español',
+    // Booking
+    bookBadge: 'Presupuesto Directo al Mejor Precio',
+    bookTitle: 'Consultar Disponibilidad',
+    bookSubtitle: 'Selecciona las fechas para solicitar disponibilidad y la mejor tarifa',
+    labelCheckin: 'Fecha Check-in (desde 17:00)',
+    labelCheckout: 'Fecha Check-out (hasta 10:30)',
+    labelGuests: 'Número de Huéspedes',
+    labelRoom: 'Tipo de Habitación',
+    guestCount1: '1 Huésped',
+    guestCount2: '2 Huéspedes',
+    guestCount3: '3 Huéspedes',
+    guestCount4: '4 Huéspedes',
+    guestCount5: '5 Huéspedes',
+    guestCount6: '6 Huéspedes (Estructura Completa)',
+    optPompei: 'Pompei Room (Estándar) - Contactar para precio',
+    optStabia: 'Stabia Sunset (Vistas Montaña) - Contactar para precio',
+    optVesu: 'VesuView (Balcón Panorámico • 2 Huéspedes + Cuna) - Contactar para precio',
+    labelDayUse: 'Fórmula Day Use (3 horas de relax)',
+    labelAllestimento: 'Preparación Personalizada de la Habitación',
+    optAllestimentoStandard: 'Estándar (Sin preparación extra)',
+    optAllestimentoRomantico: 'Pétalos y Velas Románticas',
+    optAllestimentoCompleanno: 'Cumpleaños o Aniversario Especial',
+    optAllestimentoProsecco: 'Prosecco y Dulces de Bienvenida',
+    optAllestimentoLuxury: 'Preparación Luxury Completa',
+    stayDuration: 'Duración de la estancia',
+    estimatedTotal: 'Presupuesto estancia',
+    btnBookSubmit: 'Consultar Disponibilidad y Presupuesto',
+    bookDisclaimer: 'Respuesta inmediata por WhatsApp y Email. Sin pagos por adelantado.',
+    // Reception & Contacts
+    contactsSectionTitle: 'Recepción y Contacto',
+    contactsHelpTitle: 'Atención Personalizada',
+    contactsHelpDesc: 'Nuestro equipo está a tu entera disposición para información sobre las habitaciones, consejos de viaje, horarios de llegada personalizados y necesidades especiales.',
+    contactPhoneLabel: 'Móvil e Info',
+    contactLandlineLabel: 'Teléfono Fijo',
+    contactWhatsAppLabel: 'WhatsApp Directo 24/7',
+    contactWhatsAppSub: 'Escríbenos en tiempo real',
+    contactEmailLabel: 'Email Oficial',
+    contactAddressLabel: 'Ubicación y Dirección',
+    contactAddressValue: 'Via Raffaele Viviani, 36 (5ª Planta con ascensor)<br>80054 Gragnano (NA), Italia',
+    formTitle: 'Solicitud Directa de Estancia',
+    inputNamePh: 'Nombre y Apellidos *',
+    inputEmailPh: 'Correo Electrónico *',
+    inputPhonePh: 'Teléfono / WhatsApp',
+    optAllRooms: 'Habitación de interés (cualquiera)',
+    inputNotesPh: 'Fechas tentativas o peticiones especiales',
+    btnFormSubmit: 'Enviar Solicitud por WhatsApp',
+    footerCheckinHours: 'Check-in: 17:00 - 21:00',
+    footerCheckoutHours: 'Check-out: 08:00 - 10:30',
+    footerCopyright: '© 2026 • Todos los derechos reservados',
+    footerDevBy: 'Sitio web realizado por'
   }
 };
 
@@ -470,19 +617,42 @@ function closeModal() {
 
 // Send via WhatsApp directly with complete pre-set message
 function sendViaWhatsApp() {
-  const name = document.getElementById('guestName')?.value || 'Ospite';
+  const isEs = currentLang === 'es';
+  const isEn = currentLang === 'en';
+
+  const defaultName = isEs ? 'Huésped' : (isEn ? 'Guest' : 'Ospite');
+  const name = document.getElementById('guestName')?.value || defaultName;
   const phone = document.getElementById('guestPhone')?.value || '';
   const email = document.getElementById('guestEmail')?.value || '';
   const room = bookingData.roomName || 'Camera B&B CaMa';
   const guests = bookingData.ospiti ? bookingData.ospiti : '2';
-  const dates = `dal ${bookingData.checkin} al ${bookingData.checkout} (${bookingData.nights || 1} notti)`;
 
-  const isDayUse = (document.getElementById('dayUseCheckbox')?.checked || document.getElementById('dayUseToggle')?.checked) 
-    ? "in formula Day Use (3 ore)" 
-    : "per pernottamento";
-  const allestimento = document.getElementById('allestimentoSelect')?.value || document.getElementById('allestimentoInput')?.value || "Standard";
+  const nightsCount = bookingData.nights || 1;
+  let dates = `dal ${bookingData.checkin} al ${bookingData.checkout} (${nightsCount} notti)`;
+  if (isEs) {
+    const nightsWord = nightsCount === 1 ? 'noche' : 'noches';
+    dates = `del ${bookingData.checkin} al ${bookingData.checkout} (${nightsCount} ${nightsWord})`;
+  } else if (isEn) {
+    const nightsWord = nightsCount === 1 ? 'night' : 'nights';
+    dates = `from ${bookingData.checkin} to ${bookingData.checkout} (${nightsCount} ${nightsWord})`;
+  }
 
-  const message = `Salve B&B CaMa, vorrei prenotare la camera ${room} ${isDayUse} per ${guests} ospiti nelle date ${dates}. Allestimento richiesto: ${allestimento}. Nome: ${name}, telefono: ${phone}, email: ${email}.`;
+  const isDayUseChecked = (document.getElementById('dayUseCheckbox')?.checked || document.getElementById('dayUseToggle')?.checked);
+  let isDayUse = isDayUseChecked ? "in formula Day Use (3 ore)" : "per pernottamento";
+  if (isEs) {
+    isDayUse = isDayUseChecked ? "en fórmula Day Use (3 horas)" : "para estancia completa";
+  } else if (isEn) {
+    isDayUse = isDayUseChecked ? "in Day Use formula (3 hours)" : "for overnight stay";
+  }
+
+  const allestimento = document.getElementById('allestimentoSelect')?.value || document.getElementById('allestimentoInput')?.value || (isEs ? "Estándar" : (isEn ? "Standard" : "Standard"));
+
+  let message = `Salve B&B CaMa, vorrei prenotare la camera ${room} ${isDayUse} per ${guests} ospiti nelle date ${dates}. Allestimento richiesto: ${allestimento}. Nome: ${name}, telefono: ${phone}, email: ${email}.`;
+  if (isEs) {
+    message = `Hola B&B CaMa, me gustaría reservar la habitación ${room} ${isDayUse} para ${guests} huéspedes en las fechas ${dates}. Preparación solicitada: ${allestimento}. Mi nombre es ${name}, teléfono: ${phone}, email: ${email}.`;
+  } else if (isEn) {
+    message = `Hello B&B CaMa, I would like to book room ${room} ${isDayUse} for ${guests} guests on dates ${dates}. Setup requested: ${allestimento}. My name is ${name}, phone: ${phone}, email: ${email}.`;
+  }
 
   const whatsappUrl = `https://wa.me/393447186581?text=${encodeURIComponent(message)}`;
   window.open(whatsappUrl, '_blank');
