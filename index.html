@@ -8,9 +8,28 @@
   <meta name="description"
     content="B&B CaMa a Gragnano (NA). Camere di charme al 5° piano con vista panoramica sui Monti Lattari, bagno privato e servizi premium. Punteggio 9.5 Eccezionale.">
 
-  <!-- Google Fonts: Cinzel, Cormorant Garamond, Montserrat -->
+  <!-- SEO & Social Meta Tags -->
+  <meta name="theme-color" content="#0a0a0c">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="B&B CaMa | Camere di Charme a Gragnano - Costiera & Pompei">
+  <meta property="og:description" content="B&B CaMa a Gragnano (NA). Camere di charme al 5° piano con terrazza panoramica sui Monti Lattari e vista Vesuvio. Punteggio 9.5 Eccezionale.">
+  <meta property="og:image" content="immagini/Stabia Sunset1.jpeg">
+  <meta property="og:site_name" content="B&B CaMa">
+  <meta property="og:locale" content="it_IT">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="B&B CaMa | Camere di Charme a Gragnano">
+  <meta name="twitter:description" content="Camere di charme con terrazza panoramica al 5° piano con vista Vesuvio a Gragnano. Punteggio 9.5 Booking.com.">
+  <meta name="twitter:image" content="immagini/Stabia Sunset1.jpeg">
+
+  <!-- Performance Preconnects & DNS Prefetch -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+  <link rel="dns-prefetch" href="https://unpkg.com">
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+
+  <!-- Google Fonts: Cinzel, Cormorant Garamond, Montserrat -->
   <link
     href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap"
     rel="stylesheet">
@@ -53,6 +72,41 @@
 
   <!-- Custom Luxury Stylesheet -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- Schema.org JSON-LD Structured Data for BedAndBreakfast -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BedAndBreakfast",
+    "name": "B&B CaMa",
+    "image": "immagini/Stabia Sunset1.jpeg",
+    "description": "B&B CaMa a Gragnano (NA). Camere di charme al 5° piano con vista panoramica sui Monti Lattari, terrazza solarium, bagno privato e servizi premium.",
+    "telephone": "+39 344 718 6581",
+    "email": "bebcama1963@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Via Raffaele Viviani, 36 (Piano 5)",
+      "addressLocality": "Gragnano",
+      "addressRegion": "Campania",
+      "postalCode": "80054",
+      "addressCountry": "IT"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 40.6975,
+      "longitude": 14.5142
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "9.5",
+      "bestRating": "10",
+      "reviewCount": "120"
+    },
+    "checkinTime": "17:00",
+    "checkoutTime": "10:30",
+    "petsAllowed": false
+  }
+  </script>
 </head>
 
 <body class="bg-[#0a0a0c] text-[#d1d1d6] font-sans antialiased selection:bg-[#c5a880] selection:text-black">
@@ -593,7 +647,7 @@
           <div>
             <!-- Photo Slider Container -->
             <div class="relative aspect-[4/3] bg-zinc-900 overflow-hidden cursor-pointer select-none" onclick="openGallery('pompei', roomCardSliders.pompei.index)">
-              <img id="pompeiCardImg" src="immagini/Pompei Room1.jpeg" alt="Pompei Room B&B CaMa" class="w-full h-full object-cover transition-opacity duration-300">
+              <img id="pompeiCardImg" src="immagini/Pompei Room1.jpeg" alt="Pompei Room B&B CaMa" loading="lazy" decoding="async" class="w-full h-full object-cover transition-opacity duration-300">
               
               <!-- Subtle Photo Count Badge -->
               <div class="absolute top-3 right-3 z-10 bg-black/70 backdrop-blur-sm border border-gold-400/40 text-gold-300 text-[10px] font-cinzel font-semibold px-2.5 py-1 uppercase tracking-wider rounded-sm flex items-center gap-1.5 shadow">
@@ -653,7 +707,7 @@
           <div>
             <!-- Photo Slider Container -->
             <div class="relative aspect-[4/3] bg-zinc-900 overflow-hidden cursor-pointer select-none" onclick="openGallery('stabia', roomCardSliders.stabia.index)">
-              <img id="stabiaCardImg" src="immagini/Stabia Sunset1.jpeg" alt="Stabia Sunset B&B CaMa" class="w-full h-full object-cover transition-opacity duration-300">
+              <img id="stabiaCardImg" src="immagini/Stabia Sunset1.jpeg" alt="Stabia Sunset B&B CaMa" loading="lazy" decoding="async" class="w-full h-full object-cover transition-opacity duration-300">
               
               <div class="absolute top-3 right-3 z-10 bg-black/70 backdrop-blur-sm border border-gold-400/40 text-gold-300 text-[10px] font-cinzel font-semibold px-2.5 py-1 uppercase tracking-wider rounded-sm flex items-center gap-1.5 shadow">
                 <i data-lucide="camera" class="w-3 h-3 text-gold-400"></i>
@@ -713,7 +767,7 @@
           <div>
             <!-- Photo Slider Container -->
             <div class="relative aspect-[4/3] bg-zinc-900 overflow-hidden cursor-pointer select-none" onclick="openGallery('vesuview', roomCardSliders.vesuview.index)">
-              <img id="vesuviewCardImg" src="immagini/VesuView1.jpeg" alt="VesuView B&B CaMa" class="w-full h-full object-cover transition-opacity duration-300">
+              <img id="vesuviewCardImg" src="immagini/VesuView1.jpeg" alt="VesuView B&B CaMa" loading="lazy" decoding="async" class="w-full h-full object-cover transition-opacity duration-300">
               
               <div class="absolute top-3 right-3 z-10 bg-black/70 backdrop-blur-sm border border-gold-400/40 text-gold-300 text-[10px] font-cinzel font-semibold px-2.5 py-1 uppercase tracking-wider rounded-sm flex items-center gap-1.5 shadow">
                 <i data-lucide="camera" class="w-3 h-3 text-gold-400"></i>
@@ -781,7 +835,7 @@
 
         <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
           <div class="luxury-image-card aspect-[4/3] group" onclick="openGallery('esterni', 0)">
-            <img src="immagini/Esterno1.jpeg" alt="Terrazza Panoramica Solarium al 5° Piano"
+            <img src="immagini/Esterno1.jpeg" alt="Terrazza Panoramica Solarium al 5° Piano" loading="lazy" decoding="async"
               class="w-full h-full object-cover">
             <div class="card-caption !p-2 !bg-black/70 text-center">
               <span class="text-[10px] text-gold-300 font-cinzel block" data-i18n="terrazzaSolarium">Terrazza
@@ -789,26 +843,26 @@
             </div>
           </div>
           <div class="luxury-image-card aspect-[4/3] group" onclick="openGallery('esterni', 1)">
-            <img src="immagini/Esterno2.jpeg" alt="Panorama su Gragnano e Monti Lattari"
+            <img src="immagini/Esterno2.jpeg" alt="Panorama su Gragnano e Monti Lattari" loading="lazy" decoding="async"
               class="w-full h-full object-cover">
             <div class="card-caption !p-2 !bg-black/70 text-center">
               <span class="text-[10px] text-gold-300 font-cinzel block" data-i18n="vistaDallAlto">Vista dall'Alto</span>
             </div>
           </div>
           <div class="luxury-image-card aspect-[4/3] group" onclick="openGallery('esterni', 2)">
-            <img src="immagini/WhatsApp Image 2026-09-01 at 20.09.02.jpeg" alt="Vista sul Vesuvio dalla Terrazza" class="w-full h-full object-cover">
+            <img src="immagini/WhatsApp Image 2026-09-01 at 20.09.02.jpeg" alt="Vista sul Vesuvio dalla Terrazza" loading="lazy" decoding="async" class="w-full h-full object-cover">
             <div class="card-caption !p-2 !bg-black/70 text-center">
               <span class="text-[10px] text-gold-300 font-cinzel block" data-i18n="montiLattari">Vista sul Vesuvio</span>
             </div>
           </div>
           <div class="luxury-image-card aspect-[4/3] group" onclick="openGallery('esterni', 3)">
-            <img src="immagini/Esterno4.jpeg" alt="Area Relax Esterna" class="w-full h-full object-cover">
+            <img src="immagini/Esterno4.jpeg" alt="Area Relax Esterna" loading="lazy" decoding="async" class="w-full h-full object-cover">
             <div class="card-caption !p-2 !bg-black/70 text-center">
               <span class="text-[10px] text-gold-300 font-cinzel block" data-i18n="areaRelax">Area Relax Terrazza</span>
             </div>
           </div>
           <div class="luxury-image-card aspect-[4/3] group" onclick="openGallery('esterni', 4)">
-            <img src="immagini/cucina in comune con frigo.jpeg" alt="Area Colazione e Cucina Comune"
+            <img src="immagini/cucina in comune con frigo.jpeg" alt="Area Colazione e Cucina Comune" loading="lazy" decoding="async"
               class="w-full h-full object-cover">
             <div class="card-caption !p-2 !bg-black/70 text-center">
               <span class="text-[10px] text-gold-300 font-cinzel block" data-i18n="cucinaFrigo">Cucina &

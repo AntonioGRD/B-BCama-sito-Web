@@ -769,19 +769,29 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Scroll to top button visibility handler
+  // Scroll to top button visibility handler (Optimized with requestAnimationFrame)
   const scrollTopBtn = document.getElementById('scrollToTopBtn');
   if (scrollTopBtn) {
+    let ticking = false;
     const checkScroll = () => {
       if (window.scrollY > 250) {
         scrollTopBtn.classList.add('visible');
       } else {
         scrollTopBtn.classList.remove('visible');
       }
+      ticking = false;
     };
-    window.addEventListener('scroll', checkScroll, { passive: true });
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(checkScroll);
+        ticking = true;
+      }
+    }, { passive: true });
     checkScroll();
   }
+
+  // Initialize Mobile Touch Gestures for Room Cards
+  initRoomCardTouchSwipes();
 
   // Apply initial language
   setLanguage(currentLang);
@@ -1180,6 +1190,42 @@ function handleSwipeGesture() {
       prevGalleryPhoto(); // swipe right -> prev photo
     }
   }
+}
+
+// Mobile Touch Swipe for Room Card Sliders
+function initRoomCardTouchSwipes() {
+  const roomKeys = ['pompei', 'stabia', 'vesuview'];
+  roomKeys.forEach(key => {
+    const imgEl = document.getElementById(roomCardSliders[key]?.imgId);
+    const container = imgEl ? imgEl.closest('.relative') : null;
+    if (!container) return;
+
+    let startX = 0;
+    let endX = 0;
+    let startY = 0;
+    let endY = 0;
+
+    container.addEventListener('touchstart', (e) => {
+      startX = e.changedTouches[0].screenX;
+      startY = e.changedTouches[0].screenY;
+    }, { passive: true });
+
+    container.addEventListener('touchend', (e) => {
+      endX = e.changedTouches[0].screenX;
+      endY = e.changedTouches[0].screenY;
+      const diffX = endX - startX;
+      const diffY = endY - startY;
+
+      // Ensure horizontal swipe is dominant and above 35px threshold
+      if (Math.abs(diffX) > 35 && Math.abs(diffX) > Math.abs(diffY)) {
+        if (diffX < 0) {
+          slideRoomCard(key, 'next');
+        } else {
+          slideRoomCard(key, 'prev');
+        }
+      }
+    }, { passive: true });
+  });
 }
 
 // ==========================================================================

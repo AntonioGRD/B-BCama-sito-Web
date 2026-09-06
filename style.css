@@ -1117,4 +1117,51 @@ button, a, input, select {
 .amenities-scroll-bar {
   -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth;
+  overscroll-behavior-x: contain;
+}
+
+/* ==========================================================================
+   PERFORMANCE & ACCESSIBILITY OPTIMIZATIONS
+   ========================================================================== */
+
+/* GPU Acceleration & Performance */
+.hero-luxury-bg,
+.room-card,
+.lightbox-modal,
+.slider-dot,
+.concierge-card {
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Touch responsiveness optimization */
+button,
+a,
+.slider-dot,
+.lang-btn {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+/* Accessible focus rings */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--gold-400);
+  outline-offset: 2px;
+}
+
+/* Respect user preference for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
