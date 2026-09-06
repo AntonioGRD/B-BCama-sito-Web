@@ -70,10 +70,6 @@ const TRANSLATIONS = {
     dayUseTitle: 'Formula Day Use (3 Ore)',
     dayUseDesc: 'Opzione flessibile diurna per qualche ora di totale riservatezza e relax in camera privata con bagno en-suite, balcone panoramico e climatizzazione autonoma.',
     dayUseCta: 'Richiedi Day Use',
-    setupBadge: 'Momenti Romantici & Ricorrenze',
-    setupTitle: 'Allestimenti Personalizzati',
-    setupDesc: 'Rendi unico il tuo momento: richiedi allestimenti con petali di rosa, candele, Prosecco, dolcezze e composizioni speciali per compleanni e anniversari.',
-    setupCta: 'Personalizza Soggiorno',
     // External
     commonAreasBadge: 'Terrazza & Servizi Comuni (5 Foto)',
     commonAreasTitle: 'Spazi Comuni & Panorama',
@@ -129,12 +125,6 @@ const TRANSLATIONS = {
     optVesu: 'VesuView (Balcone Panoramico • 2 Ospiti) - Contatta per il prezzo',
     labelDayUse: 'Formula Day Use (3 ore di relax)',
     labelCulla: 'Richiesta Culla Neonato (0-2 anni)',
-    labelAllestimento: 'Allestimento Personalizzato Stanza',
-    optAllestimentoStandard: 'Standard (Nessun allestimento extra)',
-    optAllestimentoRomantico: 'Petali & Candele Romantiche',
-    optAllestimentoCompleanno: 'Compleanno o Ricorrenza Speciale',
-    optAllestimentoProsecco: 'Prosecco & Dolcezze di Benvenuto',
-    optAllestimentoLuxury: 'Allestimento Luxury Completo',
     stayDuration: 'Durata soggiorno',
     estimatedTotal: 'Preventivo soggiorno',
     btnBookSubmit: 'Richiedi Disponibilità & Preventivo',
@@ -264,10 +254,6 @@ const TRANSLATIONS = {
     dayUseTitle: 'Day Use Formula (3 Hours)',
     dayUseDesc: 'Flexible daytime break for maximum privacy and comfort in a private room with en-suite bathroom, panoramic balcony, and air conditioning.',
     dayUseCta: 'Request Day Use',
-    setupBadge: 'Romantic Moments & Celebrations',
-    setupTitle: 'Custom Room Setups',
-    setupDesc: 'Make your stay unforgettable: request themed setups with rose petals, scented candles, Prosecco, sweets, and birthday or anniversary arrangements.',
-    setupCta: 'Customize Stay',
     // External
     commonAreasBadge: 'Terrace & Shared Areas (5 Photos)',
     commonAreasTitle: 'Shared Spaces & Scenic Views',
@@ -323,12 +309,6 @@ const TRANSLATIONS = {
     optVesu: 'VesuView (Panoramic Balcony • 2 Guests) - Contact for price',
     labelDayUse: 'Day Use Formula (3-hour stay)',
     labelCulla: 'Baby Cot / Crib Request (0-2 years)',
-    labelAllestimento: 'Custom Room Setup & Occasion',
-    optAllestimentoStandard: 'Standard (No extra setup)',
-    optAllestimentoRomantico: 'Romantic Petals & Candles',
-    optAllestimentoCompleanno: 'Birthday or Special Anniversary',
-    optAllestimentoProsecco: 'Prosecco & Welcome Sweets',
-    optAllestimentoLuxury: 'Full Luxury Experience Setup',
     stayDuration: 'Stay duration',
     estimatedTotal: 'Custom Quote',
     btnBookSubmit: 'Request Availability & Quote',
@@ -457,10 +437,6 @@ const TRANSLATIONS = {
     dayUseTitle: 'Fórmula Day Use (3 Horas)',
     dayUseDesc: 'Opción flexible diurna para unas horas de total privacidad y relax en habitación privada con baño en-suite, balcón panorámico y climatización.',
     dayUseCta: 'Solicitar Day Use',
-    setupBadge: 'Momentos Románticos y Celebraciones',
-    setupTitle: 'Preparación Personalizada',
-    setupDesc: 'Haz único tu momento: solicita detalles con pétalos de rosa, velas, Prosecco, bombones y decoración especial para cumpleaños y aniversarios.',
-    setupCta: 'Personalizar Estancia',
     // External
     commonAreasBadge: 'Terraza y Zonas Comunes (5 Fotos)',
     commonAreasTitle: 'Espacios Comunes y Vistas',
@@ -516,12 +492,6 @@ const TRANSLATIONS = {
     optVesu: 'VesuView (Balcón Panorámico • 2 Huéspedes) - Contactar para precio',
     labelDayUse: 'Fórmula Day Use (3 horas de relax)',
     labelCulla: 'Solicitud de Cuna para Bebé (0-2 años)',
-    labelAllestimento: 'Preparación Personalizada de la Habitación',
-    optAllestimentoStandard: 'Estándar (Sin preparación extra)',
-    optAllestimentoRomantico: 'Pétalos y Velas Románticas',
-    optAllestimentoCompleanno: 'Cumpleaños o Aniversario Especial',
-    optAllestimentoProsecco: 'Prosecco y Dulces de Bienvenida',
-    optAllestimentoLuxury: 'Preparación Luxury Completa',
     stayDuration: 'Duración de la estancia',
     estimatedTotal: 'Presupuesto estancia',
     btnBookSubmit: 'Consultar Disponibilidad y Presupuesto',
@@ -823,7 +793,6 @@ function handleBookingSubmit(e) {
 
   document.getElementById('modalDates').textContent = `${checkin} → ${checkout} (${nights} ${nightsWord})`;
   document.getElementById('modalGuests').textContent = `${ospiti} ${guestsWord}${cullaNote}`;
-  document.getElementById('modalRoom').textContent = roomName;
   document.getElementById('modalTotal').textContent = currentLang === 'en' ? 'Best Rate on Request' : (currentLang === 'es' ? 'Mejor Tarifa a Petición' : 'Contattaci per il miglior prezzo');
 
   document.getElementById('bookingModal').classList.remove('hidden');
@@ -836,7 +805,6 @@ function closeModal() {
   modal.classList.remove('flex');
 }
 
-// Send via WhatsApp directly with complete pre-set message
 function sendViaWhatsApp() {
   const isEs = currentLang === 'es';
   const isEn = currentLang === 'en';
@@ -868,13 +836,11 @@ function sendViaWhatsApp() {
 
   const cullaStr = bookingData.hasCulla ? (isEs ? " • Con cuna para bebé" : (isEn ? " • With baby cot/crib" : " • Con culla neonato")) : "";
 
-  const allestimento = document.getElementById('allestimentoSelect')?.value || document.getElementById('allestimentoInput')?.value || (isEs ? "Estándar" : (isEn ? "Standard" : "Standard"));
-
-  let message = `Salve B&B CaMa, vorrei verificare la disponibilità per la camera ${room} ${isDayUse} per ${guests} ospiti${cullaStr} nelle date ${dates}. Allestimento richiesto: ${allestimento}. Nome: ${name}, telefono: ${phone}, email: ${email}.`;
+  let message = `Salve B&B CaMa, vorrei verificare la disponibilità per la camera ${room} ${isDayUse} per ${guests} ospiti${cullaStr} nelle date ${dates}. Nome: ${name}, telefono: ${phone}, email: ${email}.`;
   if (isEs) {
-    message = `Hola B&B CaMa, me gustaría consultar la disponibilidad para la habitación ${room} ${isDayUse} para ${guests} huéspedes${cullaStr} en las fechas ${dates}. Preparación solicitada: ${allestimento}. Mi nombre es ${name}, teléfono: ${phone}, email: ${email}.`;
+    message = `Hola B&B CaMa, me gustaría consultar la disponibilidad para la habitación ${room} ${isDayUse} para ${guests} huéspedes${cullaStr} en las fechas ${dates}. Mi nombre es ${name}, telefono: ${phone}, email: ${email}.`;
   } else if (isEn) {
-    message = `Hello B&B CaMa, I would like to check availability for room ${room} ${isDayUse} for ${guests} guests${cullaStr} on dates ${dates}. Setup requested: ${allestimento}. My name is ${name}, phone: ${phone}, email: ${email}.`;
+    message = `Hello B&B CaMa, I would like to check availability for room ${room} ${isDayUse} for ${guests} guests${cullaStr} on dates ${dates}. My name is ${name}, phone: ${phone}, email: ${email}.`;
   }
 
   const whatsappUrl = `https://wa.me/393447186581?text=${encodeURIComponent(message)}`;
