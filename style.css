@@ -1094,3 +1094,27 @@ button, a, input, select {
 .mobile-bar-btn:active {
   transform: scale(0.96);
 }
+
+/* Room Slider Dots & Transitions */
+.slider-dot {
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+  transition: all 0.25s ease-in-out;
+}
+.slider-dot:hover {
+  background-color: #ffffff;
+  transform: scale(1.15);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.amenities-scroll-bar {
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}

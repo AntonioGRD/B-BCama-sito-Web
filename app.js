@@ -37,7 +37,7 @@ const TRANSLATIONS = {
     aboutFeature2Sub: 'Calore Familiare',
     sectionWelcome: 'Benvenuti a CaMa',
     sectionRoomsTitle: 'Le Nostre Camere',
-    sectionRoomsQuote: "«Un'oasi di tranquillità ed eleganza al 5° piano con terrazza panoramica, dove ogni dettaglio è pensato per regalarti un soggiorno memorabile tra Pompei, Sorrento e la Costiera.»",
+    sectionRoomsQuote: "Un'oasi di tranquillità ed eleganza al 5° piano con terrazza panoramica, dove ogni dettaglio è pensato per regalarti un soggiorno memorabile tra Pompei, Sorrento e la Costiera.",
     sectionRoomsDesc: "Nel cuore di Gragnano, raffinate camere matrimoniali al 5° piano con ascensore e vista panoramica sui Monti Lattari, dotate di tutti i comfort:",
     featBreakfastTitle: 'Colazione Inclusa',
     featBreakfastSub: 'Monodose & Espresso',
@@ -243,7 +243,7 @@ const TRANSLATIONS = {
     aboutFeature2Sub: 'Family Warmth',
     sectionWelcome: 'Welcome to CaMa',
     sectionRoomsTitle: 'Our Rooms',
-    sectionRoomsQuote: '«A peaceful and elegant haven on the 5th floor with a panoramic terrace, where every detail is designed for a memorable stay between Pompeii, Sorrento, and the Amalfi Coast.»',
+    sectionRoomsQuote: 'A peaceful and elegant haven on the 5th floor with a panoramic terrace, where every detail is designed for a memorable stay between Pompeii, Sorrento, and the Amalfi Coast.',
     sectionRoomsDesc: 'In the heart of Gragnano, refined double bedrooms on the 5th floor with elevator and panoramic mountain views, featuring all premium amenities:',
     featBreakfastTitle: 'Breakfast Included',
     featBreakfastSub: 'Single-serve & Espresso',
@@ -449,7 +449,7 @@ const TRANSLATIONS = {
     aboutFeature2Sub: 'Calidez Familiar',
     sectionWelcome: 'Bienvenidos a CaMa',
     sectionRoomsTitle: 'Nuestras Habitaciones',
-    sectionRoomsQuote: '«Un oasis de tranquilidad y elegancia en la 5ª planta con terraza panorámica, donde cada detalle está pensado para regalarte una estancia inolvidable entre Pompeya, Sorrento y la Costa Amalfitana.»',
+    sectionRoomsQuote: 'Un oasis de tranquilidad y elegancia en la 5ª planta con terraza panorámica, donde cada detalle está pensado para regalarte una estancia inolvidable entre Pompeya, Sorrento y la Costa Amalfitana.',
     sectionRoomsDesc: 'En el corazón de Gragnano, elegantes habitaciones matrimoniales en la 5ª planta con ascensor y vistas panorámicas, equipadas con todas las comodidades:',
     featBreakfastTitle: 'Desayuno Incluido',
     featBreakfastSub: 'Monodosis y Espresso',
@@ -992,6 +992,68 @@ const ROOM_GALLERIES = {
     { src: 'immagini/cucina in comune con frigo.jpeg', caption: 'Area Colazione & Cucina in comune con Frigorifero (5/5)' }
   ]
 };
+
+// Room card slider controller
+const roomCardSliders = {
+  pompei: { index: 0, count: 5, imgId: 'pompeiCardImg', counterId: 'pompeiPhotoBadge', dotsId: 'pompeiDots' },
+  stabia: { index: 0, count: 4, imgId: 'stabiaCardImg', counterId: 'stabiaPhotoBadge', dotsId: 'stabiaDots' },
+  vesuview: { index: 0, count: 3, imgId: 'vesuviewCardImg', counterId: 'vesuviewPhotoBadge', dotsId: 'vesuviewDots' }
+};
+
+function slideRoomCard(roomKey, direction, e) {
+  if (e) e.stopPropagation();
+  const slider = roomCardSliders[roomKey];
+  const gallery = ROOM_GALLERIES[roomKey];
+  if (!slider || !gallery) return;
+
+  if (direction === 'next') {
+    slider.index = (slider.index + 1) % gallery.length;
+  } else if (direction === 'prev') {
+    slider.index = (slider.index - 1 + gallery.length) % gallery.length;
+  }
+
+  updateRoomCardSliderUI(roomKey);
+}
+
+function setRoomCardSlide(roomKey, index, e) {
+  if (e) e.stopPropagation();
+  const slider = roomCardSliders[roomKey];
+  const gallery = ROOM_GALLERIES[roomKey];
+  if (!slider || !gallery || index < 0 || index >= gallery.length) return;
+
+  slider.index = index;
+  updateRoomCardSliderUI(roomKey);
+}
+
+function updateRoomCardSliderUI(roomKey) {
+  const slider = roomCardSliders[roomKey];
+  const gallery = ROOM_GALLERIES[roomKey];
+  if (!slider || !gallery) return;
+
+  const currentItem = gallery[slider.index];
+  const imgEl = document.getElementById(slider.imgId);
+  const badgeEl = document.getElementById(slider.counterId);
+  const dotsContainer = document.getElementById(slider.dotsId);
+
+  if (imgEl) {
+    imgEl.src = currentItem.src;
+  }
+  if (badgeEl) {
+    badgeEl.textContent = `${slider.index + 1}/${gallery.length} Foto`;
+  }
+  if (dotsContainer) {
+    const dots = dotsContainer.querySelectorAll('.slider-dot');
+    dots.forEach((dot, idx) => {
+      if (idx === slider.index) {
+        dot.classList.add('bg-white', 'w-4');
+        dot.classList.remove('bg-white/50', 'w-1.5');
+      } else {
+        dot.classList.remove('bg-white', 'w-4');
+        dot.classList.add('bg-white/50', 'w-1.5');
+      }
+    });
+  }
+}
 
 let currentGalleryKey = 'pompei';
 let currentPhotoIndex = 0;
