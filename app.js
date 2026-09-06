@@ -47,9 +47,9 @@ const TRANSLATIONS = {
     stabiaTag3: 'Vista Montagna',
     // VesuView
     vesuviewType: 'Matrimoniale con Balcone',
-    vesuviewDesc: 'Splendida camera matrimoniale dotata di <strong>balcone panoramico</strong> con vista suggestiva. Riservata per <strong>2 persone</strong> (3° ospite consentito solo per <strong>neonato con culla</strong> su richiesta). Bagno privato e climatizzazione autonoma.',
+    vesuviewDesc: 'Splendida camera matrimoniale dotata di <strong>balcone panoramico</strong> con vista suggestiva. Riservata per <strong>2 persone</strong> con letto matrimoniale confortevole, bagno privato e climatizzazione autonoma.',
     vesuviewTag1: 'Balcone Panoramico',
-    vesuviewTag2: '2 Ospiti (+ Culla Neonato)',
+    vesuviewTag2: '2 Ospiti',
     vesuviewTag3: 'Bagno Privato',
 
     roomRateFrom: 'Tariffa',
@@ -126,8 +126,9 @@ const TRANSLATIONS = {
     guestCount6: '6 Ospiti (Intera struttura)',
     optPompei: 'Pompei Room (Standard) - Contatta per il prezzo',
     optStabia: 'Stabia Sunset (Vista Montagna) - Contatta per il prezzo',
-    optVesu: 'VesuView (Balcone Panoramico • 2 Ospiti + Culla) - Contatta per il prezzo',
+    optVesu: 'VesuView (Balcone Panoramico • 2 Ospiti) - Contatta per il prezzo',
     labelDayUse: 'Formula Day Use (3 ore di relax)',
+    labelCulla: 'Richiesta Culla Neonato (0-2 anni)',
     labelAllestimento: 'Allestimento Personalizzato Stanza',
     optAllestimentoStandard: 'Standard (Nessun allestimento extra)',
     optAllestimentoRomantico: 'Petali & Candele Romantiche',
@@ -240,9 +241,9 @@ const TRANSLATIONS = {
     stabiaTag3: 'Mountain View',
     // VesuView
     vesuviewType: 'Double with Balcony',
-    vesuviewDesc: 'Charming double room with a <strong>panoramic balcony</strong> and scenic views. Designed for <strong>2 guests</strong> (3rd guest allowed only for <strong>infant with crib</strong> upon request). Private bathroom and climate control.',
+    vesuviewDesc: 'Charming double room with a <strong>panoramic balcony</strong> and scenic views. Designed for <strong>2 guests</strong> with comfortable double bed, private bathroom, and autonomous climate control.',
     vesuviewTag1: 'Panoramic Balcony',
-    vesuviewTag2: '2 Guests (+ Infant Crib)',
+    vesuviewTag2: '2 Guests',
     vesuviewTag3: 'Private Bathroom',
 
     roomRateFrom: 'Rate',
@@ -319,8 +320,9 @@ const TRANSLATIONS = {
     guestCount6: '6 Guests (Full Property)',
     optPompei: 'Pompei Room (Standard) - Contact for price',
     optStabia: 'Stabia Sunset (Mountain View) - Contact for price',
-    optVesu: 'VesuView (Panoramic Balcony • 2 Guests + Crib) - Contact for price',
+    optVesu: 'VesuView (Panoramic Balcony • 2 Guests) - Contact for price',
     labelDayUse: 'Day Use Formula (3-hour stay)',
+    labelCulla: 'Baby Cot / Crib Request (0-2 years)',
     labelAllestimento: 'Custom Room Setup & Occasion',
     optAllestimentoStandard: 'Standard (No extra setup)',
     optAllestimentoRomantico: 'Romantic Petals & Candles',
@@ -433,9 +435,9 @@ const TRANSLATIONS = {
     stabiaTag3: 'Vistas a la Montaña',
     // VesuView
     vesuviewType: 'Doble con Balcón',
-    vesuviewDesc: 'Espléndida habitación doble con <strong>balcón panorámico</strong> y vistas impresionantes. Reservada para <strong>2 personas</strong> (3er huésped permitido solo para <strong>bebé con cuna</strong> bajo petición). Baño privado y aire acondicionado.',
+    vesuviewDesc: 'Espléndida habitación doble con <strong>balcón panorámico</strong> y vistas impresionantes. Reservada para <strong>2 personas</strong> con cómoda cama de matrimonio, baño privado y climatización autónoma.',
     vesuviewTag1: 'Balcón Panorámico',
-    vesuviewTag2: '2 Huéspedes (+ Cuna Bebé)',
+    vesuviewTag2: '2 Huéspedes',
     vesuviewTag3: 'Baño Privado',
     roomRateFrom: 'Tarifa',
     contactForPrice: 'Contactar para el precio',
@@ -511,8 +513,9 @@ const TRANSLATIONS = {
     guestCount6: '6 Huéspedes (Estructura Completa)',
     optPompei: 'Pompei Room (Estándar) - Contactar para precio',
     optStabia: 'Stabia Sunset (Vistas Montaña) - Contactar para precio',
-    optVesu: 'VesuView (Balcón Panorámico • 2 Huéspedes + Cuna) - Contactar para precio',
+    optVesu: 'VesuView (Balcón Panorámico • 2 Huéspedes) - Contactar para precio',
     labelDayUse: 'Fórmula Day Use (3 horas de relax)',
+    labelCulla: 'Solicitud de Cuna para Bebé (0-2 años)',
     labelAllestimento: 'Preparación Personalizada de la Habitación',
     optAllestimentoStandard: 'Estándar (Sin preparación extra)',
     optAllestimentoRomantico: 'Pétalos y Velas Románticas',
@@ -803,6 +806,7 @@ function handleBookingSubmit(e) {
   const checkout = document.getElementById('checkout').value;
   const ospiti = document.getElementById('ospiti').value;
   const roomKey = document.getElementById('camere').value;
+  const hasCulla = document.getElementById('cullaCheckbox')?.checked || false;
 
   const date1 = new Date(checkin);
   const date2 = new Date(checkout);
@@ -810,13 +814,15 @@ function handleBookingSubmit(e) {
   const nights = Math.max(1, Math.ceil(diffTime / (1000 * 60 * 60 * 24)));
   const roomName = ROOM_NAMES[roomKey] || 'Camera B&B CaMa';
 
-  bookingData = { checkin, checkout, ospiti, roomKey, roomName, nights };
+  bookingData = { checkin, checkout, ospiti, roomKey, roomName, nights, hasCulla };
 
   const nightsWord = currentLang === 'en' ? (nights === 1 ? 'night' : 'nights') : (currentLang === 'es' ? (nights === 1 ? 'noche' : 'noches') : (nights === 1 ? 'notte' : 'notti'));
   const guestsWord = currentLang === 'en' ? (ospiti === '1' ? 'Guest' : 'Guests') : (currentLang === 'es' ? (ospiti === '1' ? 'Huésped' : 'Huéspedes') : (ospiti === '1' ? 'Ospite' : 'Ospiti'));
 
+  const cullaNote = hasCulla ? (currentLang === 'en' ? ' + Baby Crib' : (currentLang === 'es' ? ' + Cuna Bebé' : ' + Culla Neonato')) : '';
+
   document.getElementById('modalDates').textContent = `${checkin} → ${checkout} (${nights} ${nightsWord})`;
-  document.getElementById('modalGuests').textContent = `${ospiti} ${guestsWord}`;
+  document.getElementById('modalGuests').textContent = `${ospiti} ${guestsWord}${cullaNote}`;
   document.getElementById('modalRoom').textContent = roomName;
   document.getElementById('modalTotal').textContent = currentLang === 'en' ? 'Best Rate on Request' : (currentLang === 'es' ? 'Mejor Tarifa a Petición' : 'Contattaci per il miglior prezzo');
 
@@ -860,13 +866,15 @@ function sendViaWhatsApp() {
     isDayUse = isDayUseChecked ? "in Day Use formula (3 hours)" : "for overnight stay";
   }
 
+  const cullaStr = bookingData.hasCulla ? (isEs ? " • Con cuna para bebé" : (isEn ? " • With baby cot/crib" : " • Con culla neonato")) : "";
+
   const allestimento = document.getElementById('allestimentoSelect')?.value || document.getElementById('allestimentoInput')?.value || (isEs ? "Estándar" : (isEn ? "Standard" : "Standard"));
 
-  let message = `Salve B&B CaMa, vorrei prenotare la camera ${room} ${isDayUse} per ${guests} ospiti nelle date ${dates}. Allestimento richiesto: ${allestimento}. Nome: ${name}, telefono: ${phone}, email: ${email}.`;
+  let message = `Salve B&B CaMa, vorrei verificare la disponibilità per la camera ${room} ${isDayUse} per ${guests} ospiti${cullaStr} nelle date ${dates}. Allestimento richiesto: ${allestimento}. Nome: ${name}, telefono: ${phone}, email: ${email}.`;
   if (isEs) {
-    message = `Hola B&B CaMa, me gustaría reservar la habitación ${room} ${isDayUse} para ${guests} huéspedes en las fechas ${dates}. Preparación solicitada: ${allestimento}. Mi nombre es ${name}, teléfono: ${phone}, email: ${email}.`;
+    message = `Hola B&B CaMa, me gustaría consultar la disponibilidad para la habitación ${room} ${isDayUse} para ${guests} huéspedes${cullaStr} en las fechas ${dates}. Preparación solicitada: ${allestimento}. Mi nombre es ${name}, teléfono: ${phone}, email: ${email}.`;
   } else if (isEn) {
-    message = `Hello B&B CaMa, I would like to book room ${room} ${isDayUse} for ${guests} guests on dates ${dates}. Setup requested: ${allestimento}. My name is ${name}, phone: ${phone}, email: ${email}.`;
+    message = `Hello B&B CaMa, I would like to check availability for room ${room} ${isDayUse} for ${guests} guests${cullaStr} on dates ${dates}. Setup requested: ${allestimento}. My name is ${name}, phone: ${phone}, email: ${email}.`;
   }
 
   const whatsappUrl = `https://wa.me/393447186581?text=${encodeURIComponent(message)}`;
@@ -885,6 +893,8 @@ function sendFinalBooking(e) {
   if (isEn) subject = `Booking Inquiry B&B CaMa - ${name}`;
   if (isEs) subject = `Solicitud de Reserva B&B CaMa - ${name}`;
 
+  const cullaEmailStr = bookingData.hasCulla ? ' (Culla Neonato Richiesta)' : '';
+
   const body = encodeURIComponent(
     `Richiesta di soggiorno / Booking Inquiry B&B CaMa:\n\n` +
     `Nome / Name: ${name}\n` +
@@ -892,7 +902,7 @@ function sendFinalBooking(e) {
     `Email: ${email}\n` +
     `Camera / Room: ${bookingData.roomName}\n` +
     `Periodo / Dates: Dal ${bookingData.checkin} al ${bookingData.checkout} (${bookingData.nights} notti / nights)\n` +
-    `Ospiti / Guests: ${bookingData.ospiti}\n\n` +
+    `Ospiti / Guests: ${bookingData.ospiti}${cullaEmailStr}\n\n` +
     `Desidero ricevere la migliore tariffa e la conferma della disponibilità.\n`
   );
 
