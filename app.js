@@ -20,7 +20,13 @@ const TRANSLATIONS = {
     heroTitle: 'Le Nostre Camere',
     heroSubtitle: "L'eleganza dell'ospitalità italiana con vista mozzafiato sul Vesuvio",
     heroBtnBook: 'Verifica Disponibilità',
-    heroBtnExplore: 'Esplora le Camere',
+    heroBtnExplore: 'Scopri Camere',
+    heroBtnPernottamento: 'Pernottamento',
+    heroBtnDayUse: 'Formula Day Use (3 Ore)',
+    homeStayTitle: 'Pernottamento',
+    homeStayDesc: 'Soggiorno in eleganti camere matrimoniali al 5° piano con ascensore, bagno privato, Smart TV e terrazza panoramica.',
+    homeDayUseTitle: 'Day Use (3 Ore)',
+    homeDayUseDesc: 'Camera privata diurna per 3 ore di totale riservatezza con bagno en-suite, balcone panoramico e climatizzazione.',
     // Chi Siamo
     aboutBadge: 'Una Storia di Famiglia & Cuore',
     aboutTitle: 'Dove nasce il nome CaMa',
@@ -68,8 +74,8 @@ const TRANSLATIONS = {
     stayCta: 'Scopri le Camere',
     dayUseBadge: 'Relax & Privacy Diurna',
     dayUseTitle: 'Formula Day Use (3 Ore)',
-    dayUseDesc: 'Opzione flessibile diurna per qualche ora di totale riservatezza e relax in camera privata con bagno en-suite, balcone panoramico e climatizzazione autonoma.',
-    dayUseCta: 'Richiedi Day Use',
+    dayUseDesc: 'La comodità e la totale riservatezza di una camera privata al 5° piano per qualche ora di pausa e relax: bagno en-suite con doccia, balcone panoramico sui Monti Lattari, Smart TV, Wi-Fi fibra e climatizzazione autonoma.',
+    dayUseCta: 'Richiedi Formula Day Use',
     // External
     commonAreasBadge: 'Terrazza & Servizi Comuni (5 Foto)',
     commonAreasTitle: 'Spazi Comuni & Panorama',
@@ -205,6 +211,12 @@ const TRANSLATIONS = {
     heroSubtitle: 'The elegance of Italian hospitality with breathtaking views of Mount Vesuvius',
     heroBtnBook: 'Check Availability',
     heroBtnExplore: 'Explore Rooms',
+    heroBtnPernottamento: 'Overnight Stay',
+    heroBtnDayUse: 'Day Use (3 Hours)',
+    homeStayTitle: 'Overnight Stay',
+    homeStayDesc: 'Classic stay in elegant bedrooms on the 5th floor with elevator, private bathroom, Smart TV, and panoramic terrace.',
+    homeDayUseTitle: 'Day Use (3 Hours)',
+    homeDayUseDesc: 'Private daytime guest room for 3 hours of complete privacy with en-suite bathroom, scenic balcony, and A/C.',
     // About Us
     aboutBadge: 'A Story of Heart & Family',
     aboutTitle: 'Where the Name CaMa Originates',
@@ -252,8 +264,8 @@ const TRANSLATIONS = {
     stayCta: 'Discover Rooms',
     dayUseBadge: 'Daytime Relax & Privacy',
     dayUseTitle: 'Day Use Formula (3 Hours)',
-    dayUseDesc: 'Flexible daytime break for maximum privacy and comfort in a private room with en-suite bathroom, panoramic balcony, and air conditioning.',
-    dayUseCta: 'Request Day Use',
+    dayUseDesc: 'The comfort and total privacy of a private guest room on the 5th floor for daytime rest: en-suite bathroom with shower, panoramic balcony overlooking the Lattari Mountains, Smart TV, fiber Wi-Fi, and autonomous A/C.',
+    dayUseCta: 'Request Day Use Formula',
     // External
     commonAreasBadge: 'Terrace & Shared Areas (5 Photos)',
     commonAreasTitle: 'Shared Spaces & Scenic Views',
@@ -389,6 +401,12 @@ const TRANSLATIONS = {
     heroSubtitle: 'La elegancia de la hospitalidad italiana con vistas panorámicas al Vesubio',
     heroBtnBook: 'Consultar Disponibilidad',
     heroBtnExplore: 'Explorar Habitaciones',
+    heroBtnPernottamento: 'Alojamiento & Noche',
+    heroBtnDayUse: 'Day Use (3 Horas)',
+    homeStayTitle: 'Alojamiento & Noche',
+    homeStayDesc: 'Estancia clásica en elegantes habitaciones con ascensor, baño privado, Smart TV y terraza panorámica.',
+    homeDayUseTitle: 'Day Use (3 Horas)',
+    homeDayUseDesc: 'Habitación privada diurna durante 3 horas de total privacidad con baño privado, balcón y climatización.',
     // Quiénes Somos
     aboutBadge: 'Una Historia de Corazón y Familia',
     aboutTitle: 'El Origen del Nombre CaMa',
@@ -435,8 +453,8 @@ const TRANSLATIONS = {
     stayCta: 'Descubrir Habitaciones',
     dayUseBadge: 'Relax y Privacidad Diurna',
     dayUseTitle: 'Fórmula Day Use (3 Horas)',
-    dayUseDesc: 'Opción flexible diurna para unas horas de total privacidad y relax en habitación privada con baño en-suite, balcón panorámico y climatización.',
-    dayUseCta: 'Solicitar Day Use',
+    dayUseDesc: 'La comodidad y total privacidad de una habitación privada en la 5ª planta para unas horas de relax: baño en-suite con ducha, balcón panorámico con vistas a los Montes Lattari, Smart TV, Wi-Fi fibra y climatización autónoma.',
+    dayUseCta: 'Solicitar Fórmula Day Use',
     // External
     commonAreasBadge: 'Terraza y Zonas Comunes (5 Fotos)',
     commonAreasTitle: 'Espacios Comunes y Vistas',
@@ -763,6 +781,15 @@ function selezionaCamera(roomKey) {
     select.value = roomKey;
     updatePriceCalculator();
   }
+  const prenotaSec = document.getElementById('prenota') || document.getElementById('contatti');
+  prenotaSec?.scrollIntoView({ behavior: 'smooth' });
+}
+
+// Select Day Use from highlight lounge
+function selezionaDayUse() {
+  const checkbox = document.getElementById('dayUseCheckbox');
+  if (checkbox) checkbox.checked = true;
+  updatePriceCalculator();
   const prenotaSec = document.getElementById('prenota') || document.getElementById('contatti');
   prenotaSec?.scrollIntoView({ behavior: 'smooth' });
 }
