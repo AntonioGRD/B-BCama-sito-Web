@@ -10,11 +10,11 @@
   --bg-dark-secondary: #121216;
   --bg-dark-card: #18181f;
   --bg-dark-hover: #21212b;
-  
+
   --bg-light: #faf8f5;
   --bg-cream: #f4efe6;
   --bg-card-light: #ffffff;
-  
+
   --gold-100: #fbf7ee;
   --gold-200: #f4e8cc;
   --gold-300: #e5cd97;
@@ -22,7 +22,7 @@
   --gold-500: #c5a880;
   --gold-600: #b08d4b;
   --gold-700: #8c6a2d;
-  
+
   --gold-gradient: linear-gradient(135deg, #ebd5a0 0%, #c5a880 50%, #9e7b39 100%);
   --gold-gradient-hover: linear-gradient(135deg, #f5e4b8 0%, #d4b68d 50%, #b89149 100%);
   --gold-gradient-text: linear-gradient(135deg, #f3e5c8 0%, #d9b87a 40%, #b89248 100%);
@@ -31,7 +31,7 @@
   --font-serif-luxury: 'Cinzel', serif;
   --font-serif-editorial: 'Cormorant Garamond', Georgia, serif;
   --font-sans: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  
+
   --border-gold-subtle: rgba(197, 168, 128, 0.25);
   --border-gold-bright: rgba(212, 178, 111, 0.6);
   --shadow-luxury: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
@@ -373,7 +373,7 @@ body {
 /* Concierge & Booking Dark Section */
 .concierge-section {
   background-color: var(--bg-dark);
-  background-image: 
+  background-image:
     radial-gradient(circle at 10% 20%, rgba(197, 168, 128, 0.08) 0%, transparent 40%),
     radial-gradient(circle at 90% 80%, rgba(197, 168, 128, 0.06) 0%, transparent 45%);
   position: relative;
@@ -401,6 +401,237 @@ body {
 
 .concierge-input::placeholder {
   color: #6a6a75;
+}
+
+/* Custom Luxury Select Menus */
+select.concierge-input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%23d4b26f' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-position: right 1.1rem center;
+  background-repeat: no-repeat;
+  background-size: 1.15rem;
+  padding-right: 2.8rem;
+  cursor: pointer;
+}
+
+select.concierge-input option {
+  background-color: #14141c;
+  color: #f4e8cc;
+  padding: 12px 14px;
+  font-size: 0.95rem;
+}
+
+select.concierge-input option:checked {
+  background: linear-gradient(135deg, #2a2215 0%, #1c1812 100%);
+  color: #ebd5a0;
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   FLATPICKR CUSTOM LUXURY DARK & GOLD THEME
+   ========================================================================== */
+.flatpickr-calendar {
+  background: #121218 !important;
+  border: 1px solid rgba(212, 178, 111, 0.45) !important;
+  border-radius: 6px !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.9), 0 0 25px rgba(197, 168, 128, 0.2) !important;
+  font-family: var(--font-sans) !important;
+  width: 320px !important;
+  padding: 12px !important;
+  backdrop-filter: blur(20px) !important;
+  animation: calendarPop 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.flatpickr-calendar::before,
+.flatpickr-calendar::after {
+  border-bottom-color: #121218 !important;
+}
+
+.flatpickr-calendar.arrowTop::before {
+  border-bottom-color: rgba(212, 178, 111, 0.45) !important;
+}
+.flatpickr-calendar.arrowBottom::before {
+  border-top-color: rgba(212, 178, 111, 0.45) !important;
+}
+.flatpickr-calendar.arrowBottom::after {
+  border-top-color: #121218 !important;
+}
+
+@keyframes calendarPop {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Month Header */
+.flatpickr-months {
+  background: transparent !important;
+  padding-bottom: 8px !important;
+  border-bottom: 1px solid rgba(197, 168, 128, 0.2) !important;
+  margin-bottom: 6px !important;
+}
+
+.flatpickr-current-month {
+  font-family: var(--font-serif-luxury) !important;
+  font-size: 1.05rem !important;
+  color: #f4e8cc !important;
+  padding-top: 2px !important;
+}
+
+.flatpickr-current-month .cur-month {
+  font-weight: 600 !important;
+  color: var(--gold-300) !important;
+}
+
+.flatpickr-current-month input.cur-year {
+  font-family: var(--font-serif-luxury) !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+}
+
+.flatpickr-current-month .numInputWrapper span.arrowUp::after {
+  border-bottom-color: var(--gold-400) !important;
+}
+.flatpickr-current-month .numInputWrapper span.arrowDown::after {
+  border-top-color: var(--gold-400) !important;
+}
+
+/* Navigation Chevrons */
+.flatpickr-prev-month,
+.flatpickr-next-month {
+  color: var(--gold-300) !important;
+  fill: var(--gold-300) !important;
+  padding: 6px !important;
+  border-radius: 4px !important;
+  transition: all 0.2s ease !important;
+}
+
+.flatpickr-prev-month:hover,
+.flatpickr-next-month:hover {
+  color: #ffffff !important;
+  fill: #ffffff !important;
+  background: rgba(197, 168, 128, 0.2) !important;
+}
+
+.flatpickr-prev-month svg,
+.flatpickr-next-month svg {
+  width: 14px !important;
+  height: 14px !important;
+}
+
+/* Weekday Row */
+.flatpickr-weekdays {
+  background: transparent !important;
+  margin-top: 4px !important;
+}
+
+span.flatpickr-weekday {
+  background: transparent !important;
+  color: var(--gold-400) !important;
+  font-family: var(--font-serif-luxury) !important;
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+}
+
+/* Days Container */
+.flatpickr-days {
+  width: 100% !important;
+}
+
+.dayContainer {
+  width: 100% !important;
+  min-width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* Day Cells */
+.flatpickr-day {
+  color: #e0e0e6 !important;
+  background: transparent !important;
+  border: 1px solid transparent !important;
+  border-radius: 4px !important;
+  font-size: 0.88rem !important;
+  font-weight: 500 !important;
+  height: 38px !important;
+  line-height: 38px !important;
+  max-width: 38px !important;
+  margin: 1px auto !important;
+  transition: all 0.2s ease !important;
+}
+
+.flatpickr-day:hover {
+  background: rgba(197, 168, 128, 0.2) !important;
+  border-color: rgba(212, 178, 111, 0.5) !important;
+  color: #ffffff !important;
+}
+
+.flatpickr-day.today {
+  border-color: var(--gold-400) !important;
+  background: rgba(212, 178, 111, 0.12) !important;
+  color: var(--gold-200) !important;
+  font-weight: 600 !important;
+}
+
+.flatpickr-day.today:hover {
+  background: rgba(212, 178, 111, 0.3) !important;
+}
+
+.flatpickr-day.selected,
+.flatpickr-day.startRange,
+.flatpickr-day.endRange {
+  background: var(--gold-gradient) !important;
+  border-color: transparent !important;
+  color: #0c0c10 !important;
+  font-weight: 700 !important;
+  box-shadow: 0 2px 10px rgba(212, 178, 111, 0.5) !important;
+}
+
+.flatpickr-day.inRange {
+  background: rgba(197, 168, 128, 0.18) !important;
+  border-color: transparent !important;
+  color: #f4e8cc !important;
+  box-shadow: -4px 0 0 rgba(197, 168, 128, 0.18), 4px 0 0 rgba(197, 168, 128, 0.18) !important;
+}
+
+.flatpickr-day.flatpickr-disabled,
+.flatpickr-day.flatpickr-disabled:hover,
+.flatpickr-day.prevMonthDay,
+.flatpickr-day.nextMonthDay {
+  color: #4a4a58 !important;
+  background: transparent !important;
+  border-color: transparent !important;
+  cursor: not-allowed !important;
+}
+
+/* Flatpickr Input Trigger with Gold Calendar Icon */
+input.concierge-input.flatpickr-input[readonly] {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%23d4b26f' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect width='18' height='18' x='3' y='4' rx='2' ry='2'/%3E%3Cline x1='16' x2='16' y1='2' y2='6'/%3E%3Cline x1='8' x2='8' y1='2' y2='6'/%3E%3Cline x1='3' x2='21' y1='10' y2='10'/%3E%3C/svg%3E");
+  background-position: right 1.1rem center;
+  background-repeat: no-repeat;
+  background-size: 1.15rem;
+  padding-right: 2.8rem;
+  cursor: pointer;
+  background-color: #131318;
+}
+
+input.concierge-input.flatpickr-input[readonly]:hover {
+  border-color: rgba(212, 178, 111, 0.6);
+  background-color: #161620;
+}
+
+input.concierge-input.flatpickr-input[readonly]:focus {
+  border-color: var(--gold-400);
+  background-color: #181824;
+  box-shadow: 0 0 18px rgba(197, 168, 128, 0.35);
 }
 
 /* Lightbox Modal */
@@ -466,31 +697,38 @@ body {
 
 /* Luxury Badges */
 .badge-gold {
-  border: 1px solid rgba(197, 168, 128, 0.5);
-  background: rgba(197, 168, 128, 0.1);
-  color: var(--gold-400);
-  padding: 0.35rem 0.9rem;
-  border-radius: 20px;
-  font-size: 0.75rem;
-  letter-spacing: 0.1em;
+  border: 1px solid rgba(197, 168, 128, 0.4);
+  background: rgba(10, 10, 14, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: var(--gold-300);
+  padding: 0.4rem 1.15rem;
+  border-radius: 9999px;
+  font-family: var(--font-serif-luxury);
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   font-weight: 600;
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
+
 ::-webkit-scrollbar-track {
   background: #0a0a0c;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #33333e;
   border-radius: 4px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: var(--gold-600);
 }
@@ -541,4 +779,151 @@ body {
 
 .scroll-top-btn:hover svg {
   transform: translateY(-2px);
+}
+
+/* Custom Modal Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #121218;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #2a2a38;
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-500);
+}
+
+/* Cookie Banner Luxury Animation */
+#cookieBanner {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.85), 0 0 25px rgba(197, 168, 128, 0.15);
+  animation: cookieSlideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes cookieSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==========================================================================
+   ULTRA-LUXURY CONCIERGE & CONTATTI SUITE
+   ========================================================================== */
+.luxury-concierge-card {
+  background: linear-gradient(180deg, rgba(22, 22, 30, 0.85) 0%, rgba(13, 13, 18, 0.95) 100%);
+  border: 1px solid rgba(197, 168, 128, 0.28);
+  border-radius: 4px;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7);
+}
+
+.luxury-concierge-card:hover {
+  border-color: rgba(212, 178, 111, 0.65);
+  transform: translateY(-3px);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.9), 0 0 25px rgba(197, 168, 128, 0.1);
+}
+
+.luxury-concierge-card.featured {
+  background: linear-gradient(180deg, rgba(26, 26, 36, 0.92) 0%, rgba(15, 15, 22, 0.98) 100%);
+  border: 1.5px solid rgba(212, 178, 111, 0.55);
+  box-shadow: 0 15px 45px -10px rgba(0, 0, 0, 0.85), 0 0 20px rgba(197, 168, 128, 0.12);
+}
+
+.luxury-concierge-card.featured:hover {
+  border-color: var(--gold-300);
+  box-shadow: 0 25px 55px -10px rgba(0, 0, 0, 0.95), 0 0 35px rgba(197, 168, 128, 0.2);
+}
+
+.luxury-icon-emblem {
+  width: 3.25rem;
+  height: 3.25rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(197, 168, 128, 0.18) 0%, rgba(197, 168, 128, 0.04) 100%);
+  border: 1px solid rgba(197, 168, 128, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold-300);
+  margin: 0 auto;
+  transition: all 0.35s ease;
+}
+
+.luxury-concierge-card:hover .luxury-icon-emblem {
+  border-color: var(--gold-300);
+  transform: scale(1.06);
+  box-shadow: 0 0 18px rgba(197, 168, 128, 0.3);
+}
+
+.concierge-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.4rem;
+  font-family: var(--font-serif-luxury);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.concierge-pill-btn.primary {
+  background: var(--gold-gradient);
+  color: #0b0b0e;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 15px rgba(197, 168, 128, 0.3);
+}
+
+.concierge-pill-btn.primary:hover {
+  background: var(--gold-gradient-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(197, 168, 128, 0.5);
+  color: #000;
+}
+
+.concierge-pill-btn.outline {
+  background: rgba(18, 18, 24, 0.6);
+  color: var(--gold-200);
+  border: 1px solid rgba(197, 168, 128, 0.35);
+}
+
+.concierge-pill-btn.outline:hover {
+  background: rgba(197, 168, 128, 0.15);
+  border-color: var(--gold-300);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.concierge-social-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background: rgba(16, 16, 22, 0.8);
+  border: 1px solid rgba(197, 168, 128, 0.2);
+  border-radius: 2px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.concierge-social-item:hover {
+  border-color: rgba(212, 178, 111, 0.6);
+  background: rgba(28, 28, 38, 0.9);
+  transform: translateX(3px);
 }

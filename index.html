@@ -45,6 +45,12 @@
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
+  <!-- Flatpickr Datepicker & Locales (IT / ES / EN) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="https://npmcdn.com/flatpickr/dist/l10n/it.js"></script>
+  <script src="https://npmcdn.com/flatpickr/dist/l10n/es.js"></script>
+
   <!-- Custom Luxury Stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
@@ -215,8 +221,7 @@
       <div class="flex flex-col items-center mb-6">
         <img src="immagini/logo.png" alt="Logo Ufficiale B&B CaMa"
           class="h-24 md:h-28 w-auto object-contain mb-4 drop-shadow-[0_4px_25px_rgba(197,168,128,0.4)]">
-        <div class="badge-gold animate-pulse">
-          <i data-lucide="sparkles" class="w-3.5 h-3.5 text-gold-300"></i>
+        <div class="badge-gold">
           <span data-i18n="heroBadge">Esperienza di Charme & Panorama</span>
         </div>
       </div>
@@ -260,8 +265,7 @@
         
         <!-- Left Column: Story Content -->
         <div class="lg:col-span-7 space-y-6">
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gold-400/10 border border-gold-400/30 text-gold-300 text-xs font-cinzel tracking-widest uppercase">
-            <i data-lucide="heart" class="w-3.5 h-3.5 text-gold-400"></i>
+          <div class="inline-flex items-center px-4 py-1.5 rounded-full bg-gold-400/10 border border-gold-400/30 text-gold-300 text-xs font-cinzel tracking-widest uppercase">
             <span data-i18n="aboutBadge">Una Storia di Famiglia & Cuore</span>
           </div>
 
@@ -308,14 +312,9 @@
               
               <!-- Glassmorphism Badge Overlay -->
               <div class="absolute bottom-0 inset-x-0 p-5 bg-gradient-to-t from-black via-black/80 to-transparent">
-                <div class="flex items-center gap-3">
-                  <div class="w-10 h-10 rounded-full bg-gold-400/20 border border-gold-400 flex items-center justify-center text-gold-300 shrink-0">
-                    <i data-lucide="sparkles" class="w-5 h-5"></i>
-                  </div>
-                  <div>
-                    <span class="font-cinzel text-white text-sm font-bold block">Welcome to CaMa</span>
-                    <span class="text-[11px] text-gold-300 font-editorial italic">Cascone Marco • Tradizione & Ospitalità</span>
-                  </div>
+                <div>
+                  <span class="font-cinzel text-white text-sm font-bold block">Welcome to CaMa</span>
+                  <span class="text-[11px] text-gold-300 font-editorial italic">Cascone Marco • Tradizione & Ospitalità</span>
                 </div>
               </div>
             </div>
@@ -328,8 +327,7 @@
       <div class="mt-16 pt-16 border-t border-gold-400/20">
         
         <div class="text-center max-w-2xl mx-auto mb-12">
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gold-400/10 border border-gold-400/30 text-gold-300 text-xs font-cinzel tracking-widest uppercase mb-3">
-            <i data-lucide="compass" class="w-3.5 h-3.5 text-gold-400"></i>
+          <div class="inline-flex items-center px-4 py-1.5 rounded-full bg-gold-400/10 border border-gold-400/30 text-gold-300 text-xs font-cinzel tracking-widest uppercase mb-3">
             <span data-i18n="locSectionBadge">Nel Cuore della Campania</span>
           </div>
           <h3 class="font-cinzel text-2xl md:text-3xl lg:text-4xl text-white font-normal tracking-wide" data-i18n="locSectionTitle">
@@ -483,7 +481,7 @@
           <div class="absolute -right-8 -bottom-8 w-28 h-28 bg-gold-400/10 rounded-full blur-2xl group-hover:bg-gold-400/20 transition"></div>
           <div class="relative z-10">
             <div class="w-12 h-12 rounded-sm bg-gold-400/15 border border-gold-400/50 flex items-center justify-center text-gold-300 mb-4">
-              <i data-lucide="sparkles" class="w-6 h-6 text-gold-300"></i>
+              <i data-lucide="gift" class="w-6 h-6 text-gold-300"></i>
             </div>
             <span class="text-[10px] font-cinzel uppercase tracking-widest text-gold-300 font-bold block mb-1" data-i18n="setupBadge">Momenti Romantici & Ricorrenze</span>
             <h3 class="font-cinzel text-lg md:text-xl font-normal text-white mb-2" data-i18n="setupTitle">Allestimenti Personalizzati</h3>
@@ -924,7 +922,7 @@
           <span data-i18n="amenityTV">Smart TV a Schermo Piatto</span>
         </div>
         <div class="flex items-center justify-center gap-2">
-          <i data-lucide="sparkles" class="w-4 h-4 text-gold-600"></i>
+          <i data-lucide="bath" class="w-4 h-4 text-gold-600"></i>
           <span data-i18n="amenityKit">Set Cortesia & Asciugamani</span>
         </div>
       </div>
@@ -1123,7 +1121,7 @@
           <div>
             <label for="allestimentoSelect"
               class="block text-xs font-cinzel uppercase tracking-wider text-gold-300 mb-2 flex items-center gap-2">
-              <i data-lucide="sparkles" class="w-4 h-4 text-gold-400"></i>
+              <i data-lucide="gift" class="w-4 h-4 text-gold-400"></i>
               <span data-i18n="labelAllestimento">Allestimento Personalizzato Stanza</span>
             </label>
             <select id="allestimentoSelect" class="concierge-input">
@@ -1153,7 +1151,6 @@
         </div>
 
         <button type="submit" class="w-full btn-gold text-sm uppercase py-4">
-          <i data-lucide="sparkles" class="w-4 h-4"></i>
           <span data-i18n="btnBookSubmit">Richiedi Disponibilità & Preventivo</span>
         </button>
 
@@ -1164,204 +1161,257 @@
     </div>
   </section>
 
-  <!-- RECEPTION & CONTATTI FOOTER -->
-  <!-- SEZIONE 1: RECEPTION & CONTATTI (PURA & A GRIGLIA SPAZIOSA) -->
-  <section id="contatti" class="concierge-section py-20 md:py-28 px-6 border-t border-gold-400/20">
-    <div class="max-w-6xl mx-auto">
+  <!-- RECEPTION & CONTATTI CONCIERGE -->
+  <section id="contatti" class="py-24 md:py-32 px-6 border-t border-gold-400/20 relative bg-[#09090c] overflow-hidden">
+    <!-- Ambient Warm Glow Overlay -->
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-gradient-to-b from-gold-400/[0.07] via-gold-400/[0.02] to-transparent rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-6xl mx-auto relative z-10">
       
       <!-- Section Header -->
-      <div class="text-center max-w-3xl mx-auto mb-14">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gold-400/10 border border-gold-400/30 text-gold-300 text-xs font-cinzel tracking-widest uppercase mb-3">
-          <i data-lucide="headphones" class="w-3.5 h-3.5 text-gold-400"></i>
-          <span data-i18n="contactsSectionBadge">Assistenza Dedicata 24/7</span>
-        </div>
-        <h2 class="font-cinzel text-3xl md:text-5xl font-normal text-white tracking-wide mb-3" data-i18n="contactsSectionTitle">
+      <div class="text-center max-w-2xl mx-auto mb-16 md:mb-20">
+        <span class="text-[11px] font-cinzel tracking-[0.3em] uppercase text-gold-400 font-semibold block mb-3" data-i18n="contactsSectionBadge">
+          ✦ Concierge & Hospitality ✦
+        </span>
+        <h2 class="font-cinzel text-3xl sm:text-4xl md:text-5xl font-normal text-white tracking-wider mb-4" data-i18n="contactsSectionTitle">
           Reception & Contatti
         </h2>
-        <div class="w-20 h-[1.5px] bg-gradient-to-r from-transparent via-[#c5a880] to-transparent mx-auto mb-4"></div>
-        <p class="text-sm md:text-base text-zinc-300 font-sans" data-i18n="contactsSectionSubtitle">
-          Siamo a tua completa disposizione per qualsiasi informazione, richiesta personalizzata o prenotazione diretta.
+        <div class="w-16 h-[1.5px] bg-gradient-to-r from-transparent via-[#c5a880] to-transparent mx-auto mb-5"></div>
+        <p class="text-xs sm:text-sm text-zinc-300 font-sans leading-relaxed" data-i18n="contactsSectionSubtitle">
+          Siamo a tua completa disposizione per informazioni sulle camere, richieste personalizzate e prenotazioni dirette.
         </p>
       </div>
 
-      <!-- 4-Columns Grid of Large Direct Contact Tiles -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+      <!-- 3 Monolithic Luxury Pillars -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 items-stretch">
         
-        <!-- Card 1: WhatsApp Diretto (Featured) -->
-        <a href="https://wa.me/393447186581?text=Salve%20Reception%20B%26B%20CaMa%2C%20vorrei%20informazioni%20su%20un%20soggiorno"
-          target="_blank"
-          class="bg-gradient-to-br from-[#12221b] to-[#0c1410] border-2 border-emerald-500/50 hover:border-emerald-400 rounded-sm p-6 flex flex-col justify-between group transition duration-300 hover:-translate-y-1.5 shadow-xl text-decoration-none">
+        <!-- Pillar 1: Sede & Posizione -->
+        <div class="luxury-concierge-card p-8 md:p-9 text-center flex flex-col justify-between">
           <div>
-            <div class="w-12 h-12 rounded-sm bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center text-emerald-400 mb-4 group-hover:bg-emerald-500 group-hover:text-black transition">
-              <i data-lucide="message-circle" class="w-6 h-6"></i>
+            <div class="luxury-icon-emblem mb-6">
+              <i data-lucide="map-pin" class="w-5 h-5 text-gold-300"></i>
             </div>
-            <span class="text-[10px] font-cinzel uppercase tracking-widest text-emerald-400 font-bold block mb-1" data-i18n="contactWhatsAppLabel">WhatsApp Diretto 24/7</span>
-            <h3 class="font-cinzel text-base md:text-lg text-white font-bold mb-1">+39 344 718 6581</h3>
-            <p class="text-xs text-zinc-400 mb-4" data-i18n="contactWhatsAppSub">Risposta in tempo reale</p>
-          </div>
-          <span class="text-xs font-cinzel font-semibold text-emerald-400 group-hover:text-white flex items-center gap-1.5 uppercase tracking-wider">
-            <span data-i18n="contactWhatsAppAction">Avvia Chat WhatsApp</span>
-            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-          </span>
-        </a>
+            
+            <span class="text-[10px] font-cinzel uppercase tracking-[0.2em] text-gold-400 font-bold block mb-2" data-i18n="contactAddressLabel">Sede & Posizione</span>
+            <h3 class="font-cinzel text-lg font-semibold text-white tracking-wide mb-3">B&B CaMa</h3>
+            
+            <p class="text-xs text-zinc-300 font-sans leading-relaxed mb-6" data-i18n="contactAddressValue">
+              Via Raffaele Viviani, 36<br>
+              <span class="text-gold-300/90">Piano 5 con Ascensore</span><br>
+              80054 Gragnano (NA), Italia
+            </p>
 
-        <!-- Card 2: Cellulare -->
-        <a href="tel:+393447186581"
-          class="bg-[#14141c] border border-gold-400/30 hover:border-gold-400 rounded-sm p-6 flex flex-col justify-between group transition duration-300 hover:-translate-y-1.5 shadow-xl text-decoration-none">
+            <div class="pt-4 border-t border-zinc-800/80 text-[11px] font-cinzel text-zinc-400 space-y-1.5 mb-6">
+              <div data-i18n="footerCheckinHours">Check-in: 17:00 – 21:00</div>
+              <div data-i18n="footerCheckoutHours">Check-out: 08:00 – 10:30</div>
+            </div>
+          </div>
+
+          <a href="https://maps.google.com/?q=Via+Raffaele+Viviani+36+Gragnano+NA" target="_blank" rel="noopener noreferrer"
+            class="concierge-pill-btn outline w-full">
+            <span data-i18n="btnGoogleMaps">Apri Google Maps</span>
+            <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+
+        <!-- Pillar 2: Concierge Diretto (Center Featured) -->
+        <div class="luxury-concierge-card featured p-8 md:p-10 text-center flex flex-col justify-between relative">
+          <!-- Featured Badge -->
+          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-gold-300 via-gold-400 to-gold-500 text-black text-[9px] font-cinzel font-bold uppercase tracking-[0.25em] py-1 px-4 rounded-full shadow-lg">
+            Canale Diretto
+          </div>
+
           <div>
-            <div class="w-12 h-12 rounded-sm bg-gold-400/15 border border-gold-400/40 flex items-center justify-center text-gold-300 mb-4 group-hover:bg-gold-400 group-hover:text-black transition">
-              <i data-lucide="phone" class="w-6 h-6"></i>
+            <div class="luxury-icon-emblem mb-6 !w-16 !h-16 !border-gold-400/60 !bg-gold-400/10">
+              <i data-lucide="phone-call" class="w-7 h-7 text-gold-300"></i>
             </div>
-            <span class="text-[10px] font-cinzel uppercase tracking-widest text-gold-400 font-bold block mb-1" data-i18n="contactPhoneLabel">Cellulare & Assistenza</span>
-            <h3 class="font-cinzel text-base md:text-lg text-white font-bold mb-1">+39 344 718 6581</h3>
-            <p class="text-xs text-zinc-400 mb-4">Chiamata diretta mobile</p>
-          </div>
-          <span class="text-xs font-cinzel font-semibold text-gold-300 group-hover:text-white flex items-center gap-1.5 uppercase tracking-wider">
-            <span data-i18n="contactMobileAction">Chiama Cellulare</span>
-            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-          </span>
-        </a>
 
-        <!-- Card 3: Telefono Fisso -->
-        <a href="tel:08118974870"
-          class="bg-[#14141c] border border-gold-400/30 hover:border-gold-400 rounded-sm p-6 flex flex-col justify-between group transition duration-300 hover:-translate-y-1.5 shadow-xl text-decoration-none">
-          <div>
-            <div class="w-12 h-12 rounded-sm bg-gold-400/15 border border-gold-400/40 flex items-center justify-center text-gold-300 mb-4 group-hover:bg-gold-400 group-hover:text-black transition">
-              <i data-lucide="phone-call" class="w-6 h-6"></i>
-            </div>
-            <span class="text-[10px] font-cinzel uppercase tracking-widest text-gold-400 font-bold block mb-1" data-i18n="contactLandlineLabel">Telefono Fisso</span>
-            <h3 class="font-cinzel text-base md:text-lg text-white font-bold mb-1">081 18974870</h3>
-            <p class="text-xs text-zinc-400 mb-4">Linea fissa struttura</p>
-          </div>
-          <span class="text-xs font-cinzel font-semibold text-gold-300 group-hover:text-white flex items-center gap-1.5 uppercase tracking-wider">
-            <span data-i18n="contactLandlineAction">Chiama Fisso</span>
-            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-          </span>
-        </a>
+            <span class="text-[10px] font-cinzel uppercase tracking-[0.2em] text-gold-400 font-bold block mb-2" data-i18n="contactPhoneLabel">Assistenza Host 24/7</span>
+            
+            <a href="tel:+393447186581" class="font-cinzel text-2xl sm:text-3xl font-bold text-white hover:text-gold-300 transition block mb-1 tracking-wider">
+              +39 344 718 6581
+            </a>
+            
+            <span class="text-xs text-zinc-400 font-cinzel block mb-3">
+              Fisso: <a href="tel:08118974870" class="text-zinc-300 hover:text-gold-300 transition">081 18974870</a>
+            </span>
 
-        <!-- Card 4: Email Ufficiale -->
-        <a href="mailto:bebcama1963@gmail.com"
-          class="bg-[#14141c] border border-gold-400/30 hover:border-gold-400 rounded-sm p-6 flex flex-col justify-between group transition duration-300 hover:-translate-y-1.5 shadow-xl text-decoration-none">
-          <div>
-            <div class="w-12 h-12 rounded-sm bg-gold-400/15 border border-gold-400/40 flex items-center justify-center text-gold-300 mb-4 group-hover:bg-gold-400 group-hover:text-black transition">
-              <i data-lucide="mail" class="w-6 h-6"></i>
-            </div>
-            <span class="text-[10px] font-cinzel uppercase tracking-widest text-gold-400 font-bold block mb-1" data-i18n="contactEmailLabel">Email Ufficiale</span>
-            <h3 class="font-sans text-xs md:text-sm text-white font-medium truncate mb-1" title="bebcama1963@gmail.com">bebcama1963@gmail.com</h3>
-            <p class="text-xs text-zinc-400 mb-4">Richieste & Preventivi</p>
+            <a href="mailto:bebcama1963@gmail.com" class="text-xs text-zinc-300 hover:text-gold-300 font-sans transition inline-block mb-6 underline underline-offset-4">
+              bebcama1963@gmail.com
+            </a>
           </div>
-          <span class="text-xs font-cinzel font-semibold text-gold-300 group-hover:text-white flex items-center gap-1.5 uppercase tracking-wider">
-            <span data-i18n="contactEmailAction">Invia Email</span>
-            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-          </span>
-        </a>
 
-      </div>
-
-      <!-- Official Social Channels Banner -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-        <!-- Instagram Card -->
-        <a href="https://www.instagram.com/cama.bed.and.breakfast/" target="_blank" rel="noopener noreferrer"
-          class="bg-gradient-to-r from-[#1d1222] to-[#14141c] border border-pink-500/30 hover:border-pink-500 rounded-sm p-4 flex items-center justify-between group transition duration-300 shadow-md text-decoration-none">
-          <div class="flex items-center gap-3.5">
-            <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-yellow-500 via-pink-500 to-purple-600 flex items-center justify-center text-white shadow group-hover:scale-105 transition">
-              <svg class="w-5 h-5 fill-none stroke-current" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
-              </svg>
-            </div>
-            <div>
-              <span class="text-[10px] font-cinzel uppercase tracking-wider text-pink-400 font-bold block">Instagram Ufficiale</span>
-              <span class="text-sm font-semibold text-white group-hover:text-pink-300 transition">@cama.bed.and.breakfast</span>
-            </div>
-          </div>
-          <span class="text-xs font-cinzel font-semibold text-zinc-400 group-hover:text-white flex items-center gap-1 uppercase tracking-wider">
-            <span>Seguici</span>
-            <i data-lucide="external-link" class="w-3.5 h-3.5 text-pink-400"></i>
-          </span>
-        </a>
-
-        <!-- TikTok Card -->
-        <a href="https://www.tiktok.com/@cama.bed.and.brea?lang=it-IT" target="_blank" rel="noopener noreferrer"
-          class="bg-gradient-to-r from-[#0d1820] to-[#14141c] border border-cyan-500/30 hover:border-cyan-400 rounded-sm p-4 flex items-center justify-between group transition duration-300 shadow-md text-decoration-none">
-          <div class="flex items-center gap-3.5">
-            <div class="w-10 h-10 rounded-full bg-black border border-cyan-400/50 flex items-center justify-center text-cyan-400 shadow group-hover:scale-105 transition">
-              <svg class="w-5 h-5 fill-current text-cyan-300" viewBox="0 0 24 24">
-                <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.24 1.07-.14 1.61.24 1.16 1.19 2.09 2.37 2.26.96.16 1.98-.07 2.76-.66.6-.44.97-1.12 1.04-1.87.05-1.9.02-3.8.03-5.7 0-4.14-.01-8.28.02-12.42z"/>
-              </svg>
-            </div>
-            <div>
-              <span class="text-[10px] font-cinzel uppercase tracking-wider text-cyan-400 font-bold block">TikTok Ufficiale</span>
-              <span class="text-sm font-semibold text-white group-hover:text-cyan-300 transition">@cama.bed.and.brea</span>
-            </div>
-          </div>
-          <span class="text-xs font-cinzel font-semibold text-zinc-400 group-hover:text-white flex items-center gap-1 uppercase tracking-wider">
-            <span>Guarda i Video</span>
-            <i data-lucide="external-link" class="w-3.5 h-3.5 text-cyan-400"></i>
-          </span>
-        </a>
-      </div>
-
-      <!-- Full-Width Address & Access Banner -->
-      <div class="bg-[#121217] border border-gold-400/30 rounded-sm p-5 md:p-6 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-lg">
-        <div class="flex items-center gap-4 text-center sm:text-left">
-          <div class="w-11 h-11 rounded-full bg-gold-400/10 border border-gold-400/40 flex items-center justify-center text-gold-300 shrink-0">
-            <i data-lucide="map-pin" class="w-5 h-5"></i>
-          </div>
-          <div>
-            <span class="text-[10px] font-cinzel uppercase tracking-widest text-gold-400 font-bold block" data-i18n="contactAddressLabel">Indirizzo & Accoglienza</span>
-            <p class="text-xs md:text-sm text-zinc-200 font-sans" data-i18n="contactAddressValue">Via Raffaele Viviani, 36 (Piano 5 con ascensore), 80054 Gragnano (NA), Italia</p>
+          <div class="space-y-3 pt-4 border-t border-zinc-800/80">
+            <a href="https://wa.me/393447186581?text=Salve%20Reception%20B%26B%20CaMa%2C%20vorrei%20informazioni%20su%20un%20soggiorno"
+              target="_blank"
+              class="concierge-pill-btn primary w-full">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+              <span data-i18n="contactWhatsAppAction">Chat WhatsApp Diretta</span>
+            </a>
+            <span class="text-[11px] text-zinc-400 font-sans block" data-i18n="contactWhatsAppSub">
+              Risposta immediata in tempo reale
+            </span>
           </div>
         </div>
-        <a href="#prenota" class="btn-gold text-xs uppercase py-2.5 px-5 shrink-0">
-          <span data-i18n="navBook">Chiedi Disponibilità</span>
-        </a>
+
+        <!-- Pillar 3: Esperienza Social & Prenotazioni -->
+        <div class="luxury-concierge-card p-8 md:p-9 text-center flex flex-col justify-between">
+          <div>
+            <div class="luxury-icon-emblem mb-6">
+              <i data-lucide="camera" class="w-5 h-5 text-gold-300"></i>
+            </div>
+
+            <span class="text-[10px] font-cinzel uppercase tracking-[0.2em] text-gold-400 font-bold block mb-2">Social & Charme</span>
+            <h3 class="font-cinzel text-lg font-semibold text-white tracking-wide mb-3">Vivi l'Esperienza</h3>
+
+            <p class="text-xs text-zinc-300 font-sans leading-relaxed mb-6">
+              Scopri i panorami sui Monti Lattari, gli allestimenti speciali e i sapori autentici di Gragnano.
+            </p>
+
+            <!-- Refined Luxury Social Channels -->
+            <div class="space-y-3 mb-6 text-left">
+              <a href="https://www.instagram.com/cama.bed.and.breakfast/" target="_blank" rel="noopener noreferrer"
+                class="concierge-social-item group/soc">
+                <div class="flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-full bg-gold-400/10 border border-gold-400/30 flex items-center justify-center text-gold-300 group-hover/soc:border-gold-300 transition">
+                    <svg class="w-4 h-4 fill-none stroke-current" viewBox="0 0 24 24" stroke-width="2">
+                      <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="text-xs text-zinc-200 font-medium block">Instagram</span>
+                    <span class="text-[10px] text-gold-300/80 font-cinzel">@cama.bed.and.breakfast</span>
+                  </div>
+                </div>
+                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-zinc-400 group-hover/soc:text-gold-300 transition"></i>
+              </a>
+
+              <a href="https://www.tiktok.com/@cama.bed.and.brea?lang=it-IT" target="_blank" rel="noopener noreferrer"
+                class="concierge-social-item group/soc">
+                <div class="flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-full bg-gold-400/10 border border-gold-400/30 flex items-center justify-center text-gold-300 group-hover/soc:border-gold-300 transition">
+                    <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                      <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.24 1.07-.14 1.61.24 1.16 1.19 2.09 2.37 2.26.96.16 1.98-.07 2.76-.66.6-.44.97-1.12 1.04-1.87.05-1.9.02-3.8.03-5.7 0-4.14-.01-8.28.02-12.42z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="text-xs text-zinc-200 font-medium block">TikTok</span>
+                    <span class="text-[10px] text-gold-300/80 font-cinzel">@cama.bed.and.brea</span>
+                  </div>
+                </div>
+                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-zinc-400 group-hover/soc:text-gold-300 transition"></i>
+              </a>
+            </div>
+          </div>
+
+          <a href="#prenota" class="concierge-pill-btn outline w-full">
+            <span data-i18n="navBook">Verifica Disponibilità</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+
       </div>
 
     </div>
   </section>
 
   <!-- FOOTER & TITOLI DI CODA -->
-  <footer class="bg-[#08080a] py-10 px-6 border-t border-zinc-900 text-xs text-zinc-400">
-    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-      <div class="flex flex-wrap items-center gap-2 text-center md:text-left">
-        <span class="font-cinzel font-bold text-gold-300 tracking-wider">B&B CAMA</span>
-        <span class="text-zinc-600">•</span>
-        <span data-i18n="footerCopyright">© 2026 • Tutti i diritti riservati</span>
-        <span class="text-zinc-600 hidden sm:inline">•</span>
-        <div class="inline-flex items-center gap-2.5">
-          <a href="https://www.instagram.com/cama.bed.and.breakfast/" target="_blank" rel="noopener noreferrer"
-            class="text-zinc-400 hover:text-pink-400 transition" title="Instagram Ufficiale" aria-label="Instagram">
-            <svg class="w-3.5 h-3.5 fill-none stroke-current" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
-              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
-            </svg>
-          </a>
-          <a href="https://www.tiktok.com/@cama.bed.and.brea?lang=it-IT" target="_blank" rel="noopener noreferrer"
-            class="text-zinc-400 hover:text-cyan-400 transition" title="TikTok Ufficiale" aria-label="TikTok">
-            <svg class="w-3 h-3 fill-current" viewBox="0 0 24 24">
-              <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.24 1.07-.14 1.61.24 1.16 1.19 2.09 2.37 2.26.96.16 1.98-.07 2.76-.66.6-.44.97-1.12 1.04-1.87.05-1.9.02-3.8.03-5.7 0-4.14-.01-8.28.02-12.42z"/>
-            </svg>
-          </a>
+  <footer class="bg-[#08080a] pt-12 pb-8 px-6 border-t border-zinc-900 text-xs text-zinc-400">
+    <div class="max-w-6xl mx-auto space-y-8">
+      
+      <!-- Main Footer Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-8 border-b border-zinc-900/80">
+        
+        <!-- Col 1: Brand & Struttura -->
+        <div class="space-y-2.5 text-center md:text-left">
+          <div class="flex items-center justify-center md:justify-start gap-2">
+            <span class="font-cinzel font-bold text-base text-gold-300 tracking-wider">B&B CAMA</span>
+            <span class="text-zinc-500 font-sans text-xs">di Fabiano Cascone</span>
+          </div>
+          <p class="text-zinc-400 text-xs leading-relaxed">
+            Via Raffaele Viviani, 36 (Piano 5) — 80054 Gragnano (NA)
+          </p>
+          <p class="text-[11px] text-gold-400 font-mono tracking-wide">
+            CIN: IT063034C1... | CIR: 15063034...
+          </p>
+          <!-- Social Icons -->
+          <div class="flex items-center justify-center md:justify-start gap-3 pt-1">
+            <a href="https://www.instagram.com/cama.bed.and.breakfast/" target="_blank" rel="noopener noreferrer"
+              class="text-zinc-400 hover:text-pink-400 transition inline-flex items-center gap-1.5 text-xs" title="Instagram Ufficiale" aria-label="Instagram">
+              <svg class="w-4 h-4 fill-none stroke-current" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+              </svg>
+              <span>Instagram</span>
+            </a>
+            <span class="text-zinc-700">•</span>
+            <a href="https://www.tiktok.com/@cama.bed.and.brea?lang=it-IT" target="_blank" rel="noopener noreferrer"
+              class="text-zinc-400 hover:text-cyan-400 transition inline-flex items-center gap-1.5 text-xs" title="TikTok Ufficiale" aria-label="TikTok">
+              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.24 1.07-.14 1.61.24 1.16 1.19 2.09 2.37 2.26.96.16 1.98-.07 2.76-.66.6-.44.97-1.12 1.04-1.87.05-1.9.02-3.8.03-5.7 0-4.14-.01-8.28.02-12.42z"/>
+              </svg>
+              <span>TikTok</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Contatti & Orari -->
+        <div class="space-y-2 text-center md:text-left flex flex-col items-center md:items-start">
+          <span class="font-cinzel uppercase tracking-wider text-gold-300 text-xs font-semibold">Contatti & Orari</span>
+          <div class="space-y-1.5 text-xs">
+            <p class="flex items-center gap-2">
+              <i data-lucide="phone" class="w-3.5 h-3.5 text-gold-400"></i>
+              <span>Tel: <a href="tel:+393447186581" class="text-zinc-300 hover:text-gold-300 transition">+39 344 718 6581</a></span>
+            </p>
+            <p class="flex items-center gap-2">
+              <i data-lucide="mail" class="w-3.5 h-3.5 text-gold-400"></i>
+              <span>Email: <a href="mailto:bebcama1963@gmail.com" class="text-zinc-300 hover:text-gold-300 transition">bebcama1963@gmail.com</a></span>
+            </p>
+            <div class="pt-1 flex flex-wrap gap-2 sm:gap-4 font-cinzel text-[11px] text-zinc-400">
+              <span data-i18n="footerCheckinHours">Check-in: 17:00 - 21:00</span>
+              <span>•</span>
+              <span data-i18n="footerCheckoutHours">Check-out: 08:00 - 10:30</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Col 3: Dicitura Legale & Trasparenza -->
+        <div class="space-y-2 text-center md:text-left bg-[#101016] border border-zinc-800/80 p-4 rounded-sm">
+          <div class="flex items-center justify-center md:justify-start gap-1.5 text-gold-300 font-cinzel text-xs font-semibold">
+            <i data-lucide="shield-check" class="w-3.5 h-3.5 text-gold-400"></i>
+            <span>Informazioni di Legge</span>
+          </div>
+          <p class="text-[11px] leading-relaxed text-zinc-400" data-i18n="footerLegalNote">
+            Attività ricettiva gestita in forma non imprenditoriale ai sensi delle vigenti leggi regionali.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Bottom Sub-Footer Bar -->
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-zinc-400">
+        <div>
+          <span data-i18n="footerCopyright">© 2026 B&B CaMa • Tutti i diritti riservati</span>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <button onclick="openPrivacyModal()" class="text-zinc-400 hover:text-gold-300 underline underline-offset-4 transition cursor-pointer" data-i18n="footerPrivacy">
+            Privacy & Cookie Policy
+          </button>
+          <span class="text-zinc-700">•</span>
+          <div class="flex items-center gap-1.5">
+            <span data-i18n="footerDevBy">Sito realizzato da</span>
+            <a href="https://www.linkedin.com/in/antonio-giordano-285a5a39b/" target="_blank" rel="noopener noreferrer"
+              class="text-gold-300 hover:text-gold-100 font-semibold transition inline-flex items-center gap-1 hover:underline">
+              <span>Dev. Antonio Giordano</span>
+              <i data-lucide="external-link" class="w-3 h-3 text-gold-400"></i>
+            </a>
+          </div>
         </div>
       </div>
 
-      <!-- Dev Signature -->
-      <div class="flex items-center gap-1.5 text-xs text-zinc-400">
-        <span data-i18n="footerDevBy">Sito realizzato da</span>
-        <a href="https://www.linkedin.com/in/antonio-giordano-285a5a39b/" target="_blank" rel="noopener noreferrer"
-          class="text-gold-300 hover:text-gold-100 font-semibold transition inline-flex items-center gap-1 hover:underline">
-          <span>Dev. Antonio Giordano</span>
-          <i data-lucide="external-link" class="w-3 h-3 text-gold-400"></i>
-        </a>
-      </div>
-
-      <div class="flex gap-6 font-cinzel tracking-wider text-[11px] text-zinc-400">
-        <span data-i18n="footerCheckinHours">Check-in: 17:00 - 21:00</span>
-        <span data-i18n="footerCheckoutHours">Check-out: 08:00 - 10:30</span>
-      </div>
     </div>
   </footer>
 
@@ -1461,6 +1511,151 @@
           1 / 5</div>
       </div>
       <div id="lightboxCaption" class="text-center font-cinzel text-sm text-gold-200 mt-3 tracking-wider"></div>
+    </div>
+  </div>
+
+  <!-- PRIVACY & COOKIE POLICY MODAL -->
+  <div id="privacyModal" class="fixed inset-0 bg-black/85 backdrop-blur-md z-50 hidden items-center justify-center p-4">
+    <div class="bg-[#121218] border border-gold-400/50 rounded-sm max-w-2xl w-full max-h-[88vh] flex flex-col shadow-2xl relative text-zinc-300 animate-in fade-in zoom-in duration-200">
+      <!-- Modal Header -->
+      <div class="p-5 md:p-6 border-b border-zinc-800 flex items-center justify-between shrink-0 bg-[#0e0e14]">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-gold-400/10 border border-gold-400/40 text-gold-300 flex items-center justify-center shrink-0">
+            <i data-lucide="shield-check" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h3 class="font-cinzel text-lg md:text-xl font-bold text-white tracking-wide" data-i18n="privacyModalTitle">Informativa Privacy & Cookie Policy</h3>
+            <span class="text-[11px] text-zinc-400">B&B CaMa • Conformità GDPR (UE 2016/679)</span>
+          </div>
+        </div>
+        <button onclick="closePrivacyModal()" class="text-zinc-400 hover:text-white p-2 rounded-sm transition cursor-pointer" aria-label="Chiudi">
+          <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+      <!-- Modal Body (Scrollable) -->
+      <div class="p-5 md:p-6 overflow-y-auto space-y-6 text-xs md:text-sm leading-relaxed text-zinc-300 custom-scrollbar">
+        <!-- Section: Titolare -->
+        <div class="bg-[#181822] border border-zinc-800/80 rounded p-4">
+          <h4 class="font-cinzel font-bold text-gold-300 text-sm mb-2 flex items-center gap-2" data-i18n="privacyOwnerTitle">
+            <i data-lucide="building-2" class="w-4 h-4 text-gold-400"></i>
+            1. Titolare del Trattamento
+          </h4>
+          <p data-i18n="privacyOwnerText">
+            Il Titolare del trattamento dei dati personali è <strong>B&B CaMa</strong>, con sede in Via Raffaele Viviani, 36 (Piano 5 con ascensore), 80054 Gragnano (NA), Italia.<br>
+            Email di contatto: <a href="mailto:bebcama1963@gmail.com" class="text-gold-300 hover:underline">bebcama1963@gmail.com</a> | Telefono: <a href="tel:+393447186581" class="text-gold-300 hover:underline">+39 344 718 6581</a>.
+          </p>
+        </div>
+
+        <!-- Section: Tipologie di Dati -->
+        <div>
+          <h4 class="font-cinzel font-bold text-gold-300 text-sm mb-2 flex items-center gap-2" data-i18n="privacyDataTitle">
+            <i data-lucide="database" class="w-4 h-4 text-gold-400"></i>
+            2. Tipologia di Dati Raccolti e Finalità
+          </h4>
+          <p class="mb-2" data-i18n="privacyDataText1">
+            Attraverso il nostro sito web raccogliamo i seguenti dati esclusivamente per le finalità descritte:
+          </p>
+          <ul class="list-disc pl-5 space-y-1 text-zinc-300">
+            <li data-i18n="privacyDataLi1"><strong>Dati di contatto e prenotazione:</strong> Nome, Cognome, Telefono, Email e preferenze di soggiorno fornite volontariamente per rispondere a richieste di preventivo o disponibilità camere.</li>
+            <li data-i18n="privacyDataLi2"><strong>Dati di navigazione e preferenze:</strong> Lingua preferita memorizzata localmente (<code class="bg-black/40 text-gold-300 px-1 py-0.5 rounded">cama_lang</code>) e preferenze sui cookie (<code class="bg-black/40 text-gold-300 px-1 py-0.5 rounded">cama_cookie_consent</code>).</li>
+          </ul>
+        </div>
+
+        <!-- Section: Cookie Policy -->
+        <div>
+          <h4 class="font-cinzel font-bold text-gold-300 text-sm mb-2 flex items-center gap-2" data-i18n="privacyCookieTitle">
+            <i data-lucide="cookie" class="w-4 h-4 text-gold-400"></i>
+            3. Che cosa sono i Cookie e quali utilizziamo
+          </h4>
+          <p class="mb-3" data-i18n="privacyCookieText1">
+            I cookie sono brevi frammenti di testo che consentono al server web di memorizzare sul dispositivo dell'utente informazioni da riutilizzare nel corso della medesima visita o in seguito.
+          </p>
+
+          <div class="space-y-3">
+            <div class="bg-[#181824] border border-zinc-800 p-3.5 rounded">
+              <div class="flex items-center justify-between mb-1">
+                <span class="font-semibold text-white flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                  <span data-i18n="cookieTechTitle">Cookie Tecnici & Funzionali (Sempre Attivi)</span>
+                </span>
+                <span class="text-[10px] uppercase font-cinzel text-emerald-400 font-bold tracking-wider">Necessari</span>
+              </div>
+              <p class="text-xs text-zinc-400" data-i18n="cookieTechDesc">
+                Indispensabili per il corretto funzionamento del sito, la navigazione fluida, la selezione della lingua e la memorizzazione delle scelte di consenso. Non richiedono consenso preventivo.
+              </p>
+            </div>
+
+            <div class="bg-[#181824] border border-zinc-800 p-3.5 rounded">
+              <div class="flex items-center justify-between mb-1">
+                <span class="font-semibold text-white flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-gold-400"></span>
+                  <span data-i18n="cookieThirdTitle">Servizi di Terze Parti & Widget</span>
+                </span>
+                <label class="relative inline-flex items-center cursor-pointer">
+                  <input type="checkbox" id="cookieOptionalToggle" class="sr-only peer" checked>
+                  <div class="w-9 h-5 bg-zinc-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-zinc-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-gold-500"></div>
+                </label>
+              </div>
+              <p class="text-xs text-zinc-400" data-i18n="cookieThirdDesc">
+                Il sito può includere elementi di terze parti per migliorare l'esperienza: Google Fonts per i caratteri tipografici, icone Lucide, e link diretti a WhatsApp, Google Maps, Instagram e TikTok.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section: Diritti dell'utente -->
+        <div>
+          <h4 class="font-cinzel font-bold text-gold-300 text-sm mb-2 flex items-center gap-2" data-i18n="privacyRightsTitle">
+            <i data-lucide="scale" class="w-4 h-4 text-gold-400"></i>
+            4. Diritti dell'Interessato (GDPR)
+          </h4>
+          <p data-i18n="privacyRightsText">
+            In conformità agli articoli 15-22 del Regolamento UE 2016/679 (GDPR), l'utente ha diritto di richiedere l'accesso ai propri dati personali, la rettifica, la cancellazione, la limitazione del trattamento o di opporsi al loro trattamento inviando una comunicazione a <a href="mailto:bebcama1963@gmail.com" class="text-gold-300 hover:underline">bebcama1963@gmail.com</a>.
+          </p>
+        </div>
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="p-4 border-t border-zinc-800 bg-[#0e0e14] flex flex-col sm:flex-row items-center justify-between gap-3 shrink-0">
+        <button onclick="rejectOptionalCookies()" class="text-xs text-zinc-400 hover:text-white transition py-2 px-4 border border-zinc-700 rounded-sm hover:border-zinc-500 w-full sm:w-auto" data-i18n="cookieBtnOnlyEssential">
+          Solo Necessari
+        </button>
+        <div class="flex items-center gap-3 w-full sm:w-auto">
+          <button onclick="saveCustomCookiePreferences()" class="btn-gold py-2.5 px-5 text-xs uppercase tracking-wider w-full sm:w-auto text-center" data-i18n="cookieBtnSave">
+            Salva Preferenze
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COOKIE BANNER (GDPR COMPLIANT) -->
+  <div id="cookieBanner" class="fixed bottom-4 left-4 right-4 md:left-auto md:right-6 md:max-w-md z-50 bg-[#121218]/95 backdrop-blur-md border border-gold-400/40 rounded-sm shadow-2xl p-5 text-zinc-300 animate-in fade-in slide-in-from-bottom duration-300 hidden">
+    <div class="flex items-start gap-3.5 mb-3">
+      <div class="w-9 h-9 rounded-full bg-gold-400/15 border border-gold-400/40 text-gold-300 flex items-center justify-center shrink-0 mt-0.5">
+        <i data-lucide="cookie" class="w-4 h-4"></i>
+      </div>
+      <div>
+        <h4 class="font-cinzel text-sm font-bold text-white tracking-wide" data-i18n="cookieBannerTitle">Informativa sui Cookie</h4>
+        <p class="text-xs text-zinc-400 mt-1 leading-relaxed" data-i18n="cookieBannerText">
+          Utilizziamo cookie tecnici per garantire il funzionamento ottimale del sito e offrirti la migliore esperienza di soggiorno. Cliccando su "Accetta Tutti" acconsenti all'uso dei cookie.
+        </p>
+      </div>
+    </div>
+
+    <div class="flex flex-wrap items-center justify-between gap-2 pt-2 border-t border-zinc-800">
+      <button onclick="openPrivacyModal()" class="text-[11px] text-zinc-400 hover:text-gold-300 underline underline-offset-2 transition cursor-pointer" data-i18n="cookieBannerLearnMore">
+        Personalizza / Privacy Policy
+      </button>
+      <div class="flex items-center gap-2">
+        <button onclick="rejectOptionalCookies()" class="text-xs text-zinc-400 hover:text-white px-3 py-1.5 border border-zinc-700 hover:border-zinc-500 rounded-sm transition cursor-pointer" data-i18n="cookieBtnReject">
+          Rifiuta
+        </button>
+        <button onclick="acceptAllCookies()" class="btn-gold text-xs uppercase tracking-wider px-3.5 py-1.5 cursor-pointer" data-i18n="cookieBtnAccept">
+          Accetta Tutti
+        </button>
+      </div>
     </div>
   </div>
 

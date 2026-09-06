@@ -138,17 +138,17 @@ const TRANSLATIONS = {
     btnBookSubmit: 'Richiedi Disponibilità & Preventivo',
     bookDisclaimer: 'Risposta immediata su WhatsApp ed Email. Nessun pagamento anticipato.',
     // Reception & Contacts
-    contactsSectionBadge: 'Assistenza Dedicata 24/7',
+    contactsSectionBadge: '✦ Concierge & Hospitality ✦',
     contactsSectionTitle: 'Reception & Contatti',
-    contactsSectionSubtitle: 'Siamo a tua completa disposizione per qualsiasi informazione, richiesta personalizzata o prenotazione diretta.',
-    contactPhoneLabel: 'Cellulare & Assistenza',
+    contactsSectionSubtitle: 'Siamo a tua completa disposizione per informazioni sulle camere, richieste personalizzate e prenotazioni dirette.',
+    contactPhoneLabel: 'Assistenza Host 24/7',
     contactLandlineLabel: 'Telefono Fisso',
     contactWhatsAppLabel: 'WhatsApp Diretto 24/7',
-    contactWhatsAppSub: 'Risposta in tempo reale',
+    contactWhatsAppSub: 'Risposta immediata in tempo reale',
     contactEmailLabel: 'Email Ufficiale',
-    contactAddressLabel: 'Posizione & Indirizzo',
+    contactAddressLabel: 'Sede & Posizione',
     contactAddressValue: 'Via Raffaele Viviani, 36 (Piano 5 con ascensore), 80054 Gragnano (NA), Italia',
-    contactWhatsAppAction: 'Avvia Chat WhatsApp',
+    contactWhatsAppAction: 'Chat WhatsApp Diretta',
     contactMobileAction: 'Chiama Cellulare',
     contactLandlineAction: 'Chiama Fisso',
     contactEmailAction: 'Invia Email',
@@ -168,8 +168,32 @@ const TRANSLATIONS = {
     btnGoogleMaps: 'Apri Posizione su Google Maps',
     footerCheckinHours: 'Check-in: 17:00 - 21:00',
     footerCheckoutHours: 'Check-out: 08:00 - 10:30',
-    footerCopyright: '© 2026 • Tutti i diritti riservati',
-    footerDevBy: 'Sito realizzato da'
+    footerCopyright: '© 2026 B&B CaMa • Tutti i diritti riservati',
+    footerDevBy: 'Sito realizzato da',
+    footerPrivacy: 'Privacy & Cookie Policy',
+    footerLegalNote: 'Attività ricettiva gestita in forma non imprenditoriale ai sensi delle vigenti leggi regionali.',
+    privacyModalTitle: 'Informativa Privacy & Cookie Policy',
+    privacyOwnerTitle: '<i data-lucide="building-2" class="w-4 h-4 text-gold-400 inline-block mr-1"></i> 1. Titolare del Trattamento',
+    privacyOwnerText: 'Il Titolare del trattamento dei dati personali è <strong>B&B CaMa</strong>, con sede in Via Raffaele Viviani, 36 (Piano 5 con ascensore), 80054 Gragnano (NA), Italia.<br>Email: <a href="mailto:bebcama1963@gmail.com" class="text-gold-300 hover:underline">bebcama1963@gmail.com</a> | Telefono: <a href="tel:+393447186581" class="text-gold-300 hover:underline">+39 344 718 6581</a>.',
+    privacyDataTitle: '<i data-lucide="database" class="w-4 h-4 text-gold-400 inline-block mr-1"></i> 2. Tipologia di Dati Raccolti e Finalità',
+    privacyDataText1: 'Attraverso il nostro sito web raccogliamo i seguenti dati esclusivamente per le finalità descritte:',
+    privacyDataLi1: '<strong>Dati di contatto e prenotazione:</strong> Nome, Cognome, Telefono, Email e preferenze fornite volontariamente per rispondere a richieste di preventivo o disponibilità camere.',
+    privacyDataLi2: '<strong>Dati di navigazione e preferenze:</strong> Lingua preferita memorizzata localmente (<code class="bg-black/40 text-gold-300 px-1 py-0.5 rounded">cama_lang</code>) e preferenze sui cookie (<code class="bg-black/40 text-gold-300 px-1 py-0.5 rounded">cama_cookie_consent</code>).',
+    privacyCookieTitle: '<i data-lucide="cookie" class="w-4 h-4 text-gold-400 inline-block mr-1"></i> 3. Che cosa sono i Cookie e quali utilizziamo',
+    privacyCookieText1: 'I cookie sono brevi frammenti di testo che consentono al server web di memorizzare sul dispositivo dell\'utente informazioni da riutilizzare nel corso della medesima visita o in seguito.',
+    cookieTechTitle: 'Cookie Tecnici & Funzionali (Sempre Attivi)',
+    cookieTechDesc: 'Indispensabili per il corretto funzionamento del sito, la navigazione fluida, la selezione della lingua e la memorizzazione delle scelte di consenso. Non richiedono consenso preventivo.',
+    cookieThirdTitle: 'Servizi di Terze Parti & Widget',
+    cookieThirdDesc: 'Il sito include risorse essenziali per migliorare l\'esperienza: caratteri Google Fonts, icone vettoriali Lucide, e link diretti a WhatsApp, Google Maps, Instagram e TikTok.',
+    privacyRightsTitle: '<i data-lucide="scale" class="w-4 h-4 text-gold-400 inline-block mr-1"></i> 4. Diritti dell\'Interessato (GDPR)',
+    privacyRightsText: 'In conformità agli articoli 15-22 del Regolamento UE 2016/679 (GDPR), l\'utente ha diritto di richiedere l\'accesso ai propri dati personali, la rettifica, la cancellazione, la limitazione del trattamento o di opporsi al loro trattamento inviando una comunicazione a <a href="mailto:bebcama1963@gmail.com" class="text-gold-300 hover:underline">bebcama1963@gmail.com</a>.',
+    cookieBtnOnlyEssential: 'Solo Necessari',
+    cookieBtnSave: 'Salva Preferenze',
+    cookieBannerTitle: 'Informativa sui Cookie',
+    cookieBannerText: 'Utilizziamo cookie tecnici per garantire il funzionamento ottimale del sito e offrirti la migliore esperienza di soggiorno. Cliccando su "Accetta Tutti" acconsenti all\'uso dei cookie.',
+    cookieBannerLearnMore: 'Personalizza / Privacy Policy',
+    cookieBtnReject: 'Rifiuta',
+    cookieBtnAccept: 'Accetta Tutti'
   },
   en: {
     topRating: 'Booking.com Rating <strong class="text-white font-bold">9.5 / 10</strong> • Exceptional',
@@ -306,17 +330,17 @@ const TRANSLATIONS = {
     btnBookSubmit: 'Request Availability & Quote',
     bookDisclaimer: 'Immediate response on WhatsApp & Email. No upfront payment.',
     // Reception & Contacts
-    contactsSectionBadge: 'Dedicated 24/7 Assistance',
-    contactsSectionTitle: 'Reception & Contacts',
-    contactsSectionSubtitle: 'We are at your complete disposal for room inquiries, tailored requests, or direct reservations.',
-    contactPhoneLabel: 'Mobile & Support',
+    contactsSectionBadge: '✦ Concierge & Hospitality ✦',
+    contactsSectionTitle: 'Reception & Inquiries',
+    contactsSectionSubtitle: 'We are at your complete disposal for room inquiries, tailored requests, and direct reservations.',
+    contactPhoneLabel: 'Host Concierge 24/7',
     contactLandlineLabel: 'Landline Phone',
     contactWhatsAppLabel: 'Direct WhatsApp 24/7',
     contactWhatsAppSub: 'Real-time chat response',
     contactEmailLabel: 'Official Email',
     contactAddressLabel: 'Location & Address',
     contactAddressValue: 'Via Raffaele Viviani, 36 (5th Floor with elevator), 80054 Gragnano (NA), Italy',
-    contactWhatsAppAction: 'Start WhatsApp Chat',
+    contactWhatsAppAction: 'Direct WhatsApp Chat',
     contactMobileAction: 'Call Mobile',
     contactLandlineAction: 'Call Landline',
     contactEmailAction: 'Send Email',
@@ -336,8 +360,32 @@ const TRANSLATIONS = {
     btnGoogleMaps: 'Open Location on Google Maps',
     footerCheckinHours: 'Check-in: 17:00 - 21:00',
     footerCheckoutHours: 'Check-out: 08:00 - 10:30',
-    footerCopyright: '© 2026 • All rights reserved',
-    footerDevBy: 'Website developed by'
+    footerCopyright: '© 2026 B&B CaMa • All rights reserved',
+    footerDevBy: 'Website developed by',
+    footerPrivacy: 'Privacy & Cookie Policy',
+    footerLegalNote: 'Non-business tourist accommodation managed in compliance with regional regulations.',
+    privacyModalTitle: 'Privacy & Cookie Policy',
+    privacyOwnerTitle: '<i data-lucide="building-2" class="w-4 h-4 text-gold-400 inline-block mr-1"></i> 1. Data Controller',
+    privacyOwnerText: 'The Data Controller is <strong>B&B CaMa</strong>, located at Via Raffaele Viviani, 36 (5th Floor with elevator), 80054 Gragnano (NA), Italy.<br>Email: <a href="mailto:bebcama1963@gmail.com" class="text-gold-300 hover:underline">bebcama1963@gmail.com</a> | Phone: <a href="tel:+393447186581" class="text-gold-300 hover:underline">+39 344 718 6581</a>.',
+    privacyDataTitle: '<i data-lucide="database" class="w-4 h-4 text-gold-400 inline-block mr-1"></i> 2. Types of Data Collected & Purpose',
+    privacyDataText1: 'Through our website we collect the following data solely for the purposes described:',
+    privacyDataLi1: '<strong>Contact & booking inquiries:</strong> Name, Phone, Email, and stay preferences voluntarily submitted to respond to quote or availability requests.',
+    privacyDataLi2: '<strong>Browsing data & preferences:</strong> Preferred language stored locally (<code class="bg-black/40 text-gold-300 px-1 py-0.5 rounded">cama_lang</code>) and cookie consent preferences (<code class="bg-black/40 text-gold-300 px-1 py-0.5 rounded">cama_cookie_consent</code>).',
+    privacyCookieTitle: '<i data-lucide="cookie" class="w-4 h-4 text-gold-400 inline-block mr-1"></i> 3. What Are Cookies & Which We Use',
+    privacyCookieText1: 'Cookies are small text files stored on your device to ensure smooth website navigation and retain preferences.',
+    cookieTechTitle: 'Technical & Functional Cookies (Always Active)',
+    cookieTechDesc: 'Essential for proper website functionality, fluid navigation, language selection, and storing consent preferences. These do not require prior consent.',
+    cookieThirdTitle: 'Third-Party Services & Widgets',
+    cookieThirdDesc: 'The website includes essential third-party resources: Google Fonts typography, Lucide icons, and direct integration links to WhatsApp, Google Maps, Instagram, and TikTok.',
+    privacyRightsTitle: '<i data-lucide="scale" class="w-4 h-4 text-gold-400 inline-block mr-1"></i> 4. User Rights (GDPR)',
+    privacyRightsText: 'In compliance with Articles 15-22 of EU Regulation 2016/679 (GDPR), you have the right to request access, rectification, deletion, restriction, or objection to processing by emailing <a href="mailto:bebcama1963@gmail.com" class="text-gold-300 hover:underline">bebcama1963@gmail.com</a>.',
+    cookieBtnOnlyEssential: 'Essential Only',
+    cookieBtnSave: 'Save Preferences',
+    cookieBannerTitle: 'Cookie Notice',
+    cookieBannerText: 'We use essential technical cookies to ensure our website functions properly and provide you with the best hospitality experience. By clicking "Accept All", you consent to our cookie usage.',
+    cookieBannerLearnMore: 'Customize / Privacy Policy',
+    cookieBtnReject: 'Decline',
+    cookieBtnAccept: 'Accept All'
   },
   es: {
     topRating: 'Puntuación Booking.com <strong class="text-white font-bold">9.5 / 10</strong> • Excepcional',
@@ -473,17 +521,17 @@ const TRANSLATIONS = {
     btnBookSubmit: 'Consultar Disponibilidad y Presupuesto',
     bookDisclaimer: 'Respuesta inmediata por WhatsApp y Email. Sin pagos por adelantado.',
     // Reception & Contacts
-    contactsSectionBadge: 'Atención Dedicada 24/7',
+    contactsSectionBadge: '✦ Concierge & Hospitality ✦',
     contactsSectionTitle: 'Recepción y Contacto',
-    contactsSectionSubtitle: 'Estamos a tu entera disposición para cualquier consulta, petición especial o reserva directa.',
-    contactPhoneLabel: 'Móvil y Soporte',
+    contactsSectionSubtitle: 'Estamos a tu entera disposición para consultas sobre habitaciones, peticiones especiales y reservas directas.',
+    contactPhoneLabel: 'Atención Host 24/7',
     contactLandlineLabel: 'Teléfono Fijo',
     contactWhatsAppLabel: 'WhatsApp Directo 24/7',
-    contactWhatsAppSub: 'Respuesta en tiempo real',
+    contactWhatsAppSub: 'Respuesta inmediata en tiempo real',
     contactEmailLabel: 'Email Oficial',
-    contactAddressLabel: 'Ubicación y Dirección',
+    contactAddressLabel: 'Sede y Ubicación',
     contactAddressValue: 'Via Raffaele Viviani, 36 (5ª Planta con ascensor), 80054 Gragnano (NA), Italia',
-    contactWhatsAppAction: 'Abrir Chat de WhatsApp',
+    contactWhatsAppAction: 'Chat WhatsApp Directo',
     contactMobileAction: 'Llamar al Móvil',
     contactLandlineAction: 'Llamar al Fijo',
     contactEmailAction: 'Enviar Correo',
@@ -503,8 +551,32 @@ const TRANSLATIONS = {
     btnGoogleMaps: 'Abrir Ubicación en Google Maps',
     footerCheckinHours: 'Check-in: 17:00 - 21:00',
     footerCheckoutHours: 'Check-out: 08:00 - 10:30',
-    footerCopyright: '© 2026 • Todos los derechos reservados',
-    footerDevBy: 'Sitio web realizado por'
+    footerCopyright: '© 2026 B&B CaMa • Todos los derechos reservados',
+    footerDevBy: 'Sitio web realizado por',
+    footerPrivacy: 'Política de Privacidad y Cookies',
+    footerLegalNote: 'Alojamiento turístico gestionado de forma no empresarial de conformidad con la normativa regional vigente.',
+    privacyModalTitle: 'Política de Privacidad y Cookies',
+    privacyOwnerTitle: '<i data-lucide="building-2" class="w-4 h-4 text-gold-400 inline-block mr-1"></i> 1. Responsable del Tratamiento',
+    privacyOwnerText: 'El Responsable del tratamiento de datos personales es <strong>B&B CaMa</strong>, ubicado en Via Raffaele Viviani, 36 (5ª Planta con ascensor), 80054 Gragnano (NA), Italia.<br>Email: <a href="mailto:bebcama1963@gmail.com" class="text-gold-300 hover:underline">bebcama1963@gmail.com</a> | Teléfono: <a href="tel:+393447186581" class="text-gold-300 hover:underline">+39 344 718 6581</a>.',
+    privacyDataTitle: '<i data-lucide="database" class="w-4 h-4 text-gold-400 inline-block mr-1"></i> 2. Tipos de Datos Recopilados y Finalidad',
+    privacyDataText1: 'A través de nuestra página web recopilamos los siguientes datos únicamente para las finalidades descritas:',
+    privacyDataLi1: '<strong>Datos de contacto y reservas:</strong> Nombre, Teléfono, Email y preferencias de estancia facilitadas voluntariamente para atender consultas de disponibilidad y presupuesto.',
+    privacyDataLi2: '<strong>Datos de navegación y preferencias:</strong> Idioma preferido almacenado localmente (<code class="bg-black/40 text-gold-300 px-1 py-0.5 rounded">cama_lang</code>) y preferencias de cookies (<code class="bg-black/40 text-gold-300 px-1 py-0.5 rounded">cama_cookie_consent</code>).',
+    privacyCookieTitle: '<i data-lucide="cookie" class="w-4 h-4 text-gold-400 inline-block mr-1"></i> 3. Qué son las Cookies y cuáles utilizamos',
+    privacyCookieText1: 'Las cookies son pequeños archivos de texto que permiten guardar en su dispositivo información para mejorar la navegación en visitas sucesivas.',
+    cookieTechTitle: 'Cookies Técnicas y Funcionales (Siempre Activas)',
+    cookieTechDesc: 'Indispensables para el correcto funcionamiento de la web, navegación fluida, selección de idioma y almacenamiento de preferencias de consentimiento.',
+    cookieThirdTitle: 'Servicios de Terceros y Widgets',
+    cookieThirdDesc: 'La web incluye elementos de terceros para enriquecer la experiencia: tipografías Google Fonts, iconos Lucide y enlaces directos a WhatsApp, Google Maps, Instagram y TikTok.',
+    privacyRightsTitle: '<i data-lucide="scale" class="w-4 h-4 text-gold-400 inline-block mr-1"></i> 4. Derechos del Usuario (RGPD)',
+    privacyRightsText: 'Conforme a los artículos 15-22 del Reglamento UE 2016/679 (RGPD), tiene derecho a acceder, rectificar, suprimir o limitar el tratamiento de sus datos escribiendo a <a href="mailto:bebcama1963@gmail.com" class="text-gold-300 hover:underline">bebcama1963@gmail.com</a>.',
+    cookieBtnOnlyEssential: 'Solo Necesarias',
+    cookieBtnSave: 'Guardar Preferencias',
+    cookieBannerTitle: 'Aviso sobre Cookies',
+    cookieBannerText: 'Utilizamos cookies técnicas para asegurar el funcionamiento óptimo de la web y ofrecerle la mejor experiencia. Al hacer clic en "Aceptar Todo", consiente el uso de cookies.',
+    cookieBannerLearnMore: 'Personalizar / Privacidad',
+    cookieBtnReject: 'Rechazar',
+    cookieBtnAccept: 'Aceptar Todo'
   }
 };
 
@@ -543,18 +615,21 @@ function setLanguage(lang) {
     }
   });
 
-  updatePriceCalculator();
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-  // Initialize Lucide icons
   if (typeof lucide !== 'undefined') {
     lucide.createIcons();
   }
 
-  // Set default dates
+  initDatePickers();
+  updatePriceCalculator();
+}
+
+let checkinPicker = null;
+let checkoutPicker = null;
+
+function initDatePickers() {
   const checkinInput = document.getElementById('checkin');
   const checkoutInput = document.getElementById('checkout');
+  if (!checkinInput || !checkoutInput) return;
 
   const today = new Date();
   const tomorrow = new Date(today);
@@ -563,18 +638,78 @@ document.addEventListener('DOMContentLoaded', () => {
   dayAfter.setDate(dayAfter.getDate() + 3);
 
   const formatDate = (date) => date.toISOString().split('T')[0];
+  const currentCheckinVal = checkinInput.value || formatDate(tomorrow);
+  const currentCheckoutVal = checkoutInput.value || formatDate(dayAfter);
 
-  if (checkinInput && checkoutInput) {
+  if (typeof flatpickr !== 'undefined') {
+    let flatpickrLocale = 'default';
+    if (currentLang === 'it' && typeof flatpickr.l10ns !== 'undefined' && flatpickr.l10ns.it) {
+      flatpickrLocale = flatpickr.l10ns.it;
+    } else if (currentLang === 'es' && typeof flatpickr.l10ns !== 'undefined' && flatpickr.l10ns.es) {
+      flatpickrLocale = flatpickr.l10ns.es;
+    }
+
+    if (checkinPicker) checkinPicker.destroy();
+    if (checkoutPicker) checkoutPicker.destroy();
+
+    checkinPicker = flatpickr(checkinInput, {
+      locale: flatpickrLocale,
+      minDate: 'today',
+      defaultDate: currentCheckinVal,
+      dateFormat: 'Y-m-d',
+      altInput: true,
+      altFormat: 'd/m/Y',
+      altInputClass: 'concierge-input',
+      disableMobile: true,
+      onChange: function(selectedDates) {
+        if (selectedDates[0]) {
+          const nextDay = new Date(selectedDates[0]);
+          nextDay.setDate(nextDay.getDate() + 1);
+          if (checkoutPicker) {
+            checkoutPicker.set('minDate', nextDay);
+            if (checkoutPicker.selectedDates[0] && checkoutPicker.selectedDates[0] <= selectedDates[0]) {
+              checkoutPicker.setDate(nextDay, true);
+            }
+          }
+        }
+        updatePriceCalculator();
+      }
+    });
+
+    checkoutPicker = flatpickr(checkoutInput, {
+      locale: flatpickrLocale,
+      minDate: currentCheckinVal ? new Date(new Date(currentCheckinVal).getTime() + 86400000) : tomorrow,
+      defaultDate: currentCheckoutVal,
+      dateFormat: 'Y-m-d',
+      altInput: true,
+      altFormat: 'd/m/Y',
+      altInputClass: 'concierge-input',
+      disableMobile: true,
+      onChange: function() {
+        updatePriceCalculator();
+      }
+    });
+  } else {
     checkinInput.min = formatDate(tomorrow);
-    checkinInput.value = formatDate(tomorrow);
+    checkinInput.value = currentCheckinVal;
     checkoutInput.min = formatDate(dayAfter);
-    checkoutInput.value = formatDate(dayAfter);
-
-    checkinInput.addEventListener('change', updatePriceCalculator);
-    checkoutInput.addEventListener('change', updatePriceCalculator);
-    document.getElementById('camere')?.addEventListener('change', updatePriceCalculator);
-    document.getElementById('ospiti')?.addEventListener('change', updatePriceCalculator);
+    checkoutInput.value = currentCheckoutVal;
   }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Initialize Lucide icons
+  if (typeof lucide !== 'undefined') {
+    lucide.createIcons();
+  }
+
+  // Set default dates & initialize luxury pickers
+  initDatePickers();
+
+  document.getElementById('checkin')?.addEventListener('change', updatePriceCalculator);
+  document.getElementById('checkout')?.addEventListener('change', updatePriceCalculator);
+  document.getElementById('camere')?.addEventListener('change', updatePriceCalculator);
+  document.getElementById('ospiti')?.addEventListener('change', updatePriceCalculator);
 
   // Mobile menu toggle
   const mobileBtn = document.getElementById('mobileMenuBtn');
@@ -608,6 +743,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Apply initial language
   setLanguage(currentLang);
+
+  // Initialize Cookie Consent
+  initCookieConsent();
 });
 
 // Room names mapping
@@ -634,9 +772,9 @@ function updatePriceCalculator() {
 
   if (nights > 0 && priceSummary && summaryNights && summaryTotal) {
     priceSummary.classList.remove('hidden');
-    const nightLabel = currentLang === 'en' ? (nights === 1 ? 'night' : 'nights') : (nights === 1 ? 'notte' : 'notti');
+    const nightLabel = currentLang === 'en' ? (nights === 1 ? 'night' : 'nights') : (currentLang === 'es' ? (nights === 1 ? 'noche' : 'noches') : (nights === 1 ? 'notte' : 'notti'));
     summaryNights.textContent = `${nights} ${nightLabel}`;
-    summaryTotal.textContent = currentLang === 'en' ? 'Best Rate on Request' : 'Contattare per il prezzo';
+    summaryTotal.textContent = currentLang === 'en' ? 'Best Rate on Request' : (currentLang === 'es' ? 'Mejor Tarifa a Petición' : 'Contattare per il prezzo');
   } else if (priceSummary) {
     priceSummary.classList.add('hidden');
   }
@@ -671,13 +809,13 @@ function handleBookingSubmit(e) {
 
   bookingData = { checkin, checkout, ospiti, roomKey, roomName, nights };
 
-  const nightsWord = currentLang === 'en' ? (nights === 1 ? 'night' : 'nights') : (nights === 1 ? 'notte' : 'notti');
-  const guestsWord = currentLang === 'en' ? (ospiti === '1' ? 'Guest' : 'Guests') : (ospiti === '1' ? 'Ospite' : 'Ospiti');
+  const nightsWord = currentLang === 'en' ? (nights === 1 ? 'night' : 'nights') : (currentLang === 'es' ? (nights === 1 ? 'noche' : 'noches') : (nights === 1 ? 'notte' : 'notti'));
+  const guestsWord = currentLang === 'en' ? (ospiti === '1' ? 'Guest' : 'Guests') : (currentLang === 'es' ? (ospiti === '1' ? 'Huésped' : 'Huéspedes') : (ospiti === '1' ? 'Ospite' : 'Ospiti'));
 
   document.getElementById('modalDates').textContent = `${checkin} → ${checkout} (${nights} ${nightsWord})`;
   document.getElementById('modalGuests').textContent = `${ospiti} ${guestsWord}`;
   document.getElementById('modalRoom').textContent = roomName;
-  document.getElementById('modalTotal').textContent = currentLang === 'en' ? 'Best Rate on Request' : 'Contattaci per il miglior prezzo';
+  document.getElementById('modalTotal').textContent = currentLang === 'en' ? 'Best Rate on Request' : (currentLang === 'es' ? 'Mejor Tarifa a Petición' : 'Contattaci per il miglior prezzo');
 
   document.getElementById('bookingModal').classList.remove('hidden');
   document.getElementById('bookingModal').classList.add('flex');
@@ -739,7 +877,11 @@ function sendFinalBooking(e) {
   const email = document.getElementById('guestEmail').value;
 
   const isEn = currentLang === 'en';
-  const subject = encodeURIComponent(isEn ? `Booking Inquiry B&B CaMa - ${name}` : `Richiesta Preventivo B&B CaMa - ${name}`);
+  const isEs = currentLang === 'es';
+  let subject = `Richiesta Preventivo B&B CaMa - ${name}`;
+  if (isEn) subject = `Booking Inquiry B&B CaMa - ${name}`;
+  if (isEs) subject = `Solicitud de Reserva B&B CaMa - ${name}`;
+
   const body = encodeURIComponent(
     `Richiesta di soggiorno / Booking Inquiry B&B CaMa:\n\n` +
     `Nome / Name: ${name}\n` +
@@ -751,7 +893,7 @@ function sendFinalBooking(e) {
     `Desidero ricevere la migliore tariffa e la conferma della disponibilità.\n`
   );
 
-  window.location.href = `mailto:bebcama1963@gmail.com?subject=${subject}&body=${body}`;
+  window.location.href = `mailto:bebcama1963@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
 }
 
 // Reception direct inquiry submission via pre-set WhatsApp message
@@ -876,10 +1018,92 @@ function closeLightbox() {
 }
 
 document.addEventListener('keydown', (e) => {
-  const modal = document.getElementById('lightboxModal');
-  if (modal && modal.classList.contains('active')) {
+  const lightboxModal = document.getElementById('lightboxModal');
+  if (lightboxModal && lightboxModal.classList.contains('active')) {
     if (e.key === 'ArrowRight') nextGalleryPhoto();
     if (e.key === 'ArrowLeft') prevGalleryPhoto();
     if (e.key === 'Escape') closeLightbox();
   }
+
+  const privacyModal = document.getElementById('privacyModal');
+  if (privacyModal && !privacyModal.classList.contains('hidden')) {
+    if (e.key === 'Escape') closePrivacyModal();
+  }
+
+  const bookingModal = document.getElementById('bookingModal');
+  if (bookingModal && !bookingModal.classList.contains('hidden')) {
+    if (e.key === 'Escape') closeModal();
+  }
 });
+
+// ==========================================================================
+// PRIVACY & COOKIE CONSENT MANAGEMENT (GDPR)
+// ==========================================================================
+
+function initCookieConsent() {
+  const consent = localStorage.getItem('cama_cookie_consent');
+  const optionalToggle = document.getElementById('cookieOptionalToggle');
+  if (optionalToggle) {
+    optionalToggle.checked = consent !== 'essential';
+  }
+
+  if (!consent) {
+    setTimeout(() => {
+      const banner = document.getElementById('cookieBanner');
+      if (banner) {
+        banner.classList.remove('hidden');
+        if (typeof lucide !== 'undefined') lucide.createIcons();
+      }
+    }, 600);
+  }
+}
+
+function acceptAllCookies() {
+  localStorage.setItem('cama_cookie_consent', 'all');
+  const banner = document.getElementById('cookieBanner');
+  if (banner) banner.classList.add('hidden');
+  const optionalToggle = document.getElementById('cookieOptionalToggle');
+  if (optionalToggle) optionalToggle.checked = true;
+  closePrivacyModal();
+}
+
+function rejectOptionalCookies() {
+  localStorage.setItem('cama_cookie_consent', 'essential');
+  const banner = document.getElementById('cookieBanner');
+  if (banner) banner.classList.add('hidden');
+  const optionalToggle = document.getElementById('cookieOptionalToggle');
+  if (optionalToggle) optionalToggle.checked = false;
+  closePrivacyModal();
+}
+
+function saveCustomCookiePreferences() {
+  const optionalToggle = document.getElementById('cookieOptionalToggle');
+  const isOptionalAllowed = optionalToggle ? optionalToggle.checked : true;
+  localStorage.setItem('cama_cookie_consent', isOptionalAllowed ? 'all' : 'essential');
+  
+  const banner = document.getElementById('cookieBanner');
+  if (banner) banner.classList.add('hidden');
+  closePrivacyModal();
+}
+
+function openPrivacyModal() {
+  const modal = document.getElementById('privacyModal');
+  if (modal) {
+    const consent = localStorage.getItem('cama_cookie_consent');
+    const optionalToggle = document.getElementById('cookieOptionalToggle');
+    if (optionalToggle) {
+      optionalToggle.checked = consent !== 'essential';
+    }
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    if (typeof lucide !== 'undefined') lucide.createIcons();
+  }
+}
+
+function closePrivacyModal() {
+  const modal = document.getElementById('privacyModal');
+  if (modal) {
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+  }
+}
