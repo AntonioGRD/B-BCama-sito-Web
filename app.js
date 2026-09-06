@@ -4,16 +4,16 @@
 
 const TRANSLATIONS = {
   it: {
-    topRating: 'Punteggio Booking.com <strong class="text-white font-bold">9.5 / 10</strong> • Eccezionale',
+    topRating: 'Booking.com <strong class="text-white font-bold">9.5 / 10</strong> • Eccezionale',
     topAddress: 'Via Raffaele Viviani, 36 (Piano 5), Gragnano (NA)',
-    topWhatsApp: 'WhatsApp Diretto',
+    topWhatsApp: 'WhatsApp',
     navHome: 'Home',
     navAbout: 'Chi Siamo',
     navRooms: 'Camere',
     navServices: 'Servizi',
     navReviews: 'Recensioni',
     navContacts: 'Contatti',
-    navBook: 'Verifica Disponibilità',
+    navBook: 'Disponibilità',
     mobileBarBook: 'Disponibilità',
     heroBadge: 'Esperienza di Charme & Panorama',
     heroLocation: 'Gragnano • Costiera Amalfitana • Pompei',
