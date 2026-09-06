@@ -53,23 +53,23 @@ const TRANSLATIONS = {
     featTechSub: 'Fibra ad alta velocità',
     // Pompei Room
     pompeiType: 'Camera Matrimoniale',
-    pompeiDesc: 'Elegante camera dotata di confortevole letto matrimoniale, bagno privato en-suite con doccia, macchina del caffè espresso, climatizzazione autonoma, Smart TV e Wi-Fi veloce.',
+    pompeiDesc: 'Elegante camera dotata di confortevole letto matrimoniale, balcone privato, bagno privato en-suite con doccia, macchina del caffè espresso, climatizzazione autonoma, Smart TV e Wi-Fi veloce.',
     pompeiTag1: 'Letto Matrimoniale',
-    pompeiTag2: 'Bagno Privato En-Suite',
+    pompeiTag2: 'Balcone',
     pompeiTag3: 'Macchina del Caffè',
     pompeiTag4: 'Clima & Smart TV',
     // Stabia Sunset
     stabiaType: 'Matrimoniale con Balcone',
-    stabiaDesc: 'La sistemazione più suggestiva e panoramica: dotata di confortevole letto matrimoniale, balcone privato con vista sui Monti Lattari, macchina del caffè espresso, bagno privato en-suite e climatizzazione autonoma.',
+    stabiaDesc: 'La sistemazione più suggestiva e panoramica: dotata di confortevole letto matrimoniale e balcone privato con vista sul Golfo di Napoli e sul Vesuvio, macchina del caffè espresso, bagno en-suite e climatizzazione autonoma.',
     stabiaTag1: 'Letto Matrimoniale',
-    stabiaTag2: 'Balcone Panoramico',
+    stabiaTag2: 'Balcone Panoramico con Vista sul Golfo di Napoli e sul Vesuvio',
     stabiaTag3: 'Bagno Privato En-Suite',
     stabiaTag4: 'Macchina del Caffè',
     // VesuView
     vesuviewType: 'Matrimoniale con Balcone Panoramico',
-    vesuviewDesc: 'Splendida camera dotata di confortevole letto matrimoniale per 2 ospiti, balcone panoramico, macchina del caffè espresso, bagno privato en-suite con doccia, Smart TV e climatizzazione autonoma.',
+    vesuviewDesc: 'Splendida camera dotata di confortevole letto matrimoniale per 2 ospiti e balcone panoramico con vista sul Vesuvio. Completa di bagno privato en-suite con doccia, macchina del caffè espresso, Smart TV e climatizzazione autonoma.',
     vesuviewTag1: 'Letto Matrimoniale',
-    vesuviewTag2: 'Balcone Panoramico',
+    vesuviewTag2: 'Balcone Panoramico con Vista sul Vesuvio',
     vesuviewTag3: 'Bagno Privato En-Suite',
     vesuviewTag4: 'Macchina del Caffè',
 
@@ -97,7 +97,7 @@ const TRANSLATIONS = {
     commonAreasDesc: 'La terrazza panoramica al 5° piano con solarium e la cucina comune a disposizione degli ospiti per gustare la colazione inclusa.',
     terrazzaSolarium: 'Terrazza Solarium',
     vistaDallAlto: "Vista dall'Alto",
-    montiLattari: 'Monti Lattari',
+    montiLattari: 'Vista sul Vesuvio',
     areaRelax: 'Area Relax Terrazza',
     cucinaFrigo: 'Cucina & Colazione Inclusa',
     // Services
@@ -259,23 +259,23 @@ const TRANSLATIONS = {
     featTechSub: 'High-speed fiber',
     // Pompei Room
     pompeiType: 'Double Bedroom',
-    pompeiDesc: 'Elegant bedroom featuring a comfortable double bed, private en-suite bathroom with shower, in-room espresso coffee machine, autonomous air conditioning, Smart TV, and fast Wi-Fi.',
+    pompeiDesc: 'Elegant bedroom featuring a comfortable double bed, private balcony, en-suite bathroom with shower, in-room espresso coffee machine, autonomous air conditioning, Smart TV, and fast Wi-Fi.',
     pompeiTag1: 'Double Bed',
-    pompeiTag2: 'En-Suite Bathroom',
+    pompeiTag2: 'Balcony',
     pompeiTag3: 'Espresso Machine',
     pompeiTag4: 'A/C & Smart TV',
     // Stabia Sunset
     stabiaType: 'Double with Scenic Balcony',
-    stabiaDesc: 'Our most scenic accommodation: featuring a comfortable double bed, private balcony overlooking the Lattari Mountains, in-room espresso coffee machine, and en-suite bathroom.',
+    stabiaDesc: 'Our most scenic accommodation: featuring a comfortable double bed and private balcony overlooking the Gulf of Naples and Mount Vesuvius, in-room espresso coffee machine, and en-suite bathroom.',
     stabiaTag1: 'Double Bed',
-    stabiaTag2: 'Panoramic Balcony',
+    stabiaTag2: 'Scenic Balcony with Gulf of Naples & Vesuvius View',
     stabiaTag3: 'En-Suite Bathroom',
     stabiaTag4: 'Espresso Machine',
     // VesuView
     vesuviewType: 'Double with Panoramic Balcony',
-    vesuviewDesc: 'Charming double bedroom for 2 guests with panoramic balcony, in-room espresso coffee machine, modern en-suite bathroom with shower, Smart TV, and autonomous climate control.',
+    vesuviewDesc: 'Charming double bedroom for 2 guests with panoramic balcony overlooking Mount Vesuvius. Features private en-suite bathroom with shower, espresso coffee machine, Smart TV, and autonomous climate control.',
     vesuviewTag1: 'Double Bed',
-    vesuviewTag2: 'Panoramic Balcony',
+    vesuviewTag2: 'Scenic Balcony with Vesuvius View',
     vesuviewTag3: 'En-Suite Bathroom',
     vesuviewTag4: 'Espresso Machine',
 
@@ -303,7 +303,7 @@ const TRANSLATIONS = {
     commonAreasDesc: 'The 5th-floor panoramic solarium terrace and shared kitchen available for guests to enjoy complimentary breakfast.',
     terrazzaSolarium: 'Solarium Terrace',
     vistaDallAlto: 'Aerial View',
-    montiLattari: 'Lattari Mountains',
+    montiLattari: 'View of Mount Vesuvius',
     areaRelax: 'Terrace Relax Area',
     cucinaFrigo: 'Kitchen & Breakfast Included',
     // Services
@@ -465,23 +465,23 @@ const TRANSLATIONS = {
     featTechSub: 'Fibra de alta velocidad',
     // Pompei Room
     pompeiType: 'Habitación Matrimonial',
-    pompeiDesc: 'Elegante habitación con cómoda cama de matrimonio, baño privado en-suite con ducha, cafetera espresso en la habitación, climatización autónoma, Smart TV y Wi-Fi de alta velocidad.',
+    pompeiDesc: 'Elegante habitación con cómoda cama de matrimonio, balcón privado, baño privado en-suite con ducha, cafetera espresso en la habitación, climatización autónoma, Smart TV y Wi-Fi de alta velocidad.',
     pompeiTag1: 'Cama de Matrimonio',
-    pompeiTag2: 'Baño Privado En-Suite',
+    pompeiTag2: 'Balcón',
     pompeiTag3: 'Cafetera Espresso',
     pompeiTag4: 'Clima & Smart TV',
     // Stabia Sunset
     stabiaType: 'Matrimonial con Balcón Panorámico',
-    stabiaDesc: 'El alojamiento más sugerente y panorámico: con cómoda cama de matrimonio, balcón privado con vistas a los Montes Lattari, cafetera espresso en la habitación, baño privado en-suite y climatización autónoma.',
+    stabiaDesc: 'El alojamiento más sugerente y panorámico: con cómoda cama de matrimonio y balcón privado con vistas al Golfo de Nápoles y al Vesubio, cafetera espresso en la habitación, baño privado en-suite y climatización autónoma.',
     stabiaTag1: 'Cama de Matrimonio',
-    stabiaTag2: 'Balcón Panorámico',
+    stabiaTag2: 'Balcón Panorámico con Vistas al Golfo de Nápoles y al Vesubio',
     stabiaTag3: 'Baño Privado En-Suite',
     stabiaTag4: 'Cafetera Espresso',
     // VesuView
     vesuviewType: 'Matrimonial con Balcón Panorámico',
-    vesuviewDesc: 'Espléndida habitación con cómoda cama de matrimonio para 2 personas, balcón panorámico, cafetera espresso en la habitación, baño privado en-suite con ducha, Smart TV y Wi-Fi fibra.',
+    vesuviewDesc: 'Espléndida habitación matrimonial para 2 personas con balcón panorámico y vistas al Vesubio. Equipada con baño privado en-suite con ducha, cafetera espresso, Smart TV y Wi-Fi fibra.',
     vesuviewTag1: 'Cama de Matrimonio',
-    vesuviewTag2: 'Balcón Panorámico',
+    vesuviewTag2: 'Balcón Panorámico con Vistas al Vesubio',
     vesuviewTag3: 'Baño Privado En-Suite',
     vesuviewTag4: 'Cafetera Espresso',
     roomRateFrom: 'Tarifa',
@@ -508,7 +508,7 @@ const TRANSLATIONS = {
     commonAreasDesc: 'La terraza panorámica en la 5ª planta con solárium y la cocina común a disposición de los huéspedes para disfrutar del desayuno incluido.',
     terrazzaSolarium: 'Terraza Solárium',
     vistaDallAlto: 'Vistas Panorámicas',
-    montiLattari: 'Montes Lattari',
+    montiLattari: 'Vistas al Vesubio',
     areaRelax: 'Zona Relax Terraza',
     cucinaFrigo: 'Cocina & Desayuno Incluido',
     // Services
@@ -974,20 +974,23 @@ const ROOM_GALLERIES = {
     { src: 'immagini/Pompei Room5.jpeg', caption: 'Pompei Room - Guardaroba e finiture (5/5)' }
   ],
   stabia: [
-    { src: 'immagini/Stabia Sunset1.jpeg', caption: 'Stabia Sunset - Camera con balcone e vista panoramica (1/4)' },
-    { src: 'immagini/Stabia Sunset2.jpeg', caption: 'Stabia Sunset - Bagno privato con doccia (2/4)' },
-    { src: 'immagini/Stabia Sunset3.jpeg', caption: 'Stabia Sunset - Vista sui Monti Lattari dal balcone (3/4)' },
-    { src: 'immagini/Stabia Sunset4.jpeg', caption: 'Stabia Sunset - Dettaglio camera al tramonto (4/4)' }
+    { src: 'immagini/Stabia Sunset1.jpeg', caption: 'Stabia Sunset - Camera con balcone e vista panoramica (1/6)' },
+    { src: 'immagini/WhatsApp Image 2026-09-01 at 20.09.03.jpeg', caption: 'Stabia Sunset - Terrazza con suggestivo tramonto (2/6)' },
+    { src: 'immagini/sadwdasdaw.jpeg', caption: 'Stabia Sunset - Ampia terrazza panoramica con vista sul Vesuvio (3/6)' },
+    { src: 'immagini/Stabia Sunset2.jpeg', caption: 'Stabia Sunset - Bagno privato con doccia (4/6)' },
+    { src: 'immagini/Stabia Sunset3.jpeg', caption: 'Stabia Sunset - Vista sui Monti Lattari dal balcone (5/6)' },
+    { src: 'immagini/Stabia Sunset4.jpeg', caption: 'Stabia Sunset - Dettaglio camera al tramonto (6/6)' }
   ],
   vesuview: [
-    { src: 'immagini/VesuView1.jpeg', caption: 'VesuView - Camera matrimoniale con balcone panoramico (1/3)' },
-    { src: 'immagini/VesuView2.jpeg', caption: 'VesuView - Luminosa zona notte con affaccio panoramico (2/3)' },
-    { src: 'immagini/VesuView3.jpeg', caption: 'VesuView - Bagno privato moderno con doccia (3/3)' }
+    { src: 'immagini/VesuView1.jpeg', caption: 'VesuView - Camera matrimoniale con balcone panoramico (1/4)' },
+    { src: 'immagini/sadwadsdadfgge.jpeg', caption: 'VesuView - Ampia terrazza panoramica e suggestivo affaccio sul Vesuvio (2/4)' },
+    { src: 'immagini/VesuView2.jpeg', caption: 'VesuView - Luminosa zona notte con affaccio panoramico (3/4)' },
+    { src: 'immagini/VesuView3.jpeg', caption: 'VesuView - Bagno privato moderno con doccia (4/4)' }
   ],
   esterni: [
     { src: 'immagini/Esterno1.jpeg', caption: 'Terrazza Panoramica Solarium al 5° piano (1/5)' },
     { src: 'immagini/Esterno2.jpeg', caption: 'Panorama su Gragnano e le colline campane (2/5)' },
-    { src: 'immagini/Esterno3.jpeg', caption: 'Vista sulla catena dei Monti Lattari (3/5)' },
+    { src: 'immagini/WhatsApp Image 2026-09-01 at 20.09.02.jpeg', caption: 'Suggestiva vista panoramica sul Vesuvio al tramonto dalla terrazza (3/5)' },
     { src: 'immagini/Esterno4.jpeg', caption: 'Area relax e sedute in terrazza (4/5)' },
     { src: 'immagini/cucina in comune con frigo.jpeg', caption: 'Area Colazione & Cucina in comune con Frigorifero (5/5)' }
   ]
@@ -996,8 +999,8 @@ const ROOM_GALLERIES = {
 // Room card slider controller
 const roomCardSliders = {
   pompei: { index: 0, count: 5, imgId: 'pompeiCardImg', counterId: 'pompeiPhotoBadge', dotsId: 'pompeiDots' },
-  stabia: { index: 0, count: 4, imgId: 'stabiaCardImg', counterId: 'stabiaPhotoBadge', dotsId: 'stabiaDots' },
-  vesuview: { index: 0, count: 3, imgId: 'vesuviewCardImg', counterId: 'vesuviewPhotoBadge', dotsId: 'vesuviewDots' }
+  stabia: { index: 0, count: 6, imgId: 'stabiaCardImg', counterId: 'stabiaPhotoBadge', dotsId: 'stabiaDots' },
+  vesuview: { index: 0, count: 4, imgId: 'vesuviewCardImg', counterId: 'vesuviewPhotoBadge', dotsId: 'vesuviewDots' }
 };
 
 function slideRoomCard(roomKey, direction, e) {
