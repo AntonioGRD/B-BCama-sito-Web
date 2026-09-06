@@ -50,7 +50,8 @@ html {
   scroll-padding-top: 85px;
 }
 
-section, [id] {
+section,
+[id] {
   scroll-margin-top: 85px;
 }
 
@@ -499,9 +500,11 @@ select.concierge-input option:checked {
 .flatpickr-calendar.arrowTop::before {
   border-bottom-color: rgba(212, 178, 111, 0.45) !important;
 }
+
 .flatpickr-calendar.arrowBottom::before {
   border-top-color: rgba(212, 178, 111, 0.45) !important;
 }
+
 .flatpickr-calendar.arrowBottom::after {
   border-top-color: #121218 !important;
 }
@@ -511,6 +514,7 @@ select.concierge-input option:checked {
     opacity: 0;
     transform: translateY(10px) scale(0.97);
   }
+
   to {
     opacity: 1;
     transform: translateY(0) scale(1);
@@ -546,6 +550,7 @@ select.concierge-input option:checked {
 .flatpickr-current-month .numInputWrapper span.arrowUp::after {
   border-bottom-color: var(--gold-400) !important;
 }
+
 .flatpickr-current-month .numInputWrapper span.arrowDown::after {
   border-top-color: var(--gold-400) !important;
 }
@@ -909,7 +914,10 @@ html {
   touch-action: manipulation;
 }
 
-button, a, input, select {
+button,
+a,
+input,
+select {
   touch-action: manipulation;
 }
 
@@ -1101,6 +1109,7 @@ button, a, input, select {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
   transition: all 0.25s ease-in-out;
 }
+
 .slider-dot:hover {
   background-color: #ffffff;
   transform: scale(1.15);
@@ -1109,6 +1118,7 @@ button, a, input, select {
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -1156,6 +1166,7 @@ select:focus-visible {
 
 /* Respect user preference for reduced motion */
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
