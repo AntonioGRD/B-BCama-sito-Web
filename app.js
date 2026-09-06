@@ -13,12 +13,13 @@ const TRANSLATIONS = {
     navServices: 'Servizi',
     navReviews: 'Recensioni',
     navContacts: 'Contatti',
-    navBook: 'Chiedi Disponibilità',
+    navBook: 'Verifica Disponibilità',
+    mobileBarBook: 'Disponibilità',
     heroBadge: 'Esperienza di Charme & Panorama',
     heroLocation: 'Gragnano • Costiera Amalfitana • Pompei',
     heroTitle: 'Le Nostre Camere',
     heroSubtitle: "L'eleganza dell'ospitalità italiana con vista mozzafiato sul Vesuvio",
-    heroBtnBook: 'Chiedi Disponibilità',
+    heroBtnBook: 'Verifica Disponibilità',
     heroBtnExplore: 'Esplora le Camere',
     // Chi Siamo
     aboutBadge: 'Una Storia di Famiglia & Cuore',
@@ -206,6 +207,7 @@ const TRANSLATIONS = {
     navReviews: 'Reviews',
     navContacts: 'Contacts',
     navBook: 'Check Availability',
+    mobileBarBook: 'Availability',
     heroBadge: 'Charming & Scenic Experience',
     heroLocation: 'Gragnano • Amalfi Coast • Pompeii',
     heroTitle: 'Our Rooms',
@@ -398,6 +400,7 @@ const TRANSLATIONS = {
     navReviews: 'Opiniones',
     navContacts: 'Contacto',
     navBook: 'Consultar Disponibilidad',
+    mobileBarBook: 'Disponibilidad',
     heroBadge: 'Experiencia con Encanto y Vistas',
     heroLocation: 'Gragnano • Costa Amalfitana • Pompeya',
     heroTitle: 'Nuestras Habitaciones',
@@ -1035,6 +1038,33 @@ document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeModal();
   }
 });
+
+// Mobile Touch Swipe Support for Lightbox Modal
+let touchStartX = 0;
+let touchEndX = 0;
+
+const lightboxModal = document.getElementById('lightboxModal');
+if (lightboxModal) {
+  lightboxModal.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+  }, { passive: true });
+
+  lightboxModal.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipeGesture();
+  }, { passive: true });
+}
+
+function handleSwipeGesture() {
+  const swipeDistance = touchEndX - touchStartX;
+  if (Math.abs(swipeDistance) > 45) {
+    if (swipeDistance < 0) {
+      nextGalleryPhoto(); // swipe left -> next photo
+    } else {
+      prevGalleryPhoto(); // swipe right -> prev photo
+    }
+  }
+}
 
 // ==========================================================================
 // PRIVACY & COOKIE CONSENT MANAGEMENT (GDPR)
