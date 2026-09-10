@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="it" class="scroll-smooth">
+<html lang="it" class="scroll-smooth bg-[#f7f4ed]">
 
 <head>
   <meta charset="UTF-8">
@@ -9,8 +9,18 @@
     content="B&B CaMa a Gragnano (NA). Camere di charme al 5° piano con vista panoramica sui Monti Lattari, bagno privato e servizi premium. Punteggio 9.5 Eccezionale.">
 
   <!-- SEO & Social Meta Tags -->
-  <meta name="theme-color" content="#0a0a0c">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#f7f4ed">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+  <!-- Fallback Sfondo Bianco/Beige Immediato (Anti-Flash) -->
+  <style>
+    :root, html, body {
+      background-color: #f7f4ed !important;
+      color: #27272a;
+      color-scheme: light;
+    }
+  </style>
+
   <meta property="og:type" content="website">
   <meta property="og:title" content="B&B CaMa | Camere di Charme a Gragnano - Costiera & Pompei">
   <meta property="og:description"
@@ -56,6 +66,7 @@
               500: '#c5a880',
               600: '#b08d4b',
               700: '#8c6a2d',
+              800: '#6e4f1a',
             }
           }
         }
@@ -72,7 +83,7 @@
   <script src="https://npmcdn.com/flatpickr/dist/l10n/it.js"></script>
   <script src="https://npmcdn.com/flatpickr/dist/l10n/es.js"></script>
 
-  <!-- Custom Luxury Stylesheet -->
+  <!-- Custom Luxury Stylesheet (White & Beige Palette) -->
   <link rel="stylesheet" href="style.css">
 
   <!-- Schema.org JSON-LD Structured Data for BedAndBreakfast -->
@@ -112,8 +123,8 @@
   </script>
 </head>
 
-<body class="bg-[#0a0a0c] text-[#d1d1d6] font-sans antialiased selection:bg-[#c5a880] selection:text-black">
-  <!-- TOP STATUS STRIP & LANGUAGE SWITCHER -->
+<body class="bg-white text-[#27272a] font-sans antialiased selection:bg-[#c5a880] selection:text-black">
+  <!-- TOP STATUS STRIP & LANGUAGE SWITCHER (DARK LUXURY) -->
   <div class="bg-[#0e0e12] border-b border-[#c5a880]/20 text-xs py-2 px-3 sm:px-6">
     <div class="max-w-7xl mx-auto flex items-center justify-between gap-3">
       <!-- Left: Booking Rating & Address -->
@@ -140,8 +151,8 @@
           </a>
           <a href="https://wa.me/393447186581?text=Salve%20B%26B%20CaMa%2C%20vorrei%20informazioni%20sulle%20disponibilit%C3%A0"
             target="_blank"
-            class="text-gold-300 hover:text-white transition flex items-center gap-1.5 font-medium text-xs whitespace-nowrap">
-            <i data-lucide="message-circle" class="w-3.5 h-3.5 text-gold-400 shrink-0"></i>
+            class="text-emerald-400 hover:text-emerald-300 transition flex items-center gap-1.5 font-semibold text-xs whitespace-nowrap">
+            <i data-lucide="message-circle" class="w-3.5 h-3.5 text-emerald-400 shrink-0"></i>
             <span data-i18n="topWhatsApp">WhatsApp</span>
           </a>
         </div>
@@ -160,7 +171,7 @@
             <span class="text-[11px] font-sans">Instagram</span>
           </a>
           <a href="https://www.tiktok.com/@cama.bed.and.brea?lang=it-IT" target="_blank" rel="noopener noreferrer"
-            class="text-zinc-400 hover:text-cyan-400 transition flex items-center gap-1 text-xs whitespace-nowrap"
+            class="text-zinc-400 hover:text-white transition flex items-center gap-1 text-xs whitespace-nowrap"
             title="Seguici su TikTok" aria-label="TikTok">
             <svg class="w-3.5 h-3.5 fill-current shrink-0" viewBox="0 0 24 24">
               <path
@@ -170,16 +181,16 @@
           </a>
         </div>
 
-        <!-- Language Selector (Always Fully Visible & Tap-Friendly) -->
+        <!-- Language Selector (Dark Luxury Style) -->
         <div
-          class="flex items-center border border-gold-400/50 rounded-sm bg-black/60 overflow-hidden text-[11px] font-cinzel shadow-sm shrink-0">
-          <button onclick="setLanguage('it')" class="lang-btn px-2.5 py-1 transition cursor-pointer"
+          class="flex items-center border border-gold-500/40 rounded-sm bg-[#181820] overflow-hidden text-[11px] font-cinzel shadow-sm shrink-0">
+          <button onclick="setLanguage('it')" class="lang-btn text-zinc-300 hover:text-gold-300 px-2.5 py-1 transition cursor-pointer"
             data-lang="it">IT</button>
-          <span class="text-zinc-700 px-0.5 select-none">|</span>
-          <button onclick="setLanguage('en')" class="lang-btn px-2.5 py-1 transition cursor-pointer"
+          <span class="text-zinc-600 px-0.5 select-none">|</span>
+          <button onclick="setLanguage('en')" class="lang-btn text-zinc-300 hover:text-gold-300 px-2.5 py-1 transition cursor-pointer"
             data-lang="en">EN</button>
-          <span class="text-zinc-700 px-0.5 select-none">|</span>
-          <button onclick="setLanguage('es')" class="lang-btn px-2.5 py-1 transition cursor-pointer"
+          <span class="text-zinc-600 px-0.5 select-none">|</span>
+          <button onclick="setLanguage('es')" class="lang-btn text-zinc-300 hover:text-gold-300 px-2.5 py-1 transition cursor-pointer"
             data-lang="es">ES</button>
         </div>
       </div>
@@ -193,12 +204,14 @@
       <!-- Logo Branding (Transparent) -->
       <a href="#" class="flex items-center gap-3 group text-decoration-none shrink-0">
         <img src="immagini/logo.png" alt="Logo B&B CaMa" width="180" height="48"
-          class="h-10 md:h-12 w-auto object-contain transition duration-300 group-hover:scale-105 drop-shadow-[0_2px_10px_rgba(197,168,128,0.3)]">
+          class="h-10 md:h-12 w-auto object-contain transition duration-300 group-hover:scale-105 drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">
         <div>
-          <span class="font-cinzel text-base md:text-lg lg:text-xl font-bold tracking-widest text-white block leading-none whitespace-nowrap">
+          <span
+            class="font-cinzel text-base md:text-lg lg:text-xl font-bold tracking-widest text-white block leading-none whitespace-nowrap">
             B&B CAMA
           </span>
-          <span class="text-[8px] md:text-[9px] tracking-[0.22em] uppercase text-gold-400 font-semibold mt-1 block whitespace-nowrap">
+          <span
+            class="text-[8px] md:text-[9px] tracking-[0.22em] uppercase text-gold-400 font-bold mt-1 block whitespace-nowrap">
             Lusso & Charme • Gragnano
           </span>
         </div>
@@ -216,63 +229,65 @@
 
       <!-- CTA & Mobile Toggle -->
       <div class="flex items-center gap-3 shrink-0">
-        <a href="#prenota" class="hidden sm:inline-flex btn-gold text-xs uppercase py-2.5 px-4 lg:px-5 whitespace-nowrap" data-i18n="navBook">
+        <a href="#prenota"
+          class="hidden sm:inline-flex btn-gold text-xs uppercase py-2.5 px-4 lg:px-5 whitespace-nowrap"
+          data-i18n="navBook">
           Verifica Disponibilità
         </a>
-        <button id="mobileMenuBtn" class="lg:hidden text-zinc-300 hover:text-gold-300 p-2 focus:outline-none"
+        <button id="mobileMenuBtn" class="lg:hidden text-zinc-300 hover:text-gold-400 p-2 focus:outline-none"
           aria-label="Menu Mobile">
           <i data-lucide="menu" class="w-6 h-6"></i>
         </button>
       </div>
     </div>
 
-    <!-- Mobile Drawer (Luxury Glassmorphism) -->
+    <!-- Mobile Drawer (Dark Luxury Glass) -->
     <div id="mobileMenu"
-      class="hidden lg:hidden border-t border-gold-400/20 bg-[#0c0c12]/98 backdrop-blur-2xl px-6 py-6 space-y-4 shadow-2xl">
+      class="hidden lg:hidden border-t border-gold-400/30 bg-[#0c0c10]/98 backdrop-blur-2xl px-6 py-6 space-y-4 shadow-2xl">
       <nav class="space-y-2">
         <a href="#home"
-          class="block py-2.5 text-zinc-300 hover:text-gold-300 font-cinzel tracking-wider text-sm border-b border-zinc-800/50"
+          class="block py-2.5 text-zinc-200 hover:text-gold-400 font-cinzel tracking-wider text-sm border-b border-zinc-800/60"
           data-i18n="navHome">Home</a>
         <a href="#chi-siamo"
-          class="block py-2.5 text-zinc-300 hover:text-gold-300 font-cinzel tracking-wider text-sm border-b border-zinc-800/50"
+          class="block py-2.5 text-zinc-200 hover:text-gold-400 font-cinzel tracking-wider text-sm border-b border-zinc-800/60"
           data-i18n="navAbout">Chi Siamo</a>
         <a href="#camere"
-          class="block py-2.5 text-zinc-300 hover:text-gold-300 font-cinzel tracking-wider text-sm border-b border-zinc-800/50"
+          class="block py-2.5 text-zinc-200 hover:text-gold-400 font-cinzel tracking-wider text-sm border-b border-zinc-800/60"
           data-i18n="navRooms">Camere</a>
         <a href="#servizi"
-          class="block py-2.5 text-zinc-300 hover:text-gold-300 font-cinzel tracking-wider text-sm border-b border-zinc-800/50"
+          class="block py-2.5 text-zinc-200 hover:text-gold-400 font-cinzel tracking-wider text-sm border-b border-zinc-800/60"
           data-i18n="navServices">Servizi Premium</a>
         <a href="#recensioni"
-          class="block py-2.5 text-zinc-300 hover:text-gold-300 font-cinzel tracking-wider text-sm border-b border-zinc-800/50"
+          class="block py-2.5 text-zinc-200 hover:text-gold-400 font-cinzel tracking-wider text-sm border-b border-zinc-800/60"
           data-i18n="navReviews">Recensioni (9.5/10)</a>
-        <a href="#contatti" class="block py-2.5 text-zinc-300 hover:text-gold-300 font-cinzel tracking-wider text-sm"
+        <a href="#contatti" class="block py-2.5 text-zinc-200 hover:text-gold-400 font-cinzel tracking-wider text-sm"
           data-i18n="navContacts">Reception & Contatti</a>
       </nav>
 
       <!-- Mobile Direct Concierge CTAs -->
-      <div class="grid grid-cols-2 gap-2 pt-2 border-t border-zinc-800">
+      <div class="grid grid-cols-2 gap-2 pt-2 border-t border-zinc-800/80">
         <a href="tel:+393447186581"
-          class="flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-sm bg-[#161622] border border-gold-400/30 text-xs text-gold-300 font-cinzel hover:border-gold-400 transition">
+          class="flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-sm bg-[#16161e] border border-gold-500/30 text-xs text-gold-300 font-cinzel font-semibold hover:border-gold-400 transition">
           <i data-lucide="phone" class="w-3.5 h-3.5 text-gold-400"></i>
           <span>Chiama</span>
         </a>
         <a href="https://wa.me/393447186581?text=Salve%20Reception%20B%26B%20CaMa%2C%20vorrei%20informazioni%20su%20un%20soggiorno"
           target="_blank"
-          class="flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-sm bg-[#161622] border border-gold-400/30 text-xs text-gold-300 font-cinzel hover:border-gold-400 transition">
-          <i data-lucide="message-circle" class="w-3.5 h-3.5 text-gold-400"></i>
+          class="flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-sm bg-[#16161e] border border-gold-500/30 text-xs text-gold-300 font-cinzel font-semibold hover:border-gold-400 transition">
+          <i data-lucide="message-circle" class="w-3.5 h-3.5 text-emerald-400"></i>
           <span>WhatsApp</span>
         </a>
       </div>
 
       <!-- Mobile Lang Switcher -->
-      <div class="flex items-center justify-between pt-2 border-t border-zinc-800">
+      <div class="flex items-center justify-between pt-2 border-t border-zinc-800/80">
         <span class="text-xs text-zinc-400 font-cinzel">Lingua / Language:</span>
-        <div class="flex items-center border border-gold-400/40 rounded-sm overflow-hidden text-[11px] font-cinzel">
-          <button onclick="setLanguage('it')" class="lang-btn px-2.5 py-1 transition" data-lang="it">IT</button>
-          <span class="text-zinc-700 bg-black/40 px-0.5">|</span>
-          <button onclick="setLanguage('en')" class="lang-btn px-2.5 py-1 transition" data-lang="en">EN</button>
-          <span class="text-zinc-700 bg-black/40 px-0.5">|</span>
-          <button onclick="setLanguage('es')" class="lang-btn px-2.5 py-1 transition" data-lang="es">ES</button>
+        <div class="flex items-center border border-gold-500/40 rounded-sm overflow-hidden text-[11px] font-cinzel bg-[#14141a]">
+          <button onclick="setLanguage('it')" class="lang-btn text-zinc-300 px-2.5 py-1 transition" data-lang="it">IT</button>
+          <span class="text-zinc-600 px-0.5">|</span>
+          <button onclick="setLanguage('en')" class="lang-btn text-zinc-300 px-2.5 py-1 transition" data-lang="en">EN</button>
+          <span class="text-zinc-600 px-0.5">|</span>
+          <button onclick="setLanguage('es')" class="lang-btn text-zinc-300 px-2.5 py-1 transition" data-lang="es">ES</button>
         </div>
       </div>
 
@@ -282,25 +297,25 @@
     </div>
   </header>
 
-  <!-- HERO SECTION: DARK LUXURY AESTHETIC -->
+  <!-- HERO SECTION: LUXURY DARK ONYX AESTHETIC -->
   <section id="home" class="hero-luxury">
     <div class="hero-luxury-bg" style="background-image: url('immagini/Stabia Sunset1.jpeg');"></div>
     <div class="hero-luxury-overlay"></div>
 
     <div class="relative z-10 max-w-5xl mx-auto px-6 py-20 text-center flex flex-col items-center">
 
-      <!-- Luxury Badge & Official Transparent Logo -->
+      <!-- Luxury Badge & Official Logo -->
       <div class="flex flex-col items-center mb-6">
         <img src="immagini/logo.png" alt="Logo Ufficiale B&B CaMa" width="220" height="110"
-          class="h-24 md:h-28 w-auto object-contain mb-4 drop-shadow-[0_4px_25px_rgba(197,168,128,0.4)]">
-        <div class="badge-gold">
+          class="h-24 md:h-28 w-auto object-contain mb-4 drop-shadow-[0_4px_25px_rgba(0,0,0,0.8)]">
+        <div class="badge-gold bg-[#0e0e14]/90 border border-gold-400/60 text-[#dfc187] shadow-2xl">
           <span data-i18n="heroBadge">Esperienza di Charme & Panorama</span>
         </div>
       </div>
 
       <!-- Main Headline in Serif -->
       <div class="hero-frame-border px-8 py-10 md:px-16 md:py-14 max-w-3xl mb-8">
-        <span class="text-xs uppercase tracking-[0.3em] text-gold-400 font-semibold block mb-3 font-cinzel"
+        <span class="text-xs uppercase tracking-[0.3em] text-gold-400 font-bold block mb-3 font-cinzel"
           data-i18n="heroLocation">
           Gragnano • Costiera Amalfitana • Pompei
         </span>
@@ -316,13 +331,13 @@
       <!-- Refined Luxury Dual Actions: Pernottamento & Day Use (3 Ore) -->
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-xl">
         <a href="#prenota"
-          class="btn-gold w-full sm:w-auto min-w-[200px] py-3.5 px-6 text-xs uppercase tracking-widest flex items-center justify-center gap-2.5 shadow-lg">
+          class="btn-gold w-full sm:w-auto min-w-[200px] py-3.5 px-6 text-xs uppercase tracking-widest flex items-center justify-center gap-2.5 shadow-xl">
           <i data-lucide="bed-double" class="w-4 h-4 text-zinc-950"></i>
           <span data-i18n="heroBtnPernottamento">Pernottamento</span>
         </a>
 
         <button onclick="selezionaDayUse()"
-          class="btn-gold-outline w-full sm:w-auto min-w-[200px] py-3.5 px-6 text-xs uppercase tracking-widest flex items-center justify-center gap-2.5 cursor-pointer backdrop-blur-sm bg-black/30 hover:bg-gold-400/15">
+          class="btn-gold-outline w-full sm:w-auto min-w-[200px] py-3.5 px-6 text-xs uppercase tracking-widest flex items-center justify-center gap-2.5 cursor-pointer shadow-lg">
           <i data-lucide="clock" class="w-4 h-4 text-gold-400"></i>
           <span data-i18n="heroBtnDayUse">Day Use (3 Ore)</span>
         </button>
@@ -330,94 +345,85 @@
 
       <!-- Subtle Luxury Highlights -->
       <div
-        class="flex flex-wrap items-center justify-center gap-3 sm:gap-5 mt-6 text-[11px] text-zinc-400 font-cinzel tracking-wider">
-        <span class="flex items-center gap-1.5"><i data-lucide="check" class="w-3 h-3 text-gold-400"></i> 5° Piano con
+        class="flex flex-wrap items-center justify-center gap-3 sm:gap-5 mt-6 text-[11px] text-zinc-300 font-cinzel font-medium tracking-wider">
+        <span class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-gold-400"></i> 5° Piano con
           Ascensore</span>
-        <span class="text-zinc-700 hidden sm:inline">•</span>
-        <span class="flex items-center gap-1.5"><i data-lucide="check" class="w-3 h-3 text-gold-400"></i> Bagno Privato
+        <span class="text-zinc-500 hidden sm:inline">•</span>
+        <span class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-gold-400"></i> Bagno Privato
           En-Suite</span>
-        <span class="text-zinc-700 hidden sm:inline">•</span>
-        <span class="flex items-center gap-1.5"><i data-lucide="check" class="w-3 h-3 text-gold-400"></i> Balcone
+        <span class="text-zinc-500 hidden sm:inline">•</span>
+        <span class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-gold-400"></i> Balcone
           Panoramico</span>
-        <span class="text-zinc-700 hidden sm:inline">•</span>
-        <span class="flex items-center gap-1.5 text-gold-300 font-semibold"><i data-lucide="coffee"
-            class="w-3 h-3 text-gold-400"></i> Colazione Inclusa</span>
+        <span class="text-zinc-500 hidden sm:inline">•</span>
+        <span class="flex items-center gap-1.5 text-gold-300 font-bold"><i data-lucide="coffee"
+            class="w-3.5 h-3.5 text-gold-400"></i> Colazione Inclusa</span>
       </div>
     </div>
   </section>
 
-  <!-- SEZIONE CHI SIAMO: LA STORIA DI CAMA -->
+  <!-- SEZIONE CHI SIAMO (WARM BEIGE & LUXURY WHITE) -->
   <section id="chi-siamo"
-    class="py-20 md:py-28 px-6 bg-[#0c0c10] border-t border-b border-gold-400/20 relative overflow-hidden">
-    <div class="absolute top-0 right-0 w-96 h-96 bg-gold-400/5 rounded-full blur-3xl pointer-events-none"></div>
-    <div class="absolute bottom-0 left-0 w-96 h-96 bg-gold-400/5 rounded-full blur-3xl pointer-events-none"></div>
-
+    class="py-20 md:py-28 px-6 bg-[#f7f4ed] border-t border-b border-[#e5ddcc] relative overflow-hidden">
     <div class="max-w-6xl mx-auto relative z-10">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 
         <!-- Left Column: Story Content -->
         <div class="lg:col-span-7 space-y-6">
           <div
-            class="inline-flex items-center px-4 py-1.5 rounded-full bg-gold-400/10 border border-gold-400/30 text-gold-300 text-xs font-cinzel tracking-widest uppercase">
+            class="inline-flex items-center px-4 py-1.5 rounded-full bg-gold-400/15 border border-gold-400/40 text-gold-800 text-xs font-cinzel font-semibold tracking-widest uppercase">
             <span data-i18n="aboutBadge">Una Storia di Famiglia & Cuore</span>
           </div>
 
-          <h2 class="font-cinzel text-3xl md:text-4xl lg:text-5xl font-normal text-white tracking-wide leading-tight"
+          <h2 class="font-cinzel text-3xl md:text-4xl lg:text-5xl font-normal text-zinc-900 tracking-wide leading-tight"
             data-i18n="aboutTitle">
             Dove nasce il nome CaMa
           </h2>
           <div class="w-20 h-[2px] bg-gradient-to-r from-[#ebd5a0] via-[#c5a880] to-transparent"></div>
 
-          <div class="p-6 bg-[#14141c] border-l-4 border-gold-400 rounded-r-sm shadow-xl space-y-3">
-            <p class="font-editorial italic text-lg md:text-xl text-gold-200 leading-relaxed" data-i18n="aboutQuote">
+          <div class="p-6 bg-white border-l-4 border-gold-500 rounded-r-sm shadow-md space-y-3">
+            <p class="font-editorial italic text-lg md:text-xl text-gold-800 leading-relaxed" data-i18n="aboutQuote">
               «CaMa Bed & Breakfast nasce dal cuore, dalla volontà di onorare una figura per noi speciale: nostro padre,
               <strong>Cascone Marco</strong>, le cui iniziali danno il nome alla nostra struttura.»
             </p>
           </div>
 
-          <p class="text-sm md:text-base text-zinc-300 leading-relaxed font-sans" data-i18n="aboutText1">
+          <p class="text-sm md:text-base text-zinc-700 leading-relaxed font-sans" data-i18n="aboutText1">
             Un nome che racchiude un doppio significato: <strong>"Cama"</strong>, che in spagnolo significa
             <em>"letto"</em>, simbolo di accoglienza, riposo e calore familiare. CaMa B&B è molto più di un semplice
             alloggio: è una storia di famiglia, un luogo dove sentirsi a casa.
           </p>
 
           <!-- 3 Value Highlights -->
-          <div class="grid grid-cols-3 gap-4 pt-4 border-t border-zinc-800/80">
-            <div class="text-center p-3 rounded-sm bg-[#121218] border border-gold-400/20">
-              <span class="block font-cinzel font-bold text-gold-300 text-sm md:text-base">5° Piano</span>
-              <span class="text-[11px] text-zinc-400 block mt-0.5" data-i18n="aboutFeature1">Con Ascensore</span>
+          <div class="grid grid-cols-3 gap-4 pt-4 border-t border-zinc-200">
+            <div class="text-center p-3 rounded-sm bg-white border border-[#e5ddcc] shadow-sm">
+              <span class="block font-cinzel font-bold text-gold-800 text-sm md:text-base">5° Piano</span>
+              <span class="text-[11px] text-zinc-600 block mt-0.5" data-i18n="aboutFeature1">Con Ascensore</span>
             </div>
-            <div class="text-center p-3 rounded-sm bg-[#121218] border border-gold-400/20">
-              <span class="block font-cinzel font-bold text-gold-300 text-sm md:text-base"
+            <div class="text-center p-3 rounded-sm bg-white border border-[#e5ddcc] shadow-sm">
+              <span class="block font-cinzel font-bold text-gold-800 text-sm md:text-base"
                 data-i18n="aboutFeature2Title">Accoglienza</span>
-              <span class="text-[11px] text-zinc-400 block mt-0.5" data-i18n="aboutFeature2Sub">Calore Familiare</span>
+              <span class="text-[11px] text-zinc-600 block mt-0.5" data-i18n="aboutFeature2Sub">Calore Familiare</span>
             </div>
-            <div class="text-center p-3 rounded-sm bg-[#121218] border border-gold-400/20">
-              <span class="block font-cinzel font-bold text-gold-300 text-sm md:text-base">9.5 / 10</span>
-              <span class="text-[11px] text-zinc-400 block mt-0.5">Booking.com</span>
+            <div class="text-center p-3 rounded-sm bg-white border border-[#e5ddcc] shadow-sm">
+              <span class="block font-cinzel font-bold text-gold-800 text-sm md:text-base">9.5 / 10</span>
+              <span class="text-[11px] text-zinc-600 block mt-0.5">Booking.com</span>
             </div>
           </div>
         </div>
 
-        <!-- Right Column: Visual Frame with Glowing Neon Image / Entrance -->
+        <!-- Right Column: Visual Frame with Glowing Image / Entrance -->
         <div class="lg:col-span-5">
           <div class="relative group">
-            <!-- Decorative Gold Glow Frame -->
-            <div
-              class="absolute -inset-2 bg-gradient-to-r from-[#ebd5a0]/40 via-[#c5a880]/20 to-[#9e7b39]/40 rounded-sm blur-lg opacity-70 group-hover:opacity-100 transition duration-500">
-            </div>
-
-            <div class="relative bg-[#14141a] border border-gold-400/50 rounded-sm overflow-hidden shadow-2xl">
+            <div class="relative bg-white border border-gold-400/40 rounded-sm overflow-hidden shadow-xl">
               <img src="immagini/Esterno1.jpeg" alt="Ingresso e Terrazza B&B CaMa" width="800" height="600"
                 loading="lazy" decoding="async"
                 class="w-full h-80 lg:h-96 object-cover transform group-hover:scale-105 transition duration-700">
 
               <!-- Glassmorphism Badge Overlay -->
-              <div class="absolute bottom-0 inset-x-0 p-5 bg-gradient-to-t from-black via-black/80 to-transparent">
+              <div class="absolute bottom-0 inset-x-0 p-5 bg-gradient-to-t from-black/80 via-black/50 to-transparent text-white">
                 <div>
                   <span class="font-cinzel text-white text-sm font-bold block">Welcome to CaMa</span>
-                  <span class="text-[11px] text-gold-300 font-editorial italic">Cascone Marco • Tradizione &
-                    Ospitalità</span>
+                  <span class="text-[11px] text-gold-200 font-editorial italic">Cascone Marco • Tradizione & Ospitalità</span>
                 </div>
               </div>
             </div>
@@ -426,21 +432,21 @@
 
       </div>
 
-      <!-- Sub-block: Posizione Strategica & Dintorni (Integrata in Chi Siamo) -->
-      <div class="mt-16 pt-16 border-t border-gold-400/20">
+      <!-- Sub-block: Posizione Strategica & Dintorni -->
+      <div class="mt-16 pt-16 border-t border-[#e5ddcc]">
 
         <div class="text-center max-w-2xl mx-auto mb-12">
           <div
-            class="inline-flex items-center px-4 py-1.5 rounded-full bg-gold-400/10 border border-gold-400/30 text-gold-300 text-xs font-cinzel tracking-widest uppercase mb-3">
+            class="inline-flex items-center px-4 py-1.5 rounded-full bg-gold-400/15 border border-gold-400/40 text-gold-800 text-xs font-cinzel font-semibold tracking-widest uppercase mb-3">
             <span data-i18n="locSectionBadge">Nel Cuore della Campania</span>
           </div>
-          <h3 class="font-cinzel text-2xl md:text-3xl lg:text-4xl text-white font-normal tracking-wide"
+          <h3 class="font-cinzel text-2xl md:text-3xl lg:text-4xl text-zinc-900 font-normal tracking-wide"
             data-i18n="locSectionTitle">
             Posizione Strategica & Dintorni
           </h3>
           <div class="w-16 h-[1.5px] bg-gradient-to-r from-transparent via-[#c5a880] to-transparent mx-auto mt-3 mb-3">
           </div>
-          <p class="text-xs md:text-sm text-zinc-300 font-sans" data-i18n="locSectionSubtitle">
+          <p class="text-xs md:text-sm text-zinc-600 font-sans" data-i18n="locSectionSubtitle">
             Vivi la Campania da Gragnano — Pompei, Sorrento, la Costiera Amalfitana e Napoli a portata di mano.
           </p>
         </div>
@@ -449,11 +455,11 @@
           <!-- Left: Narrative & Transit Advantages -->
           <div class="lg:col-span-6 space-y-4">
             <div>
-              <span class="text-xs uppercase tracking-wider text-gold-400 font-cinzel font-semibold block mb-2"
+              <span class="text-xs uppercase tracking-wider text-gold-700 font-cinzel font-bold block mb-2"
                 data-i18n="locDescTitle">
                 La Base Ideale per il Tuo Viaggio
               </span>
-              <p class="text-xs md:text-sm text-zinc-300 leading-relaxed font-sans" data-i18n="locDescText">
+              <p class="text-xs md:text-sm text-zinc-700 leading-relaxed font-sans" data-i18n="locDescText">
                 Situato a Gragnano, la storica Città della Pasta ai piedi dei Monti Lattari, il B&B CaMa gode di una
                 posizione privilegiata che unisce la quiete e il relax della vista panoramica alla vicinanza immediata
                 alle mete più affascinanti della Campania.
@@ -461,30 +467,30 @@
             </div>
 
             <div class="space-y-2.5 pt-1">
-              <div class="flex items-start gap-3 p-3 rounded-sm bg-[#16161f] border border-gold-400/20">
+              <div class="flex items-start gap-3 p-3 rounded-sm bg-white border border-[#e5ddcc] shadow-sm">
                 <div
-                  class="w-5 h-5 rounded-full bg-gold-400/20 flex items-center justify-center text-gold-300 shrink-0 mt-0.5">
+                  class="w-5 h-5 rounded-full bg-gold-400/20 flex items-center justify-center text-gold-700 shrink-0 mt-0.5">
                   <i data-lucide="check" class="w-3 h-3"></i>
                 </div>
-                <span class="text-xs text-zinc-300 font-medium" data-i18n="locAdvantage1">A pochi minuti dall'autostrada
+                <span class="text-xs text-zinc-800 font-medium" data-i18n="locAdvantage1">A pochi minuti dall'autostrada
                   A3 e dalla Statale Sorrentina</span>
               </div>
 
-              <div class="flex items-start gap-3 p-3 rounded-sm bg-[#16161f] border border-gold-400/20">
+              <div class="flex items-start gap-3 p-3 rounded-sm bg-white border border-[#e5ddcc] shadow-sm">
                 <div
-                  class="w-5 h-5 rounded-full bg-gold-400/20 flex items-center justify-center text-gold-300 shrink-0 mt-0.5">
+                  class="w-5 h-5 rounded-full bg-gold-400/20 flex items-center justify-center text-gold-700 shrink-0 mt-0.5">
                   <i data-lucide="check" class="w-3 h-3"></i>
                 </div>
-                <span class="text-xs text-zinc-300 font-medium" data-i18n="locAdvantage2">Nessun caos cittadino, massima
+                <span class="text-xs text-zinc-800 font-medium" data-i18n="locAdvantage2">Nessun caos cittadino, massima
                   tranquillità e facilità di sosta</span>
               </div>
 
-              <div class="flex items-start gap-3 p-3 rounded-sm bg-[#16161f] border border-gold-400/20">
+              <div class="flex items-start gap-3 p-3 rounded-sm bg-white border border-[#e5ddcc] shadow-sm">
                 <div
-                  class="w-5 h-5 rounded-full bg-gold-400/20 flex items-center justify-center text-gold-300 shrink-0 mt-0.5">
+                  class="w-5 h-5 rounded-full bg-gold-400/20 flex items-center justify-center text-gold-700 shrink-0 mt-0.5">
                   <i data-lucide="check" class="w-3 h-3"></i>
                 </div>
-                <span class="text-xs text-zinc-300 font-medium" data-i18n="locAdvantage3">Imbarchi per Capri e Ischia a
+                <span class="text-xs text-zinc-800 font-medium" data-i18n="locAdvantage3">Imbarchi per Capri e Ischia a
                   soli 8 minuti (Castellammare)</span>
               </div>
             </div>
@@ -492,45 +498,45 @@
 
           <!-- Right: Distances Cards & Google Maps CTA -->
           <div
-            class="lg:col-span-6 bg-[#14141c] border border-gold-400/35 rounded-sm p-6 shadow-xl flex flex-col justify-between">
+            class="lg:col-span-6 bg-white border border-gold-400/40 rounded-sm p-6 shadow-md flex flex-col justify-between">
             <div class="mb-5">
               <h4
-                class="font-cinzel text-sm uppercase tracking-wider text-white font-bold mb-3.5 flex items-center gap-2">
-                <i data-lucide="map" class="w-4 h-4 text-gold-400"></i>
+                class="font-cinzel text-sm uppercase tracking-wider text-zinc-900 font-bold mb-3.5 flex items-center gap-2">
+                <i data-lucide="map" class="w-4 h-4 text-gold-600"></i>
                 <span>Distanze Principali</span>
               </h4>
 
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
-                <div class="bg-[#1c1c26] p-3 rounded-sm border border-zinc-800 flex items-center justify-between">
-                  <span class="text-zinc-300 font-medium flex items-center gap-2">
-                    <i data-lucide="landmark" class="w-4 h-4 text-gold-400"></i>
+                <div class="bg-[#fbf9f5] p-3 rounded-sm border border-[#e5ddcc] flex items-center justify-between">
+                  <span class="text-zinc-800 font-medium flex items-center gap-2">
+                    <i data-lucide="landmark" class="w-4 h-4 text-gold-600"></i>
                     <span data-i18n="distPompei">Scavi di Pompei</span>
                   </span>
-                  <span class="text-gold-300 font-cinzel font-bold">~10 min</span>
+                  <span class="text-gold-800 font-cinzel font-bold">~10 min</span>
                 </div>
 
-                <div class="bg-[#1c1c26] p-3 rounded-sm border border-zinc-800 flex items-center justify-between">
-                  <span class="text-zinc-300 font-medium flex items-center gap-2">
-                    <i data-lucide="ship" class="w-4 h-4 text-gold-400"></i>
+                <div class="bg-[#fbf9f5] p-3 rounded-sm border border-[#e5ddcc] flex items-center justify-between">
+                  <span class="text-zinc-800 font-medium flex items-center gap-2">
+                    <i data-lucide="ship" class="w-4 h-4 text-gold-600"></i>
                     <span data-i18n="distCastellammare">Castellammare (Traghetti)</span>
                   </span>
-                  <span class="text-gold-300 font-cinzel font-bold">~8 min</span>
+                  <span class="text-gold-800 font-cinzel font-bold">~8 min</span>
                 </div>
 
-                <div class="bg-[#1c1c26] p-3 rounded-sm border border-zinc-800 flex items-center justify-between">
-                  <span class="text-zinc-300 font-medium flex items-center gap-2">
-                    <i data-lucide="sun" class="w-4 h-4 text-gold-400"></i>
+                <div class="bg-[#fbf9f5] p-3 rounded-sm border border-[#e5ddcc] flex items-center justify-between">
+                  <span class="text-zinc-800 font-medium flex items-center gap-2">
+                    <i data-lucide="sun" class="w-4 h-4 text-gold-600"></i>
                     <span data-i18n="distSorrento">Sorrento & Costiera</span>
                   </span>
-                  <span class="text-gold-300 font-cinzel font-bold">~20 min</span>
+                  <span class="text-gold-800 font-cinzel font-bold">~20 min</span>
                 </div>
 
-                <div class="bg-[#1c1c26] p-3 rounded-sm border border-zinc-800 flex items-center justify-between">
-                  <span class="text-zinc-300 font-medium flex items-center gap-2">
-                    <i data-lucide="plane" class="w-4 h-4 text-gold-400"></i>
+                <div class="bg-[#fbf9f5] p-3 rounded-sm border border-[#e5ddcc] flex items-center justify-between">
+                  <span class="text-zinc-800 font-medium flex items-center gap-2">
+                    <i data-lucide="plane" class="w-4 h-4 text-gold-600"></i>
                     <span data-i18n="distNapoli">Napoli Aeroporto</span>
                   </span>
-                  <span class="text-gold-300 font-cinzel font-bold">~30 min</span>
+                  <span class="text-gold-800 font-cinzel font-bold">~30 min</span>
                 </div>
               </div>
             </div>
@@ -549,29 +555,27 @@
     </div>
   </section>
 
-  <!-- CAMERE SHOWCASE SECTION -->
-  <section id="camere" class="section-light py-20 md:py-28 px-6 scroll-mt-20">
-    <div class="max-w-6xl mx-auto">
+  <!-- CAMERE SHOWCASE SECTION (CRISP WHITE BACKGROUND) -->
+  <section id="camere" class="py-20 md:py-28 px-6 bg-white border-b border-[#e5ddcc] relative overflow-hidden scroll-mt-20">
+    <div class="max-w-6xl mx-auto relative z-10">
 
       <!-- Section Header -->
-      <!-- Section Header -->
       <div class="text-center max-w-3xl mx-auto mb-10">
-        <span class="text-xs uppercase tracking-[0.25em] text-gold-700 font-cinzel font-semibold block mb-2"
-          data-i18n="sectionWelcome">
-          Benvenuti a CaMa
-        </span>
-        <h2 class="font-cinzel text-3xl md:text-4xl lg:text-5xl font-normal text-zinc-900 tracking-wide mb-6"
+        <div class="inline-flex items-center px-4 py-1.5 rounded-full bg-gold-400/15 border border-gold-400/40 text-gold-800 text-xs font-cinzel font-semibold tracking-widest uppercase mb-3">
+          <span data-i18n="sectionWelcome">Benvenuti a CaMa</span>
+        </div>
+        <h2 class="font-cinzel text-3xl md:text-4xl lg:text-5xl font-normal text-zinc-900 tracking-wide mb-4"
           data-i18n="sectionRoomsTitle">
           Le Nostre Camere
         </h2>
-        <div class="w-20 h-[1.5px] bg-gradient-to-r from-transparent via-[#c5a880] to-transparent mx-auto mb-8"></div>
+        <div class="w-20 h-[1.5px] bg-gradient-to-r from-transparent via-[#c5a880] to-transparent mx-auto mb-6"></div>
 
-        <p class="font-cinzel text-base md:text-lg text-zinc-800 leading-relaxed font-normal mb-3"
+        <p class="font-editorial italic text-lg md:text-xl text-zinc-800 leading-relaxed mb-3"
           data-i18n="sectionRoomsQuote">
           Un'oasi di tranquillità ed eleganza al 5° piano con terrazza panoramica, dove ogni dettaglio è pensato per
           regalarti un soggiorno memorabile tra Pompei, Sorrento e la Costiera.
         </p>
-        <p class="text-sm md:text-base text-zinc-600 leading-relaxed max-w-2xl mx-auto" data-i18n="sectionRoomsDesc">
+        <p class="text-xs md:text-sm text-zinc-600 leading-relaxed max-w-2xl mx-auto font-sans" data-i18n="sectionRoomsDesc">
           Nel cuore di Gragnano, raffinate camere matrimoniali al 5° piano con ascensore e vista panoramica sui Monti
           Lattari, dotate di tutti i comfort:
         </p>
@@ -579,11 +583,11 @@
 
       <!-- Minimalist Single Horizontal Amenities Row (Fluid Touch Scroll on Mobile, Full Row on Desktop) -->
       <div
-        class="border-t border-b border-[#e2d8c3]/80 py-4 mb-14 -mx-6 px-6 md:mx-0 md:px-0 overflow-x-auto no-scrollbar amenities-scroll-bar">
+        class="border-t border-b border-[#e5ddcc] bg-[#f7f4ed] rounded-sm py-4 mb-14 -mx-6 px-6 md:mx-0 md:px-4 overflow-x-auto no-scrollbar amenities-scroll-bar">
         <div class="flex items-center gap-6 sm:gap-8 lg:gap-2 lg:justify-between w-max lg:w-full px-2 text-center">
 
           <div class="flex items-center gap-2.5 text-zinc-800 shrink-0">
-            <i data-lucide="coffee" class="w-4 h-4 text-gold-600 shrink-0"></i>
+            <i data-lucide="coffee" class="w-4 h-4 text-gold-700 shrink-0"></i>
             <div class="text-left">
               <span class="font-cinzel text-xs font-bold block uppercase tracking-wider text-zinc-900 whitespace-nowrap"
                 data-i18n="featBreakfastTitle">Colazione Inclusa</span>
@@ -592,10 +596,10 @@
             </div>
           </div>
 
-          <div class="w-1.5 h-1.5 rounded-full bg-gold-400/70 shrink-0"></div>
+          <div class="w-1.5 h-1.5 rounded-full bg-gold-500/70 shrink-0"></div>
 
           <div class="flex items-center gap-2.5 text-zinc-800 shrink-0">
-            <i data-lucide="bed-double" class="w-4 h-4 text-gold-600 shrink-0"></i>
+            <i data-lucide="bed-double" class="w-4 h-4 text-gold-700 shrink-0"></i>
             <div class="text-left">
               <span class="font-cinzel text-xs font-bold block uppercase tracking-wider text-zinc-900 whitespace-nowrap"
                 data-i18n="featBedTitle">Letto Matrimoniale</span>
@@ -604,10 +608,10 @@
             </div>
           </div>
 
-          <div class="w-1.5 h-1.5 rounded-full bg-gold-400/70 shrink-0"></div>
+          <div class="w-1.5 h-1.5 rounded-full bg-gold-500/70 shrink-0"></div>
 
           <div class="flex items-center gap-2.5 text-zinc-800 shrink-0">
-            <i data-lucide="bath" class="w-4 h-4 text-gold-600 shrink-0"></i>
+            <i data-lucide="bath" class="w-4 h-4 text-gold-700 shrink-0"></i>
             <div class="text-left">
               <span class="font-cinzel text-xs font-bold block uppercase tracking-wider text-zinc-900 whitespace-nowrap"
                 data-i18n="featBathTitle">Bagno En-Suite</span>
@@ -616,10 +620,10 @@
             </div>
           </div>
 
-          <div class="w-1.5 h-1.5 rounded-full bg-gold-400/70 shrink-0"></div>
+          <div class="w-1.5 h-1.5 rounded-full bg-gold-500/70 shrink-0"></div>
 
           <div class="flex items-center gap-2.5 text-zinc-800 shrink-0">
-            <i data-lucide="sparkles" class="w-4 h-4 text-gold-600 shrink-0"></i>
+            <i data-lucide="sparkles" class="w-4 h-4 text-gold-700 shrink-0"></i>
             <div class="text-left">
               <span class="font-cinzel text-xs font-bold block uppercase tracking-wider text-zinc-900 whitespace-nowrap"
                 data-i18n="featTowelsTitle">Kit Asciugamani</span>
@@ -628,10 +632,10 @@
             </div>
           </div>
 
-          <div class="w-1.5 h-1.5 rounded-full bg-gold-400/70 shrink-0"></div>
+          <div class="w-1.5 h-1.5 rounded-full bg-gold-500/70 shrink-0"></div>
 
           <div class="flex items-center gap-2.5 text-zinc-800 shrink-0">
-            <i data-lucide="wind" class="w-4 h-4 text-gold-600 shrink-0"></i>
+            <i data-lucide="wind" class="w-4 h-4 text-gold-700 shrink-0"></i>
             <div class="text-left">
               <span class="font-cinzel text-xs font-bold block uppercase tracking-wider text-zinc-900 whitespace-nowrap"
                 data-i18n="featAmenitiesTitle">Saponi & Fon</span>
@@ -640,10 +644,10 @@
             </div>
           </div>
 
-          <div class="w-1.5 h-1.5 rounded-full bg-gold-400/70 shrink-0"></div>
+          <div class="w-1.5 h-1.5 rounded-full bg-gold-500/70 shrink-0"></div>
 
           <div class="flex items-center gap-2.5 text-zinc-800 shrink-0">
-            <i data-lucide="wifi" class="w-4 h-4 text-gold-600 shrink-0"></i>
+            <i data-lucide="wifi" class="w-4 h-4 text-gold-700 shrink-0"></i>
             <div class="text-left">
               <span class="font-cinzel text-xs font-bold block uppercase tracking-wider text-zinc-900 whitespace-nowrap"
                 data-i18n="featTechTitle">Clima & Wi-Fi</span>
@@ -655,19 +659,19 @@
         </div>
       </div>
 
-      <!-- 3-COLUMNS ROOMS GRID (WITH FLUID SLIDER & CLEAN LUXURY CARDS) -->
+      <!-- 3-COLUMNS ROOMS GRID (WHITE & GOLD CARDS) -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
 
         <!-- Room 1: Pompei Room (5 Photos Slider) -->
         <div
-          class="bg-white border border-[#e2d8c3] rounded-sm shadow-sm overflow-hidden flex flex-col justify-between group hover:shadow-xl transition duration-300">
+          class="bg-white border border-[#e2d8c3] rounded-sm shadow-md overflow-hidden flex flex-col justify-between group hover:shadow-2xl transition duration-300">
           <div>
             <!-- Photo Slider Container -->
-            <div class="relative aspect-[4/3] bg-zinc-900 overflow-hidden cursor-pointer select-none"
+            <div class="relative aspect-[4/3] bg-zinc-100 overflow-hidden cursor-pointer select-none"
               onclick="openGallery('pompei', roomCardSliders.pompei.index)">
               <img id="pompeiCardImg" src="immagini/Pompei Room1.jpeg" alt="Pompei Room B&B CaMa" width="800"
                 height="600" loading="lazy" decoding="async"
-                class="w-full h-full object-cover transition-opacity duration-300">
+                class="w-full h-full object-cover transition-opacity duration-300 group-hover:scale-105 transition duration-700">
 
               <!-- Subtle Photo Count Badge -->
               <div
@@ -708,18 +712,18 @@
               <span class="text-[10px] font-cinzel text-gold-700 font-bold uppercase tracking-widest block mb-1"
                 data-i18n="pompeiType">Camera Matrimoniale</span>
               <h3 class="font-cinzel text-xl font-bold text-zinc-900 tracking-wide mb-3">Pompei Room</h3>
-              <p class="text-xs text-zinc-700 leading-relaxed font-normal mb-4" data-i18n="pompeiDesc">
+              <p class="text-xs text-zinc-600 leading-relaxed font-normal mb-4" data-i18n="pompeiDesc">
                 Elegante camera dotata di confortevole letto matrimoniale, balcone privato, bagno privato en-suite con
                 doccia, macchina del caffè espresso, climatizzazione autonoma, Smart TV e Wi-Fi veloce.
               </p>
 
               <!-- Clean Minimalist Essential Tags -->
-              <div class="flex flex-wrap gap-2 text-[11px] text-zinc-800">
-                <span class="bg-[#f5efe3] text-gold-900 font-medium px-2.5 py-1 rounded-sm border border-gold-200"
+              <div class="flex flex-wrap gap-2 text-[11px]">
+                <span class="bg-[#f7f4ed] text-zinc-800 font-medium px-2.5 py-1 rounded-sm border border-gold-300/60"
                   data-i18n="pompeiTag1">Letto Matrimoniale</span>
-                <span class="bg-[#f5efe3] text-zinc-800 font-medium px-2.5 py-1 rounded-sm border border-gold-200"
+                <span class="bg-[#f7f4ed] text-zinc-800 font-medium px-2.5 py-1 rounded-sm border border-gold-300/60"
                   data-i18n="pompeiTag2">Balcone</span>
-                <span class="bg-[#f5efe3] text-zinc-800 font-medium px-2.5 py-1 rounded-sm border border-gold-200"
+                <span class="bg-[#f7f4ed] text-zinc-800 font-medium px-2.5 py-1 rounded-sm border border-gold-300/60"
                   data-i18n="pompeiTag3">Macchina del Caffè</span>
               </div>
             </div>
@@ -743,14 +747,14 @@
 
         <!-- Room 2: Stabia Sunset (4 Photos Slider) -->
         <div
-          class="bg-white border-2 border-gold-400/60 rounded-sm shadow-md overflow-hidden flex flex-col justify-between group hover:shadow-xl transition duration-300 relative">
+          class="bg-white border-2 border-gold-400/70 rounded-sm shadow-md overflow-hidden flex flex-col justify-between group hover:shadow-2xl transition duration-300 relative">
           <div>
             <!-- Photo Slider Container -->
-            <div class="relative aspect-[4/3] bg-zinc-900 overflow-hidden cursor-pointer select-none"
+            <div class="relative aspect-[4/3] bg-zinc-100 overflow-hidden cursor-pointer select-none"
               onclick="openGallery('stabia', roomCardSliders.stabia.index)">
               <img id="stabiaCardImg" src="immagini/Stabia Sunset1.jpeg" alt="Stabia Sunset B&B CaMa" width="800"
                 height="600" loading="lazy" decoding="async"
-                class="w-full h-full object-cover transition-opacity duration-300">
+                class="w-full h-full object-cover transition-opacity duration-300 group-hover:scale-105 transition duration-700">
 
               <div
                 class="absolute top-3 right-3 z-10 bg-black/70 backdrop-blur-sm border border-gold-400/40 text-gold-300 text-[10px] font-cinzel font-semibold px-2.5 py-1 uppercase tracking-wider rounded-sm flex items-center gap-1.5 shadow">
@@ -792,19 +796,19 @@
               <span class="text-[10px] font-cinzel text-gold-700 font-bold uppercase tracking-widest block mb-1"
                 data-i18n="stabiaType">Matrimoniale con Balcone</span>
               <h3 class="font-cinzel text-xl font-bold text-zinc-900 tracking-wide mb-3">Stabia Sunset</h3>
-              <p class="text-xs text-zinc-700 leading-relaxed font-normal mb-4" data-i18n="stabiaDesc">
+              <p class="text-xs text-zinc-600 leading-relaxed font-normal mb-4" data-i18n="stabiaDesc">
                 La sistemazione più suggestiva e panoramica: dotata di confortevole letto matrimoniale e balcone privato
                 con vista sul Golfo di Napoli e sul Vesuvio, macchina del caffè espresso, bagno en-suite e
                 climatizzazione autonoma.
               </p>
 
               <!-- Clean Minimalist Essential Tags -->
-              <div class="flex flex-wrap gap-2 text-[11px] text-zinc-800">
-                <span class="bg-[#f5efe3] text-gold-900 font-medium px-2.5 py-1 rounded-sm border border-gold-200"
+              <div class="flex flex-wrap gap-2 text-[11px]">
+                <span class="bg-[#f7f4ed] text-zinc-800 font-medium px-2.5 py-1 rounded-sm border border-gold-300/60"
                   data-i18n="stabiaTag1">Letto Matrimoniale</span>
-                <span class="bg-[#f5efe3] text-zinc-800 font-medium px-2.5 py-1 rounded-sm border border-gold-200"
+                <span class="bg-[#f7f4ed] text-zinc-800 font-medium px-2.5 py-1 rounded-sm border border-gold-300/60"
                   data-i18n="stabiaTag2">Balcone Panoramico con Vista sul Golfo di Napoli e sul Vesuvio</span>
-                <span class="bg-[#f5efe3] text-zinc-800 font-medium px-2.5 py-1 rounded-sm border border-gold-200"
+                <span class="bg-[#f7f4ed] text-zinc-800 font-medium px-2.5 py-1 rounded-sm border border-gold-300/60"
                   data-i18n="stabiaTag4">Macchina del Caffè</span>
               </div>
             </div>
@@ -828,13 +832,14 @@
 
         <!-- Room 3: VesuView (4 Photos Slider) -->
         <div
-          class="bg-white border-2 border-gold-400/60 rounded-sm shadow-md overflow-hidden flex flex-col justify-between group hover:shadow-xl transition duration-300 relative">
+          class="bg-white border-2 border-gold-400/70 rounded-sm shadow-md overflow-hidden flex flex-col justify-between group hover:shadow-2xl transition duration-300 relative">
           <div>
             <!-- Photo Slider Container -->
-            <div class="relative aspect-[4/3] bg-zinc-900 overflow-hidden cursor-pointer select-none"
+            <div class="relative aspect-[4/3] bg-zinc-100 overflow-hidden cursor-pointer select-none"
               onclick="openGallery('vesuview', roomCardSliders.vesuview.index)">
               <img id="vesuviewCardImg" src="immagini/VesuView1.jpeg" alt="VesuView B&B CaMa" width="800" height="600"
-                loading="lazy" decoding="async" class="w-full h-full object-cover transition-opacity duration-300">
+                loading="lazy" decoding="async"
+                class="w-full h-full object-cover transition-opacity duration-300 group-hover:scale-105 transition duration-700">
 
               <div
                 class="absolute top-3 right-3 z-10 bg-black/70 backdrop-blur-sm border border-gold-400/40 text-gold-300 text-[10px] font-cinzel font-semibold px-2.5 py-1 uppercase tracking-wider rounded-sm flex items-center gap-1.5 shadow">
@@ -873,19 +878,19 @@
               <span class="text-[10px] font-cinzel text-gold-700 font-bold uppercase tracking-widest block mb-1"
                 data-i18n="vesuviewType">Matrimoniale con Balcone Panoramico</span>
               <h3 class="font-cinzel text-xl font-bold text-zinc-900 tracking-wide mb-3">VesuView</h3>
-              <p class="text-xs text-zinc-700 leading-relaxed font-normal mb-4" data-i18n="vesuviewDesc">
+              <p class="text-xs text-zinc-600 leading-relaxed font-normal mb-4" data-i18n="vesuviewDesc">
                 Splendida camera dotata di confortevole letto matrimoniale per 2 ospiti e balcone panoramico con vista
                 sul Vesuvio. Completa di bagno privato en-suite con doccia, macchina del caffè espresso, Smart TV, Wi-Fi
                 fibra e climatizzazione autonoma.
               </p>
 
               <!-- Clean Minimalist Essential Tags -->
-              <div class="flex flex-wrap gap-2 text-[11px] text-zinc-800">
-                <span class="bg-[#f5efe3] text-gold-900 font-medium px-2.5 py-1 rounded-sm border border-gold-200"
+              <div class="flex flex-wrap gap-2 text-[11px]">
+                <span class="bg-[#f7f4ed] text-zinc-800 font-medium px-2.5 py-1 rounded-sm border border-gold-300/60"
                   data-i18n="vesuviewTag1">Letto Matrimoniale</span>
-                <span class="bg-[#f5efe3] text-zinc-800 font-medium px-2.5 py-1 rounded-sm border border-gold-200"
+                <span class="bg-[#f7f4ed] text-zinc-800 font-medium px-2.5 py-1 rounded-sm border border-gold-300/60"
                   data-i18n="vesuviewTag2">Balcone Panoramico con Vista sul Vesuvio</span>
-                <span class="bg-[#f5efe3] text-zinc-800 font-medium px-2.5 py-1 rounded-sm border border-gold-200"
+                <span class="bg-[#f7f4ed] text-zinc-800 font-medium px-2.5 py-1 rounded-sm border border-gold-300/60"
                   data-i18n="vesuviewTag4">Macchina del Caffè</span>
               </div>
             </div>
@@ -910,7 +915,7 @@
       </div>
 
       <!-- Terrazza & Spazi Comuni (5 Photos) -->
-      <div class="border-t border-[#e2d8c3] pt-12">
+      <div class="border-t border-[#e5ddcc] pt-12">
         <div class="text-center max-w-2xl mx-auto mb-8">
           <span class="text-[11px] font-cinzel uppercase tracking-[0.25em] text-gold-700 font-semibold block mb-1"
             data-i18n="commonAreasBadge">Terrazza & Servizi Comuni (5 Foto)</span>
@@ -962,37 +967,35 @@
         </div>
       </div>
 
-      <!-- VIP DAY USE LOUNGE SHOWCASE -->
+      <!-- VIP DAY USE LOUNGE SHOWCASE (CHAMPAGNE BEIGE LUXURY) -->
       <div
-        class="mt-16 bg-gradient-to-br from-[#161622] via-[#101016] to-[#0c0c10] border border-gold-400/40 rounded-sm p-8 sm:p-12 shadow-2xl relative overflow-hidden">
-        <div class="absolute -top-16 -right-16 w-64 h-64 bg-gold-400/[0.08] rounded-full blur-3xl pointer-events-none">
-        </div>
+        class="mt-16 bg-gradient-to-br from-[#fbf8f2] via-[#f7f3ea] to-[#f0ebdf] border border-gold-400/50 rounded-sm p-8 sm:p-12 shadow-xl relative overflow-hidden">
         <div class="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8">
           <div class="space-y-4 max-w-2xl text-center lg:text-left">
             <div
-              class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-gold-400/15 border border-gold-400/40 text-gold-300 text-[10px] font-cinzel uppercase tracking-[0.2em] font-semibold">
-              <i data-lucide="clock" class="w-3.5 h-3.5 text-gold-400"></i>
+              class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-gold-400/20 border border-gold-400/50 text-gold-800 text-[10px] font-cinzel uppercase tracking-[0.2em] font-bold">
+              <i data-lucide="clock" class="w-3.5 h-3.5 text-gold-700"></i>
               <span data-i18n="dayUseBadge">Relax & Privacy Diurna</span>
             </div>
-            <h3 class="font-cinzel text-2xl sm:text-3xl lg:text-4xl text-white font-normal tracking-wide"
+            <h3 class="font-cinzel text-2xl sm:text-3xl lg:text-4xl text-zinc-900 font-normal tracking-wide"
               data-i18n="dayUseTitle">
               Formula Day Use (3 Ore)
             </h3>
-            <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed font-sans" data-i18n="dayUseDesc">
+            <p class="text-xs sm:text-sm text-zinc-700 leading-relaxed font-sans" data-i18n="dayUseDesc">
               La comodità e la totale riservatezza di una camera privata al 5° piano per qualche ora di pausa e relax:
               bagno en-suite completo con doccia, balcone panoramico sui Monti Lattari, Smart TV, Wi-Fi fibra e
               climatizzazione autonoma.
             </p>
             <div
-              class="flex flex-wrap items-center justify-center lg:justify-start gap-2.5 pt-2 text-[11px] text-gold-200 font-cinzel">
-              <span class="bg-[#1c1c28] px-3 py-1 rounded-sm border border-gold-400/25 flex items-center gap-1.5">
-                <i data-lucide="check" class="w-3.5 h-3.5 text-gold-400"></i> 3 Ore di Totale Riservatezza
+              class="flex flex-wrap items-center justify-center lg:justify-start gap-2.5 pt-2 text-[11px] text-zinc-800 font-cinzel font-semibold">
+              <span class="bg-white px-3 py-1 rounded-sm border border-gold-400/30 flex items-center gap-1.5 shadow-sm">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-gold-700"></i> 3 Ore di Totale Riservatezza
               </span>
-              <span class="bg-[#1c1c28] px-3 py-1 rounded-sm border border-gold-400/25 flex items-center gap-1.5">
-                <i data-lucide="check" class="w-3.5 h-3.5 text-gold-400"></i> Bagno Privato En-Suite
+              <span class="bg-white px-3 py-1 rounded-sm border border-gold-400/30 flex items-center gap-1.5 shadow-sm">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-gold-700"></i> Bagno Privato En-Suite
               </span>
-              <span class="bg-[#1c1c28] px-3 py-1 rounded-sm border border-gold-400/25 flex items-center gap-1.5">
-                <i data-lucide="check" class="w-3.5 h-3.5 text-gold-400"></i> Vista Panoramica & Ascensore
+              <span class="bg-white px-3 py-1 rounded-sm border border-gold-400/30 flex items-center gap-1.5 shadow-sm">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-gold-700"></i> Vista Panoramica & Ascensore
               </span>
             </div>
           </div>
@@ -1003,7 +1006,7 @@
               <span data-i18n="dayUseCta">Richiedi Day Use</span>
               <i data-lucide="arrow-right" class="w-4 h-4"></i>
             </button>
-            <span class="block text-[11px] text-zinc-400 font-sans mt-2">Disponibilità immediata su richiesta</span>
+            <span class="block text-[11px] text-zinc-500 font-sans mt-2">Disponibilità immediata su richiesta</span>
           </div>
         </div>
       </div>
@@ -1011,28 +1014,26 @@
     </div>
   </section>
 
-  <!-- SERVIZI PREMIUM -->
-  <section id="servizi" class="section-cream py-20 px-6 border-t border-[#e8e2d5]">
-    <div class="max-w-6xl mx-auto">
+  <!-- SERVIZI PREMIUM (WARM BEIGE & IVORY) -->
+  <section id="servizi" class="py-20 md:py-28 px-6 bg-[#f7f4ed] border-b border-[#e5ddcc] relative overflow-hidden">
+    <div class="max-w-6xl mx-auto relative z-10">
 
       <!-- Section Title -->
       <div class="text-center max-w-2xl mx-auto mb-16">
-        <span class="text-xs uppercase tracking-[0.25em] text-gold-700 font-cinzel font-semibold block mb-2"
-          data-i18n="servicesBadge">
-          Eccellenza & Accoglienza
-        </span>
+        <div class="inline-flex items-center px-4 py-1.5 rounded-full bg-gold-400/15 border border-gold-400/40 text-gold-800 text-xs font-cinzel font-semibold tracking-widest uppercase mb-3">
+          <span data-i18n="servicesBadge">Eccellenza & Accoglienza</span>
+        </div>
         <h2 class="font-cinzel text-3xl md:text-4xl font-normal text-zinc-900 tracking-wide" data-i18n="servicesTitle">
           Servizi Premium
         </h2>
-        <div class="w-16 h-[1.5px] bg-gradient-to-r from-transparent via-[#c5a880] to-transparent mx-auto mt-4 mb-3">
-        </div>
+        <div class="w-16 h-[1.5px] bg-gradient-to-r from-transparent via-[#c5a880] to-transparent mx-auto mt-4 mb-3"></div>
       </div>
 
-      <!-- 4 Gold Icon Badges -->
+      <!-- 4 Gold Icon Badges (White Luxury Cards) -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 
         <!-- Service 1 -->
-        <div class="service-luxury-item bg-white/70 backdrop-blur-sm border border-[#e2d8c3] rounded-sm p-6 shadow-sm">
+        <div class="service-luxury-item bg-white border border-[#e5ddcc] rounded-sm p-6 shadow-md hover:border-gold-400 transition">
           <div class="service-icon-luxury">
             <i data-lucide="key-round" class="w-7 h-7"></i>
           </div>
@@ -1046,7 +1047,7 @@
         </div>
 
         <!-- Service 2 -->
-        <div class="service-luxury-item bg-white/70 backdrop-blur-sm border border-[#e2d8c3] rounded-sm p-6 shadow-sm">
+        <div class="service-luxury-item bg-white border border-[#e5ddcc] rounded-sm p-6 shadow-md hover:border-gold-400 transition">
           <div class="service-icon-luxury">
             <i data-lucide="compass" class="w-7 h-7"></i>
           </div>
@@ -1061,7 +1062,7 @@
         </div>
 
         <!-- Service 3 -->
-        <div class="service-luxury-item bg-white/70 backdrop-blur-sm border border-[#e2d8c3] rounded-sm p-6 shadow-sm">
+        <div class="service-luxury-item bg-white border border-[#e5ddcc] rounded-sm p-6 shadow-md hover:border-gold-400 transition">
           <div class="service-icon-luxury">
             <i data-lucide="shield-check" class="w-7 h-7"></i>
           </div>
@@ -1075,7 +1076,7 @@
         </div>
 
         <!-- Service 4 -->
-        <div class="service-luxury-item bg-white/70 backdrop-blur-sm border border-[#e2d8c3] rounded-sm p-6 shadow-sm">
+        <div class="service-luxury-item bg-white border border-[#e5ddcc] rounded-sm p-6 shadow-md hover:border-gold-400 transition">
           <div class="service-icon-luxury">
             <i data-lucide="sparkles" class="w-7 h-7"></i>
           </div>
@@ -1093,25 +1094,25 @@
 
       <!-- Additional Amenities Bullet Points -->
       <div
-        class="mt-14 pt-8 border-t border-[#e2d8c3] grid grid-cols-2 md:grid-cols-5 gap-4 text-center text-xs font-medium text-zinc-700">
+        class="mt-14 pt-8 border-t border-[#e5ddcc] grid grid-cols-2 md:grid-cols-5 gap-4 text-center text-xs font-medium text-zinc-700">
         <div class="flex items-center justify-center gap-2">
-          <i data-lucide="coffee" class="w-4 h-4 text-gold-600"></i>
+          <i data-lucide="coffee" class="w-4 h-4 text-gold-700"></i>
           <span data-i18n="amenityBreakfast">Colazione Inclusa</span>
         </div>
         <div class="flex items-center justify-center gap-2">
-          <i data-lucide="wifi" class="w-4 h-4 text-gold-600"></i>
+          <i data-lucide="wifi" class="w-4 h-4 text-gold-700"></i>
           <span data-i18n="amenityWifi">Wi-Fi Fibra Gratuito</span>
         </div>
         <div class="flex items-center justify-center gap-2">
-          <i data-lucide="thermometer-snowflake" class="w-4 h-4 text-gold-600"></i>
+          <i data-lucide="thermometer-snowflake" class="w-4 h-4 text-gold-700"></i>
           <span data-i18n="amenityAC">Climatizzazione Autonoma</span>
         </div>
         <div class="flex items-center justify-center gap-2">
-          <i data-lucide="tv" class="w-4 h-4 text-gold-600"></i>
+          <i data-lucide="tv" class="w-4 h-4 text-gold-700"></i>
           <span data-i18n="amenityTV">Smart TV a Schermo Piatto</span>
         </div>
         <div class="flex items-center justify-center gap-2 col-span-2 md:col-span-1">
-          <i data-lucide="bath" class="w-4 h-4 text-gold-600"></i>
+          <i data-lucide="bath" class="w-4 h-4 text-gold-700"></i>
           <span data-i18n="amenityKit">Kit Asciugamani (3 pz/persona), Saponi & Asciugacapelli</span>
         </div>
       </div>
@@ -1119,44 +1120,41 @@
     </div>
   </section>
 
-  <!-- RECENSIONI E RICONOSCIMENTI (BOOKING 9.5) -->
-  <section id="recensioni" class="py-20 px-6 bg-[#0e0e12] border-t border-b border-[#c5a880]/20">
+  <!-- RECENSIONI E RICONOSCIMENTI (WHITE BACKGROUND & GOLD BANNER) -->
+  <section id="recensioni" class="py-20 px-6 bg-white border-b border-[#e5ddcc]">
     <div class="max-w-6xl mx-auto">
 
-      <!-- Booking 9.5 Banner -->
+      <!-- Booking 9.5 Banner (Light Champagne) -->
       <div
-        class="bg-gradient-to-r from-[#171720] to-[#121217] border border-gold-400/30 rounded-sm p-8 md:p-10 mb-12 flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl relative overflow-hidden">
-        <div class="absolute -top-12 -right-12 w-48 h-48 bg-gold-400/10 rounded-full blur-3xl pointer-events-none">
-        </div>
-
+        class="bg-gradient-to-r from-[#fbf8f2] via-[#f7f3ea] to-[#f3ebd9] border border-gold-400/50 rounded-sm p-8 md:p-10 mb-12 flex flex-col md:flex-row items-center justify-between gap-8 shadow-md relative overflow-hidden">
         <div class="flex items-center gap-6">
           <div
-            class="w-20 h-20 rounded-sm bg-gradient-to-br from-gold-300 via-gold-500 to-gold-700 flex flex-col items-center justify-center font-cinzel font-bold text-black shadow-lg shrink-0">
+            class="w-20 h-20 rounded-sm bg-gradient-to-br from-gold-300 via-gold-500 to-gold-700 flex flex-col items-center justify-center font-cinzel font-bold text-zinc-950 shadow-md shrink-0">
             <span class="text-3xl leading-none">9.5</span>
             <span class="text-[9px] uppercase tracking-widest mt-0.5">su 10</span>
           </div>
           <div>
             <div class="flex items-center gap-2 mb-1">
-              <span class="font-cinzel text-2xl font-bold text-white tracking-wide" data-i18n="scoreTitle">Punteggio
+              <span class="font-cinzel text-2xl font-bold text-zinc-900 tracking-wide" data-i18n="scoreTitle">Punteggio
                 Eccezionale</span>
-              <span class="text-gold-400 text-sm">★★★★★</span>
+              <span class="text-gold-600 text-sm">★★★★★</span>
             </div>
-            <p class="text-zinc-400 text-sm" data-i18n="scoreSubtitle">Riconoscimento ufficiale basato su recensioni
+            <p class="text-zinc-600 text-sm" data-i18n="scoreSubtitle">Riconoscimento ufficiale basato su recensioni
               verificate di ospiti internazionali.</p>
           </div>
         </div>
 
-        <div class="flex flex-wrap gap-4 text-xs font-cinzel text-zinc-300">
-          <div class="bg-black/50 px-4 py-2.5 rounded-sm border border-gold-400/20 text-center">
-            <span class="text-gold-300 font-bold block text-base">10 / 10</span> <span
+        <div class="flex flex-wrap gap-4 text-xs font-cinzel text-zinc-800">
+          <div class="bg-white/80 px-4 py-2.5 rounded-sm border border-gold-400/40 text-center shadow-sm">
+            <span class="text-gold-800 font-bold block text-base">10 / 10</span> <span
               data-i18n="scoreStaff">Accoglienza</span>
           </div>
-          <div class="bg-black/50 px-4 py-2.5 rounded-sm border border-gold-400/20 text-center">
-            <span class="text-gold-300 font-bold block text-base">10 / 10</span> <span
+          <div class="bg-white/80 px-4 py-2.5 rounded-sm border border-gold-400/40 text-center shadow-sm">
+            <span class="text-gold-800 font-bold block text-base">10 / 10</span> <span
               data-i18n="scoreClean">Pulizia</span>
           </div>
-          <div class="bg-black/50 px-4 py-2.5 rounded-sm border border-gold-400/20 text-center">
-            <span class="text-gold-300 font-bold block text-base">9.6 / 10</span> <span
+          <div class="bg-white/80 px-4 py-2.5 rounded-sm border border-gold-400/40 text-center shadow-sm">
+            <span class="text-gold-800 font-bold block text-base">9.6 / 10</span> <span
               data-i18n="scoreLoc">Posizione</span>
           </div>
         </div>
@@ -1165,63 +1163,63 @@
       <!-- Testimonial Cards -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-        <div class="bg-[#14141a] border border-[#262632] p-6 rounded-sm flex flex-col justify-between">
+        <div class="bg-[#fbf9f5] border border-[#e5ddcc] p-6 rounded-sm flex flex-col justify-between shadow-sm hover:shadow-md transition">
           <div class="space-y-3">
-            <div class="flex text-gold-400 gap-1 text-xs">
-              <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
+            <div class="flex text-gold-600 gap-1 text-xs">
+              <i data-lucide="star" class="w-4 h-4 fill-gold-600"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-gold-600"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-gold-600"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-gold-600"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-gold-600"></i>
             </div>
-            <p class="font-editorial italic text-zinc-300 text-lg leading-relaxed" data-i18n="review1Text">
+            <p class="font-editorial italic text-zinc-800 text-lg leading-relaxed" data-i18n="review1Text">
               «L'accoglienza è stata fantastica! La camera era impeccabile, pulitissima e dotata di ogni comfort.
               Bellissima la vista panoramica dal quinto piano.»
             </p>
           </div>
-          <div class="pt-4 mt-4 border-t border-zinc-800 flex items-center justify-between text-xs text-zinc-500">
-            <span class="text-zinc-300 font-medium" data-i18n="review1Author">Ospite Booking.com</span>
-            <span class="text-gold-400 font-bold">10/10</span>
+          <div class="pt-4 mt-4 border-t border-zinc-200 flex items-center justify-between text-xs text-zinc-500">
+            <span class="text-zinc-700 font-medium" data-i18n="review1Author">Ospite Booking.com</span>
+            <span class="text-gold-700 font-bold">10/10</span>
           </div>
         </div>
 
-        <div class="bg-[#14141a] border border-[#262632] p-6 rounded-sm flex flex-col justify-between">
+        <div class="bg-[#fbf9f5] border border-[#e5ddcc] p-6 rounded-sm flex flex-col justify-between shadow-sm hover:shadow-md transition">
           <div class="space-y-3">
-            <div class="flex text-gold-400 gap-1 text-xs">
-              <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
+            <div class="flex text-gold-600 gap-1 text-xs">
+              <i data-lucide="star" class="w-4 h-4 fill-gold-600"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-gold-600"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-gold-600"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-gold-600"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-gold-600"></i>
             </div>
-            <p class="font-editorial italic text-zinc-300 text-lg leading-relaxed" data-i18n="review2Text">
+            <p class="font-editorial italic text-zinc-800 text-lg leading-relaxed" data-i18n="review2Text">
               «Posizione strategica per visitare Pompei, Sorrento e la Costiera senza lo stress del caos cittadino.
               Proprietario gentilissimo e sempre disponibile.»
             </p>
           </div>
-          <div class="pt-4 mt-4 border-t border-zinc-800 flex items-center justify-between text-xs text-zinc-500">
-            <span class="text-zinc-300 font-medium" data-i18n="review2Author">Coppia in Viaggio</span>
-            <span class="text-gold-400 font-bold">10/10</span>
+          <div class="pt-4 mt-4 border-t border-zinc-200 flex items-center justify-between text-xs text-zinc-500">
+            <span class="text-zinc-700 font-medium" data-i18n="review2Author">Coppia in Viaggio</span>
+            <span class="text-gold-700 font-bold">10/10</span>
           </div>
         </div>
 
-        <div class="bg-[#14141a] border border-[#262632] p-6 rounded-sm flex flex-col justify-between">
+        <div class="bg-[#fbf9f5] border border-[#e5ddcc] p-6 rounded-sm flex flex-col justify-between shadow-sm hover:shadow-md transition">
           <div class="space-y-3">
-            <div class="flex text-gold-400 gap-1 text-xs">
-              <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-gold-400"></i>
+            <div class="flex text-gold-600 gap-1 text-xs">
+              <i data-lucide="star" class="w-4 h-4 fill-gold-600"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-gold-600"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-gold-600"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-gold-600"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-gold-600"></i>
             </div>
-            <p class="font-editorial italic text-zinc-300 text-lg leading-relaxed" data-i18n="review3Text">
+            <p class="font-editorial italic text-zinc-800 text-lg leading-relaxed" data-i18n="review3Text">
               «Struttura nuova, curata nei minimi dettagli, silenziosa e con un letto comodissimo. Ottima anche la
               colazione e la presenza dell'ascensore.»
             </p>
           </div>
-          <div class="pt-4 mt-4 border-t border-zinc-800 flex items-center justify-between text-xs text-zinc-500">
-            <span class="text-zinc-300 font-medium" data-i18n="review3Author">Ospite Italiano</span>
-            <span class="text-gold-400 font-bold">9.5/10</span>
+          <div class="pt-4 mt-4 border-t border-zinc-200 flex items-center justify-between text-xs text-zinc-500">
+            <span class="text-zinc-700 font-medium" data-i18n="review3Author">Ospite Italiano</span>
+            <span class="text-gold-700 font-bold">9.5/10</span>
           </div>
         </div>
 
@@ -1230,15 +1228,18 @@
     </div>
   </section>
 
-  <!-- PRENOTAZIONE RAPIDA & CALCOLATORE DATE -->
-  <section id="prenota" class="py-20 px-6 bg-[#0a0a0c]">
-    <div class="max-w-4xl mx-auto bg-[#131318] border border-gold-400/40 rounded-sm p-8 md:p-12 shadow-2xl relative">
+  <!-- PRENOTAZIONE RAPIDA & CALCOLATORE DATE (WARM BEIGE & WHITE CARD) -->
+  <section id="prenota" class="py-20 px-6 bg-[#f7f4ed] border-b border-[#e5ddcc]">
+    <div class="max-w-4xl mx-auto bg-white border border-gold-400/50 rounded-sm p-8 md:p-12 shadow-xl relative">
       <div class="text-center max-w-xl mx-auto mb-10">
-        <span class="badge-gold mb-3" data-i18n="bookBadge">Prenotazione Diretta al Miglior Prezzo</span>
-        <h2 class="font-cinzel text-3xl md:text-4xl text-white font-normal tracking-wide" data-i18n="bookTitle">
+        <div
+          class="inline-flex items-center px-4 py-1.5 rounded-full bg-gold-400/15 border border-gold-400/40 text-gold-800 text-xs font-cinzel font-semibold tracking-widest uppercase mb-3">
+          <span data-i18n="bookBadge">Prenotazione Diretta al Miglior Prezzo</span>
+        </div>
+        <h2 class="font-cinzel text-3xl md:text-4xl text-zinc-900 font-normal tracking-wide" data-i18n="bookTitle">
           Verifica Disponibilità
         </h2>
-        <p class="font-editorial italic text-gold-200 text-lg mt-2" data-i18n="bookSubtitle">
+        <p class="font-editorial italic text-gold-800 text-lg mt-2" data-i18n="bookSubtitle">
           Seleziona le date per calcolare la tariffa e inviare la richiesta
         </p>
       </div>
@@ -1247,16 +1248,16 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             <label for="checkin"
-              class="block text-xs font-cinzel uppercase tracking-wider text-gold-300 mb-2 flex items-center gap-2">
-              <i data-lucide="calendar" class="w-4 h-4 text-gold-400"></i>
+              class="block text-xs font-cinzel uppercase tracking-wider text-gold-800 font-bold mb-2 flex items-center gap-2">
+              <i data-lucide="calendar" class="w-4 h-4 text-gold-700"></i>
               <span data-i18n="labelCheckin">Data Check-in (dalle 17:00)</span>
             </label>
             <input type="date" id="checkin" required class="concierge-input">
           </div>
           <div>
             <label for="checkout"
-              class="block text-xs font-cinzel uppercase tracking-wider text-gold-300 mb-2 flex items-center gap-2">
-              <i data-lucide="calendar" class="w-4 h-4 text-gold-400"></i>
+              class="block text-xs font-cinzel uppercase tracking-wider text-gold-800 font-bold mb-2 flex items-center gap-2">
+              <i data-lucide="calendar" class="w-4 h-4 text-gold-700"></i>
               <span data-i18n="labelCheckout">Data Check-out (entro 10:30)</span>
             </label>
             <input type="date" id="checkout" required class="concierge-input">
@@ -1266,8 +1267,8 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             <label for="ospiti"
-              class="block text-xs font-cinzel uppercase tracking-wider text-gold-300 mb-2 flex items-center gap-2">
-              <i data-lucide="users" class="w-4 h-4 text-gold-400"></i>
+              class="block text-xs font-cinzel uppercase tracking-wider text-gold-800 font-bold mb-2 flex items-center gap-2">
+              <i data-lucide="users" class="w-4 h-4 text-gold-700"></i>
               <span data-i18n="labelGuests">Numero Ospiti</span>
             </label>
             <select id="ospiti" class="concierge-input">
@@ -1281,8 +1282,8 @@
           </div>
           <div>
             <label for="camere"
-              class="block text-xs font-cinzel uppercase tracking-wider text-gold-300 mb-2 flex items-center gap-2">
-              <i data-lucide="bed-double" class="w-4 h-4 text-gold-400"></i>
+              class="block text-xs font-cinzel uppercase tracking-wider text-gold-800 font-bold mb-2 flex items-center gap-2">
+              <i data-lucide="bed-double" class="w-4 h-4 text-gold-700"></i>
               <span data-i18n="labelRoom">Tipologia Camera</span>
             </label>
             <select id="camere" class="concierge-input">
@@ -1300,22 +1301,22 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-1">
           <!-- Day Use Checkbox -->
           <div
-            class="flex items-center gap-3 p-3.5 bg-[#181822] border border-gold-400/25 rounded-sm hover:border-gold-400/50 transition">
+            class="flex items-center gap-3 p-3.5 bg-[#fbf9f5] border border-[#e5ddcc] rounded-sm hover:border-gold-400 transition">
             <input type="checkbox" id="dayUseCheckbox" class="w-4 h-4 accent-[#c5a880] cursor-pointer">
             <label for="dayUseCheckbox"
-              class="text-xs text-zinc-300 font-medium cursor-pointer flex items-center gap-2 select-none">
-              <i data-lucide="clock" class="w-4 h-4 text-gold-400"></i>
+              class="text-xs text-zinc-800 font-medium cursor-pointer flex items-center gap-2 select-none">
+              <i data-lucide="clock" class="w-4 h-4 text-gold-700"></i>
               <span data-i18n="labelDayUse">Formula Day Use (3 ore di relax)</span>
             </label>
           </div>
 
           <!-- Culla Neonato Checkbox -->
           <div
-            class="flex items-center gap-3 p-3.5 bg-[#181822] border border-gold-400/25 rounded-sm hover:border-gold-400/50 transition">
+            class="flex items-center gap-3 p-3.5 bg-[#fbf9f5] border border-[#e5ddcc] rounded-sm hover:border-gold-400 transition">
             <input type="checkbox" id="cullaCheckbox" class="w-4 h-4 accent-[#c5a880] cursor-pointer">
             <label for="cullaCheckbox"
-              class="text-xs text-zinc-300 font-medium cursor-pointer flex items-center gap-2 select-none">
-              <i data-lucide="baby" class="w-4 h-4 text-gold-400"></i>
+              class="text-xs text-zinc-800 font-medium cursor-pointer flex items-center gap-2 select-none">
+              <i data-lucide="baby" class="w-4 h-4 text-gold-700"></i>
               <span data-i18n="labelCulla">Richiesta Culla Neonato (0-2 anni)</span>
             </label>
           </div>
@@ -1323,16 +1324,16 @@
 
         <!-- Dynamic Price Summary Box -->
         <div id="priceSummary"
-          class="bg-[#1a1a24] border border-gold-400/30 p-4 rounded-sm flex items-center justify-between">
+          class="bg-[#f5efe4] border border-gold-400/40 p-4 rounded-sm flex items-center justify-between">
           <div>
-            <span class="text-xs text-zinc-400 uppercase tracking-wider block font-cinzel"
+            <span class="text-xs text-zinc-600 uppercase tracking-wider block font-cinzel font-semibold"
               data-i18n="stayDuration">Durata soggiorno</span>
-            <span id="summaryNights" class="text-white font-medium text-sm">2 notti</span>
+            <span id="summaryNights" class="text-zinc-900 font-bold text-sm">2 notti</span>
           </div>
           <div class="text-right">
-            <span class="text-xs text-zinc-400 uppercase tracking-wider block font-cinzel"
+            <span class="text-xs text-zinc-600 uppercase tracking-wider block font-cinzel font-semibold"
               data-i18n="rateTypeLabel">Offerta & Preventivo</span>
-            <span id="summaryTotal" class="text-sm md:text-base font-cinzel font-bold text-gold-300"
+            <span id="summaryTotal" class="text-sm md:text-base font-cinzel font-bold text-gold-800"
               data-i18n="bestRateOnRequest">Miglior Tariffa su Richiesta</span>
           </div>
         </div>
@@ -1341,7 +1342,7 @@
           <span data-i18n="btnBookSubmit">Richiedi Disponibilità & Preventivo</span>
         </button>
 
-        <p class="text-center text-xs text-zinc-400" data-i18n="bookDisclaimer">
+        <p class="text-center text-xs text-zinc-500" data-i18n="bookDisclaimer">
           Colazione all'italiana inclusa nel soggiorno. Risposta immediata su WhatsApp ed Email. Nessun pagamento
           anticipato.
         </p>
@@ -1349,72 +1350,67 @@
     </div>
   </section>
 
-  <!-- RECEPTION & CONTATTI CONCIERGE -->
-  <section id="contatti" class="py-24 md:py-32 px-6 border-t border-gold-400/20 relative bg-[#09090c] overflow-hidden">
-    <!-- Ambient Warm Glow Overlay -->
-    <div
-      class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-to-b from-gold-400/[0.06] to-transparent rounded-full blur-3xl pointer-events-none">
-    </div>
-
+  <!-- RECEPTION & CONTATTI CONCIERGE (CRISP WHITE & BEIGE CARD) -->
+  <section id="contatti" class="py-24 md:py-32 px-6 relative bg-white overflow-hidden">
     <div class="max-w-5xl mx-auto relative z-10">
 
       <!-- Section Header -->
       <div class="text-center max-w-2xl mx-auto mb-14 md:mb-16">
-        <span class="text-[11px] font-cinzel tracking-[0.3em] uppercase text-gold-400 font-semibold block mb-3"
+        <span class="text-[11px] font-cinzel tracking-[0.3em] uppercase text-gold-800 font-bold block mb-3"
           data-i18n="contactsSectionBadge">
           ✦ Concierge & Hospitality ✦
         </span>
-        <h2 class="font-cinzel text-3xl sm:text-4xl md:text-5xl font-normal text-white tracking-wider mb-4"
+        <h2 class="font-cinzel text-3xl sm:text-4xl md:text-5xl font-normal text-zinc-900 tracking-wider mb-4"
           data-i18n="contactsSectionTitle">
           Reception & Contatti
         </h2>
         <div class="w-16 h-[1.5px] bg-gradient-to-r from-transparent via-[#c5a880] to-transparent mx-auto mb-5"></div>
-        <p class="text-xs sm:text-sm text-zinc-300 font-sans leading-relaxed" data-i18n="contactsSectionSubtitle">
+        <p class="text-xs sm:text-sm text-zinc-600 font-sans leading-relaxed" data-i18n="contactsSectionSubtitle">
           Siamo a tua completa disposizione per informazioni sulle camere, richieste personalizzate e prenotazioni
           dirette.
         </p>
       </div>
 
-      <!-- Unified Architectural Concierge Showcase (Grand Suite) -->
+      <!-- Unified Architectural Concierge Showcase (Grand Suite in Light Luxury) -->
       <div class="grand-concierge-suite p-8 sm:p-12 lg:p-14">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
 
           <!-- Left Column (Concierge Desk & Prenotazioni) -->
           <div class="lg:col-span-7 space-y-6">
             <div>
-              <span class="text-[10px] font-cinzel uppercase tracking-[0.25em] text-gold-400 font-bold block mb-2"
+              <span class="text-[10px] font-cinzel uppercase tracking-[0.25em] text-gold-800 font-bold block mb-2"
                 data-i18n="contactPhoneLabel">
                 Assistenza Host & Reception 24/7
               </span>
-              <h3 class="font-cinzel text-2xl sm:text-3xl text-white font-normal tracking-wide mb-3">
+              <h3 class="font-cinzel text-2xl sm:text-3xl text-zinc-900 font-normal tracking-wide mb-3">
                 Contatto Diretto
               </h3>
-              <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed font-sans">
+              <p class="text-xs sm:text-sm text-zinc-700 leading-relaxed font-sans">
                 Rispondiamo in tempo reale su WhatsApp e al telefono per fornirti disponibilità aggiornate, tariffe
                 dedicate e consigli esclusivi per il tuo viaggio.
               </p>
             </div>
 
-            <!-- Numbers in Large Serif Typography -->
-            <div class="space-y-2 pt-2">
-              <div class="flex flex-wrap items-baseline gap-3">
-                <span class="text-xs uppercase tracking-wider text-zinc-400 font-cinzel">Mobile / WhatsApp:</span>
+            <!-- Contact Details List (Uniform & Elegant) -->
+            <div class="space-y-2 pt-2 text-xs">
+              <div class="flex items-baseline gap-3">
+                <span class="text-zinc-500 font-cinzel uppercase tracking-wider font-semibold">Mobile / WhatsApp:</span>
                 <a href="tel:+393447186581"
-                  class="font-cinzel text-2xl sm:text-3xl font-bold text-white hover:text-gold-300 transition tracking-wider">
+                  class="text-zinc-800 hover:text-gold-700 font-cinzel font-semibold transition">
                   +39 344 718 6581
                 </a>
               </div>
-              <div class="flex items-baseline gap-3 text-xs">
-                <span class="text-zinc-400 font-cinzel uppercase tracking-wider">Linea Fissa:</span>
+              <div class="flex items-baseline gap-3">
+                <span class="text-zinc-500 font-cinzel uppercase tracking-wider font-semibold">Linea Fissa:</span>
                 <a href="tel:08118974870"
-                  class="text-zinc-200 hover:text-gold-300 font-cinzel font-semibold transition">
+                  class="text-zinc-800 hover:text-gold-700 font-cinzel font-semibold transition">
                   081 18974870
                 </a>
               </div>
-              <div class="flex items-baseline gap-3 text-xs">
-                <span class="text-zinc-400 font-cinzel uppercase tracking-wider">Email Ufficiale:</span>
+              <div class="flex items-baseline gap-3">
+                <span class="text-zinc-500 font-cinzel uppercase tracking-wider font-semibold">Email Ufficiale:</span>
                 <a href="mailto:bebcama1963@gmail.com"
-                  class="text-zinc-300 hover:text-gold-300 font-sans transition underline underline-offset-4">
+                  class="text-zinc-800 hover:text-gold-700 font-sans transition underline underline-offset-4">
                   bebcama1963@gmail.com
                 </a>
               </div>
@@ -1424,7 +1420,7 @@
             <div class="flex flex-wrap items-center gap-4 pt-4">
               <a href="https://wa.me/393447186581?text=Salve%20Reception%20B%26B%20CaMa%2C%20vorrei%20informazioni%20su%20un%20soggiorno"
                 target="_blank"
-                class="btn-gold py-3.5 px-6 text-xs uppercase tracking-widest inline-flex items-center gap-2 shadow-lg">
+                class="btn-gold py-3.5 px-6 text-xs uppercase tracking-widest inline-flex items-center gap-2 shadow-md">
                 <i data-lucide="message-circle" class="w-4 h-4"></i>
                 <span data-i18n="contactWhatsAppAction">Chat WhatsApp Diretta</span>
               </a>
@@ -1438,18 +1434,18 @@
           </div>
 
           <!-- Right Column (Sede, Orari & Canali Ufficiali) -->
-          <div class="lg:col-span-5 lg:border-l lg:border-gold-400/25 lg:pl-10 space-y-6">
+          <div class="lg:col-span-5 lg:border-l lg:border-[#e5ddcc] lg:pl-10 space-y-6">
 
             <!-- Posizione -->
             <div>
-              <span class="text-[10px] font-cinzel uppercase tracking-[0.25em] text-gold-400 font-bold block mb-2"
+              <span class="text-[10px] font-cinzel uppercase tracking-[0.25em] text-gold-800 font-bold block mb-2"
                 data-i18n="contactAddressLabel">
                 Sede & Struttura
               </span>
-              <p class="text-xs text-zinc-300 leading-relaxed">
-                <strong class="text-white block font-cinzel font-semibold text-sm mb-1">B&B CaMa</strong>
+              <p class="text-xs text-zinc-700 leading-relaxed">
+                <strong class="text-zinc-900 block font-cinzel font-semibold text-sm mb-1">B&B CaMa</strong>
                 Via Raffaele Viviani, 36<br>
-                <span class="text-gold-300/90 font-medium">Piano 5 con Ascensore</span><br>
+                <span class="text-gold-800 font-medium">Piano 5 con Ascensore</span><br>
                 80054 Gragnano (NA), Italia
               </p>
               <a href="https://maps.google.com/?q=Via+Raffaele+Viviani+36+Gragnano+NA" target="_blank"
@@ -1461,19 +1457,19 @@
             </div>
 
             <!-- Orari -->
-            <div class="pt-4 border-t border-zinc-800/80">
-              <span class="text-[10px] font-cinzel uppercase tracking-[0.25em] text-gold-400 font-bold block mb-2">
+            <div class="pt-4 border-t border-zinc-200">
+              <span class="text-[10px] font-cinzel uppercase tracking-[0.25em] text-gold-800 font-bold block mb-2">
                 Orari Accoglienza
               </span>
-              <div class="text-xs text-zinc-300 font-cinzel space-y-1">
+              <div class="text-xs text-zinc-700 font-cinzel space-y-1 font-medium">
                 <div data-i18n="footerCheckinHours">Check-in: 17:00 – 21:00</div>
                 <div data-i18n="footerCheckoutHours">Check-out: 08:00 – 10:30</div>
               </div>
             </div>
 
             <!-- Canali Social -->
-            <div class="pt-4 border-t border-zinc-800/80">
-              <span class="text-[10px] font-cinzel uppercase tracking-[0.25em] text-gold-400 font-bold block mb-2">
+            <div class="pt-4 border-t border-zinc-200">
+              <span class="text-[10px] font-cinzel uppercase tracking-[0.25em] text-gold-800 font-bold block mb-2">
                 Canali Ufficiali
               </span>
               <div class="flex flex-wrap items-center gap-4 text-xs font-cinzel">
@@ -1482,10 +1478,11 @@
                   <svg class="w-3.5 h-3.5 fill-none stroke-current" viewBox="0 0 24 24" stroke-width="2">
                     <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
                     <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
                   </svg>
                   <span>Instagram</span>
                 </a>
-                <span class="text-zinc-700">•</span>
+                <span class="text-zinc-400">•</span>
                 <a href="https://www.tiktok.com/@cama.bed.and.brea?lang=it-IT" target="_blank" rel="noopener noreferrer"
                   class="concierge-luxury-link">
                   <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
@@ -1505,29 +1502,29 @@
     </div>
   </section>
 
-  <!-- FOOTER & TITOLI DI CODA -->
-  <footer class="bg-[#08080a] pt-12 pb-8 px-6 border-t border-zinc-900 text-xs text-zinc-400">
+  <!-- FOOTER & TITOLI DI CODA (WARM BEIGE PALETTE) -->
+  <footer class="bg-[#f7f4ed] pt-12 pb-8 px-6 border-t border-[#e5ddcc] text-xs text-zinc-600">
     <div class="max-w-6xl mx-auto space-y-8">
 
       <!-- Main Footer Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-8 border-b border-zinc-900/80">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-8 border-b border-zinc-200">
 
         <!-- Col 1: Brand & Struttura -->
         <div class="space-y-2.5 text-center md:text-left">
           <div class="flex items-center justify-center md:justify-start gap-2">
-            <span class="font-cinzel font-bold text-base text-gold-300 tracking-wider">B&B CAMA</span>
+            <span class="font-cinzel font-bold text-base text-zinc-900 tracking-wider">B&B CAMA</span>
             <span class="text-zinc-500 font-sans text-xs">di Fabiano Cascone</span>
           </div>
-          <p class="text-zinc-400 text-xs leading-relaxed">
+          <p class="text-zinc-600 text-xs leading-relaxed">
             Via Raffaele Viviani, 36 (Piano 5) — 80054 Gragnano (NA)
           </p>
-          <p class="text-[11px] text-gold-400 font-mono tracking-wide">
-            CIN: IT063034C1... | CIR: 15063034...
+          <p class="text-[11px] text-gold-800 font-mono font-semibold tracking-wide">
+            CIN: IT063034C1...
           </p>
           <!-- Social Icons -->
           <div class="flex items-center justify-center md:justify-start gap-3 pt-1">
             <a href="https://www.instagram.com/cama.bed.and.breakfast/" target="_blank" rel="noopener noreferrer"
-              class="text-zinc-400 hover:text-pink-400 transition inline-flex items-center gap-1.5 text-xs"
+              class="text-zinc-600 hover:text-pink-600 transition inline-flex items-center gap-1.5 text-xs"
               title="Instagram Ufficiale" aria-label="Instagram">
               <svg class="w-4 h-4 fill-none stroke-current" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"
                 stroke-linejoin="round">
@@ -1537,9 +1534,9 @@
               </svg>
               <span>Instagram</span>
             </a>
-            <span class="text-zinc-700">•</span>
+            <span class="text-zinc-300">•</span>
             <a href="https://www.tiktok.com/@cama.bed.and.brea?lang=it-IT" target="_blank" rel="noopener noreferrer"
-              class="text-zinc-400 hover:text-cyan-400 transition inline-flex items-center gap-1.5 text-xs"
+              class="text-zinc-600 hover:text-black transition inline-flex items-center gap-1.5 text-xs"
               title="TikTok Ufficiale" aria-label="TikTok">
               <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
                 <path
@@ -1552,19 +1549,19 @@
 
         <!-- Col 2: Contatti & Orari -->
         <div class="space-y-2 text-center md:text-left flex flex-col items-center md:items-start">
-          <span class="font-cinzel uppercase tracking-wider text-gold-300 text-xs font-semibold">Contatti & Orari</span>
+          <span class="font-cinzel uppercase tracking-wider text-gold-800 text-xs font-bold">Contatti & Orari</span>
           <div class="space-y-1.5 text-xs">
             <p class="flex items-center gap-2">
-              <i data-lucide="phone" class="w-3.5 h-3.5 text-gold-400"></i>
-              <span>Tel: <a href="tel:+393447186581" class="text-zinc-300 hover:text-gold-300 transition">+39 344 718
+              <i data-lucide="phone" class="w-3.5 h-3.5 text-gold-700"></i>
+              <span>Tel: <a href="tel:+393447186581" class="text-zinc-800 hover:text-gold-700 transition font-medium">+39 344 718
                   6581</a></span>
             </p>
             <p class="flex items-center gap-2">
-              <i data-lucide="mail" class="w-3.5 h-3.5 text-gold-400"></i>
+              <i data-lucide="mail" class="w-3.5 h-3.5 text-gold-700"></i>
               <span>Email: <a href="mailto:bebcama1963@gmail.com"
-                  class="text-zinc-300 hover:text-gold-300 transition">bebcama1963@gmail.com</a></span>
+                  class="text-zinc-800 hover:text-gold-700 transition font-medium">bebcama1963@gmail.com</a></span>
             </p>
-            <div class="pt-1 flex flex-wrap gap-2 sm:gap-4 font-cinzel text-[11px] text-zinc-400">
+            <div class="pt-1 flex flex-wrap gap-2 sm:gap-4 font-cinzel text-[11px] text-zinc-600">
               <span data-i18n="footerCheckinHours">Check-in: 17:00 - 21:00</span>
               <span>•</span>
               <span data-i18n="footerCheckoutHours">Check-out: 08:00 - 10:30</span>
@@ -1573,13 +1570,13 @@
         </div>
 
         <!-- Col 3: Dicitura Legale & Trasparenza -->
-        <div class="space-y-2 text-center md:text-left bg-[#101016] border border-zinc-800/80 p-4 rounded-sm">
+        <div class="space-y-2 text-center md:text-left bg-white border border-[#e5ddcc] p-4 rounded-sm shadow-sm">
           <div
-            class="flex items-center justify-center md:justify-start gap-1.5 text-gold-300 font-cinzel text-xs font-semibold">
-            <i data-lucide="shield-check" class="w-3.5 h-3.5 text-gold-400"></i>
+            class="flex items-center justify-center md:justify-start gap-1.5 text-gold-800 font-cinzel text-xs font-bold">
+            <i data-lucide="shield-check" class="w-3.5 h-3.5 text-gold-700"></i>
             <span>Informazioni di Legge</span>
           </div>
-          <p class="text-[11px] leading-relaxed text-zinc-400" data-i18n="footerLegalNote">
+          <p class="text-[11px] leading-relaxed text-zinc-600" data-i18n="footerLegalNote">
             Attività ricettiva gestita in forma non imprenditoriale ai sensi delle vigenti leggi regionali.
           </p>
         </div>
@@ -1587,24 +1584,24 @@
       </div>
 
       <!-- Bottom Sub-Footer Bar -->
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-zinc-400">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-zinc-600">
         <div>
           <span data-i18n="footerCopyright">© 2026 B&B CaMa • Tutti i diritti riservati</span>
         </div>
 
         <div class="flex flex-wrap items-center justify-center gap-4">
           <button onclick="openPrivacyModal()"
-            class="text-zinc-400 hover:text-gold-300 underline underline-offset-4 transition cursor-pointer"
+            class="text-zinc-600 hover:text-gold-800 underline underline-offset-4 transition cursor-pointer"
             data-i18n="footerPrivacy">
             Privacy & Cookie Policy
           </button>
-          <span class="text-zinc-700">•</span>
+          <span class="text-zinc-300">•</span>
           <div class="flex items-center gap-1.5">
             <span data-i18n="footerDevBy">Sito realizzato da</span>
             <a href="https://www.linkedin.com/in/antonio-giordano-285a5a39b/" target="_blank" rel="noopener noreferrer"
-              class="text-gold-300 hover:text-gold-100 font-semibold transition inline-flex items-center gap-1 hover:underline">
+              class="text-gold-800 hover:text-gold-600 font-bold transition inline-flex items-center gap-1 hover:underline">
               <span>Dev. Antonio Giordano</span>
-              <i data-lucide="external-link" class="w-3 h-3 text-gold-400"></i>
+              <i data-lucide="external-link" class="w-3 h-3 text-gold-700"></i>
             </a>
           </div>
         </div>
@@ -1613,57 +1610,57 @@
     </div>
   </footer>
 
-  <!-- BOOKING MODAL -->
-  <div id="bookingModal" class="fixed inset-0 bg-black/85 backdrop-blur-md z-50 hidden items-center justify-center p-4">
+  <!-- BOOKING MODAL (LIGHT LUXURY) -->
+  <div id="bookingModal" class="fixed inset-0 bg-black/60 backdrop-blur-md z-50 hidden items-center justify-center p-4">
     <div
-      class="bg-[#14141a] border border-gold-400/50 rounded-sm max-w-lg w-full p-8 shadow-2xl relative animate-in fade-in zoom-in duration-200 text-white">
-      <button onclick="closeModal()" class="absolute top-5 right-5 text-zinc-400 hover:text-white p-2">
+      class="bg-white border border-gold-400/50 rounded-sm max-w-lg w-full p-8 shadow-2xl relative animate-in fade-in zoom-in duration-200 text-zinc-900">
+      <button onclick="closeModal()" class="absolute top-5 right-5 text-zinc-400 hover:text-zinc-900 p-2">
         <i data-lucide="x" class="w-6 h-6"></i>
       </button>
 
       <div class="text-center mb-6">
         <div
-          class="w-14 h-14 bg-gold-400/10 border border-gold-400/40 text-gold-300 rounded-full flex items-center justify-center mx-auto mb-3">
+          class="w-14 h-14 bg-gold-400/15 border border-gold-400/40 text-gold-800 rounded-full flex items-center justify-center mx-auto mb-3">
           <i data-lucide="check-circle-2" class="w-7 h-7"></i>
         </div>
-        <h3 class="text-2xl font-cinzel font-normal text-white" data-i18n="bookTitle">Riepilogo Soggiorno</h3>
-        <p class="text-xs text-zinc-400 font-sans mt-1">Invia la richiesta direttamente all'host di B&B CaMa</p>
+        <h3 class="text-2xl font-cinzel font-normal text-zinc-900" data-i18n="bookTitle">Riepilogo Soggiorno</h3>
+        <p class="text-xs text-zinc-600 font-sans mt-1">Invia la richiesta direttamente all'host di B&B CaMa</p>
       </div>
 
       <!-- Soggiorno Info Box -->
-      <div class="bg-[#1a1a24] border border-zinc-800 rounded-sm p-4 mb-6 text-sm space-y-2 font-sans">
+      <div class="bg-[#f7f4ed] border border-[#e5ddcc] rounded-sm p-4 mb-6 text-sm space-y-2 font-sans">
         <div class="flex justify-between">
-          <span class="text-zinc-400">Date:</span>
-          <span id="modalDates" class="font-medium text-white">-</span>
+          <span class="text-zinc-600">Date:</span>
+          <span id="modalDates" class="font-semibold text-zinc-900">-</span>
         </div>
         <div class="flex justify-between">
-          <span class="text-zinc-400" data-i18n="labelGuests">Ospiti:</span>
-          <span id="modalGuests" class="font-medium text-white">-</span>
+          <span class="text-zinc-600" data-i18n="labelGuests">Ospiti:</span>
+          <span id="modalGuests" class="font-semibold text-zinc-900">-</span>
         </div>
         <div class="flex justify-between">
-          <span class="text-zinc-400" data-i18n="labelRoom">Tipologia:</span>
-          <span id="modalRoom" class="font-medium text-gold-300">-</span>
+          <span class="text-zinc-600" data-i18n="labelRoom">Tipologia:</span>
+          <span id="modalRoom" class="font-semibold text-gold-800">-</span>
         </div>
-        <div class="flex justify-between pt-2 border-t border-zinc-700 font-cinzel font-bold text-base text-white">
+        <div class="flex justify-between pt-2 border-t border-zinc-300 font-cinzel font-bold text-base text-zinc-900">
           <span data-i18n="estimatedTotal">Preventivo:</span>
-          <span id="modalTotal" class="text-gold-300 text-sm md:text-base">-</span>
+          <span id="modalTotal" class="text-gold-800 text-sm md:text-base">-</span>
         </div>
       </div>
 
       <form onsubmit="sendFinalBooking(event)" class="space-y-4">
         <div>
-          <label class="block text-xs font-cinzel uppercase tracking-wider text-zinc-400 mb-1"
+          <label class="block text-xs font-cinzel uppercase tracking-wider text-zinc-700 font-bold mb-1"
             data-i18n="inputNamePh">Nome e Cognome *</label>
           <input type="text" id="guestName" required placeholder="Es. Mario Rossi" class="concierge-input text-sm py-2">
         </div>
         <div>
-          <label class="block text-xs font-cinzel uppercase tracking-wider text-zinc-400 mb-1"
+          <label class="block text-xs font-cinzel uppercase tracking-wider text-zinc-700 font-bold mb-1"
             data-i18n="inputPhonePh">Telefono *</label>
           <input type="tel" id="guestPhone" required placeholder="Es. +39 333 1234567"
             class="concierge-input text-sm py-2">
         </div>
         <div>
-          <label class="block text-xs font-cinzel uppercase tracking-wider text-zinc-400 mb-1"
+          <label class="block text-xs font-cinzel uppercase tracking-wider text-zinc-700 font-bold mb-1"
             data-i18n="inputEmailPh">Email *</label>
           <input type="email" id="guestEmail" required placeholder="mario.rossi@email.com"
             class="concierge-input text-sm py-2">
@@ -1671,7 +1668,7 @@
 
         <div class="grid grid-cols-2 gap-3 pt-2">
           <button type="button" onclick="sendViaWhatsApp()"
-            class="bg-emerald-600 hover:bg-emerald-500 text-white font-medium py-3 rounded-sm flex items-center justify-center gap-2 text-xs uppercase tracking-wider transition">
+            class="bg-emerald-600 hover:bg-emerald-700 text-white font-medium py-3 rounded-sm flex items-center justify-center gap-2 text-xs uppercase tracking-wider transition shadow-sm">
             <i data-lucide="message-circle" class="w-4 h-4"></i>
             <span>WhatsApp</span>
           </button>
@@ -1712,74 +1709,74 @@
     </div>
   </div>
 
-  <!-- PRIVACY & COOKIE POLICY MODAL -->
-  <div id="privacyModal" class="fixed inset-0 bg-black/85 backdrop-blur-md z-50 hidden items-center justify-center p-4">
+  <!-- PRIVACY & COOKIE POLICY MODAL (LIGHT LUXURY) -->
+  <div id="privacyModal" class="fixed inset-0 bg-black/60 backdrop-blur-md z-50 hidden items-center justify-center p-4">
     <div
-      class="bg-[#121218] border border-gold-400/50 rounded-sm max-w-2xl w-full max-h-[88vh] flex flex-col shadow-2xl relative text-zinc-300 animate-in fade-in zoom-in duration-200">
+      class="bg-white border border-gold-400/50 rounded-sm max-w-2xl w-full max-h-[88vh] flex flex-col shadow-2xl relative text-zinc-800 animate-in fade-in zoom-in duration-200">
       <!-- Modal Header -->
-      <div class="p-5 md:p-6 border-b border-zinc-800 flex items-center justify-between shrink-0 bg-[#0e0e14]">
+      <div class="p-5 md:p-6 border-b border-zinc-200 flex items-center justify-between shrink-0 bg-[#f7f4ed]">
         <div class="flex items-center gap-3">
           <div
-            class="w-10 h-10 rounded-full bg-gold-400/10 border border-gold-400/40 text-gold-300 flex items-center justify-center shrink-0">
+            class="w-10 h-10 rounded-full bg-gold-400/15 border border-gold-400/40 text-gold-800 flex items-center justify-center shrink-0">
             <i data-lucide="shield-check" class="w-5 h-5"></i>
           </div>
           <div>
-            <h3 class="font-cinzel text-lg md:text-xl font-bold text-white tracking-wide" data-i18n="privacyModalTitle">
+            <h3 class="font-cinzel text-lg md:text-xl font-bold text-zinc-900 tracking-wide" data-i18n="privacyModalTitle">
               Informativa Privacy & Cookie Policy</h3>
-            <span class="text-[11px] text-zinc-400">B&B CaMa • Conformità GDPR (UE 2016/679)</span>
+            <span class="text-[11px] text-zinc-500">B&B CaMa • Conformità GDPR (UE 2016/679)</span>
           </div>
         </div>
         <button onclick="closePrivacyModal()"
-          class="text-zinc-400 hover:text-white p-2 rounded-sm transition cursor-pointer" aria-label="Chiudi">
+          class="text-zinc-500 hover:text-zinc-900 p-2 rounded-sm transition cursor-pointer" aria-label="Chiudi">
           <i data-lucide="x" class="w-6 h-6"></i>
         </button>
       </div>
 
       <!-- Modal Body (Scrollable) -->
       <div
-        class="p-5 md:p-6 overflow-y-auto space-y-6 text-xs md:text-sm leading-relaxed text-zinc-300 custom-scrollbar">
+        class="p-5 md:p-6 overflow-y-auto space-y-6 text-xs md:text-sm leading-relaxed text-zinc-700 custom-scrollbar">
         <!-- Section: Titolare -->
-        <div class="bg-[#181822] border border-zinc-800/80 rounded p-4">
-          <h4 class="font-cinzel font-bold text-gold-300 text-sm mb-2 flex items-center gap-2"
+        <div class="bg-[#fbf9f5] border border-[#e5ddcc] rounded p-4">
+          <h4 class="font-cinzel font-bold text-gold-800 text-sm mb-2 flex items-center gap-2"
             data-i18n="privacyOwnerTitle">
-            <i data-lucide="building-2" class="w-4 h-4 text-gold-400"></i>
+            <i data-lucide="building-2" class="w-4 h-4 text-gold-700"></i>
             1. Titolare del Trattamento
           </h4>
           <p data-i18n="privacyOwnerText">
             Il Titolare del trattamento dei dati personali è <strong>B&B CaMa</strong>, con sede in Via Raffaele
             Viviani, 36 (Piano 5 con ascensore), 80054 Gragnano (NA), Italia.<br>
             Email di contatto: <a href="mailto:bebcama1963@gmail.com"
-              class="text-gold-300 hover:underline">bebcama1963@gmail.com</a> | Telefono: <a href="tel:+393447186581"
-              class="text-gold-300 hover:underline">+39 344 718 6581</a>.
+              class="text-gold-800 font-semibold hover:underline">bebcama1963@gmail.com</a> | Telefono: <a href="tel:+393447186581"
+              class="text-gold-800 font-semibold hover:underline">+39 344 718 6581</a>.
           </p>
         </div>
 
         <!-- Section: Tipologie di Dati -->
         <div>
-          <h4 class="font-cinzel font-bold text-gold-300 text-sm mb-2 flex items-center gap-2"
+          <h4 class="font-cinzel font-bold text-gold-800 text-sm mb-2 flex items-center gap-2"
             data-i18n="privacyDataTitle">
-            <i data-lucide="database" class="w-4 h-4 text-gold-400"></i>
+            <i data-lucide="database" class="w-4 h-4 text-gold-700"></i>
             2. Tipologia di Dati Raccolti e Finalità
           </h4>
           <p class="mb-2" data-i18n="privacyDataText1">
             Attraverso il nostro sito web raccogliamo i seguenti dati esclusivamente per le finalità descritte:
           </p>
-          <ul class="list-disc pl-5 space-y-1 text-zinc-300">
+          <ul class="list-disc pl-5 space-y-1 text-zinc-700">
             <li data-i18n="privacyDataLi1"><strong>Dati di contatto e prenotazione:</strong> Nome, Cognome, Telefono,
               Email e preferenze di soggiorno fornite volontariamente per rispondere a richieste di preventivo o
               disponibilità camere.</li>
             <li data-i18n="privacyDataLi2"><strong>Dati di navigazione e preferenze:</strong> Lingua preferita
-              memorizzata localmente (<code class="bg-black/40 text-gold-300 px-1 py-0.5 rounded">cama_lang</code>) e
+              memorizzata localmente (<code class="bg-[#f7f4ed] text-gold-800 font-semibold px-1 py-0.5 rounded">cama_lang</code>) e
               preferenze sui cookie (<code
-                class="bg-black/40 text-gold-300 px-1 py-0.5 rounded">cama_cookie_consent</code>).</li>
+                class="bg-[#f7f4ed] text-gold-800 font-semibold px-1 py-0.5 rounded">cama_cookie_consent</code>).</li>
           </ul>
         </div>
 
         <!-- Section: Cookie Policy -->
         <div>
-          <h4 class="font-cinzel font-bold text-gold-300 text-sm mb-2 flex items-center gap-2"
+          <h4 class="font-cinzel font-bold text-gold-800 text-sm mb-2 flex items-center gap-2"
             data-i18n="privacyCookieTitle">
-            <i data-lucide="cookie" class="w-4 h-4 text-gold-400"></i>
+            <i data-lucide="cookie" class="w-4 h-4 text-gold-700"></i>
             3. Che cosa sono i Cookie e quali utilizziamo
           </h4>
           <p class="mb-3" data-i18n="privacyCookieText1">
@@ -1788,35 +1785,35 @@
           </p>
 
           <div class="space-y-3">
-            <div class="bg-[#181824] border border-zinc-800 p-3.5 rounded">
+            <div class="bg-[#fbf9f5] border border-[#e5ddcc] p-3.5 rounded">
               <div class="flex items-center justify-between mb-1">
-                <span class="font-semibold text-white flex items-center gap-2">
-                  <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                <span class="font-semibold text-zinc-900 flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
                   <span data-i18n="cookieTechTitle">Cookie Tecnici & Funzionali (Sempre Attivi)</span>
                 </span>
                 <span
-                  class="text-[10px] uppercase font-cinzel text-emerald-400 font-bold tracking-wider">Necessari</span>
+                  class="text-[10px] uppercase font-cinzel text-emerald-700 font-bold tracking-wider">Necessari</span>
               </div>
-              <p class="text-xs text-zinc-400" data-i18n="cookieTechDesc">
+              <p class="text-xs text-zinc-600" data-i18n="cookieTechDesc">
                 Indispensabili per il corretto funzionamento del sito, la navigazione fluida, la selezione della lingua
                 e la memorizzazione delle scelte di consenso. Non richiedono consenso preventivo.
               </p>
             </div>
 
-            <div class="bg-[#181824] border border-zinc-800 p-3.5 rounded">
+            <div class="bg-[#fbf9f5] border border-[#e5ddcc] p-3.5 rounded">
               <div class="flex items-center justify-between mb-1">
-                <span class="font-semibold text-white flex items-center gap-2">
-                  <span class="w-2 h-2 rounded-full bg-gold-400"></span>
+                <span class="font-semibold text-zinc-900 flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-gold-600"></span>
                   <span data-i18n="cookieThirdTitle">Servizi di Terze Parti & Widget</span>
                 </span>
                 <label class="relative inline-flex items-center cursor-pointer">
                   <input type="checkbox" id="cookieOptionalToggle" class="sr-only peer" checked>
                   <div
-                    class="w-9 h-5 bg-zinc-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-zinc-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-gold-500">
+                    class="w-9 h-5 bg-zinc-300 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-zinc-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-gold-600">
                   </div>
                 </label>
               </div>
-              <p class="text-xs text-zinc-400" data-i18n="cookieThirdDesc">
+              <p class="text-xs text-zinc-600" data-i18n="cookieThirdDesc">
                 Il sito può includere elementi di terze parti per migliorare l'esperienza: Google Fonts per i caratteri
                 tipografici, icone Lucide, e link diretti a WhatsApp, Google Maps, Instagram e TikTok.
               </p>
@@ -1826,25 +1823,25 @@
 
         <!-- Section: Diritti dell'utente -->
         <div>
-          <h4 class="font-cinzel font-bold text-gold-300 text-sm mb-2 flex items-center gap-2"
+          <h4 class="font-cinzel font-bold text-gold-800 text-sm mb-2 flex items-center gap-2"
             data-i18n="privacyRightsTitle">
-            <i data-lucide="scale" class="w-4 h-4 text-gold-400"></i>
+            <i data-lucide="scale" class="w-4 h-4 text-gold-700"></i>
             4. Diritti dell'Interessato (GDPR)
           </h4>
           <p data-i18n="privacyRightsText">
             In conformità agli articoli 15-22 del Regolamento UE 2016/679 (GDPR), l'utente ha diritto di richiedere
             l'accesso ai propri dati personali, la rettifica, la cancellazione, la limitazione del trattamento o di
             opporsi al loro trattamento inviando una comunicazione a <a href="mailto:bebcama1963@gmail.com"
-              class="text-gold-300 hover:underline">bebcama1963@gmail.com</a>.
+              class="text-gold-800 font-semibold hover:underline">bebcama1963@gmail.com</a>.
           </p>
         </div>
       </div>
 
       <!-- Modal Footer -->
       <div
-        class="p-4 border-t border-zinc-800 bg-[#0e0e14] flex flex-col sm:flex-row items-center justify-between gap-3 shrink-0">
+        class="p-4 border-t border-zinc-200 bg-[#f7f4ed] flex flex-col sm:flex-row items-center justify-between gap-3 shrink-0">
         <button onclick="rejectOptionalCookies()"
-          class="text-xs text-zinc-400 hover:text-white transition py-2 px-4 border border-zinc-700 rounded-sm hover:border-zinc-500 w-full sm:w-auto"
+          class="text-xs text-zinc-600 hover:text-zinc-900 transition py-2 px-4 border border-zinc-300 rounded-sm hover:border-zinc-400 w-full sm:w-auto"
           data-i18n="cookieBtnOnlyEssential">
           Solo Necessari
         </button>
@@ -1859,33 +1856,33 @@
     </div>
   </div>
 
-  <!-- COOKIE BANNER (GDPR COMPLIANT) -->
+  <!-- COOKIE BANNER (LIGHT LUXURY) -->
   <div id="cookieBanner"
-    class="fixed bottom-4 left-4 right-4 md:left-auto md:right-6 md:max-w-md z-50 bg-[#121218]/95 backdrop-blur-md border border-gold-400/40 rounded-sm shadow-2xl p-5 text-zinc-300 animate-in fade-in slide-in-from-bottom duration-300 hidden">
+    class="fixed bottom-4 left-4 right-4 md:left-auto md:right-6 md:max-w-md z-50 bg-white/95 backdrop-blur-md border border-gold-400/50 rounded-sm shadow-2xl p-5 text-zinc-800 animate-in fade-in slide-in-from-bottom duration-300 hidden">
     <div class="flex items-start gap-3.5 mb-3">
       <div
-        class="w-9 h-9 rounded-full bg-gold-400/15 border border-gold-400/40 text-gold-300 flex items-center justify-center shrink-0 mt-0.5">
+        class="w-9 h-9 rounded-full bg-gold-400/15 border border-gold-400/40 text-gold-800 flex items-center justify-center shrink-0 mt-0.5">
         <i data-lucide="cookie" class="w-4 h-4"></i>
       </div>
       <div>
-        <h4 class="font-cinzel text-sm font-bold text-white tracking-wide" data-i18n="cookieBannerTitle">Informativa sui
+        <h4 class="font-cinzel text-sm font-bold text-zinc-900 tracking-wide" data-i18n="cookieBannerTitle">Informativa sui
           Cookie</h4>
-        <p class="text-xs text-zinc-400 mt-1 leading-relaxed" data-i18n="cookieBannerText">
+        <p class="text-xs text-zinc-600 mt-1 leading-relaxed" data-i18n="cookieBannerText">
           Utilizziamo cookie tecnici per garantire il funzionamento ottimale del sito e offrirti la migliore esperienza
           di soggiorno. Cliccando su "Accetta Tutti" acconsenti all'uso dei cookie.
         </p>
       </div>
     </div>
 
-    <div class="flex flex-wrap items-center justify-between gap-2 pt-2 border-t border-zinc-800">
+    <div class="flex flex-wrap items-center justify-between gap-2 pt-2 border-t border-zinc-200">
       <button onclick="openPrivacyModal()"
-        class="text-[11px] text-zinc-400 hover:text-gold-300 underline underline-offset-2 transition cursor-pointer"
+        class="text-[11px] text-zinc-600 hover:text-gold-800 underline underline-offset-2 transition cursor-pointer"
         data-i18n="cookieBannerLearnMore">
         Personalizza / Privacy Policy
       </button>
       <div class="flex items-center gap-2">
         <button onclick="rejectOptionalCookies()"
-          class="text-xs text-zinc-400 hover:text-white px-3 py-1.5 border border-zinc-700 hover:border-zinc-500 rounded-sm transition cursor-pointer"
+          class="text-xs text-zinc-600 hover:text-zinc-900 px-3 py-1.5 border border-zinc-300 hover:border-zinc-400 rounded-sm transition cursor-pointer"
           data-i18n="cookieBtnReject">
           Rifiuta
         </button>

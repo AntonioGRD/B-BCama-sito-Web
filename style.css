@@ -1,19 +1,21 @@
 /* ==========================================================================
    LUSSO CAMA - B&B LUXURY DESIGN SYSTEM
-   Palette: Black Onyx, Warm Gold, Ivory, Champagne Marble
+   Palette: Bianco Neve, Warm Beige, Avorio Reale, Champagne & Oro Caldo
    ========================================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --bg-dark: #0a0a0c;
-  --bg-dark-secondary: #121216;
-  --bg-dark-card: #18181f;
-  --bg-dark-hover: #21212b;
-
-  --bg-light: #faf8f5;
+  --bg-white: #ffffff;
+  --bg-beige: #f7f4ed;
+  --bg-beige-light: #fbf9f5;
   --bg-cream: #f4efe6;
-  --bg-card-light: #ffffff;
+  --bg-card: #ffffff;
+  --bg-hover: #f1ebd8;
+
+  --text-primary: #18181b;
+  --text-secondary: #3f3f46;
+  --text-muted: #71717a;
 
   --gold-100: #fbf7ee;
   --gold-200: #f4e8cc;
@@ -22,20 +24,22 @@
   --gold-500: #c5a880;
   --gold-600: #b08d4b;
   --gold-700: #8c6a2d;
+  --gold-800: #6e4f1a;
 
-  --gold-gradient: linear-gradient(135deg, #ebd5a0 0%, #c5a880 50%, #9e7b39 100%);
-  --gold-gradient-hover: linear-gradient(135deg, #f5e4b8 0%, #d4b68d 50%, #b89149 100%);
-  --gold-gradient-text: linear-gradient(135deg, #f3e5c8 0%, #d9b87a 40%, #b89248 100%);
-  --dark-gradient: linear-gradient(180deg, rgba(10, 10, 12, 0.95) 0%, rgba(18, 18, 22, 0.98) 100%);
+  --gold-gradient: linear-gradient(135deg, #e8d09b 0%, #c5a880 50%, #9e7b39 100%);
+  --gold-gradient-hover: linear-gradient(135deg, #f0ddb0 0%, #d4b68d 50%, #b89149 100%);
+  --gold-gradient-text: linear-gradient(135deg, #8c6a2d 0%, #c5a880 50%, #755518 100%);
+  --beige-gradient: linear-gradient(180deg, #ffffff 0%, #f7f4ed 100%);
 
   --font-serif-luxury: 'Cinzel', serif;
   --font-serif-editorial: 'Cormorant Garamond', Georgia, serif;
   --font-sans: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
-  --border-gold-subtle: rgba(197, 168, 128, 0.25);
-  --border-gold-bright: rgba(212, 178, 111, 0.6);
-  --shadow-luxury: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
-  --shadow-gold: 0 8px 25px rgba(197, 168, 128, 0.2);
+  --border-gold-subtle: rgba(197, 168, 128, 0.35);
+  --border-gold-bright: rgba(212, 178, 111, 0.7);
+  --border-beige: #e5ddcc;
+  --shadow-luxury: 0 10px 30px -10px rgba(197, 168, 128, 0.18);
+  --shadow-gold: 0 8px 25px rgba(197, 168, 128, 0.25);
 }
 
 /* Base Styles */
@@ -45,7 +49,10 @@
   padding: 0;
 }
 
-html {
+html,
+:root {
+  background-color: #f7f4ed;
+  color-scheme: light;
   scroll-behavior: smooth;
   scroll-padding-top: 85px;
 }
@@ -57,8 +64,8 @@ section,
 
 body {
   font-family: var(--font-sans);
-  background-color: var(--bg-dark);
-  color: #d1d1d6;
+  background-color: #ffffff;
+  color: #27272a;
   line-height: 1.6;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
@@ -105,20 +112,21 @@ body {
   transition: all 0.2s ease;
   user-select: none;
   -webkit-user-select: none;
+  color: #52525b;
 }
 
 .lang-btn:hover {
-  color: var(--gold-300);
+  color: var(--gold-700);
 }
 
 .lang-btn.active,
 .lang-btn.bg-gold-500 {
   background: var(--gold-gradient) !important;
-  color: #08080a !important;
+  color: #18181b !important;
   font-weight: 700 !important;
 }
 
-/* Header & Navigation */
+/* Header & Navigation (Luxury Dark Glass) */
 .luxury-header {
   background: rgba(10, 10, 12, 0.94);
   backdrop-filter: blur(16px);
@@ -128,6 +136,7 @@ body {
   top: 0;
   z-index: 100;
   transition: all 0.3s ease;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.5);
 }
 
 .luxury-nav-link {
@@ -168,10 +177,10 @@ body {
   width: 100%;
 }
 
-/* Hero Section */
+/* Hero Section (Luxury Dark Onyx) */
 .hero-luxury {
   position: relative;
-  background-color: var(--bg-dark);
+  background-color: #0a0a0c;
   min-height: 82vh;
   display: flex;
   flex-direction: column;
@@ -206,6 +215,8 @@ body {
   position: relative;
   background: rgba(14, 14, 18, 0.65);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 4px;
 }
 
 .hero-frame-border::before,
@@ -214,7 +225,7 @@ body {
   position: absolute;
   width: 18px;
   height: 18px;
-  border: 2px solid var(--gold-400);
+  border: 2px solid var(--gold-500);
 }
 
 .hero-frame-border::before {
@@ -231,33 +242,13 @@ body {
   border-top: none;
 }
 
-.hero-formula-card {
-  background: rgba(16, 16, 24, 0.85);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(212, 178, 111, 0.35);
-  border-radius: 4px;
-  padding: 1.25rem 1.4rem;
-  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.hero-formula-card:hover {
-  border-color: rgba(212, 178, 111, 0.85);
-  transform: translateY(-3px);
-  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.7), 0 0 25px rgba(212, 178, 111, 0.2);
-}
-
 /* Buttons */
 .btn-gold {
   background: var(--gold-gradient);
-  color: #0d0d10;
+  color: #18181b !important;
   font-family: var(--font-serif-luxury);
   font-size: 0.85rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.08em;
   padding: 0.85rem 1.8rem;
   border-radius: 4px;
@@ -268,25 +259,27 @@ body {
   white-space: nowrap !important;
   flex-shrink: 0;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 4px 15px rgba(197, 168, 128, 0.3);
+  box-shadow: 0 4px 18px rgba(197, 168, 128, 0.4);
   text-decoration: none;
-  border: 1px solid transparent;
+  border: 1.5px solid #b08d4b !important;
   cursor: pointer;
 }
 
 .btn-gold:hover {
   background: var(--gold-gradient-hover);
   transform: translateY(-2px);
-  box-shadow: 0 6px 25px rgba(212, 178, 111, 0.5);
-  color: #000;
+  box-shadow: 0 6px 25px rgba(212, 178, 111, 0.6);
+  color: #000 !important;
+  border-color: #d4b26f !important;
 }
 
 .btn-gold-outline {
-  background: transparent;
-  color: var(--gold-300);
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+  color: var(--gold-800) !important;
   font-family: var(--font-serif-luxury);
   font-size: 0.85rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.1em;
   padding: 0.85rem 1.8rem;
   border-radius: 4px;
@@ -296,22 +289,69 @@ body {
   gap: 0.5rem;
   white-space: nowrap !important;
   flex-shrink: 0;
-  border: 1px solid var(--gold-400);
+  border: 1.5px solid var(--gold-500) !important;
   transition: all 0.3s ease;
   text-decoration: none;
   cursor: pointer;
+  box-shadow: 0 4px 15px rgba(197, 168, 128, 0.15);
 }
 
 .btn-gold-outline:hover {
-  background: rgba(197, 168, 128, 0.15);
-  color: #fff;
-  border-color: var(--gold-200);
+  background: var(--gold-100) !important;
+  color: var(--gold-900) !important;
+  border-color: var(--gold-600) !important;
   transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(197, 168, 128, 0.25);
+}
+
+.hero-luxury .btn-gold-outline {
+  background: rgba(14, 14, 18, 0.85) !important;
+  background-color: rgba(14, 14, 18, 0.85) !important;
+  color: #dfc187 !important;
+  border: 1.5px solid rgba(212, 178, 111, 0.7) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.hero-luxury .btn-gold-outline:hover {
+  background: rgba(212, 178, 111, 0.25) !important;
+  color: #ffffff !important;
+  border-color: var(--gold-400) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(197, 168, 128, 0.35);
+}
+
+.badge-gold {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  padding: 0.5rem 1.4rem !important;
+  background: rgba(10, 10, 14, 0.92) !important;
+  background-color: #0e0e14 !important;
+  border: 1px solid rgba(212, 178, 111, 0.65) !important;
+  border-radius: 9999px !important;
+  color: #dfc187 !important;
+  font-family: var(--font-serif-luxury) !important;
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.16em !important;
+  text-transform: uppercase !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6), inset 0 0 12px rgba(212, 178, 111, 0.08) !important;
+  transition: all 0.3s ease !important;
+}
+
+.badge-gold:hover {
+  border-color: var(--gold-400) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 25px rgba(212, 178, 111, 0.35) !important;
+  transform: translateY(-1px) !important;
 }
 
 .btn-gold-card {
   background: var(--gold-gradient);
-  color: #0a0a0d !important;
+  color: #18181b !important;
   font-family: var(--font-serif-luxury);
   font-size: 0.78rem;
   font-weight: 700;
@@ -324,8 +364,8 @@ body {
   gap: 0.5rem;
   width: 100%;
   text-decoration: none;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 4px 14px rgba(197, 168, 128, 0.28);
+  border: 1.5px solid #b08d4b !important;
+  box-shadow: 0 4px 14px rgba(197, 168, 128, 0.35);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: pointer;
   text-transform: uppercase;
@@ -334,19 +374,22 @@ body {
 .btn-gold-card:hover {
   background: var(--gold-gradient-hover);
   transform: translateY(-2px);
-  box-shadow: 0 6px 22px rgba(212, 178, 111, 0.5);
+  box-shadow: 0 6px 22px rgba(212, 178, 111, 0.55);
   color: #000 !important;
+  border-color: #d4b26f !important;
 }
 
 /* Sections Light & Cream */
 .section-light {
-  background-color: var(--bg-light);
-  color: #2b2b30;
+  background-color: var(--bg-white);
+  color: #27272a;
+  position: relative;
 }
 
 .section-cream {
-  background-color: var(--bg-cream);
-  color: #2b2b30;
+  background-color: var(--bg-beige);
+  color: #27272a;
+  position: relative;
 }
 
 /* Luxury Image Grid Cards */
@@ -354,9 +397,9 @@ body {
   position: relative;
   overflow: hidden;
   border-radius: 4px;
-  background-color: #0d0d11;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(197, 168, 128, 0.25);
+  background-color: #f7f4ed;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(197, 168, 128, 0.3);
   transition: all 0.4s ease;
   cursor: pointer;
 }
@@ -370,8 +413,8 @@ body {
 
 .luxury-image-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
-  border-color: var(--gold-400);
+  box-shadow: 0 12px 35px rgba(197, 168, 128, 0.25);
+  border-color: var(--gold-500);
 }
 
 .luxury-image-card:hover img {
@@ -383,8 +426,8 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 1.5rem 1.25rem;
-  background: linear-gradient(180deg, transparent 0%, rgba(10, 10, 12, 0.85) 50%, rgba(10, 10, 12, 0.98) 100%);
+  padding: 1.25rem 1rem;
+  background: linear-gradient(180deg, transparent 0%, rgba(24, 24, 27, 0.8) 40%, rgba(15, 15, 18, 0.95) 100%);
   color: #fff;
   transition: all 0.3s ease;
 }
@@ -396,12 +439,17 @@ body {
   align-items: center;
   text-align: center;
   padding: 2rem 1.2rem;
-  transition: transform 0.3s ease;
-  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  border-radius: 6px;
+  background: #ffffff;
+  border: 1px solid var(--border-beige);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
 }
 
 .service-luxury-item:hover {
   transform: translateY(-4px);
+  border-color: var(--gold-400);
+  box-shadow: 0 12px 30px rgba(197, 168, 128, 0.18);
 }
 
 .service-icon-luxury {
@@ -409,63 +457,55 @@ body {
   height: 72px;
   border-radius: 50%;
   border: 1.5px solid var(--gold-400);
-  background: rgba(197, 168, 128, 0.08);
+  background: rgba(197, 168, 128, 0.12);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--gold-600);
+  color: var(--gold-700);
   margin-bottom: 1.2rem;
-  box-shadow: 0 4px 15px rgba(197, 168, 128, 0.12);
+  box-shadow: 0 4px 15px rgba(197, 168, 128, 0.15);
   transition: all 0.3s ease;
 }
 
 .service-luxury-item:hover .service-icon-luxury {
   background: var(--gold-gradient);
-  color: #0d0d10;
+  color: #18181b;
   border-color: transparent;
-  box-shadow: 0 8px 25px rgba(197, 168, 128, 0.35);
+  box-shadow: 0 8px 25px rgba(197, 168, 128, 0.4);
   transform: rotate(5deg) scale(1.05);
 }
 
-/* Concierge & Booking Dark Section */
-.concierge-section {
-  background-color: var(--bg-dark);
-  background-image:
-    radial-gradient(circle at 10% 20%, rgba(197, 168, 128, 0.08) 0%, transparent 40%),
-    radial-gradient(circle at 90% 80%, rgba(197, 168, 128, 0.06) 0%, transparent 45%);
-  position: relative;
-  border-top: 1px solid var(--border-gold-subtle);
-}
-
+/* Concierge & Booking Inputs */
 .concierge-input {
-  background: #131318;
-  border: 1px solid rgba(197, 168, 128, 0.35);
-  color: #fff;
+  background: #ffffff;
+  border: 1px solid var(--border-beige);
+  color: #18181b;
   border-radius: 4px;
   padding: 0.9rem 1.2rem;
   font-size: 0.95rem;
   font-family: var(--font-sans);
   width: 100%;
   transition: all 0.3s ease;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.03);
 }
 
 .concierge-input:focus {
   outline: none;
-  border-color: var(--gold-400);
-  box-shadow: 0 0 15px rgba(197, 168, 128, 0.3);
-  background: #181822;
+  border-color: var(--gold-500);
+  box-shadow: 0 0 0 3px rgba(197, 168, 128, 0.25);
+  background: #ffffff;
 }
 
 .concierge-input::placeholder {
-  color: #6a6a75;
+  color: #a1a1aa;
 }
 
-/* Custom Luxury Select Menus */
+/* Custom Select Menus */
 select.concierge-input {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%23d4b26f' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%238c6a2d' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
   background-position: right 1.1rem center;
   background-repeat: no-repeat;
   background-size: 1.15rem;
@@ -474,48 +514,41 @@ select.concierge-input {
 }
 
 select.concierge-input option {
-  background-color: #14141c;
-  color: #f4e8cc;
+  background-color: #ffffff;
+  color: #18181b;
   padding: 12px 14px;
   font-size: 0.95rem;
 }
 
-select.concierge-input option:checked {
-  background: linear-gradient(135deg, #2a2215 0%, #1c1812 100%);
-  color: #ebd5a0;
-  font-weight: 600;
-}
-
 /* ==========================================================================
-   FLATPICKR CUSTOM LUXURY DARK & GOLD THEME
+   FLATPICKR CUSTOM LUXURY WHITE & BEIGE THEME
    ========================================================================== */
 .flatpickr-calendar {
-  background: #121218 !important;
-  border: 1px solid rgba(212, 178, 111, 0.45) !important;
-  border-radius: 6px !important;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.9), 0 0 25px rgba(197, 168, 128, 0.2) !important;
+  background: #ffffff !important;
+  border: 1px solid var(--border-gold-subtle) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12), 0 0 20px rgba(197, 168, 128, 0.15) !important;
   font-family: var(--font-sans) !important;
   width: 320px !important;
   padding: 12px !important;
-  backdrop-filter: blur(20px) !important;
   animation: calendarPop 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
 .flatpickr-calendar::before,
 .flatpickr-calendar::after {
-  border-bottom-color: #121218 !important;
+  border-bottom-color: #ffffff !important;
 }
 
 .flatpickr-calendar.arrowTop::before {
-  border-bottom-color: rgba(212, 178, 111, 0.45) !important;
+  border-bottom-color: var(--border-gold-subtle) !important;
 }
 
 .flatpickr-calendar.arrowBottom::before {
-  border-top-color: rgba(212, 178, 111, 0.45) !important;
+  border-top-color: var(--border-gold-subtle) !important;
 }
 
 .flatpickr-calendar.arrowBottom::after {
-  border-top-color: #121218 !important;
+  border-top-color: #ffffff !important;
 }
 
 @keyframes calendarPop {
@@ -534,41 +567,33 @@ select.concierge-input option:checked {
 .flatpickr-months {
   background: transparent !important;
   padding-bottom: 8px !important;
-  border-bottom: 1px solid rgba(197, 168, 128, 0.2) !important;
+  border-bottom: 1px solid var(--border-beige) !important;
   margin-bottom: 6px !important;
 }
 
 .flatpickr-current-month {
   font-family: var(--font-serif-luxury) !important;
   font-size: 1.05rem !important;
-  color: #f4e8cc !important;
+  color: #18181b !important;
   padding-top: 2px !important;
 }
 
 .flatpickr-current-month .cur-month {
   font-weight: 600 !important;
-  color: var(--gold-300) !important;
+  color: var(--gold-800) !important;
 }
 
 .flatpickr-current-month input.cur-year {
   font-family: var(--font-serif-luxury) !important;
   font-weight: 700 !important;
-  color: #ffffff !important;
-}
-
-.flatpickr-current-month .numInputWrapper span.arrowUp::after {
-  border-bottom-color: var(--gold-400) !important;
-}
-
-.flatpickr-current-month .numInputWrapper span.arrowDown::after {
-  border-top-color: var(--gold-400) !important;
+  color: #18181b !important;
 }
 
 /* Navigation Chevrons */
 .flatpickr-prev-month,
 .flatpickr-next-month {
-  color: var(--gold-300) !important;
-  fill: var(--gold-300) !important;
+  color: var(--gold-700) !important;
+  fill: var(--gold-700) !important;
   padding: 6px !important;
   border-radius: 4px !important;
   transition: all 0.2s ease !important;
@@ -576,15 +601,9 @@ select.concierge-input option:checked {
 
 .flatpickr-prev-month:hover,
 .flatpickr-next-month:hover {
-  color: #ffffff !important;
-  fill: #ffffff !important;
-  background: rgba(197, 168, 128, 0.2) !important;
-}
-
-.flatpickr-prev-month svg,
-.flatpickr-next-month svg {
-  width: 14px !important;
-  height: 14px !important;
+  color: #18181b !important;
+  fill: #18181b !important;
+  background: var(--gold-100) !important;
 }
 
 /* Weekday Row */
@@ -595,7 +614,7 @@ select.concierge-input option:checked {
 
 span.flatpickr-weekday {
   background: transparent !important;
-  color: var(--gold-400) !important;
+  color: var(--gold-700) !important;
   font-family: var(--font-serif-luxury) !important;
   font-size: 0.75rem !important;
   font-weight: 700 !important;
@@ -616,7 +635,7 @@ span.flatpickr-weekday {
 
 /* Day Cells */
 .flatpickr-day {
-  color: #e0e0e6 !important;
+  color: #27272a !important;
   background: transparent !important;
   border: 1px solid transparent !important;
   border-radius: 4px !important;
@@ -630,20 +649,16 @@ span.flatpickr-weekday {
 }
 
 .flatpickr-day:hover {
-  background: rgba(197, 168, 128, 0.2) !important;
-  border-color: rgba(212, 178, 111, 0.5) !important;
-  color: #ffffff !important;
+  background: var(--gold-100) !important;
+  border-color: var(--gold-300) !important;
+  color: #000000 !important;
 }
 
 .flatpickr-day.today {
-  border-color: var(--gold-400) !important;
-  background: rgba(212, 178, 111, 0.12) !important;
-  color: var(--gold-200) !important;
-  font-weight: 600 !important;
-}
-
-.flatpickr-day.today:hover {
-  background: rgba(212, 178, 111, 0.3) !important;
+  border-color: var(--gold-500) !important;
+  background: rgba(197, 168, 128, 0.15) !important;
+  color: var(--gold-800) !important;
+  font-weight: 700 !important;
 }
 
 .flatpickr-day.selected,
@@ -651,55 +666,44 @@ span.flatpickr-weekday {
 .flatpickr-day.endRange {
   background: var(--gold-gradient) !important;
   border-color: transparent !important;
-  color: #0c0c10 !important;
+  color: #18181b !important;
   font-weight: 700 !important;
-  box-shadow: 0 2px 10px rgba(212, 178, 111, 0.5) !important;
+  box-shadow: 0 2px 10px rgba(197, 168, 128, 0.4) !important;
 }
 
 .flatpickr-day.inRange {
-  background: rgba(197, 168, 128, 0.18) !important;
+  background: rgba(197, 168, 128, 0.2) !important;
   border-color: transparent !important;
-  color: #f4e8cc !important;
-  box-shadow: -4px 0 0 rgba(197, 168, 128, 0.18), 4px 0 0 rgba(197, 168, 128, 0.18) !important;
+  color: #18181b !important;
+  box-shadow: -4px 0 0 rgba(197, 168, 128, 0.2), 4px 0 0 rgba(197, 168, 128, 0.2) !important;
 }
 
 .flatpickr-day.flatpickr-disabled,
 .flatpickr-day.flatpickr-disabled:hover,
 .flatpickr-day.prevMonthDay,
 .flatpickr-day.nextMonthDay {
-  color: #4a4a58 !important;
+  color: #a1a1aa !important;
   background: transparent !important;
   border-color: transparent !important;
   cursor: not-allowed !important;
 }
 
-/* Flatpickr Input Trigger with Gold Calendar Icon */
+/* Flatpickr Input Trigger */
 input.concierge-input.flatpickr-input[readonly] {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%23d4b26f' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect width='18' height='18' x='3' y='4' rx='2' ry='2'/%3E%3Cline x1='16' x2='16' y1='2' y2='6'/%3E%3Cline x1='8' x2='8' y1='2' y2='6'/%3E%3Cline x1='3' x2='21' y1='10' y2='10'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%238c6a2d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect width='18' height='18' x='3' y='4' rx='2' ry='2'/%3E%3Cline x1='16' x2='16' y1='2' y2='6'/%3E%3Cline x1='8' x2='8' y1='2' y2='6'/%3E%3Cline x1='3' x2='21' y1='10' y2='10'/%3E%3C/svg%3E");
   background-position: right 1.1rem center;
   background-repeat: no-repeat;
   background-size: 1.15rem;
   padding-right: 2.8rem;
   cursor: pointer;
-  background-color: #131318;
-}
-
-input.concierge-input.flatpickr-input[readonly]:hover {
-  border-color: rgba(212, 178, 111, 0.6);
-  background-color: #161620;
-}
-
-input.concierge-input.flatpickr-input[readonly]:focus {
-  border-color: var(--gold-400);
-  background-color: #181824;
-  box-shadow: 0 0 18px rgba(197, 168, 128, 0.35);
+  background-color: #ffffff;
 }
 
 /* Lightbox Modal */
 .lightbox-modal {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.95);
+  background: rgba(0, 0, 0, 0.92);
   backdrop-filter: blur(12px);
   z-index: 1000;
   display: flex;
@@ -725,55 +729,28 @@ input.concierge-input.flatpickr-input[readonly]:focus {
   max-width: 100%;
   max-height: 85vh;
   object-fit: contain;
-  border: 1px solid var(--gold-500);
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.9);
-}
-
-/* Room Tab Buttons */
-.room-tab-btn {
-  font-family: var(--font-serif-luxury);
-  font-size: 0.85rem;
-  letter-spacing: 0.08em;
-  padding: 0.65rem 1.5rem;
-  border-radius: 30px;
   border: 1px solid var(--gold-400);
-  background: transparent;
-  color: #4b4b52;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.room-tab-btn:hover {
-  background: rgba(197, 168, 128, 0.15);
-  color: #1a1a1a;
-}
-
-.room-tab-btn.active {
-  background: var(--gold-gradient);
-  color: #0c0c0e;
-  border-color: transparent;
-  font-weight: 600;
-  box-shadow: 0 4px 15px rgba(197, 168, 128, 0.25);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
 }
 
 /* Luxury Badges */
 .badge-gold {
-  border: 1px solid rgba(197, 168, 128, 0.4);
-  background: rgba(10, 10, 14, 0.65);
+  border: 1px solid rgba(197, 168, 128, 0.5);
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  color: var(--gold-300);
+  color: var(--gold-800);
   padding: 0.4rem 1.15rem;
   border-radius: 9999px;
   font-family: var(--font-serif-luxury);
   font-size: 0.7rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 700;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 15px rgba(197, 168, 128, 0.15);
 }
 
 /* Custom Scrollbar */
@@ -782,11 +759,11 @@ input.concierge-input.flatpickr-input[readonly]:focus {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0a0a0c;
+  background: #f7f4ed;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #33333e;
+  background: #d4c8b2;
   border-radius: 4px;
 }
 
@@ -802,15 +779,15 @@ input.concierge-input.flatpickr-input[readonly]:focus {
   width: 3.2rem;
   height: 3.2rem;
   border-radius: 50%;
-  background: rgba(18, 18, 24, 0.95);
-  border: 2px solid rgba(212, 178, 111, 0.7);
-  color: var(--gold-300);
+  background: #ffffff;
+  border: 2px solid var(--gold-500);
+  color: var(--gold-800);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   z-index: 999;
-  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.8), 0 0 15px rgba(197, 168, 128, 0.25);
+  box-shadow: 0 4px 20px rgba(197, 168, 128, 0.35);
   backdrop-filter: blur(10px);
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   opacity: 0;
@@ -827,9 +804,9 @@ input.concierge-input.flatpickr-input[readonly]:focus {
 .scroll-top-btn:hover {
   background: var(--gold-gradient);
   border-color: #fff;
-  color: #000;
+  color: #18181b;
   transform: translateY(-4px) scale(1.08);
-  box-shadow: 0 8px 30px rgba(212, 178, 111, 0.5), 0 0 20px rgba(212, 178, 111, 0.4);
+  box-shadow: 0 8px 30px rgba(212, 178, 111, 0.5);
 }
 
 .scroll-top-btn svg {
@@ -842,51 +819,13 @@ input.concierge-input.flatpickr-input[readonly]:focus {
   transform: translateY(-2px);
 }
 
-/* Custom Modal Scrollbar */
-.custom-scrollbar::-webkit-scrollbar {
-  width: 6px;
-}
-
-.custom-scrollbar::-webkit-scrollbar-track {
-  background: #121218;
-}
-
-.custom-scrollbar::-webkit-scrollbar-thumb {
-  background: #2a2a38;
-  border-radius: 3px;
-}
-
-.custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: var(--gold-500);
-}
-
-/* Cookie Banner Luxury Animation */
-#cookieBanner {
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.85), 0 0 25px rgba(197, 168, 128, 0.15);
-  animation: cookieSlideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
-@keyframes cookieSlideUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ==========================================================================
-   GRAND LUXURY CONCIERGE LOUNGE (UNIFIED EDITORIAL SUITE)
-   ========================================================================== */
+/* Grand Concierge Suite */
 .grand-concierge-suite {
-  background: linear-gradient(135deg, rgba(20, 20, 28, 0.92) 0%, rgba(10, 10, 15, 0.98) 100%);
-  border: 1px solid rgba(197, 168, 128, 0.35);
-  border-radius: 4px;
+  background: linear-gradient(135deg, #ffffff 0%, #f7f4ed 100%);
+  border: 1px solid var(--border-gold-subtle);
+  border-radius: 6px;
   position: relative;
-  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.9), 0 0 35px rgba(197, 168, 128, 0.08);
+  box-shadow: 0 20px 50px -10px rgba(197, 168, 128, 0.2);
   overflow: hidden;
 }
 
@@ -896,133 +835,37 @@ input.concierge-input.flatpickr-input[readonly]:focus {
   top: 0;
   left: 0;
   right: 0;
-  height: 2px;
+  height: 3px;
   background: var(--gold-gradient);
 }
 
 .concierge-luxury-link {
-  color: var(--gold-300);
+  color: var(--gold-800);
   transition: all 0.3s ease;
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
   text-decoration: none;
+  font-weight: 600;
 }
 
 .concierge-luxury-link:hover {
-  color: #ffffff;
+  color: var(--gold-600);
   transform: translateX(3px);
 }
 
-/* ==========================================================================
-   MOBILE & LUXURY TOUCH OPTIMIZATIONS
-   ========================================================================== */
-/* Touch targets & Tap highlights */
-html {
-  -webkit-tap-highlight-color: transparent;
-  touch-action: manipulation;
-}
-
-button,
-a,
-input,
-select {
-  touch-action: manipulation;
-}
-
-/* Comprehensive Mobile Optimizations (< 768px) */
-@media screen and (max-width: 768px) {
-  body {
-    padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px));
-  }
-
-  .concierge-input,
-  input[type="text"],
-  input[type="date"],
-  select,
-  textarea {
-    font-size: 16px !important;
-    min-height: 48px;
-  }
-
-  .btn-gold,
-  .btn-gold-outline,
-  .btn-gold-card {
-    min-height: 48px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  /* Responsive Flatpickr Calendar for Mobile */
-  .flatpickr-calendar {
-    width: 92vw !important;
-    max-width: 320px !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    border-radius: 6px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.95), 0 0 20px rgba(197, 168, 128, 0.25) !important;
-  }
-
-  .flatpickr-days {
-    width: 100% !important;
-  }
-
-  .dayContainer {
-    width: 100% !important;
-    min-width: 100% !important;
-    max-width: 100% !important;
-    justify-content: space-around;
-  }
-
-  .flatpickr-day {
-    max-width: 40px !important;
-    height: 38px !important;
-    line-height: 38px !important;
-    font-size: 13px !important;
-  }
-
-  /* Mobile Gallery Modal Optimizations */
-  #galleryModal img {
-    max-height: 65vh !important;
-    width: auto !important;
-    margin: 0 auto;
-  }
-
-  /* Cookie Banner Mobile Placement Above Floating Bar */
-  #cookieBanner {
-    bottom: calc(65px + env(safe-area-inset-bottom, 0px)) !important;
-    left: 0.75rem !important;
-    right: 0.75rem !important;
-    z-index: 95 !important;
-  }
-
-  /* Floating Scroll-to-Top Button on Mobile */
-  .scroll-top-btn {
-    bottom: calc(72px + env(safe-area-inset-bottom, 0px));
-    right: 1.1rem;
-    width: 2.75rem;
-    height: 2.75rem;
-  }
-
-  /* Mobile Hero Adjustments */
-  .hero-luxury {
-    min-height: 85vh;
-  }
-}
-
-/* Luxury Mobile Bottom Concierge Bar */
+/* Mobile Concierge Bar */
 .mobile-concierge-bar {
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
   z-index: 90;
-  background: rgba(10, 10, 14, 0.96);
+  background: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-top: 1px solid rgba(197, 168, 128, 0.35);
-  box-shadow: 0 -4px 25px rgba(0, 0, 0, 0.85);
+  border-top: 1px solid var(--border-gold-subtle);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
   padding: 0.45rem 0.65rem;
   padding-bottom: max(0.45rem, env(safe-area-inset-bottom, 0.45rem));
   display: flex;
@@ -1054,68 +897,53 @@ select {
   font-size: 0.63rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 700;
   text-decoration: none;
   white-space: nowrap;
   transition: all 0.2s ease;
-  background: rgba(18, 18, 24, 0.95);
-  border: 1px solid rgba(197, 168, 128, 0.35);
-  color: var(--gold-300);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
-}
-
-.mobile-bar-btn span {
-  display: block;
-  max-width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  line-height: 1.1;
-  text-align: center;
-}
-
-.mobile-bar-btn svg,
-.mobile-bar-btn i {
-  width: 15px;
-  height: 15px;
-  color: var(--gold-300);
-  flex-shrink: 0;
-  display: block;
+  background: #f7f4ed;
+  border: 1px solid var(--border-beige);
+  color: var(--gold-800);
 }
 
 .mobile-bar-btn.phone,
 .mobile-bar-btn.whatsapp {
-  background: rgba(18, 18, 24, 0.95);
-  border: 1px solid rgba(197, 168, 128, 0.35);
-  color: var(--gold-300);
+  background: #ffffff;
+  border: 1px solid var(--border-beige);
+  color: var(--gold-800);
 }
 
 .mobile-bar-btn.whatsapp svg,
 .mobile-bar-btn.whatsapp i {
-  color: var(--gold-300);
+  color: #15803d;
+}
+
+.mobile-bar-btn.phone svg,
+.mobile-bar-btn.phone i {
+  color: var(--gold-700);
 }
 
 .mobile-bar-btn.book {
   background: var(--gold-gradient);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  color: #08080a;
-  font-weight: 700;
-  box-shadow: 0 2px 12px rgba(197, 168, 128, 0.3);
+  border: 1.5px solid #b08d4b !important;
+  color: #18181b;
+  font-weight: 800;
+  box-shadow: 0 2px 10px rgba(197, 168, 128, 0.35);
 }
 
 .mobile-bar-btn.book svg,
 .mobile-bar-btn.book i {
-  color: #08080a;
+  color: #18181b;
 }
 
 .mobile-bar-btn:active {
   transform: scale(0.96);
 }
 
-/* Room Slider Dots & Transitions */
+/* Room Slider Dots */
 .slider-dot {
   cursor: pointer;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
   transition: all 0.25s ease-in-out;
 }
 
@@ -1139,41 +967,17 @@ select {
   overscroll-behavior-x: contain;
 }
 
-/* ==========================================================================
-   PERFORMANCE & ACCESSIBILITY OPTIMIZATIONS
-   ========================================================================== */
-
-/* GPU Acceleration & Performance */
+/* Accessibility & GPU Acceleration */
 .hero-luxury-bg,
 .room-card,
 .lightbox-modal,
-.slider-dot,
-.concierge-card {
+.slider-dot {
   transform: translateZ(0);
   -webkit-transform: translateZ(0);
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
 
-/* Touch responsiveness optimization */
-button,
-a,
-.slider-dot,
-.lang-btn {
-  -webkit-tap-highlight-color: transparent;
-  touch-action: manipulation;
-}
-
-/* Accessible focus rings */
-a:focus-visible,
-button:focus-visible,
-input:focus-visible,
-select:focus-visible {
-  outline: 2px solid var(--gold-400);
-  outline-offset: 2px;
-}
-
-/* Respect user preference for reduced motion */
 @media (prefers-reduced-motion: reduce) {
 
   *,
